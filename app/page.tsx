@@ -273,9 +273,10 @@ export default function LNGTEST() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1.2 }}
               >
-                <p className="text-[18px] drop-shadow-md font-serif leading-relaxed">
-                  <p dangerouslySetInnerHTML={{ __html: t.section }}></p>
-                </p>
+                <div
+                  className="text-[18px] drop-shadow-md font-serif leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: t.section }}
+                ></div>
               </motion.section>
             </div>
 

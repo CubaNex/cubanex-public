@@ -97,7 +97,9 @@ export default function Footer() {
                     href="#"
                     className="w-10 h-10 rounded-full bg-muted hover:bg-primary/20 flex items-center justify-center transition-colors"
                   >
-                    <Image src={src} alt={icon} width={20} height={20} />
+                    {src && (
+                      <Image src={src} alt={icon} width={20} height={20} />
+                    )}
                   </a>
                 );
               })}
