@@ -1,0 +1,22 @@
+@import "tailwindcss";
+/* @media (max-width: 415px) {
+  .bg-center {
+    background-position: -583px;
+  }
+}
+@media (min-width: 415px) and (max-width: 430px) {
+  .bg-center {
+    background-position: -545px;
+  }
+} */
+input,
+button,
+textarea {
+  font-size: 16px; /* prevents iPhone zoom */
+  -webkit-appearance: none;
+  appearance: none;
+}
+body:has(.coming-soon) .Header,
+body:has(.coming-soon) .Footer {
+  display: none !important;
+}

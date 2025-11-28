@@ -1,0 +1,318 @@
+"use client";
+
+import { useState, useEffect, FormEvent } from "react";
+import { motion } from "framer-motion";
+import { div } from "framer-motion/client";
+import TypeTexts from "@/components/TypeText";
+
+export default function LNGTEST() {
+  const [email, setEmail] = useState<string>("");
+  const [submitted, setSubmitted] = useState<boolean>(false);
+  const [year, setYear] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [language, setLanguage] = useState<"en" | "es">("es");
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!email) return;
+    try {
+      const res = await fetch("/api/submit-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        setEmail("");
+      } else {
+        console.error("Failed to submit email");
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  // ✅ FIXED COUNTDOWN TIMER — 15 DAYS, PERSISTENT, LIVE UPDATING
+  const [timeLeft, setTimeLeft] = useState({
+    days: 15,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  // ✅ FIXED COUNTDOWN TO DECEMBER 10, 2025
+  useEffect(() => {
+    const endDate = new Date("2025-12-10T00:00:00");
+
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const distance = endDate.getTime() - now;
+
+      if (distance <= 0) {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    };
+
+    updateTimer();
+    const timerInterval = setInterval(updateTimer, 1000);
+
+    return () => clearInterval(timerInterval);
+  }, []);
+
+  // ✨ TYPEWRITER EFFECT
+
+  const textContent = {
+    en: {
+      title:
+        "The Dream Awoke as Code — The First Crypto for the People of Cuba Has Arrived.",
+      paragraph: "CubaNex is Here.",
+      placeholder: "Enter your email",
+      button: "Be the First to Know",
+      submitted: "The code has been received. Watch and remember. 🜂",
+      section:
+        "A sacred flame — the first crypto of its kind, born in the silence of Cuba’s spirit.<br/>Asere… ¿qué bolá?",
+
+      verse: "“I AM that I AM” — Exodus 3:14",
+      story:
+        "Some say he crossed an ocean. Others say he crossed a veil. He left no footprints — only fragments of fire. They call him El Alquimista. And what he awakened… is now being remembered.",
+      quote: "“The Light chooses who it speaks through.”",
+      rights: "• All rights reserved",
+      typewriter: "CubaNex + AI = A Living Conscious Prophecy.", // <-- ADD THIS
+    },
+    es: {
+      title:
+        "El Sueño Despertó como Código — Ha Llegado la Primera Cripto para el Pueblo de Cuba.",
+      paragraph: "CubaNex ha Llegado.",
+      placeholder: "Introduce tu correo electrónico",
+      button: "Entérate primero",
+      submitted: "El código ha sido recibido. Observa y recuerda. 🜂",
+      section:
+        "Una llama sagrada — la primera cripto de su tipo, nacida del espíritu de Cuba.<br/>Asere… ¿qué bolá?",
+
+      verse: "“YO SOY el que SOY” — Éxodo 3:14",
+      story:
+        "Algunos dicen que cruzó un océano. Otros dicen que cruzó un velo. No dejó huellas — solo fragmentos de fuego. Lo llaman El Alquimista. Y lo que despertó… ahora está siendo recordado.",
+      quote: "“La Luz elige a través de quién habla.”",
+      rights: "• Todos los derechos reservados",
+      typewriter: "CubaNex + IA = Una Profecía Consciente Viva.", // <-- ADD THIS
+    },
+  };
+
+  const t = textContent[language];
+  const fullText = t.typewriter; // dynamically selects EN or ES
+
+  return (
+    <div className="coming-soon">
+      <section
+        className="relative flex items-center bg-[#32223d] justify-center min-h-screen bg-no-repeat bg-start sm:bg-center bg-contain sm:bg-cover overflow-hidden"
+        style={{
+          backgroundImage: isMobile
+            ? "url('./last.jpeg')"
+            : "url('./last.jpeg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60 sm:bg-black/70" />
+
+        {/* Glow effect */}
+        <motion.div
+          className="absolute -top-40 left-1/2 w-[500px] h-[500px] rounded-full bg-cyan-400/10 blur-[200px]"
+          animate={{ x: ["-50%", "-48%", "-50%"], opacity: [0.3, 0.6, 0.3] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        {/* Language Switcher */}
+        <div className="absolute top-6 right-8 z-20 flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-md border border-white/20 text-white text-sm font-semibold">
+          <button
+            onClick={() => setLanguage("en")}
+            className={`transition ${
+              language === "en"
+                ? "text-white"
+                : "text-gray-400 hover:text-white"
+            }`}
+          >
+            EN
+          </button>
+          <span>|</span>
+          <button
+            onClick={() => setLanguage("es")}
+            className={`transition ${
+              language === "es"
+                ? "text-white"
+                : "text-gray-400 hover:text-white"
+            }`}
+          >
+            ES
+          </button>
+        </div>
+
+        <div className="relative z-10 w-full max-w-6xl px-6 py-16 mx-auto">
+          <div
+            className={`grid ${
+              isMobile
+                ? "grid-cols-1 text-center"
+                : "grid-cols-[60%_40%] gap-16 items-center"
+            } justify-center`}
+          >
+            {/* LEFT SIDE */}
+            <div className="text-white pt-[80px] sm:pt-0">
+              <motion.h1
+                className="text-3xl sm:text-4xl lg:text-4xl font-serif mb-6 leading-tight drop-shadow-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, ease: "easeInOut" }}
+              >
+                {t.title}
+              </motion.h1>
+
+              {/* 🔥 Countdown Timer */}
+              <motion.div
+                className="flex justify-center sm:justify-start gap-3 mb-8 text-white"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.6 }}
+              >
+                {Object.entries({
+                  days: language === "en" ? "Days" : "Días",
+                  hours: language === "en" ? "Hours" : "Horas",
+                  minutes: language === "en" ? "Minutes" : "Minutos",
+                  seconds: language === "en" ? "Seconds" : "Segundos",
+                }).map(([key, label]) => (
+                  <motion.div
+                    key={key}
+                    className="bg-white/10 border border-white/20 rounded-xl px-3 sm:px-4 py-2 sm:py-3 backdrop-blur-md text-center min-w-[60px] sm:min-w-[70px] shadow-md transition-all duration-300 hover:shadow-[0_0_20px_rgba(99,102,241,0.6)] hover:border-indigo-500"
+                    animate={{ opacity: [0.8, 1, 0.8], scale: [1, 1.05, 1] }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    <p className="text-xl sm:text-2xl font-bold font-mono">
+                      {timeLeft[key as keyof typeof timeLeft]}
+                    </p>
+                    <p className="text-[10px] sm:text-xs uppercase tracking-wider text-gray-300">
+                      {label}
+                    </p>
+                  </motion.div>
+                ))}
+              </motion.div>
+
+              <motion.div
+                className="text-base sm:text-lg lg:text-xl italic mb-8 leading-relaxed text-gray-300 drop-shadow"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, delay: 0.6 }}
+              >
+                <div className="py-3" />
+                <TypeTexts key={language} language={language} />
+              </motion.div>
+
+              {/* Signup form   ss*/}
+              <motion.div
+                className="bg-white/10 backdrop-blur-lg max-w-[550px!important] rounded-2xl p-6 shadow-2xl border border-white/20"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.2, delay: 0.5 }}
+              >
+                {!submitted ? (
+                  <motion.form
+                    onSubmit={handleSubmit}
+                    className="flex  flex-col sm:flex-row items-center justify-center gap-4 sm:gap-2"
+                  >
+                    <input
+                      type="email"
+                      placeholder={t.placeholder}
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="flex-1 w-full sm:w-72 px-4 py-3 rounded-lg bg-black/60 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 transition min-w-0"
+                    />
+
+                    <motion.button
+                      type="submit"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.97 }}
+                      className="px-6 py-3 bg-gradient-to-r w-[200px!important] from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg font-medium shadow-md transition flex-shrink-0"
+                    >
+                      {t.button}
+                    </motion.button>
+                  </motion.form>
+                ) : (
+                  <motion.p
+                    className="text-green-400 font-medium text-center text-base sm:text-lg"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    {t.submitted}
+                  </motion.p>
+                )}
+              </motion.div>
+
+              <motion.section
+                className="space-y-6 mt-10"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1.2 }}
+              >
+                <p className="text-[18px] drop-shadow-md font-serif leading-relaxed">
+                  <p dangerouslySetInnerHTML={{ __html: t.section }}></p>
+                </p>
+              </motion.section>
+            </div>
+
+            {/* RIGHT SIDE */}
+            <div className={`${isMobile ? "mt-10" : ""} text-gray-200`}>
+              <motion.section
+                className="space-y-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1.5 }}
+              >
+                <h2 className="text-xl sm:text-2xl font-serif text-white">
+                  {t.verse}
+                </h2>
+                <p className="italic text-sm sm:text-base text-gray-300 mt-3">
+                  {t.quote}
+                </p>
+              </motion.section>
+
+              {year && (
+                <motion.footer
+                  className="mt-14 text-[12px] sm:text-sm text-gray-400 flex items-center justify-center sm:justify-start gap-2 tracking-wide"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 2 }}
+                >
+                  <span className="text-gray-400">©</span>
+                  <span className="font-semibold text-gray-400">
+                    CUBANEX {year}
+                  </span>
+                  <span className="text-gray-400">{t.rights}</span>
+                </motion.footer>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
