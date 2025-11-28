@@ -5,11 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { textContent } from "@/constants/contents";
 
-interface FooterProps {
-  language: "eng" | "esp";
-}
-
-export default function Footer({ language }: FooterProps) {
+export default function Footer() {
+  const pathname = usePathname() || "/"; // fallback if undefined
+  const language: "eng" | "esp" = pathname.startsWith("/en") ? "eng" : "esp";
   const t = textContent[language].footer;
 
   return (

@@ -46,7 +46,7 @@ export default function RootLayout({
         {children}
 
         {/* Footer (server) receives language directly */}
-        <Footer language={defaultLang} />
+        <Footer />
       </body>
     </html>
   );
