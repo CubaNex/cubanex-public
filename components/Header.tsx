@@ -8,8 +8,15 @@ import { usePathname, useRouter } from "next/navigation";
 import { textContent } from "@/constants/contents";
 import { textVariant2 } from "@/font-utils/motion";
 
-const Header = () => {
-  const [language, setLanguage] = useState<"eng" | "esp">("esp");
+// ✅ Add props interface
+interface HeaderProps {
+  defaultLanguage?: "eng" | "esp"; // optional, in case you want default fallback
+}
+
+const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
+  const [language, setLanguage] = useState<"eng" | "esp">(
+    defaultLanguage || "esp"
+  ); // fallback to "esp"
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const pathname = usePathname();
@@ -48,7 +55,6 @@ const Header = () => {
     { name: t.links[2], path: "/tokenomics" },
     { name: t.links[3], path: "/community" },
   ];
-
   return (
     <>
       {/* HEADER */}

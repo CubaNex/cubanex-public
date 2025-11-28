@@ -1,13 +1,15 @@
-"use client"; // Footer must be client component
+"use client";
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { textContent } from "@/constants/contents";
 
-export default function Footer() {
-  const pathname = usePathname();
-  const language: "eng" | "esp" = pathname.startsWith("/en") ? "eng" : "esp";
+interface FooterProps {
+  language: "eng" | "esp";
+}
+
+export default function Footer({ language }: FooterProps) {
   const t = textContent[language].footer;
 
   return (
