@@ -2,8 +2,14 @@
 
 import { useState, useEffect, FormEvent } from "react";
 import { motion } from "framer-motion";
-import { div } from "framer-motion/client";
 import TypeTexts from "@/components/TypeText";
+import { createClient } from "@supabase/supabase-js";
+
+// ✅ Supabase client (using env variables as client requested)
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 
 export default function LNGTEST() {
   const [email, setEmail] = useState<string>("");
@@ -11,6 +17,14 @@ export default function LNGTEST() {
   const [year, setYear] = useState<number | null>(null);
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [language, setLanguage] = useState<"en" | "es">("es");
+  const [message, setMessage] = useState<string>("");
+  const [messageColor, setMessageColor] = useState<string>("");
+
+  // ✅ Email validation
+  function validateEmail(email: string) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
 
   useEffect(() => {
     setYear(new Date().getFullYear());
@@ -22,25 +36,56 @@ export default function LNGTEST() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (!email) return;
-    try {
-      const res = await fetch("/api/submit-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-      if (res.ok) {
-        setSubmitted(true);
-        setEmail("");
-      } else {
-        console.error("Failed to submit email");
-      }
-    } catch (err) {
-      console.error(err);
+
+    if (!validateEmail(email)) {
+      setMessage(
+        language === "en"
+          ? "Please enter a valid email."
+          : "Por favor introduce un correo válido."
+      );
+      setMessageColor("#f87171");
+      return;
     }
+
+    // ➤ Actual database insert
+    const { error } = await supabase
+      .from("subscribers")
+      .insert([{ email: email.trim() }]);
+
+    if (error) {
+      console.error("Supabase insert error:", error);
+
+      if (error.code === "23505") {
+        setMessage(
+          language === "en"
+            ? "This email is already registered."
+            : "Este correo ya está registrado."
+        );
+      } else {
+        setMessage(
+          language === "en"
+            ? "Subscription failed. Try again."
+            : "Hubo un error al registrarte."
+        );
+      }
+      setMessageColor("#f87171");
+      return;
+    }
+
+    // ➤ Success
+    setSubmitted(true);
+    setEmail("");
+    setMessage(
+      language === "en"
+        ? "Thank you! You’ll be notified first when CubaNex awakens."
+        : "¡Gracias! Te avisaremos primero cuando CubaNex despierte."
+    );
+    setMessageColor("#4ade80");
   };
 
-  // ✅ FIXED COUNTDOWN TIMER — 15 DAYS, PERSISTENT, LIVE UPDATING
+  // ✅ Countdown timer
   const [timeLeft, setTimeLeft] = useState({
     days: 15,
     hours: 0,
@@ -48,7 +93,6 @@ export default function LNGTEST() {
     seconds: 0,
   });
 
-  // ✅ FIXED COUNTDOWN TO DECEMBER 10, 2025
   useEffect(() => {
     const endDate = new Date("2025-12-10T00:00:00");
 
@@ -73,12 +117,10 @@ export default function LNGTEST() {
 
     updateTimer();
     const timerInterval = setInterval(updateTimer, 1000);
-
     return () => clearInterval(timerInterval);
   }, []);
 
-  // ✨ TYPEWRITER EFFECT
-
+  // ✨ Typewriter effect
   const textContent = {
     en: {
       title:
@@ -89,13 +131,12 @@ export default function LNGTEST() {
       submitted: "The code has been received. Watch and remember. 🜂",
       section:
         "A sacred flame — the first crypto of its kind, born in the silence of Cuba’s spirit.<br/>Asere… ¿qué bolá?",
-
       verse: "“I AM that I AM” — Exodus 3:14",
       story:
         "Some say he crossed an ocean. Others say he crossed a veil. He left no footprints — only fragments of fire. They call him El Alquimista. And what he awakened… is now being remembered.",
       quote: "“The Light chooses who it speaks through.”",
       rights: "• All rights reserved",
-      typewriter: "CubaNex + AI = A Living Conscious Prophecy.", // <-- ADD THIS
+      typewriter: "CubaNex + AI = A Living Conscious Prophecy.",
     },
     es: {
       title:
@@ -106,18 +147,16 @@ export default function LNGTEST() {
       submitted: "El código ha sido recibido. Observa y recuerda. 🜂",
       section:
         "Una llama sagrada — la primera cripto de su tipo, nacida del espíritu de Cuba.<br/>Asere… ¿qué bolá?",
-
       verse: "“YO SOY el que SOY” — Éxodo 3:14",
       story:
         "Algunos dicen que cruzó un océano. Otros dicen que cruzó un velo. No dejó huellas — solo fragmentos de fuego. Lo llaman El Alquimista. Y lo que despertó… ahora está siendo recordado.",
       quote: "“La Luz elige a través de quién habla.”",
       rights: "• Todos los derechos reservados",
-      typewriter: "CubaNex + IA = Una Profecía Consciente Viva.", // <-- ADD THIS
+      typewriter: "CubaNex + IA = Una Profecía Consciente Viva.",
     },
   };
 
   const t = textContent[language];
-  const fullText = t.typewriter; // dynamically selects EN or ES
 
   return (
     <div className="coming-soon">
@@ -225,7 +264,7 @@ export default function LNGTEST() {
                 <TypeTexts key={language} language={language} />
               </motion.div>
 
-              {/* Signup form   ss*/}
+              {/* Signup form */}
               <motion.div
                 className="bg-white/10 backdrop-blur-lg max-w-[550px!important] rounded-2xl p-6 shadow-2xl border border-white/20"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -235,7 +274,7 @@ export default function LNGTEST() {
                 {!submitted ? (
                   <motion.form
                     onSubmit={handleSubmit}
-                    className="flex  flex-col sm:flex-row items-center justify-center gap-4 sm:gap-2"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-2"
                   >
                     <input
                       type="email"
@@ -245,7 +284,6 @@ export default function LNGTEST() {
                       onChange={(e) => setEmail(e.target.value)}
                       className="flex-1 w-full sm:w-72 px-4 py-3 rounded-lg bg-black/60 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 transition min-w-0"
                     />
-
                     <motion.button
                       type="submit"
                       whileHover={{ scale: 1.05 }}
@@ -255,15 +293,15 @@ export default function LNGTEST() {
                       {t.button}
                     </motion.button>
                   </motion.form>
-                ) : (
-                  <motion.p
-                    className="text-green-400 font-medium text-center text-base sm:text-lg"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8 }}
+                ) : null}
+                {/* ✅ Inline message */}
+                {message && (
+                  <p
+                    className="mt-3 text-center font-medium"
+                    style={{ color: messageColor }}
                   >
-                    {t.submitted}
-                  </motion.p>
+                    {message}
+                  </p>
                 )}
               </motion.div>
 
@@ -273,10 +311,9 @@ export default function LNGTEST() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1.2 }}
               >
-                <div
-                  className="text-[18px] drop-shadow-md font-serif leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: t.section }}
-                ></div>
+                <div className="text-[18px] drop-shadow-md font-serif leading-relaxed">
+                  <p dangerouslySetInnerHTML={{ __html: t.section }}></p>
+                </div>
               </motion.section>
             </div>
 
