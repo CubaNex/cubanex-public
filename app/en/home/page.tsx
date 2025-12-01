@@ -1,115 +1,136 @@
-"use client";
+// app/page.js (Next.js 13+ with App Router)
 
-import { textContent } from "@/constants/contents";
+"use client";
+import React from "react";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
-  const t = textContent.eng;
-
   return (
-    <main className="relative overflow-hidden">
-      {/* ===== Background Decoration ===== */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-400 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-500 rounded-full blur-3xl"></div>
-      </div>
-
-      {/* ===== HERO ===== */}
-      <section className="pt-[120px] px-6 text-center max-w-3xl mx-auto relative z-10">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-4">{t.title}</h1>
-        <p className="text-lg sm:text-xl text-gray-200 mb-8">{t.paragraph}</p>
-
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <input
-            type="email"
-            placeholder={t.placeholder}
-            className="border border-gray-400 bg-transparent text-white px-4 py-2 rounded-md w-full sm:w-auto"
+    <main className="bg-black text-white min-h-screen w-full overflow-x-hidden">
+      {/* ================= HERO SECTION ================= */}
+      <section className="relative w-full min-h-screen flex items-center justify-center px-6">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/last.jpeg"
+            className="w-full h-full object-cover opacity-70"
+            alt="Hero Background"
           />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-center pt-20">
+          <h1 className="text-5xl font-bold leading-tight mb-6">
+            Empowering Cuba with Next-Generation Blockchain Technology
+          </h1>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+            Cubanex is a forward-looking blockchain ecosystem designed to
+            enhance energy sustainability, boost the digital economy, and
+            support Cuba’s growth through advanced decentralized tools.
+          </p>
 
-          <button
-            className="px-6 py-2 rounded-full text-white font-medium w-full sm:w-auto"
-            style={{
-              background:
-                "linear-gradient(90deg, #C766EF 0%, #7928D2 51%, #2B0C52 100%)",
-            }}
-          >
-            {t.button}
-          </button>
+          <div className="flex flex-wrap gap-4 justify-center mt-8">
+            <button className="px-6 py-3 bg-white text-black rounded-xl font-semibold flex items-center gap-2 hover:bg-gray-200 transition">
+              Get Started <ArrowRight size={18} />
+            </button>
+            <button className="px-6 py-3 border border-white rounded-xl font-semibold hover:bg-white hover:text-black transition">
+              Learn More
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* ===== MAIN CONTENT ===== */}
-      <section className="mt-20 max-w-3xl mx-auto px-6 relative z-10 leading-relaxed text-gray-100">
-        <div
-          className="mb-6 text-lg"
-          dangerouslySetInnerHTML={{ __html: t.section }}
-        />
+      {/* ================= WHY CUBANEX ================= */}
+      <section className="py-20 bg-black px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">Why CubaNex?</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-12">
+            A sustainable blockchain ecosystem supporting Cuba’s clean energy,
+            transportation modernization, and long-term digital growth.
+          </p>
 
-        <blockquote className="italic mb-6 border-l-4 pl-4 border-purple-400 text-gray-300">
-          {t.verse}
-        </blockquote>
-
-        <p className="mb-6 text-lg">{t.story}</p>
-
-        <blockquote className="font-semibold border-l-4 border-yellow-400 pl-4 text-lg">
-          {t.quote}
-        </blockquote>
-      </section>
-
-      {/* ===== FEATURES ===== */}
-      <section className="mt-24 py-16 px-6 bg-[#0f0f16] relative z-10">
-        <h2 className="text-3xl font-bold text-center mb-10">Features</h2>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div
-              key={i}
-              className="p-6 bg-black/30 border border-gray-800 rounded-2xl shadow-lg backdrop-blur-lg"
-            >
-              <h3 className="text-xl font-semibold mb-2">Feature {i}</h3>
-              <p className="text-gray-300 text-sm">
-                This is a placeholder description. Replace it anytime.
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="p-8 border border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <h3 className="text-xl font-semibold mb-3">Green Energy Ready</h3>
+              <p className="text-gray-400 text-sm">
+                Built to support renewable power usage, energy tokenization, and
+                eco-friendly development.
               </p>
             </div>
-          ))}
-        </div>
-      </section>
 
-      {/* ===== ROADMAP ===== */}
-      <section className="py-20 px-6 max-w-5xl mx-auto relative z-10">
-        <h2 className="text-3xl font-bold text-center mb-12">Roadmap</h2>
-
-        <div className="space-y-8">
-          {["Phase 1", "Phase 2", "Phase 3", "Phase 4"].map((phase, idx) => (
-            <div
-              key={idx}
-              className="p-6 border border-gray-700 bg-black/20 rounded-xl backdrop-blur-lg"
-            >
-              <h3 className="text-xl font-semibold mb-3">{phase}</h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-1">
-                <li>Milestone A</li>
-                <li>Milestone B</li>
-                <li>Milestone C</li>
-              </ul>
+            <div className="p-8 border border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <h3 className="text-xl font-semibold mb-3">
+                Future-Proof Digital Economy
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Powering decentralized applications that contribute to
+                sustainable economic growth.
+              </p>
             </div>
-          ))}
+
+            <div className="p-8 border border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <h3 className="text-xl font-semibold mb-3">
+                Modern Infrastructure
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Developed to support mobility, transport upgrades, and
+                data-integrated infrastructure.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ===== CTA ===== */}
-      <section className="py-24 text-center px-6 bg-gradient-to-br from-purple-900/40 to-blue-900/40 relative z-10">
-        <h2 className="text-4xl font-bold mb-4">Join the Movement</h2>
-        <p className="text-lg mb-8">Be part of something bigger.</p>
+      {/* ================= COMMUNITY SECTION ================= */}
+      <section className="py-24 bg-black px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-4">
+            Connect With Our Global Community
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-12">
+            Stay updated with the latest developments, ecosystem tools, and
+            collaborative opportunities.
+          </p>
 
-        <button
-          className="px-8 py-3 rounded-full text-white font-medium text-lg"
-          style={{
-            background:
-              "linear-gradient(90deg, #C766EF 0%, #7928D2 51%, #2B0C52 100%)",
-          }}
-        >
-          {t.button}
-        </button>
+          <div className="flex justify-center gap-6 flex-wrap">
+            <a
+              href="#"
+              className="px-6 py-3 border border-gray-700 rounded-xl hover:bg-white hover:text-black transition"
+            >
+              Join Community
+            </a>
+            <a
+              href="#"
+              className="px-6 py-3 bg-white text-black rounded-xl font-semibold hover:bg-gray-200 transition"
+            >
+              Follow Updates
+            </a>
+          </div>
+        </div>
       </section>
+
+      {/* ================= WHITEPAPER SECTION ================= */}
+      <section className="py-24 bg-gradient-to-b from-black to-gray-900 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Whitepaper & Documentation
+          </h2>
+          <p className="text-gray-300 max-w-2xl mx-auto mb-10">
+            Explore our detailed technical documentation, vision, economic
+            structure, and roadmaps that define the future of CubaNex.
+          </p>
+
+          <a
+            href="/CUBANEX-Whitepaper.pdf"
+            className="px-8 py-4 bg-white text-black rounded-xl font-semibold inline-block hover:bg-gray-200 transition"
+          >
+            Download Whitepaper
+          </a>
+        </div>
+      </section>
+
+      {/* ================= FOOTER ================= */}
+      <footer className="py-10 text-center text-gray-500 text-sm border-t border-gray-800">
+        Driving Cuba's sustainable Web3 growth with innovative blockchain
+        solutions.
+      </footer>
     </main>
   );
 }
