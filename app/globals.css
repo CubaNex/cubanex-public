@@ -20,3 +20,24 @@ body:has(.coming-soon) .Header,
 body:has(.coming-soon) .Footer {
   display: none !important;
 }
+@keyframes softBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.soft-bounce {
+  animation: softBounce 1.8s ease-in-out infinite;
+}
+@keyframes smoothPulse {
+  0% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.3); }
+  100% { opacity: 0.4; transform: scale(0.9); }
+}
+
+.smooth-pulse {
+  animation: smoothPulse 1.6s ease-in-out infinite;
+}

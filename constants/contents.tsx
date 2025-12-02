@@ -18,21 +18,28 @@ export const textContent = {
       terms: "Terms of Service",
       rights: "© 2025 CubaNex. All rights reserved.",
     },
+    jbtn: "Join Presale",
+    amongbtn: "Be Among the First",
+    whitepbtn: "Read Whitepaper",
+    smartbtn: "View Smart Contract",
+    joinbtn: "Join",
+    readBtn: "Read Online",
 
-    title:
-      "The Dream Awoke as Code — The First Crypto for the People of Cuba Has Arrived.",
-    paragraph: "CubaNex is Here.",
-    placeholder: "Enter your email",
-    button: "Be the First to Know",
-    submitted: "The code has been received. Watch and remember. 🜂",
-    section:
-      "A sacred flame — the first crypto of its kind, born in the silence of Cuba’s spirit.<br/>Asere… ¿qué bolá?",
-    verse: "“I AM that I AM” — Exodus 3:14",
-    story:
-      "Some say he crossed an ocean. Others say he crossed a veil. He left no footprints — only fragments of fire. They call him El Alquimista. And what he awakened… is now being remembered.",
-    quote: "“The Light chooses who it speaks through.”",
-    rights: "• All rights reserved",
-    typewriter: "CubaNex + AI = A Living Conscious Prophecy.",
+    // home page start
+    homeheroTitle: "The Future of Cuba is ",
+    herotitleSpan: "Crypto",
+    homeSD:
+      "The Dream Awoke as a Code — The First Crypto for the People of Cuba Has Arrived. CUBANEX is here",
+    herojoinpresale: "Presale Live Now",
+    herothreepoint: {
+      points: [
+        "Verified Contract",
+        "Transparent Source",
+        "Pure Supply Structure",
+      ],
+    },
+
+    // home page ends
   },
 
   esp: {
@@ -40,6 +47,26 @@ export const textContent = {
       links: ["Inicio", "Acerca de", "Comunidad", "Economía del token"],
       button: "Únete a la preventa",
     },
+    jbtn: "Únete a la preventa",
+    amongbtn: "Sé de los primeros",
+    whitepbtn: "Leer el Whitepaper",
+    smartbtn: "Ver Smart Contract",
+    joinbtn: "Unirse",
+    readBtn: "Leer en línea",
+    // home page start
+    homeheroTitle: "El futuro de Cuba es",
+    herotitleSpan: "Cripto",
+    homeSD:
+      "El Sueño Despertó como Código — Ha Llegado la Primera Cripto para el Pueblo de Cuba. CUBANEX está aquí",
+    herojoinpresale: "Preventa en vivo ahora",
+    herothreepoint: {
+      points: [
+        "Contrato verificado",
+        "Fuente transparente",
+        "Estructura de suministro pura",
+      ],
+    },
+    // home page ends
 
     // -----------------------
     // FOOTER CONTENT (SPANISH)
@@ -58,20 +85,5 @@ export const textContent = {
       terms: "Términos del Servicio",
       rights: "© 2025 CubaNex. Todos los derechos reservados.",
     },
-
-    title:
-      "El Sueño Despertó como Código — Ha Llegado la Primera Cripto para el Pueblo de Cuba.",
-    paragraph: "CubaNex ha Llegado.",
-    placeholder: "Introduce tu correo electrónico",
-    button: "Entérate primero",
-    submitted: "El código ha sido recibido. Observa y recuerda. 🜂",
-    section:
-      "Una llama sagrada — la primera cripto de su tipo, nacida del espíritu de Cuba.<br/>Asere… ¿qué bolá?",
-    verse: "“YO SOY el que SOY” — Éxodo 3:14",
-    story:
-      "Algunos dicen que cruzó un océano. Otros dicen que cruzó un velo. No dejó huellas — solo fragmentos de fuego. Lo llaman El Alquimista. Y lo que despertó… ahora está siendo recordado.",
-    quote: "“La Luz elige a través de quién habla.”",
-    rights: "• Todos los derechos reservados",
-    typewriter: "CubaNex + IA = Una Profecía Consciente Viva.",
   },
 };
