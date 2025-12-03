@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Work_Sans, Orbitron } from "next/font/google";
 import { main } from "framer-motion/client";
+import Image from "next/image";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -20,12 +21,12 @@ export default function Home() {
         <div className="absolute bg-[#000] inset-0 z-0">
           <img
             src="/cubanexthero.png"
-            className="hidden sm:block w-full h-full center object-cover opacity-38"
+            className="hidden sm:block w-full h-full center object-cover opacity-45"
             alt="Hero Background"
           />
           <img
             src="/cubanextherophone.png"
-            className="block sm:hidden w-full h-full center object-cover opacity-38"
+            className="block sm:hidden w-full h-full center object-cover opacity-45"
             alt="Hero Background"
           />
         </div>
@@ -91,58 +92,160 @@ export default function Home() {
             </div>
           </div>
           <div className="py-8 flex justify-center">
-            <img
-              src="./belowbuton.png"
-              alt=""
-              className="w-[25px] sm:w-[32px] mx-auto soft-bounce drop-shadow-lg opacity-90"
-            />
+            <a href="#fourPoint">
+              <img
+                src="./belowbuton.png"
+                alt=""
+                className="w-[25px] sm:w-[32px] mx-auto soft-bounce drop-shadow-lg opacity-90"
+              />
+            </a>
           </div>
         </div>
       </section>
 
       {/* ================= WHY CUBANEX ================= */}
-      <section className="py-20 bg-black px-6">
+      <section id="fourPoint" className=" pb-20 sm:py-20 bg-[#000] px-6">
+        <div className="flex items-center justify-center gap-4 sm:gap-6 pb-[60px]">
+          <div className="lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
+            <img src="./1B+.png" alt="" className="w-[45px] sm:w-auto" />
+
+            <p className={`${workSans.className} text-[12px] sm:text-[15px]`}>
+              Suministro total
+            </p>
+          </div>
+          <div className=" lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
+            <img src="./40.png" alt="" className="w-[60px] sm:w-auto" />
+
+            <p className={`${workSans.className} text-[12px] sm:text-[15px]`}>
+              Preventa{" "}
+            </p>
+          </div>
+          <div className=" lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
+            <img src="./30.png" alt="" className="w-[55px] sm:w-auto" />
+
+            <p className={`${workSans.className} text-[12px] sm:text-[15px]`}>
+              Liquidez{" "}
+            </p>
+          </div>
+          <div className=" lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
+            <img src="./15.png" alt="" className="w-[45px] sm:w-auto" />
+
+            <p className={`${workSans.className} text-[12px] sm:text-[15px]`}>
+              Desarrollo{" "}
+            </p>
+          </div>
+        </div>
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Why CubaNex?</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-12">
-            A sustainable blockchain ecosystem supporting Cuba’s clean energy,
-            transportation modernization, and long-term digital growth.
+          <h2
+            className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1em] mb-6`}
+          >
+            <span className="text-[#FF8F00]"> ¿Por qué</span> CubaNex?
+          </h2>{" "}
+          <p className="text-gray-400 max-w-[500px] mx-auto mb-12">
+            Conectando el patrimonio cultural de Cuba con la tecnología
+            blockchain moderna de manera respetuosa y equilibrada.
           </p>
-
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="p-8 border border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-              <h3 className="text-xl font-semibold mb-3">Green Energy Ready</h3>
-              <p className="text-gray-400 text-sm">
-                Built to support renewable power usage, energy tokenization, and
-                eco-friendly development.
-              </p>
-            </div>
-
-            <div className="p-8 border border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-              <h3 className="text-xl font-semibold mb-3">
-                Future-Proof Digital Economy
+          <div className="grid gap-4 md:grid-cols-4">
+            {/* 1 */}
+            <div className="p-8 border text-start items-start border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <h3 className="text-xl font-semibold mb-3 flex gap-2 items-center">
+                <div className="w-[3px] h-[17px] bg-[#22CCEE]"></div> Rápido
+                como un rayo
               </h3>
               <p className="text-gray-400 text-sm">
-                Powering decentralized applications that contribute to
-                sustainable economic growth.
+                El Surgimiento de Cuba como la Primera Superpotencia Cripto de
+                América Latina
               </p>
             </div>
-
-            <div className="p-8 border border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-              <h3 className="text-xl font-semibold mb-3">
-                Modern Infrastructure
+            {/* 2 */}
+            <div className="p-8 border text-start items-start border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <h3 className="text-xl font-semibold mb-3 flex gap-2 items-center">
+                <div className="w-[3px] h-[17px] bg-[#22CCEE]"></div> Seguro y
+                auditado
               </h3>
               <p className="text-gray-400 text-sm">
-                Developed to support mobility, transport upgrades, and
-                data-integrated infrastructure.
+                CubaNex une la profundidad cultural de Cuba con la ola creciente
+                de innovación digital — posicionando a la nación hacia el
+                liderazgo global en esta nueva era descentralizada.
               </p>
             </div>
+            {/* 3 */}
+            <div className="p-8 border text-start items-start border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <h3 className="text-xl font-semibold mb-3 flex gap-2 items-center">
+                <div className="w-[3px] h-[17px] bg-[#FF754B]"></div> Ecológico
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Introduce un nuevo lenguaje financiero a través de blockchain e
+                inteligencia artificial — diseñado para avanzar con alineación,
+                claridad y propósito.
+              </p>
+            </div>
+            {/* 4 */}
+            <div className="p-8 border text-start items-start border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <h3 className="text-xl font-semibold mb-3 flex gap-2 items-center">
+                <div className="w-[3px] h-[17px] bg-[#9945FF]"></div>Utilidad
+                real
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Este es el momento en que Cuba lidera a América Latina hacia una
+                nueva realidad financiera. Un código nacido de la consciencia
+                colectiva, creado para evolucionar con quienes se alinean
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-[1300px] mx-auto sm:flex items-center justify-between gap-8 pt-20 lg:pt-40 pb-20 ">
+          <div className="">
+            <h2
+              className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+            >
+              De La <span className="text-[#7928D2]"> Habana</span> a la
+              <span className="text-[#FF8F00]"> Blockchain</span>
+            </h2>{" "}
+            <div
+              className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[16px] text-gray-300   mb-8`}
+            >
+              <p className="pb-2">
+                {" "}
+                CubaNex está moldeado por la creatividad de la isla y la
+                claridad de las herramientas digitales modernas. Surge como un
+                activo digital con propósito, para quienes se alinean con su
+                visión.
+              </p>
+
+              <p className="pb-2">
+                {" "}
+                Al unir la identidad cultural con nuevas tecnologías, CubaNex
+                crea un espacio de participación donde el espíritu cubano se
+                conecta con la innovación global.
+              </p>
+              <p className="pb-2">
+                {" "}
+                La visión incluye integraciones con IA, modelos sostenibles y
+                futuras herramientas Web3 — desarrolladas con intención y
+                enfoque.
+              </p>
+              <p>
+                CubaNex abre un camino digital moderno para quienes están listos
+                para explorar nuevas posibilidades — construyendo un puente
+                entre la tradición y la tecnología.
+              </p>
+            </div>
+          </div>
+          <div className="">
+            <Image
+              src={"/hero-havana-CDeUqYMJ.png"}
+              alt="from havana to blockchain"
+              width={600}
+              height={500}
+            />
           </div>
         </div>
       </section>
 
       {/* ================= COMMUNITY SECTION ================= */}
-      <section className="py-24 bg-black px-6">
+      <section className="py-24 bg-[#061123] px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4">
             Connect With Our Global Community
