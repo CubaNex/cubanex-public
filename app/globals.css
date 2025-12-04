@@ -41,3 +41,8 @@ body:has(.coming-soon) .Footer {
 .smooth-pulse {
   animation: smoothPulse 1.6s ease-in-out infinite;
 }
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0px #00e5ff55; }
+  50% { box-shadow: 0 0 20px #00e5ffcc; }
+  100% { box-shadow: 0 0 0px #00e5ff55; }
+}

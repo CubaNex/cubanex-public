@@ -3,6 +3,10 @@ import { ArrowRight } from "lucide-react";
 import { Work_Sans, Orbitron } from "next/font/google";
 import { main } from "framer-motion/client";
 import Image from "next/image";
+import ConnectWallet from "@/components/ConnectWallet";
+import RoeadMapEn from "@/components/RoeadMapEn";
+import VipForm from "@/components/VipForm";
+import WhitePaper from "@/components/WhitePaper";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -244,55 +248,318 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= COMMUNITY SECTION ================= */}
-      <section className="py-24 bg-[#061123] px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4">
-            Connect With Our Global Community
-          </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-12">
-            Stay updated with the latest developments, ecosystem tools, and
-            collaborative opportunities.
-          </p>
+      {/* ================= tokenomics ================= */}
 
-          <div className="flex justify-center gap-6 flex-wrap">
-            <a
-              href="#"
-              className="px-6 py-3 border border-gray-700 rounded-xl hover:bg-white hover:text-black transition"
-            >
-              Join Community
-            </a>
-            <a
-              href="#"
-              className="px-6 py-3 bg-white text-black rounded-xl font-semibold hover:bg-gray-200 transition"
-            >
-              Follow Updates
-            </a>
+      <section>
+        <h2
+          className={`${orbitron.className} text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+        >
+          CNEX
+          <span className="text-[#FF8F00]"> Tokenomics</span>
+        </h2>
+        <p
+          className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
+        >
+          A new digital asset built for the Cuban community—CUBANEX brings the
+          CNEX token to life with clear, transparent tokenomics.
+        </p>
+        {/*  */}
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+          {/* TOKEN DISTRIBUTION BOX */}
+          <div className="bg-[#000] border  border-[#9333EA]/40 rounded-xl p-8 shadow-lg">
+            <h2 className={`${orbitron.className} text-white text-2xl mb-6`}>
+              Token Distribution
+            </h2>
+
+            <ul className="space-y-4">
+              <li
+                className={`${workSans.className} flex justify-between text-white/80`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#7f5af0]"></span>
+                  Presale
+                </span>
+                <span className="text-[#7f5af0] font-semibold">40%</span>
+              </li>
+
+              <li
+                className={`${workSans.className} flex justify-between text-white/80`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#ffb800]"></span>
+                  Liquidity
+                </span>
+                <span className="text-[#ffb800] font-semibold">30%</span>
+              </li>
+
+              <li
+                className={`${workSans.className} flex justify-between text-white/80`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#00d1ff]"></span>
+                  Development
+                </span>
+                <span className="text-[#00d1ff] font-semibold">15%</span>
+              </li>
+
+              <li
+                className={`${workSans.className} flex justify-between text-white/80`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#ff4d4d]"></span>
+                  Marketing
+                </span>
+                <span className="text-[#ff4d4d] font-semibold">10%</span>
+              </li>
+
+              <li
+                className={`${workSans.className} flex justify-between text-white/80`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#00ff88]"></span>
+                  Team & Ecosystem
+                </span>
+                <span className="text-[#00ff88] font-semibold">5%</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* KEY FEATURES BOX */}
+          <div className="bg-[#000] border  border-[#9333EA]/40 rounded-xl p-8 shadow-lg">
+            <h2 className={`${orbitron.className} text-white text-2xl mb-6`}>
+              Key Features
+            </h2>
+
+            <div className="space-y-6">
+              {/* Total Supply */}
+              <div className="flex items-center gap-4">
+                {/* <div className="w-12 h-12 rounded-lg bg-[#7f5af0] flex justify-center items-center text-white">
+                  <span className="text-xl">🔢</span>
+                </div> */}
+                <img src="../image20.png" alt="" />
+
+                <div>
+                  <p className={`${workSans.className} text-white font-medium`}>
+                    Total Supply
+                  </p>
+                  <p className={`${workSans.className} text-white/60 text-sm`}>
+                    1,000,000,000 CNEX tokens
+                  </p>
+                </div>
+              </div>
+
+              {/* Smart Contract */}
+              <div className="flex items-center gap-4">
+                {/* <div className="w-12 h-12 rounded-lg bg-[#ffb800] flex justify-center items-center text-white">
+                  <span className="text-xl">📜</span>
+                </div> */}
+                <img src="../image21.png" alt="" />
+
+                <div>
+                  <p className={`${workSans.className} text-white font-medium`}>
+                    Smart Contract
+                  </p>
+                  <p className={`${workSans.className} text-white/60 text-sm`}>
+                    Audited & Verified
+                  </p>
+                </div>
+              </div>
+
+              {/* Real Utility */}
+              <div className="flex items-center gap-4">
+                {/* <div className="w-12 h-12 rounded-lg bg-[#00d1ff] flex justify-center items-center text-white">
+                  <span className="text-xl">🚀</span>
+                </div> */}
+                <img
+                  src="../image 22.png"
+                  alt=""
+                  className="sm:w-[50px] ml-[5px]"
+                />
+                <div>
+                  <p className={`${workSans.className} text-white font-medium`}>
+                    Real Utility
+                  </p>
+                  <p className={`${workSans.className} text-white/60 text-sm`}>
+                    Transportation, Energy & DeFi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* BUTTON */}
+        <div className="flex justify-center mt-10">
+          <button className="px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2]">
+            View Smart Contract
+          </button>
+        </div>
+        {/*  */}
+      </section>
+
+      {/* ================= tokenomics ================= */}
+
+      {/* ================= Road Map ================= */}
+      <section>
+        <h2
+          className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+        >
+          Project
+          <span className="text-[#FF8F00]"> Roadmap</span>
+        </h2>
+        <p
+          className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
+        >
+          A clear plan for advancing Cuba’s digital future.
+        </p>
+
+        <div className="roead map">
+          <RoeadMapEn />
+        </div>
+      </section>
+
+      {/* ================= Road Map ================= */}
+
+      {/* ================= How to Buy CNEX ================= */}
+
+      <section>
+        <h2
+          className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+        >
+          How to
+          <span className="text-[#FF8F00]"> Buy CNEX</span>
+        </h2>
+        <p
+          className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
+        >
+          Join the presale in 4 simple steps
+        </p>
+        <div className="grid max-w-[1300px] mx-auto gap-4 md:grid-cols-4">
+          {/* 1 */}
+          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <img src="../one.png" alt="" className="mx-auto pb-4 w-[55px]" />
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Lightning Fast
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Cuba’s Emergence as the First Crypto Superpower of Latin America
+            </p>
+          </div>
+          {/* 2 */}
+          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <img src="../2.png" alt="" className="mx-auto pb-4 w-[55px]" />
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Lightning Fast
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Cuba’s Emergence as the First Crypto Superpower of Latin America
+            </p>
+          </div>
+          {/* 3 */}
+          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <img src="../3.png" alt="" className="mx-auto pb-4 w-[55px]" />
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Lightning Fast
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Cuba’s Emergence as the First Crypto Superpower of Latin America
+            </p>
+          </div>
+          {/* 4 */}
+          <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <img src="../4.png" alt="" className="mx-auto pb-4 w-[55px]" />
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Lightning Fast
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Cuba’s Emergence as the First Crypto Superpower of Latin America
+            </p>
+          </div>
+        </div>
+        <ConnectWallet />
+      </section>
+      {/* ================= How to Buy CNEX ================= */}
+
+      {/* ================= Unlock VIP Access to CubaNexN ================= */}
+      <section>
+        <h2
+          className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+        >
+          Unlock <span className="text-[#FF8F00]">VIP </span>
+          Access to <span className="text-[#00DED4]">CubaNex</span>
+        </h2>
+        <p
+          className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[550px]  mx-auto mb-8`}
+        >
+          The project moves quietly. Those meant to find it always do.{" "}
+        </p>
+
+        <VipForm />
+        <div className="pt-20 grid max-w-[1100px] mx-auto gap-4 md:grid-cols-3">
+          {/* 1 */}
+
+          {/* 2 */}
+          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <img
+              src="../twitter-1.svg"
+              alt=""
+              className="mx-auto pb-4 w-[55px]"
+            />
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Lightning Fast
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Cuba’s Emergence as the First Crypto Superpower of Latin America
+            </p>
+          </div>
+          {/* 3 */}
+          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <img
+              src="../telegram-1.svg"
+              alt=""
+              className="mx-auto pb-4 w-[55px]"
+            />
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Lightning Fast
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Cuba’s Emergence as the First Crypto Superpower of Latin America
+            </p>
+          </div>
+          {/* 4 */}
+          <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <img
+              src="../message 2.svg"
+              alt=""
+              className="mx-auto pb-4 w-[55px]"
+            />
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Lightning Fast
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Cuba’s Emergence as the First Crypto Superpower of Latin America
+            </p>
           </div>
         </div>
       </section>
+      {/* ================= Unlock VIP Access to CubaNex================= */}
 
       {/* ================= WHITEPAPER SECTION ================= */}
-      <section className="py-24 bg-gradient-to-b from-black to-gray-900 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Whitepaper & Documentation
-          </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-10">
-            Explore our detailed technical documentation, vision, economic
-            structure, and roadmaps that define the future of CubaNex.
-          </p>
-
-          <a
-            href="/CUBANEX-Whitepaper.pdf"
-            className="px-8 py-4 bg-white text-black rounded-xl font-semibold inline-block hover:bg-gray-200 transition"
-          >
-            Download Whitepaper
-          </a>
-        </div>
+      <section className="py-20">
+        <h2
+          className={`${orbitron.className} bg-[#000000] text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
+        >
+          <span className="text-[#FF8F00]">Whitepaper  </span> & Documentation
+        </h2>{" "}
+        <p
+          className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[700px]  mx-auto mb-8`}
+        >
+          Explore the core ideas behind CubaNex with clear, easy-to-read
+          technical and conceptual documents. Learn how CNX is structured, how
+          it works, and the vision guiding its future development.{" "}
+        </p>
+        <WhitePaper />
       </section>
-
-      {/* ================= FOOTER ================= */}
     </main>
   );
 }
