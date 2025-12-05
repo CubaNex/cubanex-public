@@ -27,7 +27,7 @@ const ConnectWallet = () => {
 
   return (
     <div
-      className={`w-full flex justify-center py-16 px-4 ${workSans.variable} ${orbitron.variable}`}
+      className={` w-full flex justify-center py-16 px-5 ${workSans.variable} ${orbitron.variable}`}
     >
       <div className="bg-[#081420] border border-[#0f2334] rounded-xl p-10 w-full max-w-[900px] shadow-xl">
         {/* Title */}
@@ -41,14 +41,14 @@ const ConnectWallet = () => {
         </p>
 
         {/* Wallet Buttons */}
-        <div className="flex justify-center gap-6 mt-10">
+        <div className="flex justify-center gap-3 sm:gap-6 mt-10">
           {/* BUTTON 1 (Gradient) */}
           <button
             className="
-              px-[30px] py-[10px] text-[14px] sm:text-[16px]
+              px-[10px] sm:px-[30px] py-[10px] text-[10px] sm:text-[16px]
               rounded-full text-white font-medium font-[var(--font-work-sans)]
               bg-gradient-to-r from-[#C766EF] via-[#7928D2] to-[#2B0C52]
-              min-w-[180px] text-center
+              min-w-[150px] sm:min-w-[180px] text-center
             "
           >
             MetaMask
@@ -57,12 +57,12 @@ const ConnectWallet = () => {
           {/* BUTTON 2 (Border only → hover fills with gradient) */}
           <button
             className="
-              px-[30px] py-[10px] text-[14px] sm:text-[16px]
+              px-[10px] sm:px-[30px] py-[10px] text-[10px] sm:text-[16px]
               rounded-full font-medium text-white font-[var(--font-work-sans)]
               border border-[#7928D2]
               transition-all duration-300
               hover:bg-gradient-to-r hover:from-[#C766EF] hover:via-[#7928D2] hover:to-[#2B0C52]
-              min-w-[180px] text-center
+              min-w-[150px] sm:min-w-[180px] text-center
             "
           >
             WalletConnect

@@ -80,7 +80,7 @@ export const textContent = {
         "Contrato Inteligente",
         "Informe de Auditoría",
       ],
-      community: ["Twitter", "Telegram", "Mensaje"],
+      community: ["Twitter", "Telegram", "Message"],
       privacy: "Política de Privacidad",
       terms: "Términos del Servicio",
       rights: "© 2025 CubaNex. Todos los derechos reservados.",

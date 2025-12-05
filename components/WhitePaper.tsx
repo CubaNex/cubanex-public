@@ -96,7 +96,7 @@ const WhitePaper = () => {
         {/* SECOND BUTTON - Border then gradient on hover */}
         <button
           className="
-            px-[10px] py-2 text-[12px] sm:text-[18px] sm:px-6 sm:py-3
+            px-[30px] py-2 text-[12px] sm:text-[18px] sm:px-6 sm:py-3
             rounded-full text-white font-medium
             border border-[#7928D2]
             transition-all duration-300

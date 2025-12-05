@@ -82,13 +82,13 @@ export default function Footer() {
                 let src = "";
                 switch (icon.toLowerCase()) {
                   case "twitter":
-                    src = "/twitter 1.svg";
+                    src = "/twitter-1.svg";
                     break;
                   case "telegram":
-                    src = "/telegram 1.svg";
+                    src = "/telegram-1.svg";
                     break;
                   case "message":
-                    src = "/message 1.svg";
+                    src = "/message-1.png";
                     break;
                 }
                 return (

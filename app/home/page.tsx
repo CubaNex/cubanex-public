@@ -108,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* ================= WHY CUBANEX ================= */}
-      <section id="fourPoint" className=" pb-20 sm:py-20 bg-[#000] px-6">
+      <section id="fourPoint" className=" sm:pb-20 sm:py-20 bg-[#000] px-6">
         <div className="flex items-center justify-center gap-4 sm:gap-6 pb-[60px]">
           <div className="lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
             <img src="./1B+.png" alt="" className="w-[45px] sm:w-auto" />
@@ -252,23 +252,23 @@ export default function Home() {
 
       <section>
         <h2
-          className={`${orbitron.className} text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          className={`${orbitron.className} px-4 sm:px-0 text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
           CNEX
-          <span className="text-[#FF8F00]"> Tokenomics</span>
+          <span className="text-[#FF8F00]">  Economía del token</span>
         </h2>
         <p
-          className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
+          className={`${workSans.className} px-4 sm:px-0 text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
         >
-          A new digital asset built for the Cuban community—CUBANEX brings the
-          CNEX token to life with clear, transparent tokenomics.
+          Un nuevo activo digital creado para la comunidad cubana — CUBANEX da
+          vida al token CNEX con una tokenomía clara y transparente.
         </p>
         {/*  */}
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* TOKEN DISTRIBUTION BOX */}
           <div className="bg-[#000] border  border-[#9333EA]/40 rounded-xl p-8 shadow-lg">
             <h2 className={`${orbitron.className} text-white text-2xl mb-6`}>
-              Token Distribution
+              Distribución de tokens{" "}
             </h2>
 
             <ul className="space-y-4">
@@ -327,7 +327,7 @@ export default function Home() {
           {/* KEY FEATURES BOX */}
           <div className="bg-[#000] border  border-[#9333EA]/40 rounded-xl p-8 shadow-lg">
             <h2 className={`${orbitron.className} text-white text-2xl mb-6`}>
-              Key Features
+              Características clave{" "}
             </h2>
 
             <div className="space-y-6">
@@ -336,8 +336,7 @@ export default function Home() {
                 {/* <div className="w-12 h-12 rounded-lg bg-[#7f5af0] flex justify-center items-center text-white">
                   <span className="text-xl">🔢</span>
                 </div> */}
-                <img src="../image20.png" alt="" />
-
+                <Image src={"/image20.png"} alt="icon" width={60} height={50} />
                 <div>
                   <p className={`${workSans.className} text-white font-medium`}>
                     Total Supply
@@ -353,7 +352,7 @@ export default function Home() {
                 {/* <div className="w-12 h-12 rounded-lg bg-[#ffb800] flex justify-center items-center text-white">
                   <span className="text-xl">📜</span>
                 </div> */}
-                <img src="../image21.png" alt="" />
+                <Image src={"/image21.png"} alt="icon" width={60} height={50} />
 
                 <div>
                   <p className={`${workSans.className} text-white font-medium`}>
@@ -370,11 +369,15 @@ export default function Home() {
                 {/* <div className="w-12 h-12 rounded-lg bg-[#00d1ff] flex justify-center items-center text-white">
                   <span className="text-xl">🚀</span>
                 </div> */}
-                <img
-                  src="../image 22.png"
-                  alt=""
-                  className="sm:w-[50px] ml-[5px]"
+
+                <Image
+                  src={"/image22.png"}
+                  className="ml-[6px]"
+                  alt="icon"
+                  width={55}
+                  height={50}
                 />
+
                 <div>
                   <p className={`${workSans.className} text-white font-medium`}>
                     Real Utility
@@ -390,8 +393,8 @@ export default function Home() {
 
         {/* BUTTON */}
         <div className="flex justify-center mt-10">
-          <button className="px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2]">
-            View Smart Contract
+          <button className="px-[20px] py-3 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2]">
+            Ver Smart Contract{" "}
           </button>
         </div>
         {/*  */}
@@ -400,20 +403,20 @@ export default function Home() {
       {/* ================= tokenomics ================= */}
 
       {/* ================= Road Map ================= */}
-      <section>
+      <section className="px-4 sm:px-0">
         <h2
-          className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          className={`${orbitron.className}  text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
-          Project
-          <span className="text-[#FF8F00]"> Roadmap</span>
+          Hoja de ruta del
+          <span className="text-[#FF8F00]"> proyecto</span>
         </h2>
         <p
           className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
         >
-          A clear plan for advancing Cuba’s digital future.
+          Un plan claro para avanzar el futuro digital de Cuba.{" "}
         </p>
 
-        <div className="roead map">
+        <div className="roead map px-8 sm:px-0">
           <RoeadMapEn />
         </div>
       </section>
@@ -426,53 +429,53 @@ export default function Home() {
         <h2
           className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
-          How to
-          <span className="text-[#FF8F00]"> Buy CNEX</span>
+          Cómo comprar
+          <span className="text-[#FF8F00]"> CNEX</span>
         </h2>
         <p
           className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
         >
-          Join the presale in 4 simple steps
+          Únete a la preventa en 4 sencillos pasos{" "}
         </p>
-        <div className="grid max-w-[1300px] mx-auto gap-4 md:grid-cols-4">
+        <div className="px-8 grid max-w-[1300px] mx-auto gap-6 sm:gap-5 md:grid-cols-4">
           {/* 1 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <img src="../one.png" alt="" className="mx-auto pb-4 w-[55px]" />
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Obtén una cartera{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Descarga MetaMask o tu cartera Web3 preferida
             </p>
           </div>
           {/* 2 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <img src="../2.png" alt="" className="mx-auto pb-4 w-[55px]" />
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Agregar fondos{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Compra ETH o BNB y envíalos a tu cartera{" "}
             </p>
           </div>
           {/* 3 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <img src="../3.png" alt="" className="mx-auto pb-4 w-[55px]" />
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Conectar cartera{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Conecta tu cartera a la plataforma de preventa de CubaNex{" "}
             </p>
           </div>
           {/* 4 */}
           <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <img src="../4.png" alt="" className="mx-auto pb-4 w-[55px]" />
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Comprar CNEX{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Intercambia tu ETH/BNB por tokens CNEX al instante{" "}
             </p>
           </div>
         </div>
@@ -485,78 +488,94 @@ export default function Home() {
         <h2
           className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
-          Unlock <span className="text-[#FF8F00]">VIP </span>
-          Access to <span className="text-[#00DED4]">CubaNex</span>
+          Obtén acceso <span className="text-[#FF8F00]">VIP </span>a{" "}
+          <span className="text-[#00DED4]">CubaNex</span>
         </h2>
+
         <p
-          className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[550px]  mx-auto mb-8`}
+          className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[550px] mx-auto mb-8`}
         >
-          The project moves quietly. Those meant to find it always do.{" "}
+          El proyecto avanza en silencio. Quienes están destinados a
+          encontrarlo, siempre lo hacen.
         </p>
 
         <VipForm />
-        <div className="pt-20 grid max-w-[1100px] mx-auto gap-4 md:grid-cols-3">
-          {/* 1 */}
 
-          {/* 2 */}
-          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+        <div className="px-8 pt-20 grid max-w-[1100px] mx-auto gap-4 md:grid-cols-3">
+          {/* 1 — Twitter */}
+          <div className="p-8 border text-center items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <img
-              src="../twitter-1.svg"
+              src="/twitter-1.svg"
               alt=""
               className="mx-auto pb-4 w-[55px]"
             />
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Twitter/X
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Síguenos para obtener actualizaciones y anuncios en tiempo real.
+              <br />
+              Seguir @CubaNex
             </p>
           </div>
-          {/* 3 */}
-          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img
-              src="../telegram-1.svg"
-              alt=""
+
+          {/* 2 — Telegram */}
+          <div className="p-8 border text-center items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <Image
+              src="/telegram-1.svg"
+              alt="telegram"
+              width={60}
+              height={60}
               className="mx-auto pb-4 w-[55px]"
             />
+
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Telegram
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Únete a nuestra comunidad activa y charla con los miembros del
+              equipo.
+              <br />
+              Unirse Telegram
             </p>
           </div>
-          {/* 4 */}
-          <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img
-              src="../message 2.svg"
-              alt=""
+
+          {/* 3 — Discord */}
+          <div className="p-8 border text-center items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <Image
+              src="/message-2.svg"
+              alt="discord"
+              width={60}
+              height={60}
               className="mx-auto pb-4 w-[55px]"
             />
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Discord
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Conéctate con los holders y participa en la gobernanza.
+              <br />
+              Unirse Discord
             </p>
           </div>
         </div>
       </section>
-      {/* ================= Unlock VIP Access to CubaNex================= */}
 
-      {/* ================= WHITEPAPER SECTION ================= */}
-      <section className="py-20">
+      {/* ================= Unlock VIP Access to CubaNexN ================= */}
+
+      <section className="px-5 py-20">
         <h2
-          className={`${orbitron.className} bg-[#000000] text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
+          className={`${orbitron.className} bg-[#000000] text-center text-[28px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
         >
-          <span className="text-[#FF8F00]">Whitepaper  </span> & Documentation
+          <span className="text-[#FF8F00]">Whitepaper </span>y Documentación
         </h2>{" "}
         <p
           className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[700px]  mx-auto mb-8`}
         >
-          Explore the core ideas behind CubaNex with clear, easy-to-read
-          technical and conceptual documents. Learn how CNX is structured, how
-          it works, and the vision guiding its future development.{" "}
+          Explora las ideas principales detrás de CubaNex con documentos
+          técnicos y conceptuales claros y fáciles de leer. Aprende cómo está
+          estructurado CNEX, cómo funciona y la visión que guía su desarrollo
+          futuro.
         </p>
         <WhitePaper />
       </section>

@@ -66,7 +66,7 @@ const VipForm = () => {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 w-full px-5 py-3 sm:py-4 rounded-full bg-transparent border border-[#14F195]/10 text-white placeholder-gray-500 outline-none focus:ring-2 focus:ring-[#14F195]/40 transition"
+            className="flex-1 w-full px-5 py-3 sm:py-4 rounded-full bg-transparent border border-[#14F195]/10 text-white placeholder-gray-500 outline-none focus:ring-2 focus:ring-[#14F195]/40 "
             required
           />
           <button
