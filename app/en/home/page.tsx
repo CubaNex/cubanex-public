@@ -250,13 +250,13 @@ export default function Home() {
 
       <section>
         <h2
-          className={`${orbitron.className} text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          className={`${orbitron.className} px-4 sm:px-0 text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
           CNEX
           <span className="text-[#FF8F00]"> Tokenomics</span>
         </h2>
         <p
-          className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
+          className={`${workSans.className} px-4 sm:px-0 text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
         >
           A new digital asset built for the Cuban community—CUBANEX brings the
           CNEX token to life with clear, transparent tokenomics.
@@ -388,7 +388,7 @@ export default function Home() {
 
         {/* BUTTON */}
         <div className="flex justify-center mt-10">
-          <button className="px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2]">
+          <button className="px-[30px] py-3 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2]">
             View Smart Contract
           </button>
         </div>
@@ -411,7 +411,7 @@ export default function Home() {
           A clear plan for advancing Cuba’s digital future.
         </p>
 
-        <div className="roead map">
+        <div className="roead map px-12">
           <RoeadMapEn />
         </div>
       </section>
@@ -432,7 +432,7 @@ export default function Home() {
         >
           Join the presale in 4 simple steps
         </p>
-        <div className="grid max-w-[1300px] mx-auto gap-4 md:grid-cols-4">
+        <div className="px-6 grid max-w-[1300px] mx-auto gap-8 md:grid-cols-4">
           {/* 1 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <img src="../one.png" alt="" className="mx-auto pb-4 w-[55px]" />
@@ -493,7 +493,7 @@ export default function Home() {
         </p>
 
         <VipForm />
-        <div className="pt-20 grid max-w-[1100px] mx-auto gap-4 md:grid-cols-3">
+        <div className="px-6 pt-20 grid max-w-[1100px] mx-auto gap-8 md:grid-cols-3">
           {/* 1 */}
 
           {/* 2 */}
@@ -543,7 +543,7 @@ export default function Home() {
       {/* ================= Unlock VIP Access to CubaNex================= */}
 
       {/* ================= WHITEPAPER SECTION ================= */}
-      <section className="py-20">
+      <section className="px-5 py-20">
         <h2
           className={`${orbitron.className} bg-[#000000] text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
         >
