@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <main className="bg-black  text-white min-h-auto sm:min-h-screen w-full overflow-x-hidden">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative py-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
+      <section className="overflow-hidden z-20 relative py-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
         <div className="absolute bg-[#000] inset-0 z-0">
           <img
             src="/cubanexthero.png"
@@ -109,8 +109,20 @@ export default function Home() {
       </section>
 
       {/* ================= WHY CUBANEX ================= */}
-      <section id="fourPoint" className=" pb-20 sm:py-20 bg-[#000] px-6">
-        <div className="flex items-center justify-center gap-4 sm:gap-6 pb-[60px]">
+      <section
+        id="fourPoint"
+        className="relative pb-20 z-10   sm:py-20 bg-[#000] px-6"
+      >
+        {/* 4 s*/}
+        <div className="absolute w-full h-full sm:h-auto bg-[#000] top-0 z-1">
+          <img
+            src="/shapbg.png"
+            className=" w-full h-full mt-[-100px] center z-10  object-cover "
+            alt="Hero Background"
+          />
+        </div>
+
+        <div className="relative z-10 flex items-center justify-center gap-4 sm:gap-6 pb-[60px]">
           <div className="lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
             <img src="../1B+.png" alt="" className="w-[45px] sm:w-auto" />
 
@@ -140,7 +152,10 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="max-w-6xl mx-auto text-center">
+        {/* 4 s*/}
+
+        {/* why cubanex? start  */}
+        <div className="px- relative z-10 max-w-6xl mx-auto text-center">
           <h2
             className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1em] mb-6`}
           >
@@ -198,53 +213,57 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* why cubanex? start end  */}
 
-        <div className="max-w-[1300px] mx-auto sm:flex items-center justify-between gap-8 pt-20 lg:pt-40 pb-20 ">
-          <div className="">
-            <h2
-              className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
-            >
-              From <span className="text-[#7928D2]"> Havana</span> to the
-              <span className="text-[#FF8F00]"> Blockchain</span>
-            </h2>{" "}
-            <div
-              className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[16px] text-gray-300   mb-8`}
-            >
-              <p className="pb-2">
-                {" "}
-                CubaNex is shaped by the creativity of the island and the
-                clarity of modern digital tools. It emerges as a meaningful
-                digital asset for those aligned with its vision.
-              </p>
+        {/* from havana to blockchain s*/}
 
-              <p className="pb-2">
-                {" "}
-                By blending cultural identity with new technology, CubaNex
-                creates a space for participation — where the Cuban spirit
-                connects with global innovation.
-              </p>
-              <p className="pb-2">
-                {" "}
-                The vision includes integrations with AI, sustainable models,
-                and future Web3 tools — developed with intention and focus
-              </p>
-              <p>
-                CubaNex opens a digital path for those ready to explore new
-                possibilities — building a bridge between tradition and
-                technology.
-              </p>
-            </div>
-          </div>
-          <div className="">
-            <Image
-              src={"/hero-havana-CDeUqYMJ.png"}
-              alt="from havana to blockchain"
-              width={600}
-              height={500}
-            />
+        {/* from havana to blockchain s*/}
+      </section>
+      <div className=" relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-8 sm:pb-20 ">
+        <div className="">
+          <h2
+            className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          >
+            From <span className="text-[#7928D2]"> Havana</span> to the
+            <span className="text-[#FF8F00]"> Blockchain</span>
+          </h2>{" "}
+          <div
+            className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[16px] text-gray-300   mb-8`}
+          >
+            <p className="pb-2">
+              {" "}
+              CubaNex is shaped by the creativity of the island and the clarity
+              of modern digital tools. It emerges as a meaningful digital asset
+              for those aligned with its vision.
+            </p>
+
+            <p className="pb-2">
+              {" "}
+              By blending cultural identity with new technology, CubaNex creates
+              a space for participation — where the Cuban spirit connects with
+              global innovation.
+            </p>
+            <p className="pb-2">
+              {" "}
+              The vision includes integrations with AI, sustainable models, and
+              future Web3 tools — developed with intention and focus
+            </p>
+            <p>
+              CubaNex opens a digital path for those ready to explore new
+              possibilities — building a bridge between tradition and
+              technology.
+            </p>
           </div>
         </div>
-      </section>
+        <div className="">
+          <Image
+            src={"/hero-havana-CDeUqYMJ.png"}
+            alt="from havana to blockchain"
+            width={600}
+            height={500}
+          />
+        </div>
+      </div>
 
       {/* ================= tokenomics ================= */}
 
@@ -435,42 +454,66 @@ export default function Home() {
         <div className="px-6 grid max-w-[1300px] mx-auto gap-8 md:grid-cols-4">
           {/* 1 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img src="../one.png" alt="" className="mx-auto pb-4 w-[55px]" />
+            <Image
+              src={"/one.png"}
+              width={50}
+              height={50}
+              alt="icon discord"
+              className="mx-auto pb-4 w-[55px]"
+            />
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Get a Wallet{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Download MetaMask or your preferred Web3 wallet{" "}
             </p>
           </div>
           {/* 2 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img src="../2.png" alt="" className="mx-auto pb-4 w-[55px]" />
+            <Image
+              src={"/2.png"}
+              width={50}
+              height={50}
+              alt="icon discord"
+              className="mx-auto pb-4 w-[55px]"
+            />{" "}
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Add Funds{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Purchase ETH or BNB and send to your wallet{" "}
             </p>
           </div>
           {/* 3 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img src="../3.png" alt="" className="mx-auto pb-4 w-[55px]" />
+            <Image
+              src={"/3.png"}
+              width={50}
+              height={50}
+              alt="icon discord"
+              className="mx-auto pb-4 w-[55px]"
+            />
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Connect Wallet{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Connect your wallet to the CubaNex presale platform{" "}
             </p>
           </div>
           {/* 4 */}
           <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img src="../4.png" alt="" className="mx-auto pb-4 w-[55px]" />
+            <Image
+              src={"/4.png"}
+              width={50}
+              height={50}
+              alt="icon discord"
+              className="mx-auto pb-4 w-[55px]"
+            />
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Buy CNEX{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Swap your ETH/BNB for CNX tokens instantly{" "}
             </p>
           </div>
         </div>
@@ -479,7 +522,7 @@ export default function Home() {
       {/* ================= How to Buy CNEX ================= */}
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
-      <section>
+      <section className="relative pb-20 sm:py-20 px-6 z-10 b bg-section">
         <h2
           className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
@@ -498,44 +541,57 @@ export default function Home() {
 
           {/* 2 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img
-              src="../twitter-1.svg"
-              alt=""
+            <Image
+              src={"/twitter-1.svg"}
+              width={50}
+              height={50}
+              alt="icon discord"
               className="mx-auto pb-4 w-[55px]"
             />
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Twitter/X
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Follow us for real-time updates and announcements
+              <br />
+              <br />
+              Follow @CubaNex
             </p>
           </div>
           {/* 3 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img
-              src="../telegram-1.svg"
-              alt=""
+            <Image
+              src={"/telegram-1.svg"}
+              width={50}
+              height={50}
+              alt="icon discord"
               className="mx-auto pb-4 w-[55px]"
             />
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Telegram{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Join our active community and chat with team members <br />
+              <br />
+              Join Telegram{" "}
             </p>
           </div>
           {/* 4 */}
           <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img
-              src="../message 2.svg"
-              alt=""
+            <Image
+              src={"/message-new.svg"}
+              width={50}
+              height={50}
+              alt="icon discord"
               className="mx-auto pb-4 w-[55px]"
             />
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Lightning Fast
+              Discord{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Cuba’s Emergence as the First Crypto Superpower of Latin America
+              Connect with holders and participate in governance <br />
+              <br />
+              Join Discord{" "}
             </p>
           </div>
         </div>

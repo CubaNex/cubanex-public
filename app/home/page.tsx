@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <main className="bg-black  text-white min-h-auto sm:min-h-screen w-full overflow-x-hidden">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative py-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
+      <section className="overflow-hidden z-20   relative py-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
         <div className="absolute bg-[#000] inset-0 z-0">
           <img
             src="/cubanexthero.png"
@@ -108,8 +108,18 @@ export default function Home() {
       </section>
 
       {/* ================= WHY CUBANEX ================= */}
-      <section id="fourPoint" className=" sm:pb-20 sm:py-20 bg-[#000] px-6">
-        <div className="flex items-center justify-center gap-4 sm:gap-6 pb-[60px]">
+      <section
+        id="fourPoint"
+        className=" relative pb-20 z-10   sm:py-20 bg-[#000] px-6"
+      >
+        <div className="absolute w-full h-full sm:h-auto bg-[#000] top-0 z-1">
+          <img
+            src="/shapbg.png"
+            className=" w-full h-full mt-[-100px] center z-10  object-cover "
+            alt="Hero Background"
+          />
+        </div>
+        <div className="relative z-10  flex items-center justify-center gap-4 sm:gap-6 pb-[60px]">
           <div className="lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
             <img src="./1B+.png" alt="" className="w-[45px] sm:w-auto" />
 
@@ -139,7 +149,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="relative z-10  max-w-6xl mx-auto text-center">
           <h2
             className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1em] mb-6`}
           >
@@ -198,55 +208,52 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+      <div className="relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-8 sm:pb-20 ">
+        <div className="">
+          <h2
+            className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          >
+            De La <span className="text-[#7928D2]"> Habana</span> a la
+            <span className="text-[#FF8F00]"> Blockchain</span>
+          </h2>{" "}
+          <div
+            className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[16px] text-gray-300   mb-8`}
+          >
+            <p className="pb-2">
+              {" "}
+              CubaNex está moldeado por la creatividad de la isla y la claridad
+              de las herramientas digitales modernas. Surge como un activo
+              digital con propósito, para quienes se alinean con su visión.
+            </p>
 
-        <div className="max-w-[1300px] mx-auto sm:flex items-center justify-between gap-8 pt-20 lg:pt-40 pb-20 ">
-          <div className="">
-            <h2
-              className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
-            >
-              De La <span className="text-[#7928D2]"> Habana</span> a la
-              <span className="text-[#FF8F00]"> Blockchain</span>
-            </h2>{" "}
-            <div
-              className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[16px] text-gray-300   mb-8`}
-            >
-              <p className="pb-2">
-                {" "}
-                CubaNex está moldeado por la creatividad de la isla y la
-                claridad de las herramientas digitales modernas. Surge como un
-                activo digital con propósito, para quienes se alinean con su
-                visión.
-              </p>
-
-              <p className="pb-2">
-                {" "}
-                Al unir la identidad cultural con nuevas tecnologías, CubaNex
-                crea un espacio de participación donde el espíritu cubano se
-                conecta con la innovación global.
-              </p>
-              <p className="pb-2">
-                {" "}
-                La visión incluye integraciones con IA, modelos sostenibles y
-                futuras herramientas Web3 — desarrolladas con intención y
-                enfoque.
-              </p>
-              <p>
-                CubaNex abre un camino digital moderno para quienes están listos
-                para explorar nuevas posibilidades — construyendo un puente
-                entre la tradición y la tecnología.
-              </p>
-            </div>
-          </div>
-          <div className="">
-            <Image
-              src={"/hero-havana-CDeUqYMJ.png"}
-              alt="from havana to blockchain"
-              width={600}
-              height={500}
-            />
+            <p className="pb-2">
+              {" "}
+              Al unir la identidad cultural con nuevas tecnologías, CubaNex crea
+              un espacio de participación donde el espíritu cubano se conecta
+              con la innovación global.
+            </p>
+            <p className="pb-2">
+              {" "}
+              La visión incluye integraciones con IA, modelos sostenibles y
+              futuras herramientas Web3 — desarrolladas con intención y enfoque.
+            </p>
+            <p>
+              CubaNex abre un camino digital moderno para quienes están listos
+              para explorar nuevas posibilidades — construyendo un puente entre
+              la tradición y la tecnología.
+            </p>
           </div>
         </div>
-      </section>
+        <div className="">
+          <Image
+            src={"/hero-havana-CDeUqYMJ.png"}
+            alt="from havana to blockchain"
+            width={600}
+            height={500}
+          />
+        </div>
+      </div>
 
       {/* ================= tokenomics ================= */}
 
@@ -484,7 +491,7 @@ export default function Home() {
       {/* ================= How to Buy CNEX ================= */}
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
-      <section>
+      <section className="relative pb-20 sm:py-20 px-6 z-10 b bg-section">
         <h2
           className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >

@@ -10,7 +10,7 @@ export const textContent = {
     // -----------------------
     footer: {
       brandText:
-        "Empowering Cuba's sustainable Web3 revolution through blockchain innovation.",
+        "Driving sustainable Web3 development in Cuba through blockchain solutions.",
       quickLinks: ["Home", "About", "Tokenomics"],
       resources: ["Whitepaper", "Smart Contract", "Audit Report"],
       community: ["Twitter", "Telegram", "Message"],
@@ -73,7 +73,7 @@ export const textContent = {
     // -----------------------
     footer: {
       brandText:
-        "Impulsando la revolución Web3 sostenible de Cuba a través de la innovación blockchain.",
+        "Impulsando el desarrollo sostenible de Web3 en Cuba mediante soluciones blockchain.",
       quickLinks: ["Inicio", "Acerca de", "Economía del token"],
       resources: [
         "Libro Blanco",
