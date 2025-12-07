@@ -64,6 +64,27 @@ body:has(.coming-soon) .Footer {
   background-position: center;
   background-repeat: no-repeat;
 }
+.cmbg {
+  background-image: url('/abheroShape.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.cmf {
+  background-image: url('/communityf.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1200px;
+  background-color: #0b111b; /* moved here */
+}
+.tockenomicBg {
+  background-image: url('/abheroShape.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* For mobile devices */
 @media (max-width: 768px) {
   .bg-section {
@@ -76,6 +97,12 @@ body:has(.coming-soon) .Footer {
   background-image: url('/abheroshapephone.svg');
   background-size: contain;
   background-position: top;
+  background-repeat: no-repeat;
+}
+.cmbg {
+  background-image: url('/abheroshapephone.svg');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 }
