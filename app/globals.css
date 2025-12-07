@@ -58,7 +58,12 @@ body:has(.coming-soon) .Footer {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.abhBg {
+  background-image: url('/abheroShape.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* For mobile devices */
 @media (max-width: 768px) {
   .bg-section {
@@ -67,4 +72,10 @@ body:has(.coming-soon) .Footer {
   background-position: center;
   background-repeat: no-repeat;
   }
+  .abhBg {
+  background-image: url('/abheroshapephone.svg');
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
 }

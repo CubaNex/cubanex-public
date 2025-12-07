@@ -19,18 +19,18 @@ const page = () => {
         <h1
           className={`${orbitron.className} text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-6`}
         >
-          De <span className="text-[#00DED4]"> La Habana</span>a la
-          <span className="text-[#FFB74A]"> Blockchain</span>
+          From <span className="text-[#00DED4]"> Havana</span>
+          to the
+          <span className="text-[#FFB74A]">  Blockchain</span>
         </h1>
 
         <p
-          className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto mb-8`}
+          className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300   mx-auto mb-8`}
         >
-          CubaNex representa más que una criptomoneda—es un puente entre el
-          vibrante pasado de Cuba y su futuro innovador, impulsado por la
-          tecnología blockchain y una visión sostenible.
+          CubaNex represents more than cryptocurrency—it's a bridge between
+          Cuba's vibrant past and its innovative future, powered by blockchain
+          technology and sustainable vision.
         </p>
-
         <div className="max-w-[800px] mx-auto rounded-[12px] bg-[#030E1C] border border-[#1F2E47] p-6 sm:p-[50px] ">
           <h2
             className={`${orbitron.className} text-[26px] sm:text-[32px] max-w-[800px]  text-[#fff] font-semibold leading-[1.2em] mb-6`}
