@@ -19,11 +19,11 @@ export default function Footer() {
             <div className="flex items-center mb-4">
               <Link href={language === "eng" ? "/en" : "/"}>
                 <Image
-                  src="/logo-cubanex.png"
+                  src="/new-logo-tr.png"
                   alt="Cubanex Logo"
-                  width={320}
+                  width={220}
                   height={40}
-                  className="object-contain ml-[-20px]"
+                  className="object-contain "
                 />
               </Link>
             </div>

@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
   return (
     <>
       {/* HEADER */}
-      <header className="Header w-full bg-[#1A1A20] font-[var(--font-work-sans)] shadow-lg fixed top-0 left-0 z-[1000]">
+      <header className="Header w-full bg-[#000] font-[var(--font-work-sans)] shadow-lg fixed top-0 left-0 z-[1000]">
         <motion.div
           variants={textVariant2}
           initial="hidden"
@@ -68,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
           {/* Logo */}
           <Link href={language === "eng" ? "/en" : "/"}>
             <Image
-              src="/logo-cubanex.png"
+              src="/cubanex-logo.png"
               alt="Cubanex Logo"
               width={220}
               height={40}

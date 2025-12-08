@@ -33,15 +33,15 @@ const page = () => {
         </div>
         <Image
           alt="log"
-          src={"/favico-2.png"}
-          width={500}
+          src={"/community_logo.png"}
+          width={400}
           height={500}
           className="hidden sm:block"
         />
         <Image
           alt="log"
-          src={"/favico-2.png"}
-          width={200}
+          src={"/community_logo.png"}
+          width={150}
           height={200}
           className="block mx-auto sm:hidden"
         />
