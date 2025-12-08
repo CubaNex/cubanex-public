@@ -61,7 +61,7 @@ body:has(.coming-soon) .Footer {
 .abhBg {
   background-image: url('/abheroShape.svg');
   background-size: contain;
-  background-position: center;
+  background-position: start;
   background-repeat: no-repeat;
 }
 .cmbg {

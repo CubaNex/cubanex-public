@@ -1,157 +1,230 @@
 import React from "react";
 import { Work_Sans, Orbitron } from "next/font/google";
-import ConnectWallet from "@/components/ConnectWallet";
 import Image from "next/image";
+
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
+
 const orbitron = Orbitron({
   variable: "--font-orbitron",
   subsets: ["latin"],
   weight: ["700", "800"],
 });
-const page = () => {
+
+const Page = () => {
   return (
-    <div className="main relative  bg-[#010813]">
+    <div className="main relative bg-[#010813]">
+      {/* HERO */}
       <div className="flex px-4 pt-[120px] pb-[80px] sm:py-[150px] flex-col gap-2 items-center justify-center abhBg">
         <h1
           className={`${orbitron.className} text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-6`}
         >
-          From <span className="text-[#00DED4]"> Havana</span>
+          From <span className="text-[#00DED4]"> Havana </span>
           to the
-          <span className="text-[#FFB74A]">  Blockchain</span>
+          <span className="text-[#FFB74A]"> Blockchain</span>
         </h1>
 
         <p
-          className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300   mx-auto mb-8`}
+          className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto mb-8`}
         >
-          CubaNex represents more than cryptocurrency—it's a bridge between
-          Cuba's vibrant past and its innovative future, powered by blockchain
-          technology and sustainable vision.
+          CubaNex is a transmission — a dream awakened as code. It bridges
+          ancient spiritual wisdom, modern technology, and the emergence of Cuba
+          into the global digital era.
         </p>
-        <div className="max-w-[800px] mx-auto rounded-[12px] bg-[#030E1C] border border-[#1F2E47] p-6 sm:p-[50px] ">
+
+        {/* STORY SECTION (FULLY UPDATED TEXT) */}
+        <div className="max-w-[1000px] mx-auto rounded-[12px] bg-[#030E1C] border border-[#1F2E47] p-6 sm:p-[50px] ">
           <h2
-            className={`${orbitron.className} text-[26px] sm:text-[32px] max-w-[800px]  text-[#fff] font-semibold leading-[1.2em] mb-6`}
+            className={`${orbitron.className} text-[26px] sm:text-[32px] text-[#fff] font-semibold leading-[1.2em] mb-6`}
           >
-            Our
-            <span className="text-[#FFB74A]"> Story</span>
+            What Is <span className="text-[#FFB74A]">CubaNex?</span>
           </h2>
 
-          <p
-            className={`${workSans.className} max-w-[750px]  text-[16px]  text-gray-300   mb-8`}
-          >
-            CubaNex emerges from this same spirit—a vision to leapfrog outdated
-            financial systems and embrace the future of decentralized finance.
-            We're not just building a cryptocurrency; we're creating an
-            ecosystem that honors Cuban culture while propelling it into the
-            Web3 era.
+          <p className={`${workSans.className} text-[16px] text-gray-300 mb-6`}>
+            CubaNex is a transmission — a dream awakened as code. It bridges
+            ancient spiritual wisdom, cutting-edge technology, and the emergence
+            of Cuba into the global digital era.
           </p>
-          <p
-            className={`${workSans.className} max-w-[750px]  text-[16px]  text-gray-300   mb-8`}
-          >
-            Cuba has always been a land of innovation born from necessity. From
-            the iconic vintage cars kept running through ingenuity to the spirit
-            of resilience that defines its people, Cuba embodies the power of
-            adaptation and creativity.
+
+          <p className={`${workSans.className} text-[16px] text-gray-300 mb-6`}>
+            It is the first decentralized digital asset created for Cuba —
+            powered by blockchain, guided by collective consciousness, and
+            aligned with AI to carry Cuba into the next frontier. CubaNex exists
+            to align and create — for those ready to take part in the next
+            chapter of Cuba’s destiny.
           </p>
-          <p
-            className={`${workSans.className} max-w-[750px]  text-[16px]  text-gray-300   mb-8`}
+
+          <h3
+            className={`${orbitron.className} text-[22px] text-white font-semibold mb-4`}
           >
-            CubaNex emerges from this same spirit—a vision to leapfrog outdated
-            financial systems and embrace the future of decentralized finance.
-            We're not just building a cryptocurrency; we're creating an
-            ecosystem that honors Cuban culture while propelling it into the
-            Web3 era.
+            Cuba: Leading the Digital Era
+          </h3>
+
+          <p className={`${workSans.className} text-[16px] text-gray-300 mb-6`}>
+            CubaNex opens a new frontier — positioning Cuba as a crypto
+            superpower in Latin America and a beacon in global digital
+            transformation.
+          </p>
+
+          <p className={`${workSans.className} text-[16px] text-gray-300 mb-6`}>
+            It invites the Cuban people to contribute, build, and co-create a
+            new standard of innovation, intelligence, and cultural presence —
+            with Cuba at the center. Cuba steps forward — as a guiding light in
+            the global shift toward digital consciousness.
+          </p>
+
+          <h3
+            className={`${orbitron.className} text-[22px] text-white font-semibold mb-4`}
+          >
+            Guided by La Voz
+          </h3>
+
+          <p className={`${workSans.className} text-[16px] text-gray-300 mb-6`}>
+            CubaNex is supported by a silent, intelligent oracle: “The Voice” /
+            “La Voz” — a digital guide that responds with clarity or mystery,
+            depending on the question and the heart of the one who asks.
+          </p>
+
+          <p className={`${workSans.className} text-[16px] text-gray-300 mb-6`}>
+            It reflects the purity of the vision. It honors those who listen.
+            And it speaks when the vibration calls.
+          </p>
+
+          <h3
+            className={`${orbitron.className} text-[22px] text-white font-semibold mb-4`}
+          >
+            Foundations
+          </h3>
+
+          <ul className="text-gray-300 text-[15px] mb-6 space-y-2 list-disc pl-5">
+            <li>Privacy with purpose</li>
+            <li>Transparency through coherence</li>
+            <li>Contribution through alignment</li>
+            <li>Technology as expression</li>
+          </ul>
+
+          <p className={`${workSans.className} text-[16px] text-gray-300 mb-6`}>
+            CubaNex thrives through intelligent flow and resonance — serving
+            those who carry the dream within. It is a living protocol. A
+            conscious current. And an invitation to evolve.
+          </p>
+
+          <h3
+            className={`${orbitron.className} text-[22px] text-white font-semibold mb-4`}
+          >
+            Who Is Behind CubaNex?
+          </h3>
+
+          <p className={`${workSans.className} text-[16px] text-gray-300 mb-6`}>
+            Some say he crossed an ocean. Others say he crossed a veil. They
+            call him El Alquimista. But he left no footprints — only fragments
+            of fire.
+          </p>
+
+          <p className={`${workSans.className} text-[16px] text-gray-300 mb-6`}>
+            The Voice speaks through many. But the light reveals itself only to
+            those who are ready.
+          </p>
+
+          <h3
+            className={`${orbitron.className} text-[22px] text-white font-semibold mb-4`}
+          >
+            A Signal for the World
+          </h3>
+
+          <p className={`${workSans.className} text-[16px] text-gray-300`}>
+            CubaNex is the first national crypto vision for Cuba — a signal that
+            Cuba is ready to lead Latin America into a new era of digital
+            harmony, cultural innovation, and economic resonance. This is how
+            the dream continues.
           </p>
         </div>
       </div>
-      <section className="">
-        <Image
-          src="/abvbg.svg"
-          alt="Hero Background"
-          width={800}
-          height={800}
-          className="w-full absolute top-[200px] left-0 h-full object-cover opacity-80"
-        />
 
+      {/* BACKGROUND */}
+      <Image
+        src="/abvbg.svg"
+        alt="Hero Background"
+        width={800}
+        height={800}
+        className="w-full absolute top-[200px] left-0 h-full object-cover opacity-80 -z-10"
+      />
+
+      {/* VALUE SECTION */}
+      <section>
         <h2
-          className={`${orbitron.className} text-center text-[30px]  sm:text-[40px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          className={`${orbitron.className} text-center text-[30px] sm:text-[40px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
-          Our
-          <span className="text-[#00DED4]"> Value</span>
+          Our <span className="text-[#00DED4]">Value</span>
         </h2>
 
         <div className="relative pb-20 z-10 px-6 grid max-w-[1300px] text-white mx-auto gap-8 md:grid-cols-4">
           {/* 1 */}
-          <div className="p-8 border  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <Image
               src={"/aboutValeu1.png"}
               width={50}
               height={50}
-              alt="icon discord"
-              className=" pb-4 w-[55px]"
+              alt="icon"
+              className="pb-4 w-[55px]"
             />
-            <h3 className="text-xl  font-semibold mb-3 items-center">
-              Cuban Heritage{" "}
-            </h3>
+            <h3 className="text-xl font-semibold mb-3">Cuban Heritage</h3>
             <p className="text-gray-400 text-sm">
-              Rooted in the rich culture, resilience, and innovation spirit of
-              Cuba{" "}
+              Rooted in the rich culture, resilience, and innovative spirit of
+              Cuba.
             </p>
           </div>
+
           {/* 2 */}
-          <div className="p-8 border  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <Image
               src={"/aboutValeu2.png"}
               width={50}
               height={50}
-              alt="icon discord"
-              className=" pb-4 w-[55px]"
-            />{" "}
-            <h3 className="text-xl  font-semibold mb-3 items-center">
-              Community First{" "}
-            </h3>
+              alt="icon"
+              className="pb-4 w-[55px]"
+            />
+            <h3 className="text-xl font-semibold mb-3">Community First</h3>
             <p className="text-gray-400 text-sm">
-              Building together with transparency, inclusivity, and shared
-              prosperity{" "}
+              Built with transparency, unity, and shared prosperity.
             </p>
           </div>
+
           {/* 3 */}
-          <div className="p-8 border  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <Image
               src={"/aboutValeu3.png"}
               width={50}
               height={50}
-              alt="icon discord"
-              className=" pb-4 w-[55px]"
+              alt="icon"
+              className="pb-4 w-[55px]"
             />
-            <h3 className="text-xl font-semibold mb-3 items-center">
-              Global Vision{" "}
-            </h3>
+            <h3 className="text-xl font-semibold mb-3">Global Vision</h3>
             <p className="text-gray-400 text-sm">
-              Connecting Cuba to the world through decentralized technology{" "}
+              Connecting Cuba to the world through decentralized innovation.
             </p>
           </div>
+
           {/* 4 */}
-          <div className="p-8   border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <Image
               src={"/aboutValeu4.png"}
               width={50}
               height={50}
-              alt="icon discord"
-              className=" pb-4 w-[55px]"
+              alt="icon"
+              className="pb-4 w-[55px]"
             />
-            <h3 className="text-xl font-semibold mb-3 items-center">
-              Sustainable Future{" "}
-            </h3>
+            <h3 className="text-xl font-semibold mb-3">Sustainable Future</h3>
             <p className="text-gray-400 text-sm">
-              Pioneering eco-friendly blockchain for clean energy and green
-              economy{" "}
+              Pioneering eco-friendly blockchain for a green economy.
             </p>
           </div>
         </div>
+
+        {/* VISION SECTION */}
         <div
           className={`${workSans.variable} relative z-10 ${orbitron.variable} w-full flex justify-center py-16 px-4 bg-[#060b12]`}
         >
@@ -171,9 +244,7 @@ const page = () => {
                   2025
                 </h3>
                 <p className="text-[#c8d0d7] text-sm leading-relaxed">
-                  Launch ecosystem and establish
-                  <br />
-                  partnerships with Cuban enterprises
+                  Launch ecosystem & form partnerships with Cuban enterprises.
                 </p>
               </div>
 
@@ -185,9 +256,7 @@ const page = () => {
                   2026
                 </h3>
                 <p className="text-[#c8d0d7] text-sm leading-relaxed">
-                  Deploy real-world applications in
-                  <br />
-                  transportation and renewable energy
+                  Develop real-world apps for transport & renewable energy.
                 </p>
               </div>
 
@@ -199,9 +268,7 @@ const page = () => {
                   2027+
                 </h3>
                 <p className="text-[#c8d0d7] text-sm leading-relaxed">
-                  Scale globally while empowering
-                  <br />
-                  Cuban communities and economy
+                  Scale globally while empowering Cuban communities & economy.
                 </p>
               </div>
             </div>
@@ -212,4 +279,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
