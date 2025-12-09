@@ -87,14 +87,14 @@ export default function LNGTEST() {
 
   // ✅ Countdown timer
   const [timeLeft, setTimeLeft] = useState({
-    days: 15,
+    days: 20,
     hours: 0,
     minutes: 0,
     seconds: 0,
   });
 
   useEffect(() => {
-    const endDate = new Date("2025-12-10T00:00:00");
+    const endDate = new Date("2025-12-15T00:00:00");
 
     const updateTimer = () => {
       const now = new Date().getTime();
