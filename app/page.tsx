@@ -160,15 +160,44 @@ export default function LNGTEST() {
 
   return (
     <div className="coming-soon">
-      <section
-        className="relative flex items-center bg-[#32223d] justify-center min-h-screen bg-no-repeat bg-start sm:bg-center bg-contain sm:bg-cover overflow-hidden"
-        style={{
-          backgroundImage: isMobile
-            ? "url('./last.jpeg')"
-            : "url('./last.jpeg')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60 sm:bg-black/70" />
+      <section className="relative flex items-center justify-center min-h-screen overflow-hidden">
+        {/* Background Video */}
+        <video
+          src="/cubanex-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="hidden sm:block absolute inset-0 w-full h-full object-cover"
+        />
+        <video
+          src="/cubanex-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="block sm:hidden absolute inset-0 w-full min-h-[480px] object-cover"
+        />
+        {/* Overlay */}
+        <div className="absolute hidden sm:block inset-0 bg-black/60 sm:bg-black/60" />
+
+        <div
+          className="absolute block sm:hidden inset-0 bg-black/60 sm:bg-black/60"
+          style={{
+            background: `
+      linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.6) 0px,
+        rgba(0,0,0,0.6) 480px,
+        rgba(0,0,0,1) 480px,
+        rgba(0,0,0,1) 100%
+      )
+    `,
+            // Apply only on mobile
+            mask: "linear-gradient(black, black)",
+            WebkitMask: "linear-gradient(black, black)",
+          }}
+        />
 
         {/* Glow effect */}
         <motion.div

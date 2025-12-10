@@ -23,16 +23,15 @@ export default function Home() {
       {/* ================= HERO SECTION ================= */}
       <section className="overflow-hidden z-20 relative py-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
         <div className="absolute bg-[#000] inset-0 z-0">
-          <img
-            src="/cubanexthero.png"
-            className="hidden sm:block w-full h-full center object-cover opacity-38"
-            alt="Hero Background"
+          <video
+            src="/cubanex-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className=" absolute inset-0 w-full h-full object-cover"
           />
-          <img
-            src="/cubanextherophone.png"
-            className="block sm:hidden w-full h-full center object-cover opacity-38"
-            alt="Hero Background"
-          />
+          <div className="absolute inset-0 bg-black/60 sm:bg-black/60" />
         </div>
         <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center  sm:pt-20">
           <div className="inline-flex items-center space-x-2 border border-[rgba(255,255,255,0.4)] rounded-full px-3 sm:px-6 py-2  sm:py-3 mb-4 animate-pulse-slow">
