@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect, FormEvent } from "react";
+import { useState, useEffect, FormEvent, useRef } from "react";
 import { motion } from "framer-motion";
 import TypeTexts from "@/components/TypeText";
 import { createClient } from "@supabase/supabase-js";
+import { Play } from "lucide-react"; // icon
 
 // ✅ Supabase client (using env variables as client requested)
 const supabase = createClient(
@@ -19,6 +20,8 @@ export default function LNGTEST() {
   const [language, setLanguage] = useState<"en" | "es">("es");
   const [message, setMessage] = useState<string>("");
   const [messageColor, setMessageColor] = useState<string>("");
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playVideo, setPlayVideo] = useState(false);
 
   // ✅ Email validation
   function validateEmail(email: string) {
@@ -118,6 +121,10 @@ export default function LNGTEST() {
     updateTimer();
     const timerInterval = setInterval(updateTimer, 1000);
     return () => clearInterval(timerInterval);
+
+    setPlayVideo(true);
+    // Force play on first click
+    videoRef.current?.play();
   }, []);
 
   // ✨ Typewriter effect
@@ -160,26 +167,16 @@ export default function LNGTEST() {
 
   return (
     <div className="coming-soon bg-[#000]">
-      <section className="relative flex bg-[000] items-center justify-center min-h-screen overflow-hidden">
-        {/* Background Video */}
-        <video
-          src="/cubanex-video.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="hidden sm:block absolute inset-0 w-full h-full object-cover"
-        />
-        <video
-          src="/cubanex-video.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="block sm:hidden absolute inset-0 w-full min-h-[480px] object-cover"
-        />
+      <section
+        className="relative flex items-center bg-[#32223d] justify-center min-h-screen bg-no-repeat bg-start sm:bg-center bg-contain sm:bg-cover overflow-hidden"
+        style={{
+          backgroundImage: isMobile
+            ? "url('./last.jpeg')"
+            : "url('./last.jpeg')",
+        }}
+      >
         {/* Overlay */}
-        <div className="absolute hidden sm:block inset-0 bg-black/60 sm:bg-black/60" />
+        <div className="absolute hidden sm:block inset-0 bg-black/80 sm:bg-black/80" />
 
         <div
           className="absolute block sm:hidden inset-0 bg-black/60 sm:bg-black/60"
@@ -357,10 +354,56 @@ export default function LNGTEST() {
                 <h2 className="text-xl sm:text-2xl font-serif text-white">
                   {t.verse}
                 </h2>
-                <p className="italic text-sm sm:text-base text-gray-300 mt-3">
+                <p className="italic pb-5 text-sm sm:text-base text-gray-300 mt-3">
                   {t.quote}
                 </p>
               </motion.section>
+
+              <div className="relative  w-full h-64 sm:h-80 lg:h-96 rounded-xl overflow-hidden shadow-xl">
+                {/* Motion glow behind video */}
+                <motion.div
+                  className="absolute inset-0 bg-cyan-400/10 blur-2xl"
+                  animate={{ opacity: [0.2, 0.5, 0.2], scale: [1, 1.05, 1] }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+
+                {/* Video zoomed and centered to crop top & bottom black bars */}
+                {/* Video zoomed and centered to crop top & bottom black bars */}
+                {/* Video zoomed and centered */}
+                <video
+                  ref={videoRef}
+                  src="/cubanex-video.mp4"
+                  className="absolute top-1/2 left-1/2 w-full h-full object-cover rounded-xl scale-[1.25] -translate-x-1/2 -translate-y-1/2"
+                  controls={playVideo} // show controls only after play
+                  loop
+                  playsInline
+                />
+
+                {/* Play button overlay */}
+                {!playVideo && (
+                  <motion.button
+                    onClick={async () => {
+                      if (videoRef.current) {
+                        try {
+                          await videoRef.current.play(); // direct play
+                          setPlayVideo(true); // then show controls / remove button
+                        } catch (err) {
+                          console.error("Video failed to play:", err);
+                        }
+                      }
+                    }}
+                    className="absolute inset-0 m-auto flex items-center justify-center w-20 h-20 rounded-full bg-black/60 text-white text-3xl shadow-lg hover:scale-105 transition"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Play className="w-10 h-10" />
+                  </motion.button>
+                )}
+              </div>
 
               {year && (
                 <motion.footer
