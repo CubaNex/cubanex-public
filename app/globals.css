@@ -106,6 +106,35 @@ body:has(.coming-soon) .Footer {
   background-repeat: no-repeat;
 }
 }
-  html {
-        scroll-behavior: smooth;
-      }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth; /* for anchor links */
+  scroll-padding-top: 4rem; /* optional offset for fixed headers */
+  overflow-x: hidden;
+}
+
+/* Smooth momentum scrolling on mobile (iOS) */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Premium smooth scroll feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Optional: smooth scrolling for wheel and trackpad using ease-in-out */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity; /* optional for snapping effect */
+}

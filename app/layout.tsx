@@ -5,6 +5,7 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BacktoTop";
 
 // Fonts
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -41,7 +42,7 @@ export default function RootLayout({
       >
         {/* Header (client) receives default language */}
         <Header defaultLanguage={defaultLang} />
-
+        <BackToTop />
         {/* Main content */}
         {children}
 

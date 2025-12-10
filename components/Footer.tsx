@@ -11,7 +11,7 @@ export default function Footer() {
   const t = textContent[language].footer;
 
   return (
-    <footer className="w-full bg-[#1A1A20] font-[var(--font-work-sans)] Footer text-white">
+    <footer className="w-full bg-[#000] font-[var(--font-work-sans)] Footer text-white border-t border-gray-800 shadow-[0_-3px_15px_rgba(255,255,255,0.03)]">
       <div className="max-w-[1300px] container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
@@ -19,9 +19,9 @@ export default function Footer() {
             <div className="flex items-center mb-4">
               <Link href={language === "eng" ? "/en" : "/"}>
                 <Image
-                  src="/new-logo-tr.png"
+                  src="/ll.png"
                   alt="Cubanex Logo"
-                  width={220}
+                  width={180}
                   height={40}
                   className="object-contain "
                 />
@@ -108,7 +108,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border">
+        <div className="pt-8 border-t border-[#1a1f1f] border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm">{t.rights}</p>
             <div className="flex space-x-6 text-sm">

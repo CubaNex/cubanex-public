@@ -159,8 +159,8 @@ export default function LNGTEST() {
   const t = textContent[language];
 
   return (
-    <div className="coming-soon">
-      <section className="relative flex items-center justify-center min-h-screen overflow-hidden">
+    <div className="coming-soon bg-[#000]">
+      <section className="relative flex bg-[000] items-center justify-center min-h-screen overflow-hidden">
         {/* Background Video */}
         <video
           src="/cubanex-video.mp4"
