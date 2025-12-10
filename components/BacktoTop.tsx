@@ -8,6 +8,7 @@ const BackToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Only show button when scrolled more than 100px
     const onScroll = () => setIsVisible(window.scrollY > 100);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -29,10 +30,16 @@ const BackToTop: React.FC = () => {
               bottom: 30,
               right: 30,
               zIndex: 9999,
+              // --- 👇 THE FIXES FOR MOBILE SCROLL JUMP START HERE 👇 ---
+              // Forces hardware acceleration, which stabilizes fixed positioning on many mobile browsers
+              transform: "translate3d(0, 0, 0)",
+              willChange: "transform",
+              // --- 👆 THE FIXES END HERE 👆 ---
             }}
           >
             <button
               onClick={scrollToTop}
+              aria-label="Back to top"
               style={{
                 width: 36,
                 height: 36,
@@ -44,32 +51,47 @@ const BackToTop: React.FC = () => {
                 justifyContent: "center",
                 color: "#fff",
                 background: "linear-gradient(135deg, #333 0%, #000 100%)",
-
                 boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
                 animation: "pulse 1.8s infinite alternate",
+                // Ensure the button itself is also clean
+                padding: 0,
               }}
             >
               <ArrowUp size={16} />
             </button>
 
-            <style>{`
-          @keyframes pulse {
-            0% { transform: scale(1); filter: brightness(1); }
-            50% { transform: scale(1.1); filter: brightness(0.8); }
-            100% { transform: scale(1); filter: brightness(1); }
-          }
+            {/* Note: In a Next.js/Tailwind project, it's generally better to use a global CSS file
+                or a CSS-in-JS library rather than inline <style> tags, but this works for a quick fix. */}
+            <style jsx global>{`
+              @keyframes pulse {
+                0% {
+                  transform: scale(1);
+                  filter: brightness(1);
+                }
+                50% {
+                  transform: scale(1.1);
+                  filter: brightness(0.8);
+                }
+                100% {
+                  transform: scale(1);
+                  filter: brightness(1);
+                }
+              }
 
-          @media (max-width: 640px) {
-            button {
-              width: 30px !important;
-              height: 30px !important;
-            }
-            button svg {
-              width: 15px !important;
-              height: 15px !important;
-            }
-          }
-        `}</style>
+              /* Use a separate class selector instead of 'button' to avoid specificity issues 
+                 if you were using global styles, but sticking to your original approach for now */
+              @media (max-width: 640px) {
+                /* Target the motion.div's button directly */
+                [style*="position: fixed"] button {
+                  width: 30px !important;
+                  height: 30px !important;
+                }
+                [style*="position: fixed"] button svg {
+                  width: 15px !important;
+                  height: 15px !important;
+                }
+              }
+            `}</style>
           </motion.div>
         )}
       </AnimatePresence>
@@ -78,80 +100,3 @@ const BackToTop: React.FC = () => {
 };
 
 export default BackToTop;
-
-// "use client";
-
-// import { useEffect, useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-// import { ArrowUp } from "lucide-react";
-
-// const BackToTop: React.FC = () => {
-//   const [isVisible, setIsVisible] = useState(false);
-
-//   useEffect(() => {
-//     const onScroll = () => setIsVisible(window.scrollY > 100);
-//     window.addEventListener("scroll", onScroll);
-//     return () => window.removeEventListener("scroll", onScroll);
-//   }, []);
-
-//   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
-//   return (
-//     <AnimatePresence>
-//       {isVisible && (
-//         <motion.button
-//           onClick={scrollToTop}
-//           initial={{ opacity: 0, scale: 0 }}
-//           animate={{ opacity: 1, scale: 0.5 }}
-//           exit={{ opacity: 0, scale: 0 }}
-//           transition={{ duration: 0.3 }}
-//           style={{
-//             position: "fixed",
-//             bottom: 30,
-//             right: 30,
-//             width: 36,
-//             height: 36,
-//             borderRadius: "50%",
-//             border: "none",
-//             cursor: "pointer",
-//             zIndex: 9999,
-//             display: "flex",
-//             alignItems: "center",
-//             justifyContent: "center",
-//             color: "#fff",
-//             background:
-//               //   "linear-gradient(90deg, #FFB74A 20%, #FFA726 36%, #FF8F00 100%)",
-//               //   "linear-gradient(0deg, #C766EF 20%, #7928D2 36%, #2B0C52 100%)",
-//               //   "linear-gradient(10deg, #14F195 0%, #80ECFF 50%, #64A8F2 100%)",
-//               "linear-gradient(90deg, #FFB74A 20%, #FFA72 36%, #FF8F00 100%)",
-
-//             boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
-//             animation: "pulse 1.8s infinite alternate",
-//           }}
-//         >
-//           <ArrowUp size={16} />
-//           <style>{`
-//             @keyframes pulse {
-//               0% { transform: scale(1); filter: brightness(1); }
-//               50% { transform: scale(1.1); filter: brightness(0.8); }
-//               100% { transform: scale(1); filter: brightness(1); }
-//             }
-
-//             @media (max-width: 640px) {
-//               button {
-//                 width: 30px !important;
-//                 height: 30px !important;
-//               }
-//               button svg {
-//                 width: 15px !important;
-//                 height: 15px !important;
-//               }
-//             }
-//           `}</style>
-//         </motion.button>
-//       )}
-//     </AnimatePresence>
-//   );
-// };
-
-// export default BackToTop;
