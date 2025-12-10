@@ -32,7 +32,7 @@ export default function EnLayout({ children }: { children: React.ReactNode }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${workSans.variable} ${orbitron.variable} antialiased`}
       >
-        {/* Header (client) receives default language */}
+        {/* Header (client) receives default language ss*/}
 
         {/* Main content */}
         {children}
