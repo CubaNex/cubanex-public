@@ -70,7 +70,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
             <Image
               src="/cubanex-logo.png"
               alt="Cubanex Logo"
-              width={220}
+              width={180}
               height={40}
               className="object-contain ml-[-10px] sm:ml-0 cursor-pointer"
             />
@@ -100,7 +100,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
             </button>
 
             <button
-              className="px-4 py-2 rounded-full text-white font-medium"
+              className="px-3 py-1.5 rounded-full text-white text-[12px]"
               style={{
                 background:
                   "linear-gradient(90deg, #C766EF 0%, #7928D2 51%, #2B0C52 100%)",

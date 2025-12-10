@@ -48,7 +48,7 @@ const ConnectWallet = () => {
               px-[10px] sm:px-[30px] py-[10px] text-[10px] sm:text-[16px]
               rounded-full text-white font-medium font-[var(--font-work-sans)]
               bg-gradient-to-r from-[#C766EF] via-[#7928D2] to-[#2B0C52]
-              min-w-[150px] sm:min-w-[180px] text-center
+              min-w-[135px] sm:min-w-[180px] text-center
             "
           >
             MetaMask
@@ -62,7 +62,7 @@ const ConnectWallet = () => {
               border border-[#7928D2]
               transition-all duration-300
               hover:bg-gradient-to-r hover:from-[#C766EF] hover:via-[#7928D2] hover:to-[#2B0C52]
-              min-w-[150px] sm:min-w-[180px] text-center
+              min-w-[135px] sm:min-w-[180px] text-center
             "
           >
             WalletConnect

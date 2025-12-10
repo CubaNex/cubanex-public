@@ -7,6 +7,7 @@ import ConnectWallet from "@/components/ConnectWallet";
 import RoeadMapEn from "@/components/RoeadMapEn";
 import VipForm from "@/components/VipForm";
 import WhitePaper from "@/components/WhitePaper";
+import ArrowB from "@/components/ArrowB";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -21,7 +22,7 @@ export default function Home() {
   return (
     <main className="bg-black  text-white min-h-auto sm:min-h-screen w-full overflow-x-hidden">
       {/* ================= HERO SECTION ================= */}
-      <section className="overflow-hidden z-20   relative py-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
+      <section className="overflow-hidden z-20  relative pb-10 sm:pb-0 pt-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
         <div className="absolute bg-[#000] inset-0 z-0">
           <video
             src="/cubanex-video.mp4"
@@ -34,21 +35,21 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/60 sm:bg-black/60" />
         </div>
         <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center  sm:pt-20">
-          <div className="inline-flex items-center space-x-2 border border-[rgba(255,255,255,0.4)] rounded-full px-3 sm:px-6 py-2  sm:py-3 mb-4 animate-pulse-slow">
+          <div className="inline-flex items-center justify-center space-x-2 border border-[rgba(255,255,255,0.4)] rounded-full px-3 sm:px-3 py-2  sm:py-2 mb-4 animate-pulse-slow">
             <div className="w-[6px] h-[6px] rounded-full bg-[#FF8F00] smooth-pulse shadow-[0_0_8px_#FF8F00]" />
-            <span className="text-sm font-medium text-[#fff]">
+            <span className="text-[12px] text-[#fff]">
               Preventa en vivo ahora{" "}
             </span>
           </div>
 
           <h1
-            className={`${orbitron.className} text-[32px] sm:text-[56px] lg:text-[100px] text-[#fff] font-semibold leading-[1em] mb-6`}
+            className={`${orbitron.className} text-[32px] sm:text-[56px] lg:text-[100px] text-[#fff] max-w-[1000px] font-semibold leading-[1em] mb-6`}
           >
             El futuro de Cuba es <span className="text-[#FFB74A]"> Cripto</span>
           </h1>
 
           <p
-            className={`${workSans.className} text-[16px] sm:text-[24px] text-gray-300 max-w-[1000px]  mx-auto mb-8`}
+            className={`${workSans.className} text-[16px] sm:text-[24px] text-gray-300 max-w-[800px]  mx-auto mb-8`}
           >
             El Sueño Despertó como Código — Ha Llegado la Primera Cripto para el
             Pueblo de Cuba. CUBANEX está aquí
@@ -72,7 +73,7 @@ export default function Home() {
             <div className="flex justify-center items-center gap-2">
               <img src="Check_ring_duotone.svg" alt="" />
               <span
-                className={`${workSans.className} text-[12px] sm:text-[16px] `}
+                className={`${workSans.className} text-[12px] sm:text-[14px] `}
               >
                 Contrato verificado
               </span>
@@ -80,7 +81,7 @@ export default function Home() {
             <div className="flex justify-center items-center gap-2">
               <img src="./Check_ring_duotone.svg" alt="" />
               <span
-                className={`${workSans.className} text-[12px] sm:text-[16px]`}
+                className={`${workSans.className} text-[12px] sm:text-[14px] `}
               >
                 Fuente transparente{" "}
               </span>
@@ -88,20 +89,14 @@ export default function Home() {
             <div className="hidden  sm:flex justify-center items-center gap-2">
               <img src="./Check_ring_duotone.svg" alt="" />
               <span
-                className={`${workSans.className} text-[12px] sm:text-[16px]`}
+                className={`${workSans.className} text-[12px] sm:text-[14px] `}
               >
                 Estructura de suministro pura{" "}
               </span>
             </div>
           </div>
-          <div className="py-8 flex justify-center">
-            <a href="#fourPoint">
-              <img
-                src="./belowbuton.png"
-                alt=""
-                className="w-[25px] sm:w-[32px] mx-auto soft-bounce drop-shadow-lg opacity-90"
-              />
-            </a>
+          <div className="pt-8 flex justify-center">
+            <ArrowB />
           </div>
         </div>
       </section>
@@ -109,16 +104,16 @@ export default function Home() {
       {/* ================= WHY CUBANEX ================= */}
       <section
         id="fourPoint"
-        className=" relative pb-20 z-10   sm:py-20 bg-[#000] px-6"
+        className="relative sm:pb-20 z-10   sm:py-20 bg-[#000] px-6"
       >
-        <div className="absolute w-full h-full sm:h-auto bg-[#000] top-0 z-1">
+        <div className="absolute  w-full h-full sm:h-auto  bg-[#000] top-0 z-1">
           <img
             src="/shapbg.png"
-            className=" w-full h-full mt-[-100px] center z-10  object-cover "
+            className=" w-full h-full center z-10  object-cover "
             alt="Hero Background"
           />
         </div>
-        <div className="relative z-10  flex items-center justify-center gap-4 sm:gap-6 pb-[60px]">
+        <div className="relative z-10   flex items-center justify-center gap-4 sm:gap-6 pb-[60px]">
           <div className="lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
             <img src="./1B+.png" alt="" className="w-[45px] sm:w-auto" />
 
@@ -492,7 +487,7 @@ export default function Home() {
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
       <section className="relative pb-20 sm:py-20 px-6 z-10 b bg-section">
         <h2
-          className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          className={`${orbitron.className} text-center text-[26px] sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
           Obtén acceso <span className="text-[#FF8F00]">VIP </span>a{" "}
           <span className="text-[#00DED4]">CubaNex</span>
@@ -569,9 +564,9 @@ export default function Home() {
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
 
-      <section className="px-5 py-20">
+      <section className="px-5 py-10 sm:py-20">
         <h2
-          className={`${orbitron.className} bg-[#000000] text-center text-[28px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
+          className={`${orbitron.className} bg-[#000000] text-center text-[28px] sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
         >
           <span className="text-[#FF8F00]">Whitepaper </span>y Documentación
         </h2>{" "}

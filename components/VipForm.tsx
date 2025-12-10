@@ -55,8 +55,8 @@ const VipForm = () => {
   };
 
   return (
-    <div className="w-full flex justify-center py-10 px-4">
-      <div className="w-full max-w-3xl bg-[#071219] p-6 sm:p-8 rounded-3xl border border-[#14f19533]/40 shadow-[0_0_40px_#00eaff66]/30">
+    <div className="w-full flex justify-center sm:py-10 px-0">
+      <div className="w-full max-w-3xl bg-[#071219] p-6 sm:p-8 rounded-3xl border border-[#14f19533]/40 shadow-[0_0_40px_#00eaff66]/10">
         <form
           onSubmit={handleSubmit}
           className="flex flex-col sm:flex-row items-center gap-4 w-full"

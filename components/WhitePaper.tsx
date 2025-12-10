@@ -14,7 +14,7 @@ const orbitron = Orbitron({
 const WhitePaper = () => {
   return (
     <div
-      className="w-full max-w-5xl mx-auto mt-10 p-10 rounded-2xl"
+      className="w-full max-w-5xl mx-auto mt-10 p-5 sm:p-10 rounded-2xl"
       style={{
         background: "rgba(10, 14, 26, 0.6)",
         border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -84,7 +84,7 @@ const WhitePaper = () => {
         {/* FIRST BUTTON - Gradient */}
         <button
           className="
-            px-[10px] py-2 text-[12px] sm:text-[18px] sm:px-6 sm:py-3
+            px-[14px] py-2.5 text-[12px] sm:text-[18px] sm:px-6 sm:py-3
             rounded-full text-white font-medium
             bg-gradient-to-r from-[#C766EF] via-[#7928D2] to-[#2B0C52]
           "
@@ -96,11 +96,11 @@ const WhitePaper = () => {
         {/* SECOND BUTTON - Border then gradient on hover */}
         <button
           className="
-            px-[30px] py-2 text-[12px] sm:text-[18px] sm:px-6 sm:py-3
+            px-[75px] py-2.5 text-[12px] sm:text-[18px] sm:px-6 sm:py-3
             rounded-full text-white font-medium
             border border-[#7928D2]
             transition-all duration-300
-            hover:bg-gradient-to-r hover:from-[#C766EF] hover:via-[#7928D2] hover:to-[#2B0C52]  sm:min-w-[150px]
+            hover:bg-gradient-to-r hover:from-[#C766EF] hover:via-[#7928D2] hover:to-[#2B0C52]  sm:min-w-[180px]
           "
           style={{ fontFamily: "var(--font-work-sans)" }}
         >
