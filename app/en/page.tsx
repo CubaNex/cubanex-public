@@ -176,7 +176,7 @@ export default function LNGTEST() {
         }}
       >
         {/* Overlay */}
-        <div className="absolute hidden sm:block inset-0 bg-black/80 sm:bg-black/80" />
+        <div className="absolute hidden sm:block inset-0 bg-black/80 sm:bg-black/85" />
 
         <div
           className="absolute block sm:hidden inset-0 bg-black/60 sm:bg-black/60"
@@ -359,8 +359,8 @@ export default function LNGTEST() {
                 </p>
               </motion.section>
 
-              <div className="relative  w-full h-64 sm:h-80 lg:h-96 rounded-xl overflow-hidden shadow-xl">
-                {/* Motion glow behind video */}
+              <div className="relative w-full h-64 sm:h-80 lg:h-96 rounded-xl overflow-hidden shadow-xl">
+                {/* Glow Animation */}
                 <motion.div
                   className="absolute inset-0 bg-cyan-400/10 blur-2xl"
                   animate={{ opacity: [0.2, 0.5, 0.2], scale: [1, 1.05, 1] }}
@@ -371,14 +371,23 @@ export default function LNGTEST() {
                   }}
                 />
 
-                {/* Video zoomed and centered to crop top & bottom black bars */}
-                {/* Video zoomed and centered to crop top & bottom black bars */}
-                {/* Video zoomed and centered */}
+                {/* Default Preview Image */}
+                {!playVideo && (
+                  <img
+                    src="/v.jpg"
+                    className="absolute inset-0 w-full h-full object-cover rounded-xl"
+                    alt="Preview"
+                  />
+                )}
+
+                {/* Video (hidden until play) */}
                 <video
                   ref={videoRef}
                   src="/cubanex-video.mp4"
-                  className="absolute top-1/2 left-1/2 w-full h-full object-cover rounded-xl scale-[1.25] -translate-x-1/2 -translate-y-1/2"
-                  controls={playVideo} // show controls only after play
+                  className={`absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-500 ${
+                    playVideo ? "opacity-100" : "opacity-0"
+                  }`}
+                  controls={playVideo}
                   loop
                   playsInline
                 />
@@ -389,14 +398,14 @@ export default function LNGTEST() {
                     onClick={async () => {
                       if (videoRef.current) {
                         try {
-                          await videoRef.current.play(); // direct play
-                          setPlayVideo(true); // then show controls / remove button
+                          await videoRef.current.play();
+                          setPlayVideo(true);
                         } catch (err) {
                           console.error("Video failed to play:", err);
                         }
                       }
                     }}
-                    className="absolute inset-0 m-auto flex items-center justify-center w-20 h-20 rounded-full bg-black/60 text-white text-3xl shadow-lg hover:scale-105 transition"
+                    className="absolute inset-0 m-auto flex items-center justify-center w-20 h-20 rounded-full bg-black/60 text-white shadow-lg hover:scale-105 transition"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                   >
