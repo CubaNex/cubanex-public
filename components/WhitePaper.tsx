@@ -82,7 +82,9 @@ const WhitePaper = () => {
       {/* BUTTONS */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-10">
         {/* FIRST BUTTON - Gradient */}
-        <button
+        <a
+          href="/CubaNex_Whitepaper_Bilingual_Edition.pdf"
+          download="CubaNex_Whitepaper_Bilingual_Edition.pdf"
           className="
             px-[14px] py-2.5 text-[12px] sm:text-[18px] sm:px-6 sm:py-3
             rounded-full text-white font-medium
@@ -91,10 +93,11 @@ const WhitePaper = () => {
           style={{ fontFamily: "var(--font-work-sans)" }}
         >
           Download Whitepaper (PDF)
-        </button>
+        </a>
 
         {/* SECOND BUTTON - Border then gradient on hover */}
-        <button
+        <a
+          href="/whitepaper"
           className="
             px-[75px] py-2.5 text-[12px] sm:text-[18px] sm:px-6 sm:py-3
             rounded-full text-white font-medium
@@ -105,7 +108,7 @@ const WhitePaper = () => {
           style={{ fontFamily: "var(--font-work-sans)" }}
         >
           Read Online
-        </button>
+        </a>
       </div>
     </div>
   );

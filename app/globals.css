@@ -138,3 +138,519 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y proximity; /* optional for snapping effect */
 }
+/*White paper css  */
+
+/* ==================== BASE STYLES ==================== */
+/* Root styling for the whitepaper page container */
+.whitepaper-page {
+  min-height: 100vh;
+  background-color: #0a0f1c;
+  color: #e6ffff;
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+/* Heading styles */
+.whitepaper-title {
+  font-weight: 700;
+  background: linear-gradient(to right, #00e0c7, #00b4d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.whitepaper-subtitle {
+  color: #ffd369;
+  font-weight: 600;
+}
+
+.whitepaper-body {
+  color: #8badb5;
+  line-height: 1.75;
+}
+
+/* ==================== HERO SECTION ==================== */
+/* Hero section with background glow effects */
+.hero-section {
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow: hidden;
+}
+
+/* Background radial glow */
+.hero-glow-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, hsl(174 100% 44% / 0.15) 0%, transparent 70%);
+  opacity: 0.3;
+}
+
+/* Blurred orb decoration */
+.hero-orb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background-color: hsl(174 100% 44% / 0.1);
+  border-radius: 9999px;
+  filter: blur(48px);
+}
+
+/* ==================== BADGE COMPONENT ==================== */
+/* Official document badge styling */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background-color: hsl(174 100% 44% / 0.1);
+  border: 1px solid hsl(174 100% 44% / 0.3);
+}
+
+.badge-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #00e0c7;
+}
+
+.badge-text {
+  font-size: 0.875rem;
+  color: #00e0c7;
+  font-weight: 500;
+}
+
+/* ==================== CARD COMPONENT ==================== */
+/* Glass-morphism card with backdrop blur */
+.card-glass {
+  background-color: hsl(217 70% 8% / 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid hsl(217 40% 20%);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+/* ==================== BLOCKQUOTE ==================== */
+/* Styled blockquote with left border accent */
+.blockquote {
+  font-size: 1.125rem;
+  color: #8badb5;
+  font-style: italic;
+  border-left: 4px solid #00e0c7;
+  padding-left: 1.5rem;
+  text-align: left;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+/* ==================== BUTTON STYLES ==================== */
+/* Primary CTA button with gradient */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(to right, #00e0c7, #00b4d8);
+  color: #0a0f1c;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 30px hsl(174 100% 44% / 0.4);
+}
+
+/* Outline button style */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  border: 2px solid #00e0c7;
+  color: #00e0c7;
+  font-weight: 600;
+  background: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: hsl(174 100% 44% / 0.1);
+  box-shadow: 0 0 20px hsl(174 100% 44% / 0.2);
+}
+
+/* ==================== TABLE OF CONTENTS ==================== */
+/* TOC section background */
+.toc-section {
+  padding: 3rem 1rem;
+  background-color: hsl(217 70% 8% / 0.3);
+  border-top: 1px solid hsl(217 40% 20%);
+  border-bottom: 1px solid hsl(217 40% 20%);
+}
+
+/* TOC item link */
+.toc-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: hsl(217 91% 4% / 0.5);
+  border: 1px solid hsl(217 40% 20%);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.toc-item:hover {
+  border-color: hsl(174 100% 44% / 0.5);
+  background-color: hsl(174 100% 44% / 0.05);
+}
+
+.toc-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00e0c7;
+}
+
+.toc-title {
+  font-weight: 500;
+  color: #e6ffff;
+  transition: color 0.3s ease;
+}
+
+.toc-item:hover .toc-title {
+  color: #00e0c7;
+}
+
+.toc-subtitle {
+  font-size: 0.875rem;
+  color: #8badb5;
+}
+
+/* ==================== CONTENT SECTIONS ==================== */
+/* Standard content section */
+.content-section {
+  padding: 5rem 1rem;
+}
+
+/* Alternating background section */
+.content-section-alt {
+  padding: 5rem 1rem;
+  background-color: hsl(217 70% 8% / 0.3);
+  border-top: 1px solid hsl(217 40% 20%);
+  border-bottom: 1px solid hsl(217 40% 20%);
+}
+
+/* Section header with large number */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.section-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(174 100% 44% / 0.3);
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #e6ffff;
+}
+
+.section-title-es {
+  font-size: 1.25rem;
+  color: #ffd369;
+}
+
+/* ==================== BILINGUAL CONTENT GRID ==================== */
+/* Two-column layout for EN/ES content */
+.bilingual-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .bilingual-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Language indicator bar */
+.lang-bar-en {
+  height: 0.25rem;
+  width: 4rem;
+  background-color: #00e0c7;
+  border-radius: 9999px;
+}
+
+.lang-bar-es {
+  height: 0.25rem;
+  width: 4rem;
+  background-color: #ffd369;
+  border-radius: 9999px;
+}
+
+/* Language label */
+.lang-label-en {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #00e0c7;
+}
+
+.lang-label-es {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffd369;
+}
+
+/* ==================== HIGHLIGHT BOX ==================== */
+/* Important quote/highlight container */
+.highlight-box {
+  background: linear-gradient(to right, hsl(174 100% 44% / 0.2), hsl(45 100% 70% / 0.2));
+  border: 1px solid hsl(174 100% 44% / 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.highlight-text-en {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e6ffff;
+}
+
+.highlight-text-es {
+  font-size: 1.125rem;
+  color: #ffd369;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* ==================== TOKEN UTILITY CARDS ==================== */
+/* Grid for utility feature cards */
+.utility-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .utility-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .utility-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Individual utility card */
+.utility-card {
+  background-color: hsl(217 91% 4% / 0.5);
+  border: 1px solid hsl(217 40% 20%);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.utility-card:hover {
+  border-color: hsl(174 100% 44% / 0.5);
+}
+
+.utility-title {
+  font-weight: 500;
+  color: #e6ffff;
+}
+
+.utility-subtitle {
+  font-size: 0.875rem;
+  color: #8badb5;
+}
+
+/* ==================== BULLET LIST ==================== */
+/* Styled list with colored bullets */
+.bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bullet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #8badb5;
+}
+
+.bullet-cyan {
+  color: #00e0c7;
+  margin-top: 0.25rem;
+}
+
+.bullet-gold {
+  color: #ffd369;
+  margin-top: 0.25rem;
+}
+
+/* ==================== FREQUENCY QUOTE ==================== */
+/* Left-bordered quote style */
+.frequency-quote {
+  background-color: hsl(217 91% 4% / 0.5);
+  border-left: 4px solid #00e0c7;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.frequency-text-en {
+  font-size: 1.125rem;
+  color: #e6ffff;
+  font-style: italic;
+}
+
+.frequency-text-es {
+  color: #8badb5;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+/* ==================== FINAL HIGHLIGHT (ANIMATED) ==================== */
+/* Key quote with glow animation */
+.final-highlight {
+  background: linear-gradient(to right, hsl(174 100% 44% / 0.2), hsl(45 100% 70% / 0.2), hsl(174 100% 44% / 0.2));
+  border: 1px solid hsl(174 100% 44% / 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(174 100% 44% / 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(174 100% 44% / 0.4);
+  }
+}
+
+.final-quote-en {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e6ffff;
+  margin-bottom: 1rem;
+}
+
+.final-quote-es {
+  font-size: 1.25rem;
+  color: #ffd369;
+  font-style: italic;
+}
+
+/* ==================== END MARKER ==================== */
+/* Document end divider */
+.end-marker {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  color: #8badb5;
+}
+
+.end-line {
+  height: 1px;
+  width: 4rem;
+  background-color: hsl(217 40% 20%);
+}
+
+.end-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* ==================== CTA SECTION ==================== */
+/* Final call-to-action section */
+.cta-section {
+  padding: 5rem 1rem;
+  background-color: hsl(217 70% 8%);
+  border-top: 1px solid hsl(217 40% 20%);
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #e6ffff;
+  margin-bottom: 1.5rem;
+}
+
+.cta-subtitle {
+  font-size: 1.125rem;
+  color: #8badb5;
+  margin-bottom: 2rem;
+}
+
+/* ==================== RESPONSIVE UTILITIES ==================== */
+/* Responsive text sizes */
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.25rem;
+  }
+  
+  .highlight-text-en {
+    font-size: 1.5rem;
+  }
+  
+  .final-quote-en {
+    font-size: 1.875rem;
+  }
+  
+  .cta-title {
+    font-size: 2.25rem;
+  }
+}
+
+/* Max width container */
+.container-narrow {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================== RESPONSIVE BUTTON LAYOUT ==================== */
+/* Stack buttons on mobile, row on larger screens */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .btn-group {
+    flex-direction: row;
+  }
+}
+

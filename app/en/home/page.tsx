@@ -71,12 +71,14 @@ export default function Home() {
             >
               Be Among the First{" "}
             </button>
-            <button
-              className="px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white font-medium bg-gradient-to-r from-[#C766EF] via-[#7928D2] to-[#2B0C52] 
+            <a href="/whitepaper">
+              <button
+                className="px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white font-medium bg-gradient-to-r from-[#C766EF] via-[#7928D2] to-[#2B0C52] 
     hover:scale-105 transition-transform duration-300 ease-in-out"
-            >
-              Read Whitepaper{" "}
-            </button>
+              >
+                Read Whitepaper{" "}
+              </button>
+            </a>
           </div>
           <div className="pt-5 sm:pt-0 sm:py-8 sm:mt-8 flex gap-2 sm:gap-4 justify-center">
             <div className="flex justify-center items-center gap-2">
