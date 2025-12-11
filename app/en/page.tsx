@@ -22,6 +22,10 @@ export default function LNGTEST() {
   const [messageColor, setMessageColor] = useState<string>("");
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playVideo, setPlayVideo] = useState(false);
+  const videoRefDesktop = useRef<HTMLVideoElement>(null);
+  const videoRefMobile = useRef<HTMLVideoElement>(null);
+  const [isDesktopVideoPlaying, setIsDesktopVideoPlaying] = useState(false);
+  const [isMobileVideoPlaying, setIsMobileVideoPlaying] = useState(false);
 
   // ✅ Email validation
   function validateEmail(email: string) {
@@ -120,11 +124,17 @@ export default function LNGTEST() {
 
     updateTimer();
     const timerInterval = setInterval(updateTimer, 1000);
-    return () => clearInterval(timerInterval);
 
+    // 🔥 FIXED — autoplay works now
     setPlayVideo(true);
-    // Force play on first click
-    videoRef.current?.play();
+
+    if (videoRef.current) {
+      videoRef.current.play().catch((err) => {
+        console.log("Autoplay blocked:", err);
+      });
+    }
+
+    return () => clearInterval(timerInterval);
   }, []);
 
   // ✨ Typewriter effect
@@ -320,6 +330,7 @@ export default function LNGTEST() {
                     </motion.button>
                   </motion.form>
                 ) : null}
+
                 {/* ✅ Inline message */}
                 {message && (
                   <p
@@ -330,6 +341,49 @@ export default function LNGTEST() {
                   </p>
                 )}
               </motion.div>
+              {/* MOBILE VIDEO SECTION (fixed) */}
+              {/* MOBILE VIDEO SECTION (fixed) */}
+              <div className="block sm:hidden mt-5 relative w-full h-64 sm:h-80 lg:h-96 rounded-xl overflow-hidden shadow-xl">
+                {/* Mobile video */}
+                <video
+                  ref={videoRefMobile}
+                  src="/cubanex-video.mp4"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl"
+                  loop
+                  playsInline
+                  muted={false} // allow sound
+                  controls={isMobileVideoPlaying} // controls only after play
+                />
+
+                {/* Dark overlay */}
+                {!isMobileVideoPlaying && (
+                  <div className="absolute inset-0 bg-black/40 z-10"></div>
+                )}
+
+                {/* Preview image (only before clicking play) */}
+                {!isMobileVideoPlaying && (
+                  <img
+                    src="/v.jpg"
+                    className="absolute inset-0 w-full h-full object-cover rounded-xl z-20"
+                    alt="Preview"
+                  />
+                )}
+
+                {/* Play button (show until clicked) */}
+                {!isMobileVideoPlaying && (
+                  <motion.button
+                    onClick={() => {
+                      setIsMobileVideoPlaying(true);
+                      videoRefMobile.current?.play();
+                    }}
+                    className="absolute inset-0 z-30 m-auto flex items-center justify-center w-20 h-20 rounded-full bg-black/60 text-white shadow-lg hover:scale-105 transition"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Play className="w-10 h-10" />
+                  </motion.button>
+                )}
+              </div>
 
               <motion.section
                 className="space-y-6 mt-10"
@@ -358,8 +412,8 @@ export default function LNGTEST() {
                   {t.quote}
                 </p>
               </motion.section>
-
-              <div className="relative w-full h-64 sm:h-80 lg:h-96 rounded-xl overflow-hidden shadow-xl">
+              {/* DESKTOP VIDEO SECTION (fixed) */}
+              <div className="hidden sm:block relative w-full h-64 sm:h-80 lg:h-96 rounded-xl overflow-hidden shadow-xl">
                 {/* Glow Animation */}
                 <motion.div
                   className="absolute inset-0 bg-cyan-400/10 blur-2xl"
@@ -371,41 +425,42 @@ export default function LNGTEST() {
                   }}
                 />
 
-                {/* Default Preview Image */}
-                {!playVideo && (
+                {/* Video */}
+                <video
+                  ref={videoRefDesktop}
+                  src="/cubanex-video.mp4"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl"
+                  loop
+                  playsInline
+                  muted={false} // allow sound
+                  controls={isDesktopVideoPlaying} // show controls only after play
+                  preload="metadata"
+                />
+
+                {/* Dark overlay (before play) */}
+                {!isDesktopVideoPlaying && (
+                  <div className="absolute inset-0 bg-black/40 z-10"></div>
+                )}
+
+                {/* Preview image (before play) */}
+                {!isDesktopVideoPlaying && (
                   <img
                     src="/v.jpg"
-                    className="absolute inset-0 w-full h-full object-cover rounded-xl"
+                    className="absolute inset-0 w-full h-full object-cover rounded-xl z-20"
                     alt="Preview"
                   />
                 )}
 
-                {/* Video (hidden until play) */}
-                <video
-                  ref={videoRef}
-                  src="/cubanex-video.mp4"
-                  className={`absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-500 ${
-                    playVideo ? "opacity-100" : "opacity-0"
-                  }`}
-                  controls={playVideo}
-                  loop
-                  playsInline
-                />
-
-                {/* Play button overlay */}
-                {!playVideo && (
+                {/* Play button */}
+                {!isDesktopVideoPlaying && (
                   <motion.button
-                    onClick={async () => {
-                      if (videoRef.current) {
-                        try {
-                          await videoRef.current.play();
-                          setPlayVideo(true);
-                        } catch (err) {
-                          console.error("Video failed to play:", err);
-                        }
-                      }
+                    onClick={() => {
+                      setIsDesktopVideoPlaying(true);
+                      videoRefDesktop.current?.play().catch((err) => {
+                        console.error("Video failed to play:", err);
+                      });
                     }}
-                    className="absolute inset-0 m-auto flex items-center justify-center w-20 h-20 rounded-full bg-black/60 text-white shadow-lg hover:scale-105 transition"
+                    className="absolute inset-0 z-30 m-auto flex items-center justify-center w-20 h-20 rounded-full bg-black/60 text-white shadow-lg hover:scale-105 transition cursor-pointer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                   >
