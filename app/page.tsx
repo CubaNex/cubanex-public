@@ -363,7 +363,7 @@ export default function LNGTEST() {
                 {/* Preview image (only before clicking play) */}
                 {!isMobileVideoPlaying && (
                   <img
-                    src="/v.jpg"
+                    src="/coming-soon-logo.png"
                     className="absolute inset-0 w-full h-full object-cover rounded-xl z-20"
                     alt="Preview"
                   />
@@ -445,7 +445,7 @@ export default function LNGTEST() {
                 {/* Preview image (before play) */}
                 {!isDesktopVideoPlaying && (
                   <img
-                    src="/v.jpg"
+                    src="/coming-soon-logo.png"
                     className="absolute inset-0 w-full h-full object-cover rounded-xl z-20"
                     alt="Preview"
                   />
