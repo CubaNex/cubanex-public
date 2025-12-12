@@ -70,9 +70,9 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
             <Image
               src="/cuba-nex-logo-gold.png"
               alt="Cubanex Logo"
-              width={150}
-              height={40}
-              className="object-contain ml-[-10px] sm:ml-0 cursor-pointer"
+              width={200}
+              height={80}
+              className="object-contain  sm:ml-0 cursor-pointer"
             />
           </Link>
 
