@@ -112,12 +112,25 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm">{t.rights}</p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="hover:text-gray-300 transition-colors">
+              <Link
+                href={
+                  language === "eng" ? "/en/privacy-policy" : "/privacy-policy"
+                }
+                className="hover:text-gray-300 transition-colors"
+              >
                 {t.privacy}
-              </a>
-              <a href="#" className="hover:text-gray-300 transition-colors">
+              </Link>
+
+              <Link
+                href={
+                  language === "eng"
+                    ? "/en/terms-of-service"
+                    : "/terms-of-service"
+                }
+                className="hover:text-gray-300 transition-colors"
+              >
                 {t.terms}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

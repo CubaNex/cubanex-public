@@ -8,6 +8,7 @@ import RoeadMapEn from "@/components/RoeadMapEn";
 import VipForm from "@/components/VipForm";
 import WhitePaper from "@/components/WhitePaper";
 import ArrowB from "@/components/ArrowB";
+import VideoPlayer from "@/components/VideoPlayer";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -252,11 +253,16 @@ export default function Home() {
           </div>
         </div>
         <div className="">
-          <Image
+          {/* <Image
             src={"/hero-havana-CDeUqYMJ.png"}
             alt="from havana to blockchain"
             width={600}
             height={500}
+          /> */}
+          <VideoPlayer
+            videoSrc="/cubanex-video.mp4"
+            previewSrc="/hero-havana-CDeUqYMJ.png"
+            className="w-full sm:h-[300px] max-w-6xl mx-auto my-24 max-h-[520px]"
           />
         </div>
       </div>
@@ -265,7 +271,7 @@ export default function Home() {
 
       <section>
         <h2
-          className={`${orbitron.className} px-4 sm:px-0 text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          className={`${orbitron.className} mt-[-80px] sm:mt-0 px-4 sm:px-0 text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
           CNEX
           <span className="text-[#FF8F00]">  Economía del token</span>

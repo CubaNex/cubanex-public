@@ -29,7 +29,7 @@ export default function VideoPlayer({
 
   return (
     <div
-      className={`relative w-full rounded-xl overflow-hidden shadow-xl ${className}`}
+      className={`relative w-full aspect-video rounded-xl overflow-hidden shadow-xl ${className}`}
     >
       {/* Glow Animation */}
       {!isPlaying && (
