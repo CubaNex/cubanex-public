@@ -68,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
           {/* Logo */}
           <Link href={language === "eng" ? "/en" : "/"}>
             <Image
-              src="/logos/logo.svg"
+              src="/logos/cuba-nex-logo-gold.png"
               alt="Cubanex Logo"
               width={210}
               height={60}

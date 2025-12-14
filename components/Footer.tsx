@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="flex items-center mb-4">
               <Link href={language === "eng" ? "/en" : "/"}>
                 <Image
-                  src="/logos/logo.svg"
+                  src="/logos/cuba-nex-logo-gold.png"
                   alt="Cubanex Logo"
                   width={230}
                   height={40}
