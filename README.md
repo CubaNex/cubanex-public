@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CubaNex — A Self-Evolving AI Digital Asset for Cuba’s Future
 
-## Getting Started
+CubaNex is a decentralized, self-evolving AI-driven digital asset designed to empower Cuba and connect it to a global, interoperable blockchain future.  
+Reinforced by code. Awakened by conscious purpose.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌐 Official Links
+**Website:** https://cubanex.io/  
+**X (Twitter):** https://x.com/CubaNexOfficial  
+**Telegram:** https://t.me/CubaNexOfficial  
+**GitHub Organization:** https://github.com/CubaNex  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📌 Repositories
+- **cubanex-core** — Core smart contracts & blockchain logic  
+- **cubanex-public** — Public front-end & documentation  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📖 Overview
+CubaNex blends decentralized technology with evolving AI mechanisms to create a digital asset that adapts, improves, and aligns with a long-term vision of financial empowerment and global interoperability.
 
-To learn more about Next.js, take a look at the following resources:
+This repository contains the public resources for the CubaNex ecosystem.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 License
+This project is licensed under the MIT License.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👁 Transparency
+CubaNex is committed to transparent development, security best practices, and open-source accessibility.
