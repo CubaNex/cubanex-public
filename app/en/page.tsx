@@ -101,7 +101,7 @@ export default function LNGTEST() {
   });
 
   useEffect(() => {
-    const endDate = new Date("2025-12-15T00:00:00");
+    const endDate = new Date("2025-12-25T00:00:00");
 
     const updateTimer = () => {
       const now = new Date().getTime();
