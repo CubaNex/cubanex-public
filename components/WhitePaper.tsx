@@ -1,5 +1,6 @@
 import React from "react";
 import { Work_Sans, Orbitron } from "next/font/google";
+import { Shield, TrendingUp } from "lucide-react";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -25,11 +26,9 @@ const WhitePaper = () => {
         {/* LEFT BLOCK */}
         <div className="flex items-start gap-4">
           <div className="w-[100px] rounded-xl">
-            <img
-              src="/image21.png"
-              alt="placeholder"
-              className="w-full h-full object-contain"
-            />
+            <div className="icon-card yellow">
+              <Shield size={28} />
+            </div>
           </div>
 
           <div>
@@ -53,11 +52,9 @@ const WhitePaper = () => {
         {/* RIGHT BLOCK */}
         <div className="flex items-start gap-4">
           <div className="w-[100px] rounded-xl">
-            <img
-              src="/image22.png"
-              alt="placeholder"
-              className="w-full h-full object-contain"
-            />
+            <div className="icon-card cyan">
+              <TrendingUp size={28} />
+            </div>
           </div>
 
           <div>
@@ -99,7 +96,7 @@ const WhitePaper = () => {
         <a
           href="/whitepaper"
           className="
-            px-[75px] py-2.5 text-[12px] sm:text-[18px] sm:px-6 sm:py-3
+            px-[57px] py-2.5 text-[12px] sm:text-[18px] text-center sm:px-6 sm:py-3
             rounded-full text-white font-medium
             border border-[#7928D2]
             transition-all duration-300

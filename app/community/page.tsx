@@ -3,6 +3,7 @@ import { Work_Sans, Orbitron } from "next/font/google";
 import ConnectWallet from "@/components/ConnectWallet";
 import Image from "next/image";
 import VipForm from "@/components/VipForm";
+import { MessageCircle, Send, Twitter } from "lucide-react";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -16,7 +17,7 @@ const orbitron = Orbitron({
 const page = () => {
   return (
     <div className="main relative  bg-[#010813]">
-      <div className=" sm:flex px-4 w-full pt-[120px] pb-[20px] sm:pt-[150px]  gap-2 items-center justify-center cmbg">
+      <div className=" sm:flex px-4 w-full pt-[120px] sm:pb-[20px] sm:pt-[150px]  gap-2 items-center justify-center cmbg">
         <div>
           {" "}
           <h1
@@ -32,18 +33,18 @@ const page = () => {
           </p>
         </div>
         <Image
-          alt="log"
-          src={"/community_logo.png"}
-          width={400}
+          alt="logo"
+          src={"/logos/favoco.png"}
+          width={500}
           height={500}
           className="hidden sm:block"
         />
         <Image
-          alt="log"
-          src={"/community_logo.png"}
-          width={150}
+          alt="logo"
+          src={"/logos/favoco.png"}
+          width={300}
           height={200}
-          className="block mx-auto sm:hidden"
+          className="block mt-[-60px] mx-auto sm:hidden"
         />
       </div>
       <section className="">
@@ -59,13 +60,8 @@ const page = () => {
 
           {/* 2 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/twitter-1.svg"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className="mx-auto pb-4 w-[55px]"
-            />
+            <Twitter size={52} className="mx-auto mb-5" />
+
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Twitter/X
             </h3>
@@ -78,13 +74,8 @@ const page = () => {
           </div>
           {/* 3 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/telegram-1.svg"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className="mx-auto pb-4 w-[55px]"
-            />
+            <Send size={52} className="mx-auto mb-5" />
+
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Telegram{" "}
             </h3>
@@ -96,13 +87,8 @@ const page = () => {
           </div>
           {/* 4 */}
           <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/message-new.svg"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className="mx-auto pb-4 w-[55px]"
-            />
+            <MessageCircle size={52} className="mx-auto mb-5" />
+
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Discord{" "}
             </h3>

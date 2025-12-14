@@ -32,13 +32,32 @@ const page = () => {
         <div className="relative  z-10 px-6 grid max-w-[1000px] text-white mx-auto gap-8 md:grid-cols-3">
           {/* 1 */}
           <div className="p-8 border min-w-[266px]  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/tone.png"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className=" pb-4 w-[55px]"
-            />
+            <div className="w-12 h-12 mb-5 rounded-xl bg-cyan-500/20 flex items-center justify-center">
+              <svg
+                className="w-6 h-6 text-cyan-400"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 8c4.418 0 8-1.343 8-3s-3.582-3-8-3-8 1.343-8 3 3.582 3 8 3z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M20 12c0 1.657-3.582 3-8 3s-8-1.343-8-3"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M20 16c0 1.657-3.582 3-8 3s-8-1.343-8-3"
+                />
+              </svg>
+            </div>
+
             <h3 className="text-xl  font-semibold mb-3 items-center">
               1,000,000,000{" "}
             </h3>
@@ -46,13 +65,22 @@ const page = () => {
           </div>
           {/* 2 */}
           <div className="p-8 border min-w-[266px]  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/ttwo.png"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className=" pb-4 w-[55px]"
-            />{" "}
+            <div className="w-12 h-12 mb-5 rounded-xl bg-yellow-500/20 flex items-center justify-center">
+              <svg
+                className="w-6 h-6 text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 3l7 4v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V7l7-4z"
+                />
+              </svg>
+            </div>
+
             <h3 className="text-xl  font-semibold mb-3 items-center">
               Audited{" "}
             </h3>
@@ -60,13 +88,32 @@ const page = () => {
           </div>
           {/* 3 */}
           <div className="p-8 border min-w-[266px]  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/tthree.png"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className=" pb-4 w-[55px]"
-            />
+            <div className="w-12 h-12 mb-5 rounded-xl bg-purple-500/20 flex items-center justify-center">
+              <svg
+                className="w-6 h-6 text-purple-400"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M7 11V7a5 5 0 0110 0v4"
+                />
+                <rect
+                  x="5"
+                  y="11"
+                  width="14"
+                  height="10"
+                  rx="2"
+                  ry="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+
             <h3 className="text-xl font-semibold mb-3 items-center">
               2 Years{" "}
             </h3>

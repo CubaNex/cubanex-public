@@ -1,6 +1,15 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
-import { Work_Sans, Orbitron } from "next/font/google";
+import {
+  ArrowRight,
+  DiscIcon,
+  MessageCircle,
+  Send,
+  Shield,
+  TrendingUp,
+  Twitter,
+  Wallet,
+} from "lucide-react";
+import { Work_Sans, Orbitron, Abhaya_Libre } from "next/font/google";
 import { main } from "framer-motion/client";
 import Image from "next/image";
 import ConnectWallet from "@/components/ConnectWallet";
@@ -19,6 +28,14 @@ const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["700", "800"],
 });
+// app/fonts.ts or layout.tsx
+
+export const abhayaLibre = Abhaya_Libre({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-abhaya",
+});
+
 export default function Home() {
   return (
     <main className="bg-black  text-white min-h-auto sm:min-h-screen w-full overflow-x-hidden">
@@ -271,7 +288,7 @@ export default function Home() {
 
       <section>
         <h2
-          className={`${orbitron.className} mt-[-80px] sm:mt-0 px-4 sm:px-0 text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          className={`${orbitron.className} mt-[-70px] sm:mt-0 px-4 sm:px-0 text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
           CNEX
           <span className="text-[#FF8F00]">  Economía del token</span>
@@ -355,7 +372,10 @@ export default function Home() {
                 {/* <div className="w-12 h-12 rounded-lg bg-[#7f5af0] flex justify-center items-center text-white">
                   <span className="text-xl">🔢</span>
                 </div> */}
-                <Image src={"/image20.png"} alt="icon" width={60} height={50} />
+                {/* <Image src={"/image20.png"} alt="icon" width={60} height={50} /> */}
+                <div className="icon-card purple">
+                  <Wallet size={28} />
+                </div>
                 <div>
                   <p className={`${workSans.className} text-white font-medium`}>
                     Total Supply
@@ -371,7 +391,10 @@ export default function Home() {
                 {/* <div className="w-12 h-12 rounded-lg bg-[#ffb800] flex justify-center items-center text-white">
                   <span className="text-xl">📜</span>
                 </div> */}
-                <Image src={"/image21.png"} alt="icon" width={60} height={50} />
+
+                <div className="icon-card yellow">
+                  <Shield size={28} />
+                </div>
 
                 <div>
                   <p className={`${workSans.className} text-white font-medium`}>
@@ -389,14 +412,9 @@ export default function Home() {
                   <span className="text-xl">🚀</span>
                 </div> */}
 
-                <Image
-                  src={"/image22.png"}
-                  className="ml-[6px]"
-                  alt="icon"
-                  width={55}
-                  height={50}
-                />
-
+                <div className="icon-card cyan">
+                  <TrendingUp size={28} />
+                </div>
                 <div>
                   <p className={`${workSans.className} text-white font-medium`}>
                     Real Utility
@@ -459,7 +477,10 @@ export default function Home() {
         <div className="px-8 grid max-w-[1300px] mx-auto gap-6 sm:gap-5 md:grid-cols-4">
           {/* 1 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img src="../one.png" alt="" className="mx-auto pb-4 w-[55px]" />
+            {/* <img src="../one.png" alt="" className="mx-auto pb-4 w-[55px]" /> */}
+            <div className="step-wrapper w-full mx-auto">
+              <div className="step-circle">1</div>
+            </div>
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Obtén una cartera{" "}
             </h3>
@@ -469,7 +490,9 @@ export default function Home() {
           </div>
           {/* 2 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img src="../2.png" alt="" className="mx-auto pb-4 w-[55px]" />
+            <div className="step-wrapper w-full mx-auto">
+              <div className="step-circle-1">2</div>
+            </div>
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Agregar fondos{" "}
             </h3>
@@ -479,7 +502,9 @@ export default function Home() {
           </div>
           {/* 3 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img src="../3.png" alt="" className="mx-auto pb-4 w-[55px]" />
+            <div className="step-wrapper w-full mx-auto">
+              <div className="step-circle-2">3</div>
+            </div>
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Conectar cartera{" "}
             </h3>
@@ -489,7 +514,9 @@ export default function Home() {
           </div>
           {/* 4 */}
           <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img src="../4.png" alt="" className="mx-auto pb-4 w-[55px]" />
+            <div className="step-wrapper w-full mx-auto">
+              <div className="step-circle-3">4</div>
+            </div>
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Comprar CNEX{" "}
             </h3>
@@ -523,11 +550,12 @@ export default function Home() {
         <div className="px-8 pt-20 grid max-w-[1100px] mx-auto gap-4 md:grid-cols-3">
           {/* 1 — Twitter */}
           <div className="p-8 border text-center items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <img
-              src="/twitter-1.svg"
-              alt=""
-              className="mx-auto pb-4 w-[55px]"
+            <Twitter
+              size={56}
+              className="text-center mx-auto mb-5"
+              strokeWidth={1.8}
             />
+
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Twitter/X
             </h3>
@@ -540,12 +568,10 @@ export default function Home() {
 
           {/* 2 — Telegram */}
           <div className="p-8 border text-center items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src="/telegram-1.svg"
-              alt="telegram"
-              width={60}
-              height={60}
-              className="mx-auto pb-4 w-[55px]"
+            <Send
+              size={56}
+              className="text-center mx-auto mb-5"
+              strokeWidth={1.8}
             />
 
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
@@ -561,13 +587,12 @@ export default function Home() {
 
           {/* 3 — Discord */}
           <div className="p-8 border text-center items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src="/message-2.svg"
-              alt="discord"
-              width={60}
-              height={60}
-              className="mx-auto pb-4 w-[55px]"
+            <MessageCircle
+              size={56}
+              className="text-center mx-auto mb-5"
+              strokeWidth={1.8}
             />
+
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Discord
             </h3>

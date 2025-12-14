@@ -138,13 +138,22 @@ const page = () => {
         <div className="relative pb-20 z-10 px-6 grid max-w-[1300px] mx-auto text-white gap-8 md:grid-cols-4">
           {/* 1 */}
           <div className="p-8 border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src="/aboutValeu1.png"
-              width={50}
-              height={50}
-              alt="icono"
-              className="pb-4 w-[55px]"
-            />
+            <div className="w-12 h-12 mb-5 rounded-xl bg-cyan-500/20 flex items-center justify-center">
+              <svg
+                className=" w-6 h-6 text-cyan-400"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+            </div>
+
             <h3 className="text-xl font-semibold mb-3">Herencia Cubana</h3>
             <p className="text-gray-400 text-sm">
               Basado en la rica cultura, resiliencia y espíritu innovador de
@@ -154,13 +163,22 @@ const page = () => {
 
           {/* 2 */}
           <div className="p-8 border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src="/aboutValeu2.png"
-              width={50}
-              height={50}
-              alt="icono"
-              className="pb-4 w-[55px]"
-            />
+            <div className="w-12 h-12 mb-5 rounded-xl bg-yellow-500/20 flex items-center justify-center">
+              <svg
+                className="w-6 h-6 text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 20h5v-2a4 4 0 00-5-4M9 20H4v-2a4 4 0 015-4m4-4a4 4 0 11-8 0 4 4 0 018 0zm6 4a3 3 0 100-6 3 3 0 000 6z"
+                />
+              </svg>
+            </div>
+
             <h3 className="text-xl font-semibold mb-3">Comunidad Primero</h3>
             <p className="text-gray-400 text-sm">
               Construido con transparencia, unidad y prosperidad compartida.
@@ -169,13 +187,22 @@ const page = () => {
 
           {/* 3 */}
           <div className="p-8 border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src="/aboutValeu3.png"
-              width={50}
-              height={50}
-              alt="icono"
-              className="pb-4 w-[55px]"
-            />
+            <div className="w-12 h-12 mb-5 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+              <svg
+                className="w-6 h-6 text-emerald-400"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 21a9 9 0 100-18 9 9 0 000 18zM3.6 9h16.8M3.6 15h16.8M12 3c2.5 2.7 2.5 14.3 0 18M12 3c-2.5 2.7-2.5 14.3 0 18"
+                />
+              </svg>
+            </div>
+
             <h3 className="text-xl font-semibold mb-3">Visión Global</h3>
             <p className="text-gray-400 text-sm">
               Conectando a Cuba con el mundo a través de la innovación
@@ -185,13 +212,22 @@ const page = () => {
 
           {/* 4 */}
           <div className="p-8 border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src="/aboutValeu4.png"
-              width={50}
-              height={50}
-              alt="icono"
-              className="pb-4 w-[55px]"
-            />
+            <div className="w-12 h-12 mb-5 rounded-xl bg-blue-500/20 flex items-center justify-center">
+              <svg
+                className="w-6 h-6 text-blue-400"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 3l1.5 4L11 8.5l-4.5 1.5L5 14l-1.5-4L-1 8.5l4.5-1.5L5 3zM19 10l1 3 3 1-3 1-1 3-1-3-3-1 3-1 1-3z"
+                />
+              </svg>
+            </div>
+
             <h3 className="text-xl font-semibold mb-3">Futuro Sostenible</h3>
             <p className="text-gray-400 text-sm">
               Pioneros en blockchain ecológica para una economía verde.

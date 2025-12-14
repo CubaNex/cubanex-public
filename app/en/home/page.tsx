@@ -1,6 +1,14 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
-import { Work_Sans, Orbitron } from "next/font/google";
+import {
+  ArrowRight,
+  MessageCircle,
+  Send,
+  Shield,
+  TrendingUp,
+  Twitter,
+  Wallet,
+} from "lucide-react";
+import { Work_Sans, Orbitron, Sen } from "next/font/google";
 import { main } from "framer-motion/client";
 import Image from "next/image";
 import RoeadMapEn from "@/components/RoeadMapEn";
@@ -363,7 +371,9 @@ export default function Home() {
                 {/* <div className="w-12 h-12 rounded-lg bg-[#7f5af0] flex justify-center items-center text-white">
                   <span className="text-xl">🔢</span>
                 </div> */}
-                <img src="../image20.png" alt="" />
+                <div className="icon-card purple">
+                  <Wallet size={28} />
+                </div>
 
                 <div>
                   <p className={`${workSans.className} text-white font-medium`}>
@@ -380,8 +390,9 @@ export default function Home() {
                 {/* <div className="w-12 h-12 rounded-lg bg-[#ffb800] flex justify-center items-center text-white">
                   <span className="text-xl">📜</span>
                 </div> */}
-                <img src="../image21.png" alt="" />
-
+                <div className="icon-card yellow">
+                  <Shield size={28} />
+                </div>
                 <div>
                   <p className={`${workSans.className} text-white font-medium`}>
                     Smart Contract
@@ -397,11 +408,9 @@ export default function Home() {
                 {/* <div className="w-12 h-12 rounded-lg bg-[#00d1ff] flex justify-center items-center text-white">
                   <span className="text-xl">🚀</span>
                 </div> */}
-                <img
-                  src="../image 22.png"
-                  alt=""
-                  className="sm:w-[50px] ml-[5px]"
-                />
+                <div className="icon-card cyan">
+                  <TrendingUp size={28} />
+                </div>
                 <div>
                   <p className={`${workSans.className} text-white font-medium`}>
                     Real Utility
@@ -464,13 +473,9 @@ export default function Home() {
         <div className="px-6 grid max-w-[1300px] mx-auto gap-8 md:grid-cols-4">
           {/* 1 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/one.png"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className="mx-auto pb-4 w-[55px]"
-            />
+            <div className="step-wrapper w-full mx-auto">
+              <div className="step-circle">1</div>
+            </div>
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Get a Wallet{" "}
             </h3>
@@ -480,13 +485,9 @@ export default function Home() {
           </div>
           {/* 2 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/2.png"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className="mx-auto pb-4 w-[55px]"
-            />{" "}
+            <div className="step-wrapper w-full mx-auto">
+              <div className="step-circle-1">2</div>
+            </div>
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Add Funds{" "}
             </h3>
@@ -496,13 +497,9 @@ export default function Home() {
           </div>
           {/* 3 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/3.png"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className="mx-auto pb-4 w-[55px]"
-            />
+            <div className="step-wrapper w-full mx-auto">
+              <div className="step-circle-2">3</div>
+            </div>
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Connect Wallet{" "}
             </h3>
@@ -512,13 +509,9 @@ export default function Home() {
           </div>
           {/* 4 */}
           <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/4.png"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className="mx-auto pb-4 w-[55px]"
-            />
+            <div className="step-wrapper w-full mx-auto">
+              <div className="step-circle-3">4</div>
+            </div>
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Buy CNEX{" "}
             </h3>
@@ -551,13 +544,12 @@ export default function Home() {
 
           {/* 2 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/twitter-1.svg"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className="mx-auto pb-4 w-[55px]"
+            <Twitter
+              size={56}
+              className="text-center mx-auto mb-5"
+              strokeWidth={1.8}
             />
+
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Twitter/X
             </h3>
@@ -570,13 +562,12 @@ export default function Home() {
           </div>
           {/* 3 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/telegram-1.svg"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className="mx-auto pb-4 w-[55px]"
+            <Send
+              size={56}
+              className="text-center mx-auto mb-5"
+              strokeWidth={1.8}
             />
+
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Telegram{" "}
             </h3>
@@ -588,13 +579,12 @@ export default function Home() {
           </div>
           {/* 4 */}
           <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Image
-              src={"/message-new.svg"}
-              width={50}
-              height={50}
-              alt="icon discord"
-              className="mx-auto pb-4 w-[55px]"
+            <MessageCircle
+              size={56}
+              className="text-center mx-auto mb-5"
+              strokeWidth={1.8}
             />
+
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
               Discord{" "}
             </h3>

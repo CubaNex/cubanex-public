@@ -654,3 +654,132 @@ html {
   }
 }
 
+/* .icon-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #050505;
+  padding: 10px;
+  width: fit-content;
+} */
+
+.icon-card {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+/* Colors */
+.icon-card.purple {
+  background: #8b5cf6;
+}
+
+.icon-card.yellow {
+  background: #fbbf24;
+}
+
+.icon-card.cyan {
+  background: #22d3ee;
+}
+
+/* number */
+.step-wrapper {
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(
+    circle at center,
+    #1a1a1a 0%,
+    #0b0b0b 60%,
+    #000000 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gradient circle */
+.step-circle {
+   width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    #C766EF 15%,
+    #7928D2 54%,
+    #2B0C52 100%
+  );
+  color: #ffffff;
+  font-family: 'Abhaya Libre', serif;
+
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-circle-1 {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    #14F195 0%,
+    #80ECFF 61%,
+    #64A8F2 100%
+  );
+  font-family: 'Abhaya Libre', serif;
+
+  color: #000;
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gradient circle */
+.step-circle-3 {
+   width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    #19FB9B 15%,
+    #005F59 54%,
+    #0DAD7A 100%
+  );
+  color: #ffffff;
+  font-family: 'Abhaya Libre', serif;
+
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gradient circle */
+.step-circle-2 {
+   width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    #FF8F00 23%,
+    #FFA726 54%,
+    #FFB74A 100%
+  );
+  color: #ffffff;
+  font-family: 'Abhaya Libre', serif;
+
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* number */
