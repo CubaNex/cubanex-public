@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import { textContent } from "@/constants/contents";
 import { textVariant2 } from "@/font-utils/motion";
+import { link } from "fs";
 
 // ✅ Add props interface
 interface HeaderProps {
@@ -98,16 +99,17 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
               <Image src="/lngswicher.svg" width={20} height={20} alt="" />
               {language === "eng" ? "ESP" : "EN"}
             </button>
-
-            <button
-              className="px-3 py-1.5 rounded-full text-white text-[12px]"
-              style={{
-                background:
-                  "linear-gradient(90deg, #C766EF 0%, #7928D2 51%, #2B0C52 100%)",
-              }}
-            >
-              {t.button}
-            </button>
+            <a href={t.btnLink}>
+              <button
+                className="px-3 py-1.5 rounded-full text-white text-[12px]"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #C766EF 0%, #7928D2 51%, #2B0C52 100%)",
+                }}
+              >
+                {t.button}
+              </button>
+            </a>
           </div>
 
           {/* Mobile buttons */}

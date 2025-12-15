@@ -84,12 +84,14 @@ export default function Home() {
           </p>
 
           <div className="flex gap-2 sm:gap-6 justify-center">
-            <button
-              className=" px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white border-1 font-medium bg-[transparetn] hover:bg-[#fff] hover:text-[#000] 
+            <a href="http://localhost:3000/community">
+              <button
+                className=" px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white border-1 font-medium bg-[transparetn] hover:bg-[#fff] hover:text-[#000] 
     hover:scale-105 transition-transform duration-300 ease-in-out"
-            >
-              Sé de los primeros
-            </button>
+              >
+                Sé de los primeros
+              </button>
+            </a>
             <a href="/whitepaper">
               <button
                 className="px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white font-medium bg-gradient-to-r from-[#C766EF] via-[#7928D2] to-[#2B0C52] 

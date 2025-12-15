@@ -74,12 +74,14 @@ export default function Home() {
           </p>
 
           <div className="flex gap-2 sm:gap-6 justify-center">
-            <button
-              className=" px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white border-1 font-medium bg-[transparetn] hover:bg-[#fff] hover:text-[#000] 
+            <a href="http://localhost:3000/en/community">
+              <button
+                className=" px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white border-1 font-medium bg-[transparetn] hover:bg-[#fff] hover:text-[#000] 
     hover:scale-105 transition-transform duration-300 ease-in-out"
-            >
-              Be Among the First{" "}
-            </button>
+              >
+                Be Among the First{" "}
+              </button>
+            </a>
             <a href="/whitepaper">
               <button
                 className="px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white font-medium bg-gradient-to-r from-[#C766EF] via-[#7928D2] to-[#2B0C52] 
@@ -601,7 +603,7 @@ export default function Home() {
       {/* ================= WHITEPAPER SECTION ================= */}
       <section className="px-5 pb-20">
         <h2
-          className={`${orbitron.className} bg-[#000000] text-center text-[26px] sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
+          className={`${orbitron.className} bg-[#000000] text-center text-[26px] pt-6 sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
         >
           <span className="text-[#FF8F00]">Whitepaper  </span> & Documentation
         </h2>{" "}

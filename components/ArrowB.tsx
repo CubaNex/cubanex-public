@@ -3,18 +3,19 @@ import React from "react";
 
 const ArrowB = () => {
   return (
-    <img
-      src="/barrow.svg"
-      alt="Scroll Arrow"
+    <svg
+      width="20"
+      height="36"
+      viewBox="0 0 20 36"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       className="
         mx-auto
-        drop-shadow-lg
         cursor-pointer
         animate-bounce
         transition-all
         duration-300
         hover:scale-110
-        hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]
       "
       onClick={() => {
         window.scrollTo({
@@ -22,7 +23,21 @@ const ArrowB = () => {
           behavior: "smooth",
         });
       }}
-    />
+    >
+      {/* Outer thin capsule */}
+      <rect
+        x="1"
+        y="1"
+        width="18"
+        height="34"
+        rx="9"
+        stroke="#DEAA66"
+        strokeWidth="1.4"
+      />
+
+      {/* Inner small dot */}
+      <rect x="9" y="9" width="2" height="6" rx="1" fill="#DEAA66" />
+    </svg>
   );
 };
 
