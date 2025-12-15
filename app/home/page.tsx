@@ -84,7 +84,7 @@ export default function Home() {
           </p>
 
           <div className="flex gap-2 sm:gap-6 justify-center">
-            <a href="http://localhost:3000/community">
+            <a href="/community">
               <button
                 className=" px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white border-1 font-medium bg-[transparetn] hover:bg-[#fff] hover:text-[#000] 
     hover:scale-105 transition-transform duration-300 ease-in-out"
