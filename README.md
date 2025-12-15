@@ -13,9 +13,9 @@ Reinforced by code. Awakened by conscious purpose.
 
 ---
 
-## 📌 Repositories
+## 📌 Repositories 
 - **cubanex-core** — Core smart contracts & blockchain logic  
-- **cubanex-public** — Public front-end & documentation  
+- **cubanex-public** — Public front-end & documentation
 
 ---
 
@@ -31,5 +31,5 @@ This project is licensed under the MIT License.
 
 ---
 
-## 👁 Transparency
+## 👁 👁 Transparency
 CubaNex is committed to transparent development, security best practices, and open-source accessibility.
