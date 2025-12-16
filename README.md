@@ -33,3 +33,12 @@ This project is licensed under the MIT License.
 
 ## 👁 👁 Transparency
 CubaNex is committed to transparent development, security best practices, and open-source accessibility.
+
+
+## Team
+
+**Founder & Architect:** The Alchemist  
+**GitHub:** https://github.com/CubaNexLabs  
+
+The CubaNex ecosystem is developed by a distributed anonymous team committed to
+decentralization and privacy.
