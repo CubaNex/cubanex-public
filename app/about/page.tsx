@@ -1,6 +1,7 @@
 import React from "react";
 import { Work_Sans, Orbitron } from "next/font/google";
 import Image from "next/image";
+import { Github } from "lucide-react";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -287,6 +288,63 @@ const page = () => {
             </div>
           </div>
         </div>
+        {/* TEAM SECTION */}
+        <section className="w-full relative z-10  flex justify-center pt-5 pb-24 px-4 bg-[#010813]">
+          <div className="w-full max-w-4xl text-center">
+            {/* Title */}
+            <h2
+              className={`${orbitron.className} text-[36px] sm:text-[44px] text-[#00DED4] font-bold mb-6`}
+            >
+              <span className="text-white"> The</span> Team
+            </h2>
+
+            {/* Card */}
+            <div className="rounded-2xl border border-[#1F2E47] bg-gradient-to-b from-[#050F1F] to-[#020A16] px-6 sm:px-12 py-12">
+              {/* Role */}
+              <p
+                className={`${orbitron.className} text-[10px] sm:text-[22px] text-white mb-2`}
+              >
+                Founder & Architect
+              </p>
+
+              {/* Name */}
+              <p
+                className={`${orbitron.className} text-[24px] sm:text-[34px] text-[#FFB74A] mb-6`}
+              >
+                The Alchemist
+              </p>
+
+              {/* Description */}
+              <div
+                className={`${workSans.className} text-gray-300 text-[16px] sm:text-[18px] leading-relaxed space-y-4 mb-10 max-w-[720px] mx-auto`}
+              >
+                <p>
+                  CubaNex is developed by a decentralized, privacy-preserving
+                  collective.
+                </p>
+
+                <p>
+                  The founder operates under the alias &quot;The Alchemist&quot;
+                  to maintain neutrality, security, and alignment with
+                  decentralization principles.
+                </p>
+              </div>
+
+              {/* GitHub Button */}
+              <a
+                href="https://github.com/CubaNexLabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-3 rounded-xl border border-[#1F2E47] bg-[#030E1C] hover:border-[#00DED4] hover:bg-[#061A2F] transition-all duration-300 text-white"
+              >
+                <Github className="w-5 h-5" />
+                <span className={`${workSans.className} font-medium`}>
+                  CubaNexLabs
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
       </section>
     </div>
   );
