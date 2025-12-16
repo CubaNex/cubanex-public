@@ -289,13 +289,13 @@ const page = () => {
           </div>
         </div>
         {/* TEAM SECTION */}
-        <section className="w-full relative z-10  flex justify-center pt-5 pb-24 px-4 bg-[#010813]">
+        <section className="w-full relative z-10 flex justify-center pt-5 pb-24 px-4 bg-[#010813]">
           <div className="w-full max-w-4xl text-center">
             {/* Title */}
             <h2
               className={`${orbitron.className} text-[36px] sm:text-[44px] text-[#00DED4] font-bold mb-6`}
             >
-              <span className="text-white"> The</span> Team
+              <span className="text-white">El</span> Equipo
             </h2>
 
             {/* Card */}
@@ -304,7 +304,7 @@ const page = () => {
               <p
                 className={`${orbitron.className} text-[10px] sm:text-[22px] text-white mb-2`}
               >
-                Founder & Architect
+                Fundador & Arquitecto
               </p>
 
               {/* Name */}
@@ -319,14 +319,14 @@ const page = () => {
                 className={`${workSans.className} text-gray-300 text-[16px] sm:text-[18px] leading-relaxed space-y-4 mb-10 max-w-[720px] mx-auto`}
               >
                 <p>
-                  CubaNex is developed by a decentralized, privacy-preserving
-                  collective.
+                  CubaNex es desarrollado por un colectivo descentralizado y
+                  enfocado en la preservación de la privacidad.
                 </p>
 
                 <p>
-                  The founder operates under the alias &quot;The Alchemist&quot;
-                  to maintain neutrality, security, and alignment with
-                  decentralization principles.
+                  El fundador opera bajo el alias &quot;The Alchemist&quot; para
+                  mantener la neutralidad, la seguridad y la alineación con los
+                  principios de la descentralización.
                 </p>
               </div>
 
