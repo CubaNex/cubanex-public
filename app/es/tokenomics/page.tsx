@@ -59,7 +59,7 @@ const page = () => {
             </div>
 
             <h3 className="text-xl  font-semibold mb-3 items-center">
-              1,000,000,000{" "}
+              100,000,000,000{" "}
             </h3>
             <p className="text-gray-400 text-sm">Total Supply</p>
           </div>
