@@ -383,7 +383,7 @@ export default function Home() {
                     Total Supply
                   </p>
                   <p className={`${workSans.className} text-white/60 text-sm`}>
-                    1,000,000,000 CNEX tokens
+                    100,000,000,000 CNEX
                   </p>
                 </div>
               </div>
