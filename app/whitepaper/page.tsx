@@ -56,6 +56,21 @@ const Whitepaper = () => {
               presente.
             </p>
           </blockquote>
+          <div className="mt-10 flex justify-center">
+            <a
+              href="http://localhost:3000/CubaNex_Whitepaper_v1.0.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl
+               bg-primary/90 hover:bg-primary
+               text-background font-semibold
+               transition-all duration-300
+               backdrop-blur-md shadow-lg"
+            >
+              <FileText className="w-5 h-5" />
+              Download Whitepaper (PDF)
+            </a>
+          </div>
         </div>
       </section>
 

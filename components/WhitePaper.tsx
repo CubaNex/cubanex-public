@@ -80,8 +80,8 @@ const WhitePaper = () => {
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-10">
         {/* FIRST BUTTON - Gradient */}
         <a
-          href="/CubaNex_Whitepaper_v1.pdf"
-          download="CubaNex_Whitepaper_v1.pdf"
+          href="/CubaNex_Whitepaper_v1.0.pdf"
+          // download="CubaNex_Whitepaper_v1.pdf"
           className="
             px-[14px] py-2.5 text-[12px] sm:text-[18px] sm:px-6 sm:py-3
             rounded-full text-white font-medium
