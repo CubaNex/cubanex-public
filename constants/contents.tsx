@@ -3,7 +3,7 @@ export const textContent = {
     header: {
       links: ["Home", "About", "Tokenomics", "Community"],
       button: "Join Presale",
-      btnLink: "/en/community",
+      btnLink: "/community",
     },
 
     // -----------------------
@@ -47,7 +47,7 @@ export const textContent = {
     header: {
       links: ["Inicio", "Acerca de", "Comunidad", "Economía del token"],
       button: "Únete a la preventa",
-      btnLink: "/community",
+      btnLink: "/es/community",
     },
     jbtn: "Únete a la preventa",
     amongbtn: "Sé de los primeros",

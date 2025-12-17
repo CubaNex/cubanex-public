@@ -25,8 +25,8 @@ const page = () => {
         <p
           className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto mb-8`}
         >
-          Distribución transparente y utilidad del mundo real que impulsa la
-          revolución digital de Cuba
+          Transparent distribution and real-world utility powering Cuba's
+          digital revolution
         </p>
 
         <div className="relative  z-10 px-6 grid max-w-[1000px] text-white mx-auto gap-8 md:grid-cols-3">

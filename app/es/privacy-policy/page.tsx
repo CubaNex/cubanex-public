@@ -1,140 +1,126 @@
 import {
-  ShieldCheck,
-  Scale,
+  Shield,
+  Lock,
   Globe,
+  Database,
+  Bot,
+  Cookie,
+  Users,
   AlertTriangle,
-  Coins,
-  Briefcase,
-  Copyright,
-  Ban,
-  ExternalLink,
-  Handshake,
-  Gavel,
-  MapPin,
-  Puzzle,
+  Scale,
   FileText,
+  RefreshCw,
   MessageCircle,
 } from "lucide-react";
 
 const sections = [
   {
     number: "1",
-    title: "Acceptance of Terms",
-    icon: ShieldCheck,
+    title: "Introducción",
+    icon: Shield,
     content:
-      "By accessing or using the CubaNex website, you agree to be legally bound by these Terms & Conditions.",
+      "CubaNex Technologies LLC (“CubaNex”, “nosotros”) se compromete a proteger su privacidad. Esta Política de Privacidad explica cómo se recopila, utiliza, almacena y protege la información.",
   },
   {
     number: "2",
-    title: "Nature of the Project",
-    icon: FileText,
+    title: "Información que recopilamos",
+    icon: Database,
     content:
-      "CubaNex is a decentralized blockchain and AI-integrated project. Participation is voluntary and speculative.",
+      "Podemos recopilar información personal proporcionada voluntariamente (nombre, correo electrónico, dirección de billetera), datos técnicos (dirección IP, navegador, dispositivo) y datos de uso. No recopilamos intencionalmente datos personales sensibles.",
   },
   {
     number: "3",
-    title: "Eligibility",
-    icon: Globe,
+    title: "Uso de la información",
+    icon: FileText,
     content:
-      "You confirm that your use of this website complies with all applicable laws and regulations.",
+      "La información se utiliza para operar, mantener, asegurar y mejorar el sitio web, comunicar actualizaciones y cumplir con obligaciones legales.",
   },
   {
     number: "4",
-    title: "No Guarantees",
-    icon: AlertTriangle,
+    title: "Descargo de responsabilidad sobre blockchain y billeteras",
+    icon: Lock,
     content:
-      "CubaNex makes no representations or guarantees regarding value, performance, or outcomes.",
+      "Las transacciones blockchain son públicas por naturaleza. CubaNex no controla ni custodia billeteras y no es responsable por pérdidas de fondos, claves privadas o errores de transacción.",
   },
   {
     number: "5",
-    title: "Token & Digital Asset Disclaimer",
-    icon: Coins,
+    title: "Descargo de responsabilidad sobre IA",
+    icon: Bot,
     content:
-      "Digital assets are volatile and may lose all value. CubaNex is not responsible for market behavior.",
+      "CubaNex puede integrar sistemas de inteligencia artificial. Los resultados generados por IA son solo informativos y pueden ser inexactos.",
   },
   {
     number: "6",
-    title: "No Fiduciary Relationship",
-    icon: Briefcase,
-    content: "No fiduciary, advisory, or professional relationship is created.",
+    title: "Cookies y análisis",
+    icon: Cookie,
+    content:
+      "Podemos utilizar cookies y herramientas analíticas. El usuario puede desactivarlas desde su navegador.",
   },
   {
     number: "7",
-    title: "Intellectual Property",
-    icon: Copyright,
+    title: "Compartición de datos",
+    icon: Users,
     content:
-      "All content is owned by CubaNex or licensed appropriately. Unauthorized use is prohibited.",
+      "No vendemos datos personales. La información puede compartirse con proveedores de servicios únicamente para operaciones.",
   },
   {
     number: "8",
-    title: "Prohibited Use",
-    icon: Ban,
+    title: "Seguridad",
+    icon: Lock,
     content:
-      "Users may not misuse the site, attempt hacking, or violate applicable laws.",
+      "Implementamos medidas razonables, pero ningún sistema es completamente seguro.",
   },
   {
     number: "9",
-    title: "Third-Party Links",
-    icon: ExternalLink,
-    content: "CubaNex is not responsible for external websites or content.",
+    title: "Usuarios internacionales",
+    icon: Globe,
+    content:
+      "El acceso se realiza bajo su propia responsabilidad y conforme a las leyes locales.",
   },
   {
     number: "10",
-    title: "Indemnification",
-    icon: Handshake,
+    title: "Sin asesoramiento financiero",
+    icon: AlertTriangle,
     content:
-      "You agree to indemnify and hold harmless CubaNex from claims arising from your use.",
+      "Nada en este sitio constituye asesoramiento financiero, legal o de inversión.",
   },
   {
     number: "11",
-    title: "Limitation of Liability",
+    title: "Limitación de responsabilidad",
     icon: Scale,
-    content: "Liability is limited to the maximum extent permitted by law.",
+    content:
+      "En la máxima medida permitida por la ley, CubaNex no será responsable por daños o pérdidas.",
   },
   {
     number: "12",
-    title: "Governing Law & Venue",
-    icon: MapPin,
+    title: "Cambios",
+    icon: RefreshCw,
     content:
-      "These terms are governed by the laws of the State of Wyoming, USA.",
+      "Esta política puede actualizarse en cualquier momento sin previo aviso.",
   },
   {
     number: "13",
-    title: "Severability",
-    icon: Puzzle,
-    content:
-      "If any provision is found unenforceable, the remaining provisions remain in effect.",
-  },
-  {
-    number: "14",
-    title: "Entire Agreement",
-    icon: FileText,
-    content:
-      "These Terms constitute the entire agreement between you and CubaNex.",
-  },
-  {
-    number: "15",
-    title: "Contact",
+    title: "Contacto",
     icon: MessageCircle,
-    content: "Email: support@cubanex.io",
+    content: "Correo electrónico: support@cubanex.io",
   },
 ];
 
-const TermsConditions = () => {
+const PrivacyPolicyES = () => {
   return (
     <div className="min-h-screen p-5 bg-black text-white font-[var(--font-work-sans)]">
       {/* Hero */}
       <section className="pt-32 pb-16 text-center">
         <div className="max-w-4xl mx-auto px-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#F6B463]/40 bg-[#F6B463]/10 mb-6">
-            <Scale className="w-4 h-4 text-[#F6B463]" />
+            <Shield className="w-4 h-4 text-[#F6B463]" />
             <span className="text-sm text-[#F6B463] font-medium">
-              Legal Document
+              Documento Legal
             </span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-orbitron)] font-bold mb-4">
-            Terms & Conditions
+            Política de Privacidad
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-2">
@@ -142,7 +128,7 @@ const TermsConditions = () => {
           </p>
 
           <p className="text-gray-500 text-sm">
-            Last Updated: December 13, 2025
+            Última actualización: December 13, 2025
           </p>
         </div>
       </section>
@@ -174,9 +160,9 @@ const TermsConditions = () => {
                 </div>
 
                 <p className="text-gray-300 leading-relaxed">
-                  {section.number === "15" ? (
+                  {section.number === "13" ? (
                     <>
-                      Email:{" "}
+                      Correo electrónico:{" "}
                       <a
                         href="mailto:support@cubanex.io"
                         className="text-[#F6B463] underline underline-offset-4 hover:opacity-80"
@@ -194,10 +180,11 @@ const TermsConditions = () => {
 
           {/* Bottom Notice */}
           <div className="mt-16 p-6 rounded-2xl border border-[#F6B463]/30 bg-[#030D1A] text-center">
-            <Gavel className="w-8 h-8 text-[#F6B463] mx-auto mb-4" />
+            <Lock className="w-8 h-8 text-[#F6B463] mx-auto mb-4" />
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              By accessing or using the CubaNex website, you agree to these
-              Terms & Conditions in full.
+              Al usar nuestro sitio web y servicios, usted reconoce que ha
+              leído, entendido y acepta estar sujeto a esta Política de
+              Privacidad.
             </p>
           </div>
         </div>
@@ -206,4 +193,4 @@ const TermsConditions = () => {
   );
 };
 
-export default TermsConditions;
+export default PrivacyPolicyES;

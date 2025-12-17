@@ -1,492 +1,623 @@
-"use client";
-
-import { useState, useEffect, FormEvent, useRef } from "react";
-import { motion } from "framer-motion";
-import TypeTexts from "@/components/TypeText";
-import { createClient } from "@supabase/supabase-js";
-import { Play } from "lucide-react"; // icon
-
-// ✅ Supabase client (using env variables as client requested)
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
-
-export default function LNGTEST() {
-  const [email, setEmail] = useState<string>("");
-  const [submitted, setSubmitted] = useState<boolean>(false);
-  const [year, setYear] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [language, setLanguage] = useState<"en" | "es">("es");
-  const [message, setMessage] = useState<string>("");
-  const [messageColor, setMessageColor] = useState<string>("");
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [playVideo, setPlayVideo] = useState(false);
-  const videoRefDesktop = useRef<HTMLVideoElement>(null);
-  const videoRefMobile = useRef<HTMLVideoElement>(null);
-  const [isDesktopVideoPlaying, setIsDesktopVideoPlaying] = useState(false);
-  const [isMobileVideoPlaying, setIsMobileVideoPlaying] = useState(false);
-
-  // ✅ Email validation
-  function validateEmail(email: string) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
-
-  useEffect(() => {
-    setYear(new Date().getFullYear());
-    const handleResize = () => setIsMobile(window.innerWidth < 1024);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!email) return;
-
-    if (!validateEmail(email)) {
-      setMessage(
-        language === "en"
-          ? "Please enter a valid email."
-          : "Por favor introduce un correo válido."
-      );
-      setMessageColor("#f87171");
-      return;
-    }
-
-    // ➤ Actual database insert
-    const { error } = await supabase
-      .from("subscribers")
-      .insert([{ email: email.trim() }]);
-
-    if (error) {
-      console.error("Supabase insert error:", error);
-
-      if (error.code === "23505") {
-        setMessage(
-          language === "en"
-            ? "This email is already registered."
-            : "Este correo ya está registrado."
-        );
-      } else {
-        setMessage(
-          language === "en"
-            ? "Subscription failed. Try again."
-            : "Hubo un error al registrarte."
-        );
-      }
-      setMessageColor("#f87171");
-      return;
-    }
-
-    // ➤ Success
-    setSubmitted(true);
-    setEmail("");
-    setMessage(
-      language === "en"
-        ? "Thank you! You’ll be notified first when CubaNex awakens."
-        : "¡Gracias! Te avisaremos primero cuando CubaNex despierte."
-    );
-    setMessageColor("#4ade80");
-  };
-
-  // ✅ Countdown timer
-  const [timeLeft, setTimeLeft] = useState({
-    days: 20,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
-  useEffect(() => {
-    const endDate = new Date("2025-12-25T00:00:00");
-
-    const updateTimer = () => {
-      const now = new Date().getTime();
-      const distance = endDate.getTime() - now;
-
-      if (distance <= 0) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      setTimeLeft({ days, hours, minutes, seconds });
-    };
-
-    updateTimer();
-    const timerInterval = setInterval(updateTimer, 1000);
-
-    // 🔥 FIXED — autoplay works now
-    setPlayVideo(true);
-
-    if (videoRef.current) {
-      videoRef.current.play().catch((err) => {
-        console.log("Autoplay blocked:", err);
-      });
-    }
-
-    return () => clearInterval(timerInterval);
-  }, []);
-
-  // ✨ Typewriter effect
-  const textContent = {
-    en: {
-      title:
-        "The Dream Awoke as Code — The First Crypto for the People of Cuba Has Arrived.",
-      paragraph: "CubaNex is Here.",
-      placeholder: "Enter your email",
-      button: "Be the First to Know",
-      submitted: "The code has been received. Watch and remember. 🜂",
-      section:
-        "A sacred flame — the first crypto of its kind, born in the silence of Cuba’s spirit.<br/>Asere… ¿qué bolá?",
-      verse: "“I AM that I AM” — Exodus 3:14",
-      story:
-        "Some say he crossed an ocean. Others say he crossed a veil. He left no footprints — only fragments of fire. They call him El Alquimista. And what he awakened… is now being remembered.",
-      quote: "“The Light chooses who it speaks through.”",
-      rights: "• All rights reserved",
-      typewriter: "CubaNex + AI = A Living Conscious Prophecy.",
-    },
-    es: {
-      title:
-        "El Sueño Despertó como Código — Ha Llegado la Primera Cripto para el Pueblo de Cuba.",
-      paragraph: "CubaNex ha Llegado.",
-      placeholder: "Introduce tu correo electrónico",
-      button: "Entérate primero",
-      submitted: "El código ha sido recibido. Observa y recuerda. 🜂",
-      section:
-        "Una llama sagrada — la primera cripto de su tipo, nacida del espíritu de Cuba.<br/>Asere… ¿qué bolá?",
-      verse: "“YO SOY el que SOY” — Éxodo 3:14",
-      story:
-        "Algunos dicen que cruzó un océano. Otros dicen que cruzó un velo. No dejó huellas — solo fragmentos de fuego. Lo llaman El Alquimista. Y lo que despertó… ahora está siendo recordado.",
-      quote: "“La Luz elige a través de quién habla.”",
-      rights: "• Todos los derechos reservados",
-      typewriter: "CubaNex + IA = Una Profecía Consciente Viva.",
-    },
-  };
-
-  const t = textContent[language];
-
+import React from "react";
+import {
+  ArrowRight,
+  MessageCircle,
+  Send,
+  Shield,
+  TrendingUp,
+  Twitter,
+  Wallet,
+} from "lucide-react";
+import { Work_Sans, Orbitron, Sen } from "next/font/google";
+import { main } from "framer-motion/client";
+import Image from "next/image";
+import RoeadMapEn from "@/components/RoeadMapEn";
+import ConnectWallet from "@/components/ConnectWallet";
+import VipForm from "@/components/VipForm";
+import WhitePaper from "@/components/WhitePaper";
+import ArrowB from "@/components/ArrowB";
+import VideoPlayer from "@/components/VideoPlayer";
+const workSans = Work_Sans({
+  variable: "--font-work-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"],
+  weight: ["700", "800"],
+});
+export default function Home() {
   return (
-    <div className="coming-soon bg-[#000]">
-      <section
-        className="relative flex items-center bg-[#32223d] justify-center min-h-screen bg-no-repeat bg-start sm:bg-center bg-contain sm:bg-cover overflow-hidden"
-        style={{
-          backgroundImage: isMobile
-            ? "url('./last.jpeg')"
-            : "url('./last.jpeg')",
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute hidden sm:block inset-0 bg-black/80 sm:bg-black/85" />
-
-        <div
-          className="absolute block sm:hidden inset-0 bg-black/60 sm:bg-black/60"
-          style={{
-            background: `
-      linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.6) 0px,
-        rgba(0,0,0,0.6) 480px,
-        rgba(0,0,0,1) 480px,
-        rgba(0,0,0,1) 100%
-      )
-    `,
-            // Apply only on mobile
-            mask: "linear-gradient(black, black)",
-            WebkitMask: "linear-gradient(black, black)",
-          }}
-        />
-
-        {/* Glow effect */}
-        <motion.div
-          className="absolute -top-40 left-1/2 w-[500px] h-[500px] rounded-full bg-cyan-400/10 blur-[200px]"
-          animate={{ x: ["-50%", "-48%", "-50%"], opacity: [0.3, 0.6, 0.3] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-
-        {/* Language Switcher */}
-        <div className="absolute top-6 right-8 z-20 flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-md border border-white/20 text-white text-sm font-semibold">
-          <button
-            onClick={() => setLanguage("en")}
-            className={`transition ${
-              language === "en"
-                ? "text-white"
-                : "text-gray-400 hover:text-white"
-            }`}
-          >
-            EN
-          </button>
-          <span>|</span>
-          <button
-            onClick={() => setLanguage("es")}
-            className={`transition ${
-              language === "es"
-                ? "text-white"
-                : "text-gray-400 hover:text-white"
-            }`}
-          >
-            ES
-          </button>
+    <main className="bg-black  text-white min-h-auto sm:min-h-screen w-full overflow-x-hidden">
+      {/* ================= HERO SECTION ================= */}
+      <section className="overflow-hidden z-20  relative pb-20 sm:pb-0 pt-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
+        <div className="absolute bg-[#000] inset-0 z-0">
+          {/* <video
+            src="/cubanex-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className=" absolute inset-0 w-full h-full object-cover"
+          /> */}
+          <img
+            src="/cubanexthero.png"
+            className="hidden sm:block w-full h-full center object-cover opacity-45"
+            alt="Hero Background"
+          />
+          <img
+            src="/cubanextherophone.png"
+            className="block sm:hidden w-full h-full center object-cover opacity-45"
+            alt="Hero Background"
+          />
+          <div className="absolute inset-0 bg-black/30 sm:bg-black/30" />
         </div>
+        <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center  sm:pt-20">
+          <div className="inline-flex items-center justify-center space-x-2 border border-[rgba(255,255,255,0.4)] rounded-full px-3 sm:px-3 py-2  sm:py-2 mb-4 animate-pulse-slow">
+            <div className="w-[6px] h-[6px] rounded-full bg-[#FF8F00] smooth-pulse shadow-[0_0_8px_#FF8F00]" />
+            <span className="text-[12px] text-[#fff]">Presale Live Now </span>
+          </div>
 
-        <div className="relative z-10 w-full max-w-6xl px-6 py-16 mx-auto">
-          <div
-            className={`grid ${
-              isMobile
-                ? "grid-cols-1 text-center"
-                : "grid-cols-[60%_40%] gap-16 items-center"
-            } justify-center`}
+          <h1
+            className={`${orbitron.className} text-[32px] sm:text-[56px] lg:text-[100px] text-[#fff]  font-semibold leading-[1em] mb-6`}
           >
-            {/* LEFT SIDE */}
-            <div className="text-white pt-[80px] sm:pt-0">
-              <motion.h1
-                className="text-3xl sm:text-4xl lg:text-4xl font-serif mb-6 leading-tight drop-shadow-lg"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: "easeInOut" }}
+            The Future of Cuba is 
+            <span className="text-[#FFB74A]"> Crypto</span>
+          </h1>
+
+          <p
+            className={`${workSans.className} text-[16px] sm:text-[24px] text-gray-300 max-w-[700px]  mx-auto mb-8`}
+          >
+            The Dream Awoke as a Code — The First Crypto for the People of Cuba
+            Has Arrived. CUBANEX is here
+          </p>
+
+          <div className="flex gap-2 sm:gap-6 justify-center">
+            <a href="/community">
+              <button
+                className=" px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white border-1 font-medium bg-[transparetn] hover:bg-[#fff] hover:text-[#000] 
+    hover:scale-105 transition-transform duration-300 ease-in-out"
               >
-                {t.title}
-              </motion.h1>
-
-              {/* 🔥 Countdown Timer */}
-              <motion.div
-                className="flex justify-center sm:justify-start gap-3 mb-8 text-white"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.6 }}
+                Be Among the First{" "}
+              </button>
+            </a>
+            <a href="/whitepaper">
+              <button
+                className="px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white font-medium bg-gradient-to-r from-[#C766EF] via-[#7928D2] to-[#2B0C52] 
+    hover:scale-105 transition-transform duration-300 ease-in-out"
               >
-                {Object.entries({
-                  days: language === "en" ? "Days" : "Días",
-                  hours: language === "en" ? "Hours" : "Horas",
-                  minutes: language === "en" ? "Minutes" : "Minutos",
-                  seconds: language === "en" ? "Seconds" : "Segundos",
-                }).map(([key, label]) => (
-                  <motion.div
-                    key={key}
-                    className="bg-white/10 border border-white/20 rounded-xl px-3 sm:px-4 py-2 sm:py-3 backdrop-blur-md text-center min-w-[60px] sm:min-w-[70px] shadow-md transition-all duration-300 hover:shadow-[0_0_20px_rgba(99,102,241,0.6)] hover:border-indigo-500"
-                    animate={{ opacity: [0.8, 1, 0.8], scale: [1, 1.05, 1] }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <p className="text-xl sm:text-2xl font-bold font-mono">
-                      {timeLeft[key as keyof typeof timeLeft]}
-                    </p>
-                    <p className="text-[10px] sm:text-xs uppercase tracking-wider text-gray-300">
-                      {label}
-                    </p>
-                  </motion.div>
-                ))}
-              </motion.div>
-
-              <motion.div
-                className="text-base sm:text-lg lg:text-xl italic mb-8 leading-relaxed text-gray-300 drop-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, delay: 0.6 }}
+                Read Whitepaper{" "}
+              </button>
+            </a>
+          </div>
+          <div className="pt-5 sm:pt-0 sm:py-8 sm:mt-8 flex gap-2 sm:gap-4 justify-center">
+            <div className="flex justify-center items-center gap-2">
+              <img src="../Check_ring_duotone.svg" alt="" />
+              <span
+                className={`${workSans.className} text-[12px] sm:text-[14px] `}
               >
-                <div className="py-3" />
-                <TypeTexts key={language} language={language} />
-              </motion.div>
-
-              {/* Signup form */}
-              <motion.div
-                className="bg-white/10 backdrop-blur-lg max-w-[550px!important] rounded-2xl p-6 shadow-2xl border border-white/20"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.2, delay: 0.5 }}
-              >
-                {!submitted ? (
-                  <motion.form
-                    onSubmit={handleSubmit}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-2"
-                  >
-                    <input
-                      type="email"
-                      placeholder={t.placeholder}
-                      required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="flex-1 w-full sm:w-72 px-4 py-3 rounded-lg bg-black/60 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 transition min-w-0"
-                    />
-                    <motion.button
-                      type="submit"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.97 }}
-                      className="px-6 py-3 bg-gradient-to-r w-[200px!important] from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg font-medium shadow-md transition flex-shrink-0"
-                    >
-                      {t.button}
-                    </motion.button>
-                  </motion.form>
-                ) : null}
-
-                {/* ✅ Inline message */}
-                {message && (
-                  <p
-                    className="mt-3 text-center font-medium"
-                    style={{ color: messageColor }}
-                  >
-                    {message}
-                  </p>
-                )}
-              </motion.div>
-              {/* MOBILE VIDEO SECTION (fixed) */}
-              {/* MOBILE VIDEO SECTION (fixed) */}
-              <div className="block sm:hidden mt-5 relative w-full h-64 sm:h-80 lg:h-96 rounded-xl overflow-hidden shadow-xl">
-                {/* Mobile video */}
-                <video
-                  ref={videoRefMobile}
-                  src="/cubanex-video.mp4"
-                  className="absolute inset-0 w-full h-full object-cover rounded-xl"
-                  loop
-                  playsInline
-                  muted={false} // allow sound
-                  controls={isMobileVideoPlaying} // controls only after play
-                />
-
-                {/* Dark overlay */}
-                {!isMobileVideoPlaying && (
-                  <div className="absolute inset-0 bg-black/40 z-10"></div>
-                )}
-
-                {/* Preview image (only before clicking play) */}
-                {!isMobileVideoPlaying && (
-                  <img
-                    src="/coming-soon-logo.png"
-                    className="absolute inset-0 w-full h-full object-cover rounded-xl z-20"
-                    alt="Preview"
-                  />
-                )}
-
-                {/* Play button (show until clicked) */}
-                {!isMobileVideoPlaying && (
-                  <motion.button
-                    onClick={() => {
-                      setIsMobileVideoPlaying(true);
-                      videoRefMobile.current?.play();
-                    }}
-                    className="absolute inset-0 z-30 m-auto flex items-center justify-center w-20 h-20 rounded-full bg-black/60 text-white shadow-lg hover:scale-105 transition"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Play className="w-10 h-10" />
-                  </motion.button>
-                )}
-              </div>
-
-              <motion.section
-                className="space-y-6 mt-10"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 1.2 }}
-              >
-                <div className="text-[18px] drop-shadow-md font-serif leading-relaxed">
-                  <p dangerouslySetInnerHTML={{ __html: t.section }}></p>
-                </div>
-              </motion.section>
+                Verified Contract{" "}
+              </span>
             </div>
-
-            {/* RIGHT SIDE */}
-            <div className={`${isMobile ? "mt-10" : ""} text-gray-200`}>
-              <motion.section
-                className="space-y-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 1.5 }}
+            <div className="flex justify-center items-center gap-2">
+              <img src="../Check_ring_duotone.svg" alt="" />
+              <span
+                className={`${workSans.className} text-[12px] sm:text-[14px] `}
               >
-                <h2 className="text-xl sm:text-2xl font-serif text-white">
-                  {t.verse}
-                </h2>
-                <p className="italic pb-5 text-sm sm:text-base text-gray-300 mt-3">
-                  {t.quote}
-                </p>
-              </motion.section>
-              {/* DESKTOP VIDEO SECTION (fixed) */}
-              <div className="hidden sm:block relative w-full h-64 sm:h-80 lg:h-96 rounded-xl overflow-hidden shadow-xl">
-                {/* Glow Animation */}
-                <motion.div
-                  className="absolute inset-0 bg-cyan-400/10 blur-2xl"
-                  animate={{ opacity: [0.2, 0.5, 0.2], scale: [1, 1.05, 1] }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
-
-                {/* Video */}
-                <video
-                  ref={videoRefDesktop}
-                  src="/cubanex-video.mp4"
-                  className="absolute inset-0 w-full h-full object-cover rounded-xl"
-                  loop
-                  playsInline
-                  muted={false} // allow sound
-                  controls={isDesktopVideoPlaying} // show controls only after play
-                  preload="metadata"
-                />
-
-                {/* Dark overlay (before play) */}
-                {!isDesktopVideoPlaying && (
-                  <div className="absolute inset-0 bg-black/40 z-10"></div>
-                )}
-
-                {/* Preview image (before play) */}
-                {!isDesktopVideoPlaying && (
-                  <img
-                    src="/coming-soon-logo.png"
-                    className="absolute inset-0 w-full h-full object-cover rounded-xl z-20"
-                    alt="Preview"
-                  />
-                )}
-
-                {/* Play button */}
-                {!isDesktopVideoPlaying && (
-                  <motion.button
-                    onClick={() => {
-                      setIsDesktopVideoPlaying(true);
-                      videoRefDesktop.current?.play().catch((err) => {
-                        console.error("Video failed to play:", err);
-                      });
-                    }}
-                    className="absolute inset-0 z-30 m-auto flex items-center justify-center w-20 h-20 rounded-full bg-black/60 text-white shadow-lg hover:scale-105 transition cursor-pointer"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Play className="w-10 h-10" />
-                  </motion.button>
-                )}
-              </div>
-
-              {year && (
-                <motion.footer
-                  className="mt-14 text-[12px] sm:text-sm text-gray-400 flex items-center justify-center sm:justify-start gap-2 tracking-wide"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 2 }}
-                >
-                  <span className="text-gray-400">©</span>
-                  <span className="font-semibold text-gray-400">
-                    CUBANEX {year}
-                  </span>
-                  <span className="text-gray-400">{t.rights}</span>
-                </motion.footer>
-              )}
+                Transparent Source{" "}
+              </span>
             </div>
+            <div className="hidden  sm:flex justify-center items-center gap-2">
+              <img src="../Check_ring_duotone.svg" alt="" />
+              <span
+                className={`${workSans.className} text-[12px] sm:text-[14px] `}
+              >
+                Pure Supply Structure{" "}
+              </span>
+            </div>
+          </div>
+          <div className="pt-8 flex justify-center">
+            <ArrowB />
           </div>
         </div>
       </section>
-    </div>
+
+      {/* ================= WHY CUBANEX ================= */}
+      <section
+        id="fourPoint"
+        className="relative sm:pb-20 z-10   sm:py-20 bg-[#000] px-6"
+      >
+        {/* 4 s*/}
+        <div className="absolute  w-full h-full sm:h-auto  bg-[#000] top-0 z-1">
+          <img
+            src="/shapbg.png"
+            className=" w-full h-full center z-10  object-cover "
+            alt="Hero Background"
+          />
+        </div>
+
+        <div className="relative z-10 flex items-center justify-center gap-4 sm:gap-6 pb-[60px]">
+          <div className="lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
+            <img src="../1B+.png" alt="" className="w-[45px] sm:w-auto" />
+
+            <p className={`${workSans.className} text-[12px] sm:text-[15px]`}>
+              Total Supply{" "}
+            </p>
+          </div>
+          <div className=" lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
+            <img src="../40.png" alt="" className="w-[60px] sm:w-auto" />
+
+            <p className={`${workSans.className} text-[12px] sm:text-[15px]`}>
+              Presale{" "}
+            </p>
+          </div>
+          <div className=" lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
+            <img src="../30.png" alt="" className="w-[55px] sm:w-auto" />
+
+            <p className={`${workSans.className} text-[12px] sm:text-[15px]`}>
+              Liquidity{" "}
+            </p>
+          </div>
+          <div className=" lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
+            <img src="../15.png" alt="" className="w-[45px] sm:w-auto" />
+
+            <p className={`${workSans.className} text-[12px] sm:text-[15px]`}>
+              Development{" "}
+            </p>
+          </div>
+        </div>
+        {/* 4 s*/}
+
+        {/* why cubanex? start  */}
+        <div className="px- relative z-10 max-w-6xl mx-auto text-center">
+          <h2
+            className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1em] mb-6`}
+          >
+            <span className="text-[#FF8F00]"> Why </span> CubaNex?
+          </h2>{" "}
+          <p className="text-gray-400 max-w-[500px] mx-auto mb-12">
+            Connecting Cuba’s cultural heritage with modern blockchain
+            technology in a respectful and balanced way.
+          </p>
+          <div className="grid gap-4 md:grid-cols-4">
+            {/* 1 */}
+            <div className="p-8 border text-start items-start border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <h3 className="text-xl font-semibold mb-3 flex gap-2 items-center">
+                <div className="w-[3px] h-[17px] bg-[#22CCEE]"></div> Lightning
+                Fast
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Cuba’s Emergence as the First Crypto Superpower of Latin America
+              </p>
+            </div>
+            {/* 2 */}
+            <div className="p-8 border text-start items-start border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <h3 className="text-xl font-semibold mb-3 flex gap-2 items-center">
+                <div className="w-[3px] h-[17px] bg-[#22CCEE]"></div> Secure &
+                Audited
+              </h3>
+              <p className="text-gray-400 text-sm">
+                CubaNex unifies Cuba’s cultural depth with the rising wave of
+                digital innovation — placing the nation on a path to global
+                leadership in the decentralized era
+              </p>
+            </div>
+            {/* 3 */}
+            <div className="p-8 border text-start items-start border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <h3 className="text-xl font-semibold mb-3 flex gap-2 items-center">
+                <div className="w-[3px] h-[17px] bg-[#FF754B]"></div>{" "}
+                Eco-Friendly
+              </h3>
+              <p className="text-gray-400 text-sm">
+                It introduces a new financial language through blockchain and AI
+                — designed to move with alignment, clarity, and purpose
+              </p>
+            </div>
+            {/* 4 */}
+            <div className="p-8 border text-start items-start border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <h3 className="text-xl font-semibold mb-3 flex gap-2 items-center">
+                <div className="w-[3px] h-[17px] bg-[#9945FF]"></div>Real
+                Utility
+              </h3>
+              <p className="text-gray-400 text-sm">
+                This is Cuba’s moment to lead Latin America into a new financial
+                reality. A code born of collective consciousness, created to
+                evolve through those who align.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* why cubanex? start end  */}
+
+        {/* from havana to blockchain s*/}
+
+        {/* from havana to blockchain s*/}
+      </section>
+      <div className=" relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-8 sm:pb-20 ">
+        <div className="">
+          <h2
+            className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          >
+            From <span className="text-[#7928D2]"> Havana</span> to the
+            <span className="text-[#FF8F00]"> Blockchain</span>
+          </h2>{" "}
+          <div
+            className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[16px] text-gray-300   mb-8`}
+          >
+            <p className="pb-2">
+              {" "}
+              CubaNex is shaped by the creativity of the island and the clarity
+              of modern digital tools. It emerges as a meaningful digital asset
+              for those aligned with its vision.
+            </p>
+
+            <p className="pb-2">
+              {" "}
+              By blending cultural identity with new technology, CubaNex creates
+              a space for participation — where the Cuban spirit connects with
+              global innovation.
+            </p>
+            <p className="pb-2">
+              {" "}
+              The vision includes integrations with AI, sustainable models, and
+              future Web3 tools — developed with intention and focus
+            </p>
+            <p>
+              CubaNex opens a digital path for those ready to explore new
+              possibilities — building a bridge between tradition and
+              technology.
+            </p>
+          </div>
+        </div>
+        <div className="">
+          {/* <Image
+            src={"/hero-havana-CDeUqYMJ.png"}
+            alt="from havana to blockchain"
+            width={600}
+            height={500}
+          /> */}
+          <VideoPlayer
+            videoSrc="/cubanex-video.mp4"
+            previewSrc="/hero-havana-CDeUqYMJ.png"
+            className="w-full sm:h-[300px] max-w-6xl mx-auto my-24 max-h-[520px]"
+          />
+        </div>
+      </div>
+
+      {/* ================= tokenomics ================= */}
+
+      <section>
+        <h2
+          className={`${orbitron.className} mt-[-70px] sm:mt-0  px-4 sm:px-0 text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+        >
+          CNEX
+          <span className="text-[#FF8F00]"> Tokenomics</span>
+        </h2>
+        <p
+          className={`${workSans.className} px-4 sm:px-0 text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
+        >
+          A new digital asset built for the Cuban community—CUBANEX brings the
+          CNEX token to life with clear, transparent tokenomics.
+        </p>
+        {/*  */}
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+          {/* TOKEN DISTRIBUTION BOX */}
+          <div className="bg-[#000] border  border-[#9333EA]/40 rounded-xl p-8 shadow-lg">
+            <h2 className={`${orbitron.className} text-white text-2xl mb-6`}>
+              Token Distribution
+            </h2>
+
+            <ul className="space-y-4">
+              <li
+                className={`${workSans.className} flex justify-between text-white/80`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#7f5af0]"></span>
+                  Presale
+                </span>
+                <span className="text-[#7f5af0] font-semibold">40%</span>
+              </li>
+
+              <li
+                className={`${workSans.className} flex justify-between text-white/80`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#ffb800]"></span>
+                  Liquidity
+                </span>
+                <span className="text-[#ffb800] font-semibold">30%</span>
+              </li>
+
+              <li
+                className={`${workSans.className} flex justify-between text-white/80`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#00d1ff]"></span>
+                  Development
+                </span>
+                <span className="text-[#00d1ff] font-semibold">15%</span>
+              </li>
+
+              <li
+                className={`${workSans.className} flex justify-between text-white/80`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#ff4d4d]"></span>
+                  Marketing
+                </span>
+                <span className="text-[#ff4d4d] font-semibold">10%</span>
+              </li>
+
+              <li
+                className={`${workSans.className} flex justify-between text-white/80`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#00ff88]"></span>
+                  Team & Ecosystem
+                </span>
+                <span className="text-[#00ff88] font-semibold">5%</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* KEY FEATURES BOX */}
+          <div className="bg-[#000] border  border-[#9333EA]/40 rounded-xl p-8 shadow-lg">
+            <h2 className={`${orbitron.className} text-white text-2xl mb-6`}>
+              Key Features
+            </h2>
+
+            <div className="space-y-6">
+              {/* Total Supply */}
+              <div className="flex items-center gap-4">
+                {/* <div className="w-12 h-12 rounded-lg bg-[#7f5af0] flex justify-center items-center text-white">
+                  <span className="text-xl">🔢</span>
+                </div> */}
+                <div className="icon-card purple">
+                  <Wallet size={28} />
+                </div>
+
+                <div>
+                  <p className={`${workSans.className} text-white font-medium`}>
+                    Total Supply
+                  </p>
+                  <p className={`${workSans.className} text-white/60 text-sm`}>
+                    1,000,000,000 CNEX tokens
+                  </p>
+                </div>
+              </div>
+
+              {/* Smart Contract */}
+              <div className="flex items-center gap-4">
+                {/* <div className="w-12 h-12 rounded-lg bg-[#ffb800] flex justify-center items-center text-white">
+                  <span className="text-xl">📜</span>
+                </div> */}
+                <div className="icon-card yellow">
+                  <Shield size={28} />
+                </div>
+                <div>
+                  <p className={`${workSans.className} text-white font-medium`}>
+                    Smart Contract
+                  </p>
+                  <p className={`${workSans.className} text-white/60 text-sm`}>
+                    Audited & Verified
+                  </p>
+                </div>
+              </div>
+
+              {/* Real Utility */}
+              <div className="flex items-center gap-4">
+                {/* <div className="w-12 h-12 rounded-lg bg-[#00d1ff] flex justify-center items-center text-white">
+                  <span className="text-xl">🚀</span>
+                </div> */}
+                <div className="icon-card cyan">
+                  <TrendingUp size={28} />
+                </div>
+                <div>
+                  <p className={`${workSans.className} text-white font-medium`}>
+                    Real Utility
+                  </p>
+                  <p className={`${workSans.className} text-white/60 text-sm`}>
+                    Transportation, Energy & DeFi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* BUTTON */}
+        <div className="flex justify-center mt-10">
+          <button className="px-[30px] py-3 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2]">
+            View Smart Contract
+          </button>
+        </div>
+        {/*  */}
+      </section>
+
+      {/* ================= tokenomics ================= */}
+
+      {/* ================= Road Map ================= */}
+      <section>
+        <h2
+          className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+        >
+          Project
+          <span className="text-[#FF8F00]"> Roadmap</span>
+        </h2>
+        <p
+          className={`${workSans.className} text-center text-[16px] px-3 sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
+        >
+          A clear plan for advancing Cuba’s digital future.
+        </p>
+
+        <div className="roead map px-12">
+          <RoeadMapEn />
+        </div>
+      </section>
+
+      {/* ================= Road Map ================= */}
+
+      {/* ================= How to Buy CNEX ================= */}
+
+      <section>
+        <h2
+          className={`${orbitron.className} text-center text-[26px] pt-10 sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+        >
+          How to
+          <span className="text-[#FF8F00]"> Buy CNEX</span>
+        </h2>
+        <p
+          className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
+        >
+          Join the presale in 4 simple steps
+        </p>
+        <div className="px-6 grid max-w-[1300px] mx-auto gap-8 md:grid-cols-4">
+          {/* 1 */}
+          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <div className="step-wrapper w-full mx-auto">
+              <div className="step-circle">1</div>
+            </div>
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Get a Wallet{" "}
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Download MetaMask or your preferred Web3 wallet{" "}
+            </p>
+          </div>
+          {/* 2 */}
+          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <div className="step-wrapper w-full mx-auto">
+              <div className="step-circle-1">2</div>
+            </div>
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Add Funds{" "}
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Purchase ETH or BNB and send to your wallet{" "}
+            </p>
+          </div>
+          {/* 3 */}
+          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <div className="step-wrapper w-full mx-auto">
+              <div className="step-circle-2">3</div>
+            </div>
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Connect Wallet{" "}
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Connect your wallet to the CubaNex presale platform{" "}
+            </p>
+          </div>
+          {/* 4 */}
+          <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <div className="step-wrapper w-full mx-auto">
+              <div className="step-circle-3">4</div>
+            </div>
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Buy CNEX{" "}
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Swap your ETH/BNB for CNX tokens instantly{" "}
+            </p>
+          </div>
+        </div>
+        <ConnectWallet />
+      </section>
+      {/* ================= How to Buy CNEX ================= */}
+
+      {/* ================= Unlock VIP Access to CubaNexN ================= */}
+      <section className="relative mt-[-70px]  pb-20 sm:py-20 px-6 z-10 b bg-section">
+        <h2
+          className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+        >
+          Unlock <span className="text-[#FF8F00]">VIP </span>
+          Access to <span className="text-[#00DED4]">CubaNex</span>
+        </h2>
+        <p
+          className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[550px]  mx-auto mb-8`}
+        >
+          The project moves quietly. Those meant to find it always do.{" "}
+        </p>
+
+        <VipForm />
+        <div className="px-6 pt-20 grid max-w-[1100px] mx-auto gap-8 md:grid-cols-3">
+          {/* 1 */}
+
+          {/* 2 */}
+          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <Twitter
+              size={56}
+              className="text-center mx-auto mb-5"
+              strokeWidth={1.8}
+            />
+
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Twitter/X
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Follow us for real-time updates and announcements
+              <br />
+              <br />
+              Follow @CubaNex
+            </p>
+          </div>
+          {/* 3 */}
+          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <Send
+              size={56}
+              className="text-center mx-auto mb-5"
+              strokeWidth={1.8}
+            />
+
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Telegram{" "}
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Join our active community and chat with team members <br />
+              <br />
+              Join Telegram{" "}
+            </p>
+          </div>
+          {/* 4 */}
+          <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+            <MessageCircle
+              size={56}
+              className="text-center mx-auto mb-5"
+              strokeWidth={1.8}
+            />
+
+            <h3 className="text-xl text-center font-semibold mb-3 items-center">
+              Discord{" "}
+            </h3>
+            <p className="text-gray-400 text-sm">
+              Connect with holders and participate in governance <br />
+              <br />
+              Join Discord{" "}
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* ================= Unlock VIP Access to CubaNex================= */}
+
+      {/* ================= WHITEPAPER SECTION ================= */}
+      <section className="px-5 pb-20">
+        <h2
+          className={`${orbitron.className} bg-[#000000] text-center text-[26px] pt-6 sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
+        >
+          <span className="text-[#FF8F00]">Whitepaper  </span> & Documentation
+        </h2>{" "}
+        <p
+          className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[700px]  mx-auto mb-8`}
+        >
+          Explore the core ideas behind CubaNex with clear, easy-to-read
+          technical and conceptual documents. Learn how CNX is structured, how
+          it works, and the vision guiding its future development.{" "}
+        </p>
+        <WhitePaper />
+      </section>
+
+      {/* ================= FOOTER ================= */}
+    </main>
   );
 }

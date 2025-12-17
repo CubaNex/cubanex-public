@@ -1,125 +1,139 @@
 import {
-  Shield,
-  Lock,
-  Globe,
-  Database,
-  Bot,
-  Cookie,
-  Users,
-  AlertTriangle,
+  ShieldCheck,
   Scale,
+  Globe,
+  AlertTriangle,
+  Coins,
+  Briefcase,
+  Copyright,
+  Ban,
+  ExternalLink,
+  Handshake,
+  Gavel,
+  MapPin,
+  Puzzle,
   FileText,
-  RefreshCw,
   MessageCircle,
 } from "lucide-react";
 
 const sections = [
   {
     number: "1",
-    title: "Introduction",
-    icon: Shield,
+    title: "Aceptación de los términos",
+    icon: ShieldCheck,
     content:
-      'CubaNex Technologies LLC ("CubaNex," "we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how information is collected, used, stored, disclosed, and protected.',
+      "Al acceder o utilizar este sitio web, usted acepta quedar legalmente vinculado por estos Términos.",
   },
   {
     number: "2",
-    title: "Information We Collect",
-    icon: Database,
+    title: "Naturaleza del proyecto",
+    icon: FileText,
     content:
-      "We may collect personal information voluntarily provided (such as name, email address, and blockchain wallet address), technical data (IP address, browser type, device information), and usage data (pages visited, interactions). We do not knowingly collect sensitive personal data.",
+      "CubaNex es un proyecto descentralizado integrado con blockchain e inteligencia artificial. La participación es voluntaria y especulativa.",
   },
   {
     number: "3",
-    title: "Use of Information",
-    icon: FileText,
+    title: "Elegibilidad",
+    icon: Globe,
     content:
-      "Information is used to operate, maintain, secure, and improve the website; communicate updates; comply with legal obligations; and prevent fraud or abuse.",
+      "Usted confirma que cumple con todas las leyes y regulaciones aplicables.",
   },
   {
     number: "4",
-    title: "Blockchain & Wallet Data Disclaimer",
-    icon: Lock,
+    title: "Sin garantías",
+    icon: AlertTriangle,
     content:
-      "Blockchain transactions are public by nature. CubaNex does not control, store, or secure user wallets and is not responsible for loss of funds, private keys, or transaction errors.",
+      "CubaNex no ofrece garantías sobre valor, rendimiento o resultados futuros.",
   },
   {
     number: "5",
-    title: "AI & Automated Systems Disclaimer",
-    icon: Bot,
+    title: "Descargo sobre activos digitales",
+    icon: Coins,
     content:
-      "CubaNex may integrate artificial intelligence systems. AI-generated outputs are informational only and may be inaccurate or incomplete. Users assume all risk.",
+      "Los activos digitales son volátiles y pueden perder todo su valor.",
   },
   {
     number: "6",
-    title: "Cookies & Analytics",
-    icon: Cookie,
+    title: "No existe relación fiduciaria",
+    icon: Briefcase,
     content:
-      "Cookies and analytics tools may be used to improve functionality and performance. Users may disable cookies via browser settings.",
+      "No se crea ninguna relación fiduciaria, de asesoramiento o profesional.",
   },
   {
     number: "7",
-    title: "Data Sharing & Third Parties",
-    icon: Users,
+    title: "Propiedad intelectual",
+    icon: Copyright,
     content:
-      "We do not sell personal data. Limited data may be shared with service providers strictly for operational purposes.",
+      "Todo el contenido es propiedad de CubaNex o se utiliza bajo licencia.",
   },
   {
     number: "8",
-    title: "Security",
-    icon: Lock,
-    content:
-      "Reasonable safeguards are used, but no system is completely secure. Use of the site is at your own risk.",
+    title: "Uso prohibido",
+    icon: Ban,
+    content: "Está prohibido el uso indebido, hacking o violación de leyes.",
   },
   {
     number: "9",
-    title: "International Users",
-    icon: Globe,
-    content:
-      "Users access the site at their own initiative and are responsible for compliance with local laws.",
+    title: "Enlaces de terceros",
+    icon: ExternalLink,
+    content: "CubaNex no es responsable por sitios web o contenidos externos.",
   },
   {
     number: "10",
-    title: "No Financial Advice",
-    icon: AlertTriangle,
-    content:
-      "Nothing on this website constitutes financial, investment, tax, or legal advice.",
+    title: "Indemnización",
+    icon: Handshake,
+    content: "Usted acepta indemnizar y eximir de responsabilidad a CubaNex.",
   },
   {
     number: "11",
-    title: "Limitation of Liability",
+    title: "Limitación de responsabilidad",
     icon: Scale,
     content:
-      "To the fullest extent permitted by law, CubaNex disclaims liability for any loss or damages.",
+      "La responsabilidad se limita en la máxima medida permitida por la ley.",
   },
   {
     number: "12",
-    title: "Changes",
-    icon: RefreshCw,
-    content: "This policy may be updated at any time without prior notice.",
+    title: "Ley aplicable y jurisdicción",
+    icon: MapPin,
+    content:
+      "Estos términos se rigen por las leyes del Estado de Wyoming, EE. UU.",
   },
   {
     number: "13",
-    title: "Contact",
+    title: "Divisibilidad",
+    icon: Puzzle,
+    content: "Si alguna disposición es inválida, el resto seguirá vigente.",
+  },
+  {
+    number: "14",
+    title: "Acuerdo completo",
+    icon: FileText,
+    content:
+      "Estos Términos constituyen el acuerdo completo entre usted y CubaNex.",
+  },
+  {
+    number: "15",
+    title: "Contacto",
     icon: MessageCircle,
-    content: "Email: support@cubanex.io",
+    content: "Correo electrónico: support@cubanex.io",
   },
 ];
 
-const PrivacyPolicy = () => {
+const TermsConditionsES = () => {
   return (
-    <div className="min-h-screen px-5 bg-black text-white font-[var(--font-work-sans)]">
+    <div className="min-h-screen p-5 bg-black text-white font-[var(--font-work-sans)]">
       {/* Hero */}
       <section className="pt-32 pb-16 text-center">
         <div className="max-w-4xl mx-auto px-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#F6B463]/40 bg-[#F6B463]/10 mb-6">
-            <Shield className="w-4 h-4 text-[#F6B463]" />
+            <Scale className="w-4 h-4 text-[#F6B463]" />
             <span className="text-sm text-[#F6B463] font-medium">
-              Legal Document
+              Documento Legal
             </span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-orbitron)] font-bold mb-4">
-            Privacy Policy
+            Términos y Condiciones
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-2">
@@ -127,7 +141,7 @@ const PrivacyPolicy = () => {
           </p>
 
           <p className="text-gray-500 text-sm">
-            Last Updated: December 13, 2025
+            Última actualización: December 13, 2025
           </p>
         </div>
       </section>
@@ -159,9 +173,9 @@ const PrivacyPolicy = () => {
                 </div>
 
                 <p className="text-gray-300 leading-relaxed">
-                  {section.number === "13" ? (
+                  {section.number === "15" ? (
                     <>
-                      Email:{" "}
+                      Correo electrónico:{" "}
                       <a
                         href="mailto:support@cubanex.io"
                         className="text-[#F6B463] underline underline-offset-4 hover:opacity-80"
@@ -179,10 +193,11 @@ const PrivacyPolicy = () => {
 
           {/* Bottom Notice */}
           <div className="mt-16 p-6 rounded-2xl border border-[#F6B463]/30 bg-[#030D1A] text-center">
-            <Lock className="w-8 h-8 text-[#F6B463] mx-auto mb-4" />
+            <Gavel className="w-8 h-8 text-[#F6B463] mx-auto mb-4" />
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              By using our website and services, you acknowledge that you have
-              read, understood, and agree to be bound by this Privacy Policy.
+              Al acceder o utilizar nuestro sitio web, usted reconoce que ha
+              leído, entendido y acepta estos Términos y Condiciones en su
+              totalidad.
             </p>
           </div>
         </div>
@@ -191,4 +206,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default TermsConditionsES;

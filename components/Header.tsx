@@ -7,17 +7,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import { textContent } from "@/constants/contents";
 import { textVariant2 } from "@/font-utils/motion";
-import { link } from "fs";
 
-// ✅ Add props interface
 interface HeaderProps {
-  defaultLanguage?: "eng" | "esp"; // optional, in case you want default fallback
+  defaultLanguage?: "eng" | "esp";
 }
 
 const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
   const [language, setLanguage] = useState<"eng" | "esp">(
-    defaultLanguage || "esp"
-  ); // fallback to "esp"
+    defaultLanguage || "eng"
+  ); // default to English
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const pathname = usePathname();
@@ -29,19 +27,21 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
   }, []);
 
   const switchLanguage = () => {
-    const newLang = language === "esp" ? "eng" : "esp";
+    const newLang = language === "eng" ? "esp" : "eng";
     setLanguage(newLang);
     localStorage.setItem("lang", newLang);
 
     let newPath = pathname;
 
-    if (newLang === "eng") {
-      if (!pathname.startsWith("/en")) {
-        newPath = pathname === "/" ? "/en" : "/en" + pathname;
+    if (newLang === "esp") {
+      // Switch to Spanish
+      if (!pathname.startsWith("/es")) {
+        newPath = pathname === "/" ? "/es" : "/es" + pathname;
       }
     } else {
-      if (pathname.startsWith("/en")) {
-        newPath = pathname === "/en" ? "/" : pathname.replace(/^\/en/, "");
+      // Switch to English
+      if (pathname.startsWith("/es")) {
+        newPath = pathname === "/es" ? "/" : pathname.replace(/^\/es/, "");
       }
     }
 
@@ -56,9 +56,9 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
     { name: t.links[2], path: "/tokenomics" },
     { name: t.links[3], path: "/community" },
   ];
+
   return (
     <>
-      {/* HEADER */}
       <header className="Header w-full bg-[#000] font-[var(--font-work-sans)] shadow-lg fixed top-0 left-0 z-[1000]">
         <motion.div
           variants={textVariant2}
@@ -66,14 +66,13 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
           animate="show"
           className="max-w-[1300px] mx-auto px-5 py-2 flex items-center justify-between"
         >
-          {/* Logo */}
-          <Link href={language === "eng" ? "/en" : "/"}>
+          <Link href={language === "esp" ? "/es" : "/"}>
             <Image
               src="/logos/cuba-nex-logo-gold.png"
               alt="Cubanex Logo"
               width={210}
               height={60}
-              className="object-contain  sm:ml-0 cursor-pointer"
+              className="object-contain sm:ml-0 cursor-pointer"
             />
           </Link>
 
@@ -82,7 +81,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
             {menuItems.map((item, idx) => (
               <Link
                 key={idx}
-                href={language === "eng" ? "/en" + item.path : item.path}
+                href={language === "esp" ? "/es" + item.path : item.path}
                 className="hover:text-gray-300 cursor-pointer transition"
               >
                 {item.name}
@@ -97,7 +96,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
               className="flex items-center gap-1 text-white hover:text-gray-300 transition"
             >
               <Image src="/lngswicher.svg" width={20} height={20} alt="" />
-              {language === "eng" ? "ESP" : "EN"}
+              {language === "eng" ? "ES" : "EN"}
             </button>
             <a href={t.btnLink}>
               <button
@@ -112,14 +111,14 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
             </a>
           </div>
 
-          {/* Mobile buttons */}
+          {/* Mobile Buttons */}
           <div className="flex flex-nowrap md:hidden items-center gap-3 z-[1100] relative">
             <button
               className="flex items-center gap-1 text-white"
               onClick={switchLanguage}
             >
               <Image src="/lngswicher.svg" width={20} height={20} alt="" />
-              {language === "eng" ? "ESP" : "EN"}
+              {language === "eng" ? "ES" : "EN"}
             </button>
 
             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -164,9 +163,9 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
             animate={{ x: "0%" }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.35, ease: "easeOut" }}
-            className="fixed  pt-[70px] right-0 h-[calc(100%-70px)] w-64 bg-[#1A1A20] text-white p-6 z-[999] flex flex-col"
+            className="fixed pt-[70px] right-0 h-[calc(100%-70px)] w-64 bg-[#1A1A20] text-white p-6 z-[999] flex flex-col"
           >
-            <nav className="flex flex-col gap-6 text-lg mt-4 ">
+            <nav className="flex flex-col gap-6 text-lg mt-4">
               {menuItems.map((item, idx) => (
                 <motion.div
                   key={idx}
@@ -175,7 +174,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
                   transition={{ delay: idx * 0.08 }}
                 >
                   <Link
-                    href={language === "eng" ? "/en" + item.path : item.path}
+                    href={language === "esp" ? "/es" + item.path : item.path}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -183,19 +182,20 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
                 </motion.div>
               ))}
             </nav>
-
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="mt-10 w-full px-4 py-2 rounded-[999px] text-white font-medium"
-              style={{
-                background:
-                  "linear-gradient(90deg, #C766EF 0%, #7928D2 51%, #2B0C52 100%)",
-              }}
-            >
-              {t.button}
-            </motion.button>
+            <Link href={language === "esp" ? "/es/community" : "/community"}>
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="mt-10 w-full px-4 py-2 rounded-[999px] text-white font-medium"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #C766EF 0%, #7928D2 51%, #2B0C52 100%)",
+                }}
+              >
+                {t.button}
+              </motion.button>{" "}
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

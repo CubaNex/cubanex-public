@@ -19,107 +19,108 @@ import {
 const sections = [
   {
     number: "1",
-    title: "Aceptación de los términos",
+    title: "Acceptance of Terms",
     icon: ShieldCheck,
     content:
-      "Al acceder o utilizar este sitio web, usted acepta quedar legalmente vinculado por estos Términos.",
+      "By accessing or using the CubaNex website, you agree to be legally bound by these Terms & Conditions.",
   },
   {
     number: "2",
-    title: "Naturaleza del proyecto",
+    title: "Nature of the Project",
     icon: FileText,
     content:
-      "CubaNex es un proyecto descentralizado integrado con blockchain e inteligencia artificial. La participación es voluntaria y especulativa.",
+      "CubaNex is a decentralized blockchain and AI-integrated project. Participation is voluntary and speculative.",
   },
   {
     number: "3",
-    title: "Elegibilidad",
+    title: "Eligibility",
     icon: Globe,
     content:
-      "Usted confirma que cumple con todas las leyes y regulaciones aplicables.",
+      "You confirm that your use of this website complies with all applicable laws and regulations.",
   },
   {
     number: "4",
-    title: "Sin garantías",
+    title: "No Guarantees",
     icon: AlertTriangle,
     content:
-      "CubaNex no ofrece garantías sobre valor, rendimiento o resultados futuros.",
+      "CubaNex makes no representations or guarantees regarding value, performance, or outcomes.",
   },
   {
     number: "5",
-    title: "Descargo sobre activos digitales",
+    title: "Token & Digital Asset Disclaimer",
     icon: Coins,
     content:
-      "Los activos digitales son volátiles y pueden perder todo su valor.",
+      "Digital assets are volatile and may lose all value. CubaNex is not responsible for market behavior.",
   },
   {
     number: "6",
-    title: "No existe relación fiduciaria",
+    title: "No Fiduciary Relationship",
     icon: Briefcase,
-    content:
-      "No se crea ninguna relación fiduciaria, de asesoramiento o profesional.",
+    content: "No fiduciary, advisory, or professional relationship is created.",
   },
   {
     number: "7",
-    title: "Propiedad intelectual",
+    title: "Intellectual Property",
     icon: Copyright,
     content:
-      "Todo el contenido es propiedad de CubaNex o se utiliza bajo licencia.",
+      "All content is owned by CubaNex or licensed appropriately. Unauthorized use is prohibited.",
   },
   {
     number: "8",
-    title: "Uso prohibido",
+    title: "Prohibited Use",
     icon: Ban,
-    content: "Está prohibido el uso indebido, hacking o violación de leyes.",
+    content:
+      "Users may not misuse the site, attempt hacking, or violate applicable laws.",
   },
   {
     number: "9",
-    title: "Enlaces de terceros",
+    title: "Third-Party Links",
     icon: ExternalLink,
-    content: "CubaNex no es responsable por sitios web o contenidos externos.",
+    content: "CubaNex is not responsible for external websites or content.",
   },
   {
     number: "10",
-    title: "Indemnización",
+    title: "Indemnification",
     icon: Handshake,
-    content: "Usted acepta indemnizar y eximir de responsabilidad a CubaNex.",
+    content:
+      "You agree to indemnify and hold harmless CubaNex from claims arising from your use.",
   },
   {
     number: "11",
-    title: "Limitación de responsabilidad",
+    title: "Limitation of Liability",
     icon: Scale,
-    content:
-      "La responsabilidad se limita en la máxima medida permitida por la ley.",
+    content: "Liability is limited to the maximum extent permitted by law.",
   },
   {
     number: "12",
-    title: "Ley aplicable y jurisdicción",
+    title: "Governing Law & Venue",
     icon: MapPin,
     content:
-      "Estos términos se rigen por las leyes del Estado de Wyoming, EE. UU.",
+      "These terms are governed by the laws of the State of Wyoming, USA.",
   },
   {
     number: "13",
-    title: "Divisibilidad",
+    title: "Severability",
     icon: Puzzle,
-    content: "Si alguna disposición es inválida, el resto seguirá vigente.",
+    content:
+      "If any provision is found unenforceable, the remaining provisions remain in effect.",
   },
   {
     number: "14",
-    title: "Acuerdo completo",
+    title: "Entire Agreement",
     icon: FileText,
     content:
-      "Estos Términos constituyen el acuerdo completo entre usted y CubaNex.",
+      "These Terms constitute the entire agreement between you and CubaNex.",
   },
   {
     number: "15",
-    title: "Contacto",
+    title: "Contact",
     icon: MessageCircle,
-    content: "Correo electrónico: support@cubanex.io",
+    content: "Email: support@cubanex.io",
   },
 ];
 
-const TermsConditionsES = () => {
+const TermsConditions = () => {
   return (
     <div className="min-h-screen p-5 bg-black text-white font-[var(--font-work-sans)]">
       {/* Hero */}
@@ -128,12 +129,12 @@ const TermsConditionsES = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#F6B463]/40 bg-[#F6B463]/10 mb-6">
             <Scale className="w-4 h-4 text-[#F6B463]" />
             <span className="text-sm text-[#F6B463] font-medium">
-              Documento Legal
+              Legal Document
             </span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-orbitron)] font-bold mb-4">
-            Términos y Condiciones
+            Terms & Conditions
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-2">
@@ -141,7 +142,7 @@ const TermsConditionsES = () => {
           </p>
 
           <p className="text-gray-500 text-sm">
-            Última actualización: December 13, 2025
+            Last Updated: December 13, 2025
           </p>
         </div>
       </section>
@@ -175,7 +176,7 @@ const TermsConditionsES = () => {
                 <p className="text-gray-300 leading-relaxed">
                   {section.number === "15" ? (
                     <>
-                      Correo electrónico:{" "}
+                      Email:{" "}
                       <a
                         href="mailto:support@cubanex.io"
                         className="text-[#F6B463] underline underline-offset-4 hover:opacity-80"
@@ -195,9 +196,8 @@ const TermsConditionsES = () => {
           <div className="mt-16 p-6 rounded-2xl border border-[#F6B463]/30 bg-[#030D1A] text-center">
             <Gavel className="w-8 h-8 text-[#F6B463] mx-auto mb-4" />
             <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-              Al acceder o utilizar nuestro sitio web, usted reconoce que ha
-              leído, entendido y acepta estos Términos y Condiciones en su
-              totalidad.
+              By accessing or using the CubaNex website, you agree to these
+              Terms & Conditions in full.
             </p>
           </div>
         </div>
@@ -206,4 +206,4 @@ const TermsConditionsES = () => {
   );
 };
 
-export default TermsConditionsES;
+export default TermsConditions;

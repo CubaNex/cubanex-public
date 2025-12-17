@@ -25,7 +25,7 @@ const orbitron = Orbitron({
 });
 
 // Server-side default language
-const defaultLang: "eng" | "esp" = "esp";
+const defaultLang: "eng" | "esp" = "eng";
 
 export default function RootLayout({
   children,
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="en">
       <head>
         <meta
           name="viewport"

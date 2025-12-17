@@ -7,7 +7,9 @@ import { textContent } from "@/constants/contents";
 
 export default function Footer() {
   const pathname = usePathname() || "/"; // fallback if undefined
-  const language: "eng" | "esp" = pathname.startsWith("/en") ? "eng" : "esp";
+
+  // Default is English, if URL starts with /es → Spanish
+  const language: "eng" | "esp" = pathname.startsWith("/es") ? "esp" : "eng";
   const t = textContent[language].footer;
 
   return (

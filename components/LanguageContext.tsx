@@ -2,12 +2,12 @@ const switchLanguage = (currentLang: "esp" | "eng") => {
   const pathname = window.location.pathname;
   let newPath = pathname;
 
-  if (currentLang === "esp") {
+  if (currentLang === "eng") {
     // Spanish → English
-    if (!pathname.startsWith("/en")) newPath = "/en" + pathname;
+    if (!pathname.startsWith("/es")) newPath = "/es" + pathname;
   } else {
     // English → Spanish
-    if (pathname.startsWith("/en")) newPath = pathname.replace(/^\/en/, "");
+    if (pathname.startsWith("/es")) newPath = pathname.replace(/^\/es/, "");
   }
 
   window.location.href = newPath; // redirect

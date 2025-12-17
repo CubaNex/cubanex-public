@@ -4,7 +4,6 @@ import ConnectWallet from "@/components/ConnectWallet";
 import Image from "next/image";
 import VipForm from "@/components/VipForm";
 import { MessageCircle, Send, Twitter } from "lucide-react";
-import { div } from "framer-motion/client";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -18,19 +17,19 @@ const orbitron = Orbitron({
 const page = () => {
   return (
     <div className="main relative  bg-[#010813]">
-      <div className=" sm:flex px-4 w-full pt-[120px] pb-[20px] sm:pt-[150px]  gap-2 items-center justify-center cmbg">
+      <div className=" sm:flex px-4 w-full pt-[120px] sm:pb-[20px] sm:pt-[150px]  gap-2 items-center justify-center cmbg">
         <div>
           {" "}
           <h1
             className={`${orbitron.className} text-center sm:text-start text-[32px] sm:text-[56px] max-w-[800px]  text-[#fff] font-semibold leading-[1.2em] mb-6`}
           >
-            Join the <span className="text-[#FF8F00]"> Community</span>
+            Únete a la <span className="text-[#FF8F00]"> Comunidad</span>
           </h1>
           <p
             className={`${workSans.className} text-center sm:text-start max-w-[750px]  text-[16px] sm:text-[24px] text-gray-300 mb-8`}
           >
-            Connect with thousands of supporters building Cuba's decentralized
-            future together
+            Conéctate con miles de seguidores que construyen juntos el futuro
+            descentralizado de Cuba
           </p>
         </div>
         <Image
