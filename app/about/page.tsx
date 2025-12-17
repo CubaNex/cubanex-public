@@ -121,7 +121,7 @@ const Page = () => {
 
           <p className={`${workSans.className} text-[16px] text-gray-300 mb-6`}>
             Some say he crossed an ocean. Others say he crossed a veil. They
-            call him El Alquimista. But he left no footprints — only fragments
+            call him The Alchemist. But he left no footprints — only fragments
             of fire.
           </p>
 

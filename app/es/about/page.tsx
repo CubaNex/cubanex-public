@@ -103,7 +103,7 @@ const page = () => {
               ¿Quién está detrás de CubaNex?
             </span>
             Algunos dicen que él cruzó un océano. Otros dicen que él cruzó un
-            velo. Lo llaman El Alquimista. Pero no dejó huellas — solo
+            velo. Lo llaman The Alchemist. Pero no dejó huellas — solo
             fragmentos de fuego. La Voz habla a través de muchos. Pero la luz se
             revela solo a quien está listo.
           </p>
