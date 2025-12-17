@@ -333,7 +333,7 @@ const page = () => {
 
               {/* GitHub Button */}
               <a
-                href="https://github.com/CubaNexLabs"
+                href="https://github.com/CubaNex"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-3 rounded-xl border border-[#1F2E47] bg-[#030E1C] hover:border-[#00DED4] hover:bg-[#061A2F] transition-all duration-300 text-white"
