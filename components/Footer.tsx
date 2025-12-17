@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { textContent } from "@/constants/contents";
+import { Twitter, Send, Github } from "lucide-react";
 
 export default function Footer() {
   const pathname = usePathname() || "/"; // fallback if undefined
@@ -80,31 +81,25 @@ export default function Footer() {
               {language === "eng" ? "Community" : "Comunidad"}
             </h3>
             <div className="flex space-x-4">
-              {t.community.map((icon, i) => {
-                let src = "";
-                switch (icon.toLowerCase()) {
-                  case "twitter":
-                    src = "/twitter-1.svg";
-                    break;
-                  case "telegram":
-                    src = "/telegram-1.svg";
-                    break;
-                  case "message":
-                    src = "/message-1.png";
-                    break;
-                }
-                return (
-                  <a
-                    key={i}
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-muted hover:bg-primary/20 flex items-center justify-center transition-colors"
-                  >
-                    {src && (
-                      <Image src={src} alt={icon} width={20} height={20} />
-                    )}
-                  </a>
-                );
-              })}
+              {/* X (Twitter) */}
+              <a
+                href="https://x.com/CubaNexOfficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-muted hover:bg-primary/20 flex items-center justify-center transition-colors"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+
+              {/* Telegram */}
+              <a
+                href="https://t.me/CubaNexOfficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-muted hover:bg-primary/20 flex items-center justify-center transition-colors"
+              >
+                <Send className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
@@ -116,7 +111,7 @@ export default function Footer() {
             <div className="flex space-x-6 text-sm">
               <Link
                 href={
-                  language === "eng" ? "/en/privacy-policy" : "/privacy-policy"
+                  language === "eng" ? "/privacy-policy" : "/es/privacy-policy"
                 }
                 className="hover:text-gray-300 transition-colors"
               >
@@ -126,8 +121,8 @@ export default function Footer() {
               <Link
                 href={
                   language === "eng"
-                    ? "/en/terms-of-service"
-                    : "/terms-of-service"
+                    ? "/terms-of-service"
+                    : "/es/terms-of-service"
                 }
                 className="hover:text-gray-300 transition-colors"
               >

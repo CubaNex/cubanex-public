@@ -17,6 +17,7 @@ import VipForm from "@/components/VipForm";
 import WhitePaper from "@/components/WhitePaper";
 import ArrowB from "@/components/ArrowB";
 import VideoPlayer from "@/components/VideoPlayer";
+import Link from "next/link";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -545,23 +546,26 @@ export default function Home() {
           {/* 1 */}
 
           {/* 2 */}
-          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Twitter
-              size={56}
-              className="text-center mx-auto mb-5"
-              strokeWidth={1.8}
-            />
+          <a
+            href="https://x.com/CubaNexOfficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+              <Twitter size={56} className="mx-auto mb-5" strokeWidth={1.8} />
 
-            <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Twitter/X
-            </h3>
-            <p className="text-gray-400 text-sm">
-              Follow us for real-time updates and announcements
-              <br />
-              <br />
-              Follow @CubaNex
-            </p>
-          </div>
+              <h3 className="text-xl font-semibold mb-3">Twitter / X</h3>
+
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Follow us for real-time updates and announcements
+                <br />
+                <br />
+                <span className="text-[#FFB74A] font-medium">@CubaNex</span>
+              </p>
+            </div>
+          </a>
+
           {/* 3 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <Send

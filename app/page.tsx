@@ -460,7 +460,7 @@ export default function Home() {
 
       {/* ================= How to Buy CNEX ================= */}
 
-      <section>
+      <section className="pb-8 sm:pb-16">
         <h2
           className={`${orbitron.className} text-center text-[26px] pt-10 sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
@@ -527,7 +527,7 @@ export default function Home() {
       {/* ================= How to Buy CNEX ================= */}
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
-      <section className="relative mt-[-70px]  pb-20 sm:py-20 px-6 z-10 b bg-section">
+      <section className="relative mt-[-70px]  pb-20 sm:pb-20 px-6 z-10 b bg-section">
         <h2
           className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
@@ -545,57 +545,68 @@ export default function Home() {
           {/* 1 */}
 
           {/* 2 */}
-          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Twitter
-              size={56}
-              className="text-center mx-auto mb-5"
-              strokeWidth={1.8}
-            />
+          <a
+            href="https://x.com/CubaNexOfficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+              <Twitter size={56} className="mx-auto mb-5" strokeWidth={1.8} />
 
-            <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Twitter/X
-            </h3>
-            <p className="text-gray-400 text-sm">
-              Follow us for real-time updates and announcements
-              <br />
-              <br />
-              Follow @CubaNex
-            </p>
-          </div>
+              <h3 className="text-xl font-semibold mb-3">Twitter / X</h3>
+
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Follow us for real-time updates and announcements
+                <br />
+                <br />
+                <span className="text-[#FFB74A] font-medium">@CubaNex</span>
+              </p>
+            </div>
+          </a>
+
           {/* 3 */}
-          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Send
-              size={56}
-              className="text-center mx-auto mb-5"
-              strokeWidth={1.8}
-            />
+          <a
+            href="https://t.me/CubaNexOfficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+              <Send size={56} className="mx-auto mb-5" strokeWidth={1.8} />
 
-            <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Telegram{" "}
-            </h3>
-            <p className="text-gray-400 text-sm">
-              Join our active community and chat with team members <br />
-              <br />
-              Join Telegram{" "}
-            </p>
-          </div>
+              <h3 className="text-xl font-semibold mb-3">Telegram</h3>
+
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Join our active community and chat with the team
+                <br />
+                <br />
+                <span className="text-[#FFB74A] font-medium">
+                  Join Telegram
+                </span>
+              </p>
+            </div>
+          </a>
+
           {/* 4 */}
-          <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <MessageCircle
-              size={56}
-              className="text-center mx-auto mb-5"
-              strokeWidth={1.8}
-            />
+          <a href="#" rel="noopener noreferrer" className="block">
+            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+              <MessageCircle
+                size={56}
+                className="mx-auto mb-5"
+                strokeWidth={1.8}
+              />
 
-            <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Discord{" "}
-            </h3>
-            <p className="text-gray-400 text-sm">
-              Connect with holders and participate in governance <br />
-              <br />
-              Join Discord{" "}
-            </p>
-          </div>
+              <h3 className="text-xl font-semibold mb-3">Discord</h3>
+
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Connect with holders and participate in governance
+                <br />
+                <br />
+                <span className="text-[#FFB74A] font-medium">Join Discord</span>
+              </p>
+            </div>
+          </a>
         </div>
       </section>
       {/* ================= Unlock VIP Access to CubaNex================= */}
