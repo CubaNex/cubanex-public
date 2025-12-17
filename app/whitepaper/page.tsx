@@ -58,7 +58,7 @@ const Whitepaper = () => {
           </blockquote>
           <div className="mt-10 flex justify-center">
             <a
-              href="http://localhost:3000/CubaNex_Whitepaper_v1.0.pdf"
+              href="/CubaNex_Whitepaper_v1.0.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl
