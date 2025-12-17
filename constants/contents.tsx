@@ -13,7 +13,10 @@ export const textContent = {
       brandText:
         "Driving sustainable Web3 development in Cuba through blockchain solutions.",
       quickLinks: ["Home", "About", "Tokenomics"],
-      resources: ["Whitepaper", "Smart Contract", "Audit Report"],
+      resources: [
+        { label: "Whitepaper", slug: "whitepaper" },
+        { label: "Community", slug: "community" },
+      ],
       community: ["Twitter", "Telegram", "Message"],
       privacy: "Privacy Policy",
       terms: "Terms of Service",
@@ -45,7 +48,7 @@ export const textContent = {
 
   esp: {
     header: {
-      links: ["Inicio", "Acerca de", "Comunidad", "Economía del token"],
+      links: ["Inicio", "Acerca de", "Economía del token", "Comunidad"],
       button: "Únete a la preventa",
       btnLink: "/es/community",
     },
@@ -76,12 +79,12 @@ export const textContent = {
     footer: {
       brandText:
         "Impulsando el desarrollo sostenible de Web3 en Cuba mediante soluciones blockchain.",
-      quickLinks: ["Inicio", "Acerca de", "Economía del token"],
+      quickLinks: ["Home", "About", "Tokenomics"],
       resources: [
-        "Libro Blanco",
-        "Contrato Inteligente",
-        "Informe de Auditoría",
+        { label: "Libro Blanco", slug: "whitepaper" },
+        { label: "Comunidad", slug: "community" },
       ],
+
       community: ["Twitter", "Telegram", "Message"],
       privacy: "Política de Privacidad",
       terms: "Términos del Servicio",

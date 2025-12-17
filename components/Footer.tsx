@@ -20,7 +20,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center mb-4">
-              <Link href={language === "eng" ? "/en" : "/"}>
+              <Link href={language === "eng" ? "/" : "/es"}>
                 <Image
                   src="/logos/cuba-nex-logo-gold.png"
                   alt="Cubanex Logo"
@@ -44,8 +44,8 @@ export default function Footer() {
                   <Link
                     href={
                       language === "eng"
-                        ? `/en/${link.toLowerCase()}`
-                        : `/${link.toLowerCase()}`
+                        ? `/${link.toLowerCase()}`
+                        : `/es/${link.toLowerCase()}`
                     }
                     className="hover:text-gray-300 transition-colors"
                   >
@@ -64,12 +64,14 @@ export default function Footer() {
             <ul className="space-y-3">
               {t.resources.map((item, i) => (
                 <li key={i}>
-                  <a
-                    href="#"
+                  <Link
+                    href={
+                      language === "eng" ? `/${item.slug}` : `/es/${item.slug}`
+                    }
                     className="hover:text-gray-300 transition-colors inline-flex items-center gap-2"
                   >
-                    {item}
-                  </a>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
