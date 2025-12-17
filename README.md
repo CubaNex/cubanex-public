@@ -37,7 +37,7 @@ CubaNex is committed to transparent development, security best practices, and op
 ## Team
 
 **Founder & Architect:** The Alchemist  
-**GitHub:** https://github.com/CubaNexLabs  
+**GitHub:** https://github.com/CubaNex  
 
 The CubaNex ecosystem is developed by a distributed, anonymous team committed to
 decentralization and privacy.
