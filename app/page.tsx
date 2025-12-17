@@ -27,6 +27,61 @@ const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["700", "800"],
 });
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CubaNex (CNEX) – The Future of Crypto in Cuba",
+  description:
+    "CubaNex (CNEX) is a next-generation digital asset built to connect Cuba’s cultural heritage with modern blockchain technology. Join the CNEX presale and be part of Cuba’s digital future.",
+  keywords: [
+    "CubaNex",
+    "CNEX",
+    "Cuban crypto",
+    "crypto presale",
+    "blockchain Cuba",
+    "Web3 Latin America",
+    "BNB Smart Chain",
+    "crypto token",
+    "decentralized finance",
+  ],
+  authors: [{ name: "CubaNex Team" }],
+  creator: "CubaNex",
+  publisher: "CubaNex",
+  metadataBase: new URL("https://www.cubanex.io"),
+
+  openGraph: {
+    title: "CubaNex (CNEX) – The First Crypto for the People of Cuba",
+    description:
+      "A new digital asset born from Cuban culture and powered by blockchain innovation. Discover CNEX tokenomics, roadmap, and presale details.",
+    url: "https://www.cubanex.io",
+    siteName: "CubaNex",
+    images: [
+      {
+        url: "/cubanexthero.png",
+        width: 1200,
+        height: 630,
+        alt: "CubaNex – The Future of Crypto in Cuba",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "CubaNex (CNEX) – The Future of Crypto in Cuba",
+    description:
+      "The first crypto designed to bridge Cuban culture with global blockchain innovation. Join the CNEX presale today.",
+    images: ["/cubanexthero.png"],
+    creator: "@CubaNexOfficial",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function Home() {
   return (
     <main className="bg-black  text-white min-h-auto sm:min-h-screen w-full overflow-x-hidden">
