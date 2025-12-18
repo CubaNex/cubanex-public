@@ -55,10 +55,6 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
     { name: t.links[1], path: "/about" },
     { name: t.links[2], path: "/tokenomics" },
     { name: t.links[3], path: "/community" },
-    {
-      name: t.links[4],
-      path: "/CubaNex_Whitepaper_v1.0.pdf",
-    },
   ];
 
   return (
@@ -91,6 +87,9 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
                 {item.name}
               </Link>
             ))}
+            <a href="/CubaNex_Whitepaper_v1.0.pdf">
+              {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco (PDF)"}
+            </a>
           </nav>
 
           {/* Desktop Buttons */}
