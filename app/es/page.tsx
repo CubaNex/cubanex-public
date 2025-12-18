@@ -71,16 +71,17 @@ export default function Home() {
           </div>
 
           <h1
-            className={`${orbitron.className} text-[32px] sm:text-[56px] lg:text-[100px] text-[#fff] max-w-[1000px] font-semibold leading-[1em] mb-6`}
+            className={`${orbitron.className} text-[32px] sm:text-[56px] lg:text-[100px] text-[#fff] font-semibold leading-[1em] mb-6`}
           >
-            El futuro de Cuba es <span className="text-[#FFB74A]"> Cripto</span>
+            Un proyecto blockchain inspirado en
+            <span className="text-[#FFB74A]"> la cultura cubana</span>
           </h1>
 
           <p
-            className={`${workSans.className} text-[16px] sm:text-[24px] text-gray-300 max-w-[800px]  mx-auto mb-8`}
+            className={`${workSans.className} text-[16px] sm:text-[24px] text-gray-300 max-w-[700px] mx-auto mb-8`}
           >
-            El Sueño Despertó como Código — Ha Llegado la Primera Cripto para el
-            Pueblo de Cuba. CUBANEX está aquí
+            El Sueño Despertó como Código — CUBANEX es un proyecto comunitario
+            basado en la inspiración cultural cubana.
           </p>
 
           <div className="flex gap-2 sm:gap-6 justify-center">
@@ -182,8 +183,8 @@ export default function Home() {
             <span className="text-[#FF8F00]"> ¿Por qué</span> CubaNex?
           </h2>{" "}
           <p className="text-gray-400 max-w-[500px] mx-auto mb-12">
-            Conectando el patrimonio cultural de Cuba con la tecnología
-            blockchain moderna de manera respetuosa y equilibrada.
+            Inspirado en la cultura cubana, combinando identidad cultural con
+            innovación blockchain de manera respetuosa y equilibrada.
           </p>
           <div className="grid gap-4 md:grid-cols-4">
             {/* 1 */}
@@ -298,7 +299,7 @@ export default function Home() {
         <p
           className={`${workSans.className} px-4 sm:px-0 text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
         >
-          Un nuevo activo digital creado para la comunidad cubana — CUBANEX da
+          Un nuevo activo digital creado para una comunidad global — CUBANEX da
           vida al token CNEX con una tokenomía clara y transparente.
         </p>
         {/*  */}
@@ -452,7 +453,8 @@ export default function Home() {
         <p
           className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
         >
-          Un plan claro para avanzar el futuro digital de Cuba.{" "}
+          Un plan claro para desarrollar el ecosistema CNEX y apoyar la
+          participación de la comunidad.
         </p>
 
         <div className="roead map px-8 sm:px-0">

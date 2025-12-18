@@ -27,8 +27,8 @@ const page = () => {
         <p
           className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto `}
         >
-          Distribución transparente y utilidad del mundo real que impulsa la
-          revolución digital de Cuba
+          Distribución transparente de tokens y utilidad real para una comunidad
+          global y participativa.
         </p>
         <div className="pb-14 text-white relative z-100 flex justify-center">
           <a
@@ -252,10 +252,8 @@ const page = () => {
               <p
                 className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
               >
-                Power a nationwide network of electric vehicle charging
-                stations, enabling clean mobility across Cuba. Blockchain
-                ensures transparent energy distribution and cost efficiency,
-                creating cleaner urban transport.
+                Power a network of electric vehicle charging stations, enabling
+                clean and efficient mobility.
               </p>
             </div>
           </div>
@@ -279,9 +277,7 @@ const page = () => {
               <p
                 className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
               >
-                Power a nationwide network of electric vehicle charging
-                stations, enabling clean mobility across Cuba. Blockchain
-                enables transparency & supports the nation’s transition toward
+                Blockchain enables transparency & supports the transition toward
                 sustainable mobility.
               </p>
             </div>
@@ -307,8 +303,7 @@ const page = () => {
                 className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
               >
                 Enable secure peer-to-peer transactions, digital payments,
-                online businesses, and new income opportunities—built on
-                transparent, verifiable blockchain technology.
+                online businesses, and new income opportunities.
               </p>
             </div>
           </div>
@@ -333,8 +328,7 @@ const page = () => {
                 className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
               >
                 Access decentralized finance tools—lending, saving, staking, and
-                yield farming—powered by blockchain. Cuban communities gain
-                financial freedom and global crypto opportunities.
+                yield farming—powered by blockchain.
               </p>
             </div>
           </div>

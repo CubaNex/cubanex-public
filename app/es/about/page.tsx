@@ -2,7 +2,6 @@ import React from "react";
 import { Work_Sans, Orbitron } from "next/font/google";
 import Image from "next/image";
 import { Github } from "lucide-react";
-
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -30,9 +29,9 @@ const page = () => {
         <p
           className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto mb-8`}
         >
-          CubaNex representa más que una criptomoneda—es un puente entre el
-          vibrante pasado de Cuba y su futuro innovador, impulsado por la
-          tecnología blockchain y una visión sostenible.
+          CubaNex representa más que una criptomoneda — es un puente entre la
+          cultura y la innovación, impulsado por la tecnología blockchain y una
+          visión sostenible.
         </p>
 
         {/* Nuestra Historia */}
@@ -49,24 +48,25 @@ const page = () => {
             </span>
             CubaNex es una transmisión — un sueño que despertó como código. Un
             puente entre la sabiduría espiritual antigua, la tecnología de
-            vanguardia y la emergencia de Cuba en la era digital global. Es el
-            primer activo digital descentralizado creado para Cuba — impulsado
-            por blockchain, guiado por la consciencia colectiva, y alineado con
-            inteligencia artificial para llevar a Cuba hacia la nueva frontera.
-            CubaNex existe para alinear y crear — para quienes están listos para
-            participar en el próximo capítulo del destino cubano.
+            vanguardia y la emergencia de Cuba en la era digital global. Es un
+            activo digital descentralizado inspirado en la cultura cubana —
+            impulsado por blockchain y alineado con la visión de la comunidad y
+            la IA para fomentar la participación en la economía descentralizada
+            global. CubaNex existe para alinear y crear — para quienes están
+            listos para participar en el próximo capítulo del destino cubano.
           </p>
 
           <p className={`${workSans.className} text-[16px] text-gray-300 mb-4`}>
             <span className="text-[22px] sm:text-[22px] font-semibold block mb-2">
               Cuba: Liderando la Era Digital
             </span>
-            CubaNex abre una nueva frontera — posicionando a Cuba como
-            superpotencia cripto en América Latina y como faro de transformación
-            digital global. Invita al pueblo cubano a construir, contribuir y
-            co-crear un nuevo estándar de innovación, inteligencia y presencia
-            cultural — con Cuba al centro. Cuba da un paso adelante — como luz
-            guía en la transición global hacia la consciencia digital.
+            CubaNex abre nuevas oportunidades — conectando la cultura cubana con
+            la innovación digital y fomentando la participación global en la
+            economía descentralizada. Invita al pueblo cubano a construir,
+            contribuir y co-crear un nuevo estándar de innovación, inteligencia
+            y presencia cultural — con Cuba al centro. Cuba da un paso adelante
+            — como luz guía en la transición global hacia la consciencia
+            digital.
           </p>
 
           <p className={`${workSans.className} text-[16px] text-gray-300 mb-4`}>
