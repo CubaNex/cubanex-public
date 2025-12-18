@@ -15,8 +15,8 @@ const orbitron = Orbitron({
   weight: ["700", "800"],
 });
 
-const ConnectWallet = () => {
-  const contract = "0x742d35Cc6634C0532925a3b844Bc9e7559f0Beb";
+const TokenOverview = () => {
+  const contract = "0xf073d173Ed309f8A208e6C183eFf858DbC882DbB";
   const [copied, setCopied] = useState(false);
 
   const copyAddress = () => {
@@ -27,67 +27,67 @@ const ConnectWallet = () => {
 
   return (
     <div
-      className={` w-full flex justify-center py-16 px-5 ${workSans.variable} ${orbitron.variable}`}
-    ></div>
+      className={`w-full flex justify-center py-16 px-5 ${workSans.variable} ${orbitron.variable}`}
+    >
+      <div className="bg-[#081420] border border-[#0f2334] rounded-xl p-8 sm:p-10 w-full max-w-[900px] shadow-xl">
+        {/* Title */}
+        <h2 className="text-center text-3xl font-bold text-white font-[var(--font-orbitron)]">
+          CubaNex (CNEX) — Token Overview
+        </h2>
+
+        <p className="text-center text-gray-400 mt-3 text-sm font-[var(--font-work-sans)]">
+          Official token information for transparency and verification
+        </p>
+
+        {/* Token Info */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+          <InfoItem label="Token Name" value="CubaNex" />
+          <InfoItem label="Symbol" value="CNEX" />
+          <InfoItem label="Network" value="Binance Smart Chain (BEP-20)" />
+          <InfoItem label="Standard" value="BEP-20" />
+          <InfoItem label="Total Supply" value="100,000,000,000 CNEX" />
+          <InfoItem label="Decimals" value="18" />
+        </div>
+
+        {/* Contract */}
+        <div className="mt-10 bg-[#071523] border border-[#0f2334] rounded-lg p-5">
+          <p className="text-gray-400 text-sm font-[var(--font-work-sans)]">
+            Contract Address
+          </p>
+
+          <div className="flex items-center justify-between gap-3 mt-2">
+            <span className="text-[#FFB74A] break-all text-sm font-mono">
+              {contract}
+            </span>
+
+            <button
+              onClick={copyAddress}
+              className="text-[#b340ff] hover:text-white transition"
+            >
+              {copied ? (
+                <Check className="w-5 h-5 text-green-400" />
+              ) : (
+                <Copy className="w-5 h-5" />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Disclaimer */}
+        <p className="mt-8 text-xs text-gray-500 text-center">
+          CubaNex is a community-driven blockchain project and is not affiliated
+          with any government or official institution.
+        </p>
+      </div>
+    </div>
   );
 };
 
-export default ConnectWallet;
-//  <div className="bg-[#081420] border border-[#0f2334] rounded-xl p-10 w-full max-w-[900px] shadow-xl">
-//         <h2 className="text-center text-3xl font-bold text-white drop-shadow-lg font-[var(--font-orbitron)]">
-//           Connect Your Wallet
-//         </h2>
+const InfoItem = ({ label, value }: { label: string; value: string }) => (
+  <div className="bg-[#071523] border border-[#0f2334] rounded-lg p-4">
+    <p className="text-gray-400">{label}</p>
+    <p className="text-white font-medium mt-1">{value}</p>
+  </div>
+);
 
-//         <p className="text-center text-gray-400 mt-3 text-sm font-[var(--font-work-sans)]">
-//           Start your CNX journey by connecting your Web3 wallet
-//         </p>
-
-//         <div className="flex justify-center gap-3 sm:gap-6 mt-10">
-//           <button
-//             className="
-//               px-[10px] sm:px-[30px] py-[10px] text-[10px] sm:text-[16px]
-//               rounded-full text-white font-medium font-[var(--font-work-sans)]
-//               bg-gradient-to-r from-[#C766EF] via-[#7928D2] to-[#2B0C52]
-//               min-w-[135px] sm:min-w-[180px] text-center
-//             "
-//           >
-//             MetaMask
-//           </button>
-
-//           <button
-//             className="
-//               px-[10px] sm:px-[30px] py-[10px] text-[10px] sm:text-[16px]
-//               rounded-full font-medium text-white font-[var(--font-work-sans)]
-//               border border-[#7928D2]
-//               transition-all duration-300
-//               hover:bg-gradient-to-r hover:from-[#C766EF] hover:via-[#7928D2] hover:to-[#2B0C52]
-//               min-w-[135px] sm:min-w-[180px] text-center
-//             "
-//           >
-//             WalletConnect
-//           </button>
-//         </div>
-
-//         <div className="mt-10 bg-[#071523] border border-[#0f2334] rounded-lg p-5">
-//           <p className="text-gray-400 text-sm font-[var(--font-work-sans)]">
-//             Contract Address:
-//           </p>
-
-//           <div className="flex items-center justify-between mt-2">
-//             <span className="text-[#FFB74A] break-all text-sm font-mono">
-//               {contract}
-//             </span>
-
-//             <button
-//               onClick={copyAddress}
-//               className="text-[#b340ff] hover:text-white transition cursor-pointer"
-//             >
-//               {copied ? (
-//                 <Check className="w-5 h-5 text-green-400" />
-//               ) : (
-//                 <Copy className="w-5 h-5" />
-//               )}
-//             </button>
-//           </div>
-//         </div>
-//       </div>
+export default TokenOverview;
