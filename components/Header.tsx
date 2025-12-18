@@ -183,7 +183,10 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
                     {item.name}
                   </Link>
                 </motion.div>
-              ))}
+              ))}{" "}
+              <a href="/CubaNex_Whitepaper_v1.0.pdf">
+                {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco (PDF)"}
+              </a>
             </nav>
             <Link href={language === "esp" ? "/es/community" : "/community"}>
               <motion.button
