@@ -3,6 +3,7 @@ import { Work_Sans, Orbitron } from "next/font/google";
 import ConnectWallet from "@/components/ConnectWallet";
 import Image from "next/image";
 import { FileText } from "lucide-react";
+import TokenOverviewMini from "@/components/ToverView";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -219,6 +220,9 @@ const page = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className=" mt-[-60px] sm:mt-[-100px] pb-10">
+        <TokenOverviewMini />
       </div>
 
       {/* real utility */}
