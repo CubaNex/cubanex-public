@@ -195,6 +195,9 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
                   background:
                     "linear-gradient(90deg, #C766EF 0%, #7928D2 51%, #2B0C52 100%)",
                 }}
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                }}
               >
                 {t.button}
               </motion.button>{" "}
