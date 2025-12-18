@@ -30,9 +30,9 @@ const orbitron = Orbitron({
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CubaNex (CNEX) – The Future of Crypto in Cuba",
+  title: "CubaNex (CNEX) – A Blockchain Project Inspired by Cuba",
   description:
-    "CubaNex (CNEX) is a next-generation digital asset built to connect Cuba’s cultural heritage with modern blockchain technology. Join the CNEX presale and be part of Cuba’s digital future.",
+    "CubaNex (CNEX) is a decentralized blockchain project inspired by Cuban culture and global innovation, built on BNB Smart Chain.",
   keywords: [
     "CubaNex",
     "CNEX",
@@ -117,15 +117,15 @@ export default function Home() {
           <h1
             className={`${orbitron.className} text-[32px] sm:text-[56px] lg:text-[100px] text-[#fff]  font-semibold leading-[1em] mb-6`}
           >
-            The Future of Cuba is 
-            <span className="text-[#FFB74A]"> Crypto</span>
+            A Blockchain Vision Inspired
+            <span className="text-[#FFB74A]"> by Cuba</span>
           </h1>
 
           <p
             className={`${workSans.className} text-[16px] sm:text-[24px] text-gray-300 max-w-[700px]  mx-auto mb-8`}
           >
-            The Dream Awoke as a Code — The First Crypto for the People of Cuba
-            Has Arrived. CUBANEX is here
+            The Dream Awoke as a Code — A community-driven blockchain project
+            inspired by Cuban culture. CUBANEX is here
           </p>
 
           <div className="flex gap-2 sm:gap-6 justify-center">
@@ -243,7 +243,7 @@ export default function Home() {
                 Fast
               </h3>
               <p className="text-gray-400 text-sm">
-                Cuba’s Emergence as the First Crypto Superpower of Latin America
+                Designed for fast, efficient blockchain transactions.{" "}
               </p>
             </div>
             {/* 2 */}
@@ -253,9 +253,9 @@ export default function Home() {
                 Audited
               </h3>
               <p className="text-gray-400 text-sm">
-                CubaNex unifies Cuba’s cultural depth with the rising wave of
-                digital innovation — placing the nation on a path to global
-                leadership in the decentralized era
+                CubaNex combines cultural inspiration with blockchain-based
+                innovation to support participation in the decentralized
+                economy.
               </p>
             </div>
             {/* 3 */}
@@ -276,9 +276,9 @@ export default function Home() {
                 Utility
               </h3>
               <p className="text-gray-400 text-sm">
-                This is Cuba’s moment to lead Latin America into a new financial
-                reality. A code born of collective consciousness, created to
-                evolve through those who align.
+                This is a moment for CNEX to empower a new financial reality — a
+                token born of collective vision, designed to evolve with its
+                community.
               </p>
             </div>
           </div>
@@ -352,8 +352,9 @@ export default function Home() {
         <p
           className={`${workSans.className} px-4 sm:px-0 text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
         >
-          A new digital asset built for the Cuban community—CUBANEX brings the
-          CNEX token to life with clear, transparent tokenomics.
+          A new digital asset built for a global, community-driven ecosystem
+          inspired by Cuban culture, CUBANEX brings the CNEX token to life with
+          clear, transparent tokenomics.
         </p>
         {/*  */}
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -503,7 +504,8 @@ export default function Home() {
         <p
           className={`${workSans.className} text-center text-[16px] px-3 sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
         >
-          A clear plan for advancing Cuba’s digital future.
+          A clear roadmap for developing the CNEX ecosystem and supporting
+          community growth.{" "}
         </p>
 
         <div className="roead map px-12">

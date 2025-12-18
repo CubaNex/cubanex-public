@@ -85,7 +85,7 @@ export const textContent = {
     // -----------------------
     footer: {
       brandText:
-        "Impulsando el desarrollo sostenible de Web3 en Cuba mediante soluciones blockchain.",
+        "Impulsando el desarrollo sostenible de Web3 inspirado en la cultura cubana mediante soluciones blockchain.",
       quickLinks: ["Home", "About", "Tokenomics"],
       resources: [
         { label: "Libro Blanco", slug: "whitepaper" },

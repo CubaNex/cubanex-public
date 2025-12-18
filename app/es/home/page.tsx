@@ -84,7 +84,7 @@ export default function Home() {
           </p>
 
           <div className="flex gap-2 sm:gap-6 justify-center">
-            <a href="/community">
+            <a href="/es/community">
               <button
                 className=" px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white border-1 font-medium bg-[transparetn] hover:bg-[#fff] hover:text-[#000] 
     hover:scale-105 transition-transform duration-300 ease-in-out"
@@ -383,7 +383,7 @@ export default function Home() {
                     Total Supply
                   </p>
                   <p className={`${workSans.className} text-white/60 text-sm`}>
-                    1,000,000,000 CNEX tokens
+                    100,000,000,000 CNEX
                   </p>
                 </div>
               </div>
@@ -548,62 +548,80 @@ export default function Home() {
         </p>
 
         <VipForm />
-
-        <div className="px-8 pt-20 grid max-w-[1100px] mx-auto gap-4 md:grid-cols-3">
+        <div className=" sm:px-8 pt-20 grid max-w-[1100px] mx-auto gap-4 md:grid-cols-3">
           {/* 1 — Twitter */}
-          <div className="p-8 border text-center items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Twitter
-              size={56}
-              className="text-center mx-auto mb-5"
-              strokeWidth={1.8}
-            />
+          <a
+            href="https://x.com/CubaNexOfficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+              <Twitter size={56} className="mx-auto mb-5" strokeWidth={1.8} />
 
-            <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Twitter/X
-            </h3>
-            <p className="text-gray-400 text-sm">
-              Síguenos para obtener actualizaciones y anuncios en tiempo real.
-              <br />
-              Seguir @CubaNex
-            </p>
-          </div>
+              <h3 className="text-xl font-semibold mb-3">Twitter / X</h3>
+
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Síguenos para obtener actualizaciones y anuncios en tiempo real.
+                <br />
+                <br />
+                <span className="text-[#FFB74A] font-medium">
+                  Seguir @CubaNex
+                </span>
+              </p>
+            </div>
+          </a>
 
           {/* 2 — Telegram */}
-          <div className="p-8 border text-center items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Send
-              size={56}
-              className="text-center mx-auto mb-5"
-              strokeWidth={1.8}
-            />
+          <a
+            href="https://t.me/CubaNexOfficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+              <Send size={56} className="mx-auto mb-5" strokeWidth={1.8} />
 
-            <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Telegram
-            </h3>
-            <p className="text-gray-400 text-sm">
-              Únete a nuestra comunidad activa y charla con los miembros del
-              equipo.
-              <br />
-              Unirse Telegram
-            </p>
-          </div>
+              <h3 className="text-xl font-semibold mb-3">Telegram</h3>
+
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Únete a nuestra comunidad activa y charla con los miembros del
+                equipo.
+                <br />
+                <br />
+                <span className="text-[#FFB74A] font-medium">
+                  Unirse Telegram
+                </span>
+              </p>
+            </div>
+          </a>
 
           {/* 3 — Discord */}
-          <div className="p-8 border text-center items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <MessageCircle
-              size={56}
-              className="text-center mx-auto mb-5"
-              strokeWidth={1.8}
-            />
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+              <MessageCircle
+                size={56}
+                className="mx-auto mb-5"
+                strokeWidth={1.8}
+              />
 
-            <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Discord
-            </h3>
-            <p className="text-gray-400 text-sm">
-              Conéctate con los holders y participa en la gobernanza.
-              <br />
-              Unirse Discord
-            </p>
-          </div>
+              <h3 className="text-xl font-semibold mb-3">Discord</h3>
+
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Conéctate con los holders y participa en la gobernanza.
+                <br />
+                <br />
+                <span className="text-[#FFB74A] font-medium">
+                  Unirse Discord
+                </span>
+              </p>
+            </div>
+          </a>
         </div>
       </section>
 

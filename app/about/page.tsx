@@ -51,11 +51,9 @@ const Page = () => {
           </p>
 
           <p className={`${workSans.className} text-[16px] text-gray-300 mb-6`}>
-            It is the first decentralized digital asset created for Cuba —
-            powered by blockchain, guided by collective consciousness, and
-            aligned with AI to carry Cuba into the next frontier. CubaNex exists
-            to align and create — for those ready to take part in the next
-            chapter of Cuba’s destiny.
+            CubaNex is a decentralized digital asset inspired by Cuban culture —
+            powered by blockchain and aligned with community vision and AI to
+            support participation in the global decentralized economy
           </p>
 
           <h3

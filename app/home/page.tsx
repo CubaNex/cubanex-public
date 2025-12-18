@@ -17,7 +17,6 @@ import VipForm from "@/components/VipForm";
 import WhitePaper from "@/components/WhitePaper";
 import ArrowB from "@/components/ArrowB";
 import VideoPlayer from "@/components/VideoPlayer";
-import Link from "next/link";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -28,6 +27,61 @@ const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["700", "800"],
 });
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CubaNex (CNEX) – A Blockchain Project Inspired by Cuba",
+  description:
+    "CubaNex (CNEX) is a decentralized blockchain project inspired by Cuban culture and global innovation, built on BNB Smart Chain.",
+  keywords: [
+    "CubaNex",
+    "CNEX",
+    "Cuban crypto",
+    "crypto presale",
+    "blockchain Cuba",
+    "Web3 Latin America",
+    "BNB Smart Chain",
+    "crypto token",
+    "decentralized finance",
+  ],
+  authors: [{ name: "CubaNex Team" }],
+  creator: "CubaNex",
+  publisher: "CubaNex",
+  metadataBase: new URL("https://www.cubanex.io"),
+
+  openGraph: {
+    title: "CubaNex (CNEX) – The First Crypto for the People of Cuba",
+    description:
+      "A new digital asset born from Cuban culture and powered by blockchain innovation. Discover CNEX tokenomics, roadmap, and presale details.",
+    url: "https://www.cubanex.io",
+    siteName: "CubaNex",
+    images: [
+      {
+        url: "/cubanexthero.png",
+        width: 1200,
+        height: 630,
+        alt: "CubaNex – The Future of Crypto in Cuba",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "CubaNex (CNEX) – The Future of Crypto in Cuba",
+    description:
+      "The first crypto designed to bridge Cuban culture with global blockchain innovation. Join the CNEX presale today.",
+    images: ["/cubanexthero.png"],
+    creator: "@CubaNexOfficial",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function Home() {
   return (
     <main className="bg-black  text-white min-h-auto sm:min-h-screen w-full overflow-x-hidden">
@@ -63,19 +117,19 @@ export default function Home() {
           <h1
             className={`${orbitron.className} text-[32px] sm:text-[56px] lg:text-[100px] text-[#fff]  font-semibold leading-[1em] mb-6`}
           >
-            The Future of Cuba is 
-            <span className="text-[#FFB74A]"> Crypto</span>
+            A Blockchain Vision Inspired
+            <span className="text-[#FFB74A]"> by Cuba</span>
           </h1>
 
           <p
             className={`${workSans.className} text-[16px] sm:text-[24px] text-gray-300 max-w-[700px]  mx-auto mb-8`}
           >
-            The Dream Awoke as a Code — The First Crypto for the People of Cuba
-            Has Arrived. CUBANEX is here
+            The Dream Awoke as a Code — A community-driven blockchain project
+            inspired by Cuban culture. CUBANEX is here
           </p>
 
           <div className="flex gap-2 sm:gap-6 justify-center">
-            <a href="/en/community">
+            <a href="/community">
               <button
                 className=" px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white border-1 font-medium bg-[transparetn] hover:bg-[#fff] hover:text-[#000] 
     hover:scale-105 transition-transform duration-300 ease-in-out"
@@ -189,7 +243,7 @@ export default function Home() {
                 Fast
               </h3>
               <p className="text-gray-400 text-sm">
-                Cuba’s Emergence as the First Crypto Superpower of Latin America
+                Designed for fast, efficient blockchain transactions.{" "}
               </p>
             </div>
             {/* 2 */}
@@ -199,9 +253,9 @@ export default function Home() {
                 Audited
               </h3>
               <p className="text-gray-400 text-sm">
-                CubaNex unifies Cuba’s cultural depth with the rising wave of
-                digital innovation — placing the nation on a path to global
-                leadership in the decentralized era
+                CubaNex combines cultural inspiration with blockchain-based
+                innovation to support participation in the decentralized
+                economy.
               </p>
             </div>
             {/* 3 */}
@@ -222,9 +276,9 @@ export default function Home() {
                 Utility
               </h3>
               <p className="text-gray-400 text-sm">
-                This is Cuba’s moment to lead Latin America into a new financial
-                reality. A code born of collective consciousness, created to
-                evolve through those who align.
+                This is a moment for CNEX to empower a new financial reality — a
+                token born of collective vision, designed to evolve with its
+                community.
               </p>
             </div>
           </div>
@@ -298,8 +352,9 @@ export default function Home() {
         <p
           className={`${workSans.className} px-4 sm:px-0 text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
         >
-          A new digital asset built for the Cuban community—CUBANEX brings the
-          CNEX token to life with clear, transparent tokenomics.
+          A new digital asset built for a global, community-driven ecosystem
+          inspired by Cuban culture, CUBANEX brings the CNEX token to life with
+          clear, transparent tokenomics.
         </p>
         {/*  */}
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -383,7 +438,7 @@ export default function Home() {
                     Total Supply
                   </p>
                   <p className={`${workSans.className} text-white/60 text-sm`}>
-                    1,000,000,000 CNEX tokens
+                    100,000,000,000 CNEX{" "}
                   </p>
                 </div>
               </div>
@@ -449,7 +504,8 @@ export default function Home() {
         <p
           className={`${workSans.className} text-center text-[16px] px-3 sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
         >
-          A clear plan for advancing Cuba’s digital future.
+          A clear roadmap for developing the CNEX ecosystem and supporting
+          community growth.{" "}
         </p>
 
         <div className="roead map px-12">
@@ -461,7 +517,7 @@ export default function Home() {
 
       {/* ================= How to Buy CNEX ================= */}
 
-      <section>
+      <section className="pb-8 sm:pb-16">
         <h2
           className={`${orbitron.className} text-center text-[26px] pt-10 sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
@@ -528,7 +584,7 @@ export default function Home() {
       {/* ================= How to Buy CNEX ================= */}
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
-      <section className="relative mt-[-70px]  pb-20 sm:py-20 px-6 z-10 b bg-section">
+      <section className="relative mt-[-70px]  pb-20 sm:pb-20 px-6 z-10 b bg-section">
         <h2
           className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
@@ -567,39 +623,47 @@ export default function Home() {
           </a>
 
           {/* 3 */}
-          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <Send
-              size={56}
-              className="text-center mx-auto mb-5"
-              strokeWidth={1.8}
-            />
+          <a
+            href="https://t.me/CubaNexOfficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+              <Send size={56} className="mx-auto mb-5" strokeWidth={1.8} />
 
-            <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Telegram{" "}
-            </h3>
-            <p className="text-gray-400 text-sm">
-              Join our active community and chat with team members <br />
-              <br />
-              Join Telegram{" "}
-            </p>
-          </div>
+              <h3 className="text-xl font-semibold mb-3">Telegram</h3>
+
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Join our active community and chat with the team
+                <br />
+                <br />
+                <span className="text-[#FFB74A] font-medium">
+                  Join Telegram
+                </span>
+              </p>
+            </div>
+          </a>
+
           {/* 4 */}
-          <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-            <MessageCircle
-              size={56}
-              className="text-center mx-auto mb-5"
-              strokeWidth={1.8}
-            />
+          <a href="#" rel="noopener noreferrer" className="block">
+            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+              <MessageCircle
+                size={56}
+                className="mx-auto mb-5"
+                strokeWidth={1.8}
+              />
 
-            <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Discord{" "}
-            </h3>
-            <p className="text-gray-400 text-sm">
-              Connect with holders and participate in governance <br />
-              <br />
-              Join Discord{" "}
-            </p>
-          </div>
+              <h3 className="text-xl font-semibold mb-3">Discord</h3>
+
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Connect with holders and participate in governance
+                <br />
+                <br />
+                <span className="text-[#FFB74A] font-medium">Join Discord</span>
+              </p>
+            </div>
+          </a>
         </div>
       </section>
       {/* ================= Unlock VIP Access to CubaNex================= */}
