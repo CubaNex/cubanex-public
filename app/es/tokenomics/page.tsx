@@ -2,6 +2,7 @@ import React from "react";
 import { Work_Sans, Orbitron } from "next/font/google";
 import ConnectWallet from "@/components/ConnectWallet";
 import Image from "next/image";
+import { FileText } from "lucide-react";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -23,12 +24,26 @@ const page = () => {
         </h1>
 
         <p
-          className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto mb-8`}
+          className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto `}
         >
           Distribución transparente y utilidad del mundo real que impulsa la
           revolución digital de Cuba
         </p>
-
+        <div className="pb-14 text-white relative z-100 flex justify-center">
+          <a
+            href="/CubaNex_Whitepaper_v1.0.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl
+               bg-primary/90 hover:bg-primary
+               text-background font-semibold
+               transition-all duration-300
+               backdrop-blur-md shadow-lg"
+          >
+            <FileText className="w-5 h-5" />
+            Download Whitepaper (PDF)
+          </a>
+        </div>
         <div className="relative  z-10 px-6 grid max-w-[1000px] text-white mx-auto gap-8 md:grid-cols-3">
           {/* 1 */}
           <div className="p-8 border min-w-[266px]  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">

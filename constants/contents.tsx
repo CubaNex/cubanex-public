@@ -1,7 +1,7 @@
 export const textContent = {
   eng: {
     header: {
-      links: ["Home", "About", "Tokenomics", "Community"],
+      links: ["Home", "About", "Tokenomics", "Community", "Whitepaper (PDF)"],
       button: "Join Presale",
       btnLink: "/community",
     },
@@ -16,6 +16,7 @@ export const textContent = {
       resources: [
         { label: "Whitepaper", slug: "whitepaper" },
         { label: "Community", slug: "community" },
+        // { label: "Whitepaper (PDF)", slug: "CubaNex_Whitepaper_v1.0.pdf" },
       ],
       community: ["Twitter", "Telegram", "Message"],
       privacy: "Privacy Policy",
@@ -48,7 +49,13 @@ export const textContent = {
 
   esp: {
     header: {
-      links: ["Inicio", "Acerca de", "Economía del token", "Comunidad"],
+      links: [
+        "Inicio",
+        "Acerca de",
+        "Economía del token",
+        "Comunidad",
+        "Libro Blanco (PDF)",
+      ],
       button: "Únete a la preventa",
       btnLink: "/es/community",
     },
@@ -83,6 +90,7 @@ export const textContent = {
       resources: [
         { label: "Libro Blanco", slug: "whitepaper" },
         { label: "Comunidad", slug: "community" },
+        // { label: "Libro Blanco (PDF)", slug: "CubaNex_Whitepaper_v1.0.pdf" },
       ],
 
       community: ["Twitter", "Telegram", "Message"],

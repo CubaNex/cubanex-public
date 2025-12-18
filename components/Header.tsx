@@ -55,6 +55,10 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
     { name: t.links[1], path: "/about" },
     { name: t.links[2], path: "/tokenomics" },
     { name: t.links[3], path: "/community" },
+    {
+      name: t.links[4],
+      path: "https://www.cubanex.io/CubaNex_Whitepaper_v1.0.pdf",
+    },
   ];
 
   return (

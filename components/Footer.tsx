@@ -75,6 +75,12 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <a
+              href={"/CubaNex_Whitepaper_v1.0.pdf"}
+              className="hover:text-gray-300 pt-3 transition-colors inline-flex items-center gap-2"
+            >
+              {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco (PDF)"}
+            </a>
           </div>
 
           {/* Community */}
