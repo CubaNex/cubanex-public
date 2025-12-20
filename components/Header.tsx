@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -68,11 +67,18 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
         >
           <Link href={language === "esp" ? "/es" : "/"}>
             <Image
-              src="/logos/cuba-nex-logo-gold.png"
-              alt="Cubanex Logo"
-              width={210}
-              height={60}
-              className="object-contain sm:ml-0 cursor-pointer"
+              src={"/logos/logo.png"}
+              alt="logo"
+              width={200}
+              height={53}
+              className="hidden sm:block"
+            />
+            <Image
+              src={"/logos/logo.png"}
+              alt="logo"
+              width={180}
+              height={53}
+              className="block sm:hidden"
             />
           </Link>
 

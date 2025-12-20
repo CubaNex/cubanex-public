@@ -22,11 +22,10 @@ export default function Footer() {
             <div className="flex items-center mb-4">
               <Link href={language === "eng" ? "/" : "/es"}>
                 <Image
-                  src="/logos/cuba-nex-logo-gold.png"
-                  alt="Cubanex Logo"
-                  width={230}
-                  height={40}
-                  className="object-contain "
+                  src={"/logos/logo.png"}
+                  alt="logo"
+                  width={200}
+                  height={53}
                 />
               </Link>
             </div>
