@@ -235,32 +235,44 @@ const page = () => {
 
         <div className="max-w-[1000px] mx-auto flex flex-col gap-10">
           {/* 1 — Transportation */}
-          <div className="bg-[#07111f] border border-[#1b2733] rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
-            <Image
-              src="/3d-electric-car-with-charged-battery-symbol 2.png"
-              alt="Transportation"
-              width={300}
-              height={200}
-              className="rounded-lg w-full md:w-[300px] object-cover"
-            />
-
-            <div>
+          <div className="bg-[#07111f] overflow-hidden border border-[#1b2733] rounded-xl  flex flex-col md:flex-row justify-between gap-6 items-center">
+            <div className="p-6 sm:px-8">
               <h3
                 className={`${orbitron.className} text-white text-[26px] mb-2`}
               >
                 Transportation
               </h3>
               <p
-                className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
+                className={`${workSans.className} text-gray-300 text-[15px] max-w-[500px] leading-relaxed`}
               >
                 Power a network of electric vehicle charging stations, enabling
                 clean and efficient mobility.
               </p>
             </div>
+            <Image
+              src="/3d-electric-car-with-charged-battery-symbol 2.png"
+              alt="Transportation"
+              width={300}
+              height={200}
+              className="rounded-lg w-full md:w-[300px] object-cover scale: 1.05  ml-[-8px] sm:mr-[-8px] mb-[-8px]"
+            />
           </div>
 
           {/* 2 — Clean Energy (image on right) */}
-          <div className="bg-[#07111f] border border-[#1b2733] rounded-xl p-6 flex flex-col md:flex-row-reverse gap-6 items-center">
+          <div className="bg-[#07111f] border border-[#1b2733] rounded-xl  flex flex-col md:flex-row-reverse gap-6 items-center justify-between">
+            <div className="p-6 sm:px-8">
+              <h3
+                className={`${orbitron.className} text-white text-[26px] mb-2`}
+              >
+                Clean Energy
+              </h3>
+              <p
+                className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed max-w-[400px]`}
+              >
+                Blockchain enables transparency & supports the transition toward
+                sustainable mobility.
+              </p>
+            </div>
             <Image
               src="/3d-electric-car-with-charged-battery-symbol 5.png"
               alt="Clean Energy"
@@ -268,68 +280,52 @@ const page = () => {
               height={200}
               className="rounded-lg w-full md:w-[300px] object-cover"
             />
-
-            <div>
-              <h3
-                className={`${orbitron.className} text-white text-[26px] mb-2`}
-              >
-                Clean Energy
-              </h3>
-              <p
-                className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
-              >
-                Blockchain enables transparency & supports the transition toward
-                sustainable mobility.
-              </p>
-            </div>
-          </div>
-
-          {/* 3 — Digital Economy */}
-          <div className="bg-[#07111f] border border-[#1b2733] rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
-            <Image
-              src="/3d-electric-car-with-charged-battery-symbol 4.png"
-              alt="Digital Economy"
-              width={300}
-              height={200}
-              className="rounded-lg w-full md:w-[300px] object-cover"
-            />
-
-            <div>
-              <h3
-                className={`${orbitron.className} text-white text-[26px] mb-2`}
-              >
-                Digital Economy
-              </h3>
-              <p
-                className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
-              >
-                Enable secure peer-to-peer transactions, digital payments,
-                online businesses, and new income opportunities.
-              </p>
-            </div>
           </div>
 
           {/* 4 — DeFi Services (image on right) */}
-          <div className="bg-[#07111f] border border-[#1b2733] rounded-xl p-6 flex flex-col md:flex-row-reverse gap-6 items-center">
+          <div className="bg-[#07111f] border border-[#1b2733] rounded-xl overflow-hidden justify-between flex flex-col md:flex-row-reverse gap-6 items-center">
             <Image
               src="/3d-electric-car-with-charged-battery-symbol 2.png"
               alt="DeFi Services"
               width={300}
               height={200}
-              className="rounded-lg w-full md:w-[300px] object-cover"
+              className="rounded-lg w-full md:w-[300px] object-cover scale:1.05 ml-[-8px] sm:mr-[-8px] mb-[-8px]"
             />
 
-            <div>
+            <div className="p-4 sm:p-8">
               <h3
                 className={`${orbitron.className} text-white text-[26px] mb-2`}
               >
                 DeFi Services
               </h3>
               <p
-                className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
+                className={`${workSans.className} text-gray-300 text-[15px] max-w-[400px] leading-relaxed`}
               >
                 Access decentralized finance tools—lending, saving, staking, and
                 yield farming—powered by blockchain.
+              </p>
+            </div>
+          </div>
+          {/* 3 — Digital Economy */}
+          <div className="bg-[#07111f] border border-[#1b2733] rounded-xl overflow-hidden  flex flex-col md:flex-row gap-6 justify-between items-center">
+            <Image
+              src="/3d-electric-car-with-charged-battery-symbol 4.png"
+              alt="Digital Economy"
+              width={300}
+              height={200}
+              className="rounded-lg w-full md:w-[300px] object-cover scale:1.05 ml-[-8px] sm:mr-[-8px] mb-[-8px]"
+            />
+            <div className="p-6 sm:px-8">
+              <h3
+                className={`${orbitron.className} text-white text-[26px] mb-2`}
+              >
+                Digital Economy
+              </h3>
+              <p
+                className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed max-w-[400px]`}
+              >
+                Enable secure peer-to-peer transactions, digital payments,
+                online businesses, and new income opportunities.
               </p>
             </div>
           </div>
