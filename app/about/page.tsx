@@ -23,21 +23,100 @@ const Page = () => {
         <h1
           className={`${orbitron.className} text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-6`}
         >
-          From <span className="text-[#00DED4]"> Havana </span>
-          to the
-          <span className="text-[#FFB74A]"> Blockchain</span>
+          About <span className="text-[#FFB74A]"> CubaNex</span>
         </h1>
 
         <p
           className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto mb-8`}
         >
-          CubaNex is a transmission — a dream awakened as code. It bridges
-          ancient spiritual wisdom, modern technology, and the emergence of Cuba
-          into the global digital era.
+          CubaNex is a decentralized AI-powered digital asset built on BNB
+          Chain. The project focuses on creating an adaptive, secure, and
+          transparent ecosystem that supports the development of autonomous
+          tools and future intelligent systems. Designed for long-term
+          evolution, CubaNex aims to provide a foundation for emerging digital
+          and economic experiences powered by decentralized technology.
         </p>
+        <section className="relative w-full  pt-24 px-4">
+          <div className="max-w-6xl mx-auto">
+            {/* Section Title */}
+            <h2 className="text-center text-3xl md:text-4xl font-semibold text-white mb-14">
+              Mission & <span className="text-cyan-400">Vision</span>
+            </h2>
 
+            {/* Mission & Vision Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
+              {/* Mission */}
+              <div className="rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-10 w-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+                    <span className="text-cyan-400 text-lg">◎</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Mission</h3>
+                </div>
+                <p className="text-gray-400 leading-relaxed text-md">
+                  To build a secure, adaptive, and decentralized ecosystem that
+                  integrates blockchain infrastructure with emerging AI-driven
+                  technologies to support scalable digital transformation and
+                  create new pathways for community-driven innovation.
+                </p>
+              </div>
+
+              {/* Vision */}
+              <div className="rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-10 w-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+                    <span className="text-cyan-400 text-lg">◉</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Vision</h3>
+                </div>
+                <p className="text-gray-400 leading-relaxed text-md">
+                  CubaNex envisions a future where decentralized intelligence
+                  expands human potential by enabling transparent systems,
+                  autonomous tools, and meaningful digital experiences
+                  accessible to all.
+                </p>
+              </div>
+            </div>
+
+            {/* Technology */}
+            <div className="rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 mb-8 shadow-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-10 w-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+                  <span className="text-cyan-400 text-lg">⚙</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white">Technology</h3>
+              </div>
+              <p className="text-gray-400 leading-relaxed text-md">
+                CubaNex is built on the Binance Smart Chain using a secure
+                BEP-20 token standard. The ecosystem leverages established
+                blockchain frameworks combined with forward-looking AI concepts,
+                allowing the project to evolve and expand as new technologies
+                and community contributions emerge.
+              </p>
+            </div>
+
+            {/* Transparency */}
+            <div className="rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-10 w-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+                  <span className="text-cyan-400 text-lg">🔍</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white">
+                  Transparency
+                </h3>
+              </div>
+              <p className="text-gray-400 leading-relaxed text-md">
+                CubaNex is an open, decentralized ecosystem supported by public
+                smart contracts, open-source repositories, and accessible
+                documentation. The project emphasizes clarity, security, and
+                long-term development without reliance on centralized
+                identities.
+              </p>
+            </div>
+          </div>
+        </section>
         {/* STORY SECTION (FULLY UPDATED TEXT) */}
-        <div className="max-w-[1000px] mx-auto rounded-[12px] bg-[#030E1C] border border-[#1F2E47] p-6 sm:p-[50px] ">
+        {/* <div className="max-w-[1000px] mx-auto rounded-[12px] bg-[#030E1C] border border-[#1F2E47] p-6 sm:p-[50px] ">
           <h2
             className={`${orbitron.className} text-[26px] sm:text-[32px] text-[#fff] font-semibold leading-[1.2em] mb-6`}
           >
@@ -140,7 +219,7 @@ const Page = () => {
             harmony, cultural innovation, and economic resonance. This is how
             the dream continues.
           </p>
-        </div>
+        </div> */}
       </div>
 
       {/* BACKGROUND */}
