@@ -84,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden md:flex flex-1 justify-center  items-center gap-5 text-white font-normal">
+          <nav className="hidden md:flex flex-1 justify-center  items-center gap-6 text-white font-normal">
             {menuItems.map((item, idx) => (
               <Link
                 key={idx}
@@ -94,12 +94,13 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
                 {item.name}
               </Link>
             ))}
-            <a href="/CubaNex_Whitepaper_v1.0.pdf">
-              {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco"}
-            </a>
             <a href="/ecosystem">
               {language === "eng" ? "Ecosystem" : "Ecosystem"}
             </a>
+            <a href="/CubaNex_Whitepaper_v1.0.pdf">
+              {language === "eng" ? "Whitepaper" : "Libro Blanco"}
+            </a>
+
             <a
               href="https://github.com/CubaNex"
               target="_blank"
@@ -202,11 +203,11 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
                   </Link>
                 </motion.div>
               ))}{" "}
-              <a href="/CubaNex_Whitepaper_v1.0.pdf">
-                {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco (PDF)"}
-              </a>
               <a href="/ecosystem">
                 {language === "eng" ? "Ecosystem" : "Ecosystem"}
+              </a>
+              <a href="/CubaNex_Whitepaper_v1.0.pdf">
+                {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco (PDF)"}
               </a>
               <a
                 href="https://github.com/CubaNex"
