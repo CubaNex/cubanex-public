@@ -1,7 +1,7 @@
 export const textContent = {
   eng: {
     header: {
-      links: ["Home", "About", "Tokenomics", "Community", "Whitepaper (PDF)"],
+      links: ["Home", "About", "Token", "Community", "Whitepaper (PDF)"],
       button: "Join Presale",
       btnLink: "/community",
     },
@@ -52,7 +52,7 @@ export const textContent = {
       links: [
         "Inicio",
         "Acerca de",
-        "Economía del token",
+        "Token",
         "Comunidad",
         "Libro Blanco (PDF)",
       ],

@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import { textContent } from "@/constants/contents";
 import { textVariant2 } from "@/font-utils/motion";
+import { Github } from "lucide-react";
 
 interface HeaderProps {
   defaultLanguage?: "eng" | "esp";
@@ -83,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden md:flex flex-1 justify-center items-center gap-8 text-white font-medium">
+          <nav className="hidden md:flex flex-1 justify-center  items-center gap-5 text-white font-normal">
             {menuItems.map((item, idx) => (
               <Link
                 key={idx}
@@ -94,7 +95,18 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
               </Link>
             ))}
             <a href="/CubaNex_Whitepaper_v1.0.pdf">
-              {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco (PDF)"}
+              {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco"}
+            </a>
+            <a href="/ecosystem">
+              {language === "eng" ? "Ecosystem" : "Ecosystem"}
+            </a>
+            <a
+              href="https://github.com/CubaNex"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=""
+            >
+              <span className={``}>CubaNexLabs</span>
             </a>
           </nav>
 
@@ -192,6 +204,17 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
               ))}{" "}
               <a href="/CubaNex_Whitepaper_v1.0.pdf">
                 {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco (PDF)"}
+              </a>
+              <a href="/ecosystem">
+                {language === "eng" ? "Ecosystem" : "Ecosystem"}
+              </a>
+              <a
+                href="https://github.com/CubaNex"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
+                <span className={``}>CubaNexLabs</span>
               </a>
             </nav>
             <Link href={language === "esp" ? "/es/community" : "/community"}>
