@@ -1,159 +1,175 @@
 "use client";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Work_Sans, Orbitron } from "next/font/google";
 
 const workSans = Work_Sans({
-  variable: "--font-work-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
 });
 
 const orbitron = Orbitron({
-  variable: "--font-orbitron",
   subsets: ["latin"],
-  weight: ["700", "800"],
+  weight: ["700"],
 });
 
-const RoeadMapEn = () => {
+const phases = [
+  {
+    id: 1,
+    phase: "PHASE 1",
+    title: "The Awakening",
+    status: "Completed",
+    type: "completed",
+    items: [
+      "Smart contract creation",
+      "Website deployment",
+      "Whitepaper v1.0 release",
+    ],
+  },
+  {
+    id: 2,
+    phase: "PHASE 2",
+    title: "Conscious Layer Foundation",
+    status: "Current",
+    type: "current",
+    items: [
+      "Branding finalization",
+      "Website enhancements",
+      "Explorer verification",
+    ],
+  },
+  {
+    id: 3,
+    phase: "PHASE 3",
+    title: "Ecosystem Expansion",
+    status: "Upcoming",
+    type: "upcoming",
+    items: ["Developer tools", "Governance framework"],
+  },
+  {
+    id: 4,
+    phase: "PHASE 4",
+    title: "Integration & Growth",
+    status: "Upcoming",
+    type: "upcoming",
+    items: ["AI integrations", "Strategic partnerships"],
+  },
+  {
+    id: 5,
+    phase: "PHASE 5",
+    title: "Legacy Framework",
+    status: "Upcoming",
+    type: "upcoming",
+    items: ["Open-source expansion", "Long-term evolution"],
+  },
+];
+
+export default function Roadmap() {
   useEffect(() => {
-    AOS.init({ duration: 900, once: true });
+    AOS.init({ duration: 700, once: true });
   }, []);
 
-  const phases = [
-    {
-      id: 1,
-      title: "Launch",
-      tag: "Current",
-      tagColor: "#00E5FF33",
-      progress: "60%",
-      items: [
-        "Smart Contract Deployment",
-        "Website Launch",
-        "Presale Begin",
-        "Audit Completion",
-      ],
-      aos: "fade-right",
-      circleBg: "#00E5FF",
-      circleText: "#00131A",
-    },
-    {
-      id: 2,
-      title: "Growth",
-      tag: "Q2 2025",
-      tagColor: "#1A1F2E",
-      progress: "30%",
-      items: [
-        "DEX Listing",
-        "Staking Platform",
-        "Community Expansion",
-        "Marketing Campaign",
-      ],
-      aos: "fade-left",
-      circleBg: "#1A1F2E",
-      circleText: "#fff",
-    },
-    {
-      id: 3,
-      title: "Utility Expansion",
-      tag: "Q3 2025",
-      tagColor: "#1A1F2E",
-      progress: "20%",
-      items: [
-        "Transportation Utility",
-        "Energy Utility",
-        "Partnership Integrations",
-        "App Alpha Release",
-      ],
-      aos: "fade-right",
-      circleBg: "#1A1F2E",
-      circleText: "#fff",
-    },
-    {
-      id: 4,
-      title: "Ecosystem Scaling",
-      tag: "Q4 2025",
-      tagColor: "#1A1F2E",
-      progress: "10%",
-      items: [
-        "Mainstream Adoption",
-        "Advanced DeFi Tools",
-        "Mobile App Full Release",
-        "Global Utility Expansion",
-      ],
-      aos: "fade-left",
-      circleBg: "#1A1F2E",
-      circleText: "#fff",
-    },
-  ];
-
   return (
-    <div className="relative w-full max-w-5xl mx-auto pt-10 pb-20">
-      {/* Center Vertical Line */}
-      <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[3px] h-full bg-[#00E5FF]/20 pointer-events-none"></div>
+    <div className="relative max-w-6xl mx-auto py-20 px-4">
+      {/* CENTER LINE */}
+      <div className="absolute left-1/2 top-0 h-full w-[2px] bg-cyan-400/50 -translate-x-1/2 " />
 
-      {/* Loop Phases */}
-      {phases.map((phase) => (
-        <div
-          key={phase.id}
-          data-aos={phase.aos}
-          className={`
-            relative w-full md:w-[420px]
-            bg-[#0F1524] border border-[#00E5FF]/40 rounded-xl p-7
-            shadow-[0_0_20px_#00E5FF22]
-            ${phase.aos === "fade-right" ? "md:ml-[55%]" : "md:mr-[55%]"}
-            mb-14
-          `}
-        >
-          {/* Pulsing Circle */}
+      {phases.map((phase, index) => {
+        const isLeft = index % 2 === 0;
+        const isCompleted = phase.type === "completed";
+        const isCurrent = phase.type === "current";
+
+        return (
           <div
-            className={`
-              absolute top-8 w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold
-              border border-[#00E5FF]/40 animate-[pulseGlow_2s_infinite]
-              ${phase.aos === "fade-right" ? "-left-[34px]" : "-right-[34px]"}
-            `}
-            style={{ backgroundColor: phase.circleBg, color: phase.circleText }}
+            key={phase.id}
+            data-aos={isLeft ? "fade-right" : "fade-left"}
+            className="relative mb-24 flex md:block"
           >
-            {phase.id}
-          </div>
+            {/* CIRCLE */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-0 z-20">
+              <div
+                className={`w-14 h-14 rounded-full flex items-center justify-center font-bold text-lg
+                ${
+                  isCompleted
+                    ? "bg-yellow-400 text-black"
+                    : isCurrent
+                    ? "bg-cyan-400 text-black animate-[pulseRadio_2.5s_infinite]"
+                    : "bg-[#0B1220] border border-cyan-400/60 text-cyan-400"
+                }`}
+              >
+                {phase.id}
+              </div>
+            </div>
 
-          <span
-            className={`${workSans.className} uppercase text-sm tracking-wide text-gray-300`}
-          >
-            PHASE {phase.id}
-            <span
-              className="ml-2 px-2 py-0.5 rounded-md"
-              style={{ backgroundColor: phase.tagColor }}
-            >
-              {phase.tag}
-            </span>
-          </span>
-
-          <h3 className={`${orbitron.className} text-3xl text-white mt-2`}>
-            {phase.title}
-          </h3>
-
-          {/* Progress Bar */}
-          <div className="h-[4px] w-full bg-gray-700 rounded-full mt-4">
+            {/* CARD */}
             <div
-              className="h-full bg-[#00E5FF] rounded-full"
-              style={{ width: phase.progress }}
-            ></div>
-          </div>
+              className={`mt-14 w-full md:w-[420px]
+                ${isLeft ? "md:mr-auto md:pr-10" : "md:ml-auto md:pl-10"}
+              `}
+            >
+              <div
+                className={`bg-[#0B1220] rounded-xl p-6 border
+                ${
+                  isCompleted
+                    ? "border-yellow-400/60"
+                    : isCurrent
+                    ? "border-cyan-400/70 shadow-[0_0_30px_#00E5FF55]"
+                    : "border-cyan-400/30"
+                }`}
+              >
+                {/* HEADER */}
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-xs tracking-widest text-gray-400">
+                    {phase.phase}
+                  </span>
+                  <span
+                    className={`text-xs px-2 py-0.5 rounded
+                    ${
+                      isCompleted
+                        ? "bg-yellow-400/20 text-yellow-300"
+                        : isCurrent
+                        ? "bg-cyan-400/20 text-cyan-300"
+                        : "bg-gray-700 text-gray-300"
+                    }`}
+                  >
+                    {phase.status}
+                  </span>
+                </div>
 
-          {/* Phase Items */}
-          <ul className={`${workSans.className} text-gray-300 space-y-3 mt-6`}>
-            {phase.items.map((item, i) => (
-              <li key={i} className="flex items-center gap-3">
-                <span>✓</span> {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+                <h3 className={`${orbitron.className} text-xl text-white mb-4`}>
+                  {phase.title}
+                </h3>
+
+                {/* PROGRESS */}
+                <div className="h-[3px] w-full bg-white/10 mb-5">
+                  <div
+                    className={`h-full
+                    ${
+                      isCompleted
+                        ? "bg-yellow-400 w-full"
+                        : isCurrent
+                        ? "bg-cyan-400 w-[60%]"
+                        : "bg-cyan-400/40 w-[20%]"
+                    }`}
+                  />
+                </div>
+
+                {/* LIST */}
+                <ul className={`${workSans.className} space-y-3 text-gray-300`}>
+                  {phase.items.map((item, i) => (
+                    <li key={i} className="flex gap-3">
+                      <span className="w-3 h-3 mt-1 rounded-full border border-cyan-400" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
-};
-
-export default RoeadMapEn;
+}

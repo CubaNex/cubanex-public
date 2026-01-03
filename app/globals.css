@@ -799,3 +799,14 @@ html {
 .animate-fade-up {
   animation: fadeUp 0.6s ease-out both;
 }
+@keyframes pulseRadio {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(0, 229, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 229, 255, 0);
+  }
+}
