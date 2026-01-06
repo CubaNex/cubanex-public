@@ -2,8 +2,8 @@ export const textContent = {
   eng: {
     header: {
       links: ["Home", "About", "Token", "Community", "Whitepaper (PDF)"],
-      button: "Join Presale",
-      btnLink: "/community",
+      button: "Whitepaper",
+      btnLink: "/CubaNex_Whitepaper_v1.0.pdf",
     },
 
     // -----------------------
@@ -56,8 +56,8 @@ export const textContent = {
         "Comunidad",
         "Libro Blanco (PDF)",
       ],
-      button: "Únete a la preventa",
-      btnLink: "/es/community",
+      button: "Libro Blanco",
+      btnLink: "/CubaNex_Whitepaper_v1.0.pdf",
     },
     jbtn: "Únete a la preventa",
     amongbtn: "Sé de los primeros",

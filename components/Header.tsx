@@ -97,9 +97,9 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
             <a href="/ecosystem">
               {language === "eng" ? "Ecosystem" : "Ecosystem"}
             </a>
-            <a href="/CubaNex_Whitepaper_v1.0.pdf">
+            {/* <a href="/CubaNex_Whitepaper_v1.0.pdf">
               {language === "eng" ? "Whitepaper" : "Libro Blanco"}
-            </a>
+            </a> */}
 
             <a
               href="https://github.com/CubaNex"
@@ -206,9 +206,9 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
               <a href="/ecosystem">
                 {language === "eng" ? "Ecosystem" : "Ecosystem"}
               </a>
-              <a href="/CubaNex_Whitepaper_v1.0.pdf">
+              {/* <a href="/CubaNex_Whitepaper_v1.0.pdf">
                 {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco (PDF)"}
-              </a>
+              </a> */}
               <a
                 href="https://github.com/CubaNex"
                 target="_blank"
@@ -218,7 +218,13 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
                 <span className={``}>CubaNexLabs</span>
               </a>
             </nav>
-            <Link href={language === "esp" ? "/es/community" : "/community"}>
+            <Link
+              href={
+                language === "esp"
+                  ? "/CubaNex_Whitepaper_v1.0.pdf"
+                  : "/CubaNex_Whitepaper_v1.0.pdf"
+              }
+            >
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

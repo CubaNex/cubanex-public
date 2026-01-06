@@ -550,7 +550,7 @@ export default function Home() {
         </p>
 
         <VipForm />
-        <div className=" sm:px-8 pt-20 grid max-w-[1100px] mx-auto gap-4 md:grid-cols-3">
+        <div className=" sm:px-8 pt-20 grid max-w-[1100px] mx-auto gap-4 md:grid-cols-2">
           {/* 1 — Twitter */}
           <a
             href="https://x.com/CubaNexOfficial"
@@ -599,7 +599,7 @@ export default function Home() {
           </a>
 
           {/* 3 — Discord */}
-          <a
+          {/* <a
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -623,7 +623,7 @@ export default function Home() {
                 </span>
               </p>
             </div>
-          </a>
+          </a> */}
         </div>
       </section>
 

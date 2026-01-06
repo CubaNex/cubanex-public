@@ -598,7 +598,7 @@ export default function Home() {
         </p>
 
         <VipForm />
-        <div className="px-6 pt-20 grid max-w-[1100px] mx-auto gap-8 md:grid-cols-3">
+        <div className="px-6 pt-20 grid max-w-[1100px] mx-auto gap-8 md:grid-cols-2">
           {/* 1 */}
 
           {/* 2 */}
@@ -646,7 +646,7 @@ export default function Home() {
           </a>
 
           {/* 4 */}
-          <a href="#" rel="noopener noreferrer" className="block">
+          {/* <a href="#" rel="noopener noreferrer" className="block">
             <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
               <MessageCircle
                 size={56}
@@ -663,7 +663,7 @@ export default function Home() {
                 <span className="text-[#FFB74A] font-medium">Join Discord</span>
               </p>
             </div>
-          </a>
+          </a> */}
         </div>
       </section>
       {/* ================= Unlock VIP Access to CubaNex================= */}

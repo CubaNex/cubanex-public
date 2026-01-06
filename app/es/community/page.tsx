@@ -55,7 +55,7 @@ const page = () => {
         </h2>
 
         <VipForm />
-        <div className="px-6 pb-8 pt-20 grid  text-white max-w-[1100px] mx-auto gap-8 md:grid-cols-3">
+        <div className="px-6 pb-8 pt-20 grid  text-white max-w-[1100px] mx-auto gap-8 md:grid-cols-2">
           {/* 1 */}
           <a
             href="https://x.com/CubaNexOfficial"
@@ -104,7 +104,7 @@ const page = () => {
           </a>
 
           {/* 4 */}
-          <a
+          {/* <a
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -128,7 +128,7 @@ const page = () => {
                 </span>
               </p>
             </div>
-          </a>
+          </a> */}
         </div>
 
         <div
