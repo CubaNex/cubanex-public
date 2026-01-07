@@ -27,6 +27,7 @@ const TokenOverviewMini = () => {
 
   return (
     <div
+      id="smart-contract"
       className={`w-full flex justify-center py-10 px-5 ${workSans.variable} ${orbitron.variable}`}
     >
       <div className="bg-[#081420] border border-[#0f2334] rounded-xl p-6 w-full max-w-[800px]">

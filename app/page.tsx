@@ -300,7 +300,7 @@ export default function Home() {
           <div
             className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[16px] text-gray-300   mb-8`}
           >
-            <p className="pb-2">
+            {/* <p className="pb-2">
               {" "}
               CubaNex is shaped by the creativity of the island and the clarity
               of modern digital tools. It emerges as a meaningful digital asset
@@ -322,6 +322,13 @@ export default function Home() {
               CubaNex opens a digital path for those ready to explore new
               possibilities — building a bridge between tradition and
               technology.
+            </p> */}
+            <p>
+              CubaNex is an AI-native digital asset designed to evolve
+              autonomously over time. Built with a clean, transparent token
+              structure and guided by The Alchemist Manifesto, CubaNex
+              represents an emerging layer of intelligence — a self-expanding
+              ecosystem created for global participation.
             </p>
           </div>
         </div>
@@ -484,9 +491,11 @@ export default function Home() {
 
         {/* BUTTON */}
         <div className="flex justify-center mt-10">
-          <button className="px-[30px] py-3 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2]">
-            View Smart Contract
-          </button>
+          <a href="#smart-contract">
+            <button className="px-[30px] py-3 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2]">
+              View Smart Contract
+            </button>
+          </a>
         </div>
         {/*  */}
       </section>
@@ -522,12 +531,12 @@ export default function Home() {
           className={`${orbitron.className} text-center text-[26px] pt-10 sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
           How to
-          <span className="text-[#FF8F00]"> Buy CNEX</span>
+          <span className="text-[#FF8F00]"> Get CNEX</span>
         </h2>
         <p
           className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
         >
-          Join the presale in 4 simple steps
+          An overview of how CNEX can be accessed on Binance Smart Chain{" "}
         </p>
         <div className="px-6 grid max-w-[1300px] mx-auto gap-8 md:grid-cols-4">
           {/* 1 */}
@@ -536,10 +545,12 @@ export default function Home() {
               <div className="step-circle">1</div>
             </div>
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Get a Wallet{" "}
+              Set Up a Wallet{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Download MetaMask or your preferred Web3 wallet{" "}
+              CNEX operates on the Binance Smart Chain (BEP-20) network. A
+              compatible Web3 wallet (such as MetaMask or Trust Wallet) is
+              required to interact with the token.
             </p>
           </div>
           {/* 2 */}
@@ -548,10 +559,11 @@ export default function Home() {
               <div className="step-circle-1">2</div>
             </div>
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Add Funds{" "}
+              Hold BNB{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Purchase ETH or BNB and send to your wallet{" "}
+              BNB is used for network transactions on BSC. Keeping a small BNB
+              balance is necessary for standard blockchain fees.{" "}
             </p>
           </div>
           {/* 3 */}
@@ -560,10 +572,11 @@ export default function Home() {
               <div className="step-circle-2">3</div>
             </div>
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Connect Wallet{" "}
+              Connect to the Platform{" "}
             </h3>
             <p className="text-gray-400 text-sm">
-              Connect your wallet to the CubaNex presale platform{" "}
+              Connect your wallet to the official CubaNex platform to view
+              token-related features and on-chain interactions.{" "}
             </p>
           </div>
           {/* 4 */}
@@ -572,10 +585,11 @@ export default function Home() {
               <div className="step-circle-3">4</div>
             </div>
             <h3 className="text-xl text-center font-semibold mb-3 items-center">
-              Buy CNEX{" "}
+              Receive CNEX
             </h3>
             <p className="text-gray-400 text-sm">
-              Swap your ETH/BNB for CNX tokens instantly{" "}
+              CNEX tokens are distributed according to the project’s token model
+              and smart contract rules.{" "}
             </p>
           </div>
         </div>
