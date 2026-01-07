@@ -106,19 +106,19 @@ export default function Home() {
             className="block sm:hidden w-full h-full center object-cover opacity-45"
             alt="Hero Background"
           />
-          <div className="absolute inset-0 bg-black/30 sm:bg-black/30" />
+          <div className="absolute inset-0 bg-black/30 sm:bg-black/40" />
         </div>
         <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center  sm:pt-20">
           <div className="inline-flex items-center justify-center space-x-2 border border-[rgba(255,255,255,0.4)] rounded-full px-3 sm:px-3 py-2  sm:py-2 mb-4 animate-pulse-slow">
             <div className="w-[6px] h-[6px] rounded-full bg-[#FF8F00] smooth-pulse shadow-[0_0_8px_#FF8F00]" />
-            <span className="text-[12px] text-[#fff]">Presale Live Now </span>
+            <span className="text-[12px] text-[#fff]">Live Now </span>
           </div>
 
           <h1
-            className={`${orbitron.className} text-[32px] sm:text-[56px] lg:text-[100px] text-[#fff]  font-semibold leading-[1em] mb-6`}
+            className={`${orbitron.className} text-[32px] sm:text-[62px]  text-[#fff]  font-semibold leading-[1em] mb-6`}
           >
-            A Blockchain Vision Inspired
-            <span className="text-[#FFB74A]"> by Cuba</span>
+            Cuba’s AI-Native Digital Asset
+            <span className="text-[#FFB74A]"> Awakening a New Future.</span>
           </h1>
 
           <p

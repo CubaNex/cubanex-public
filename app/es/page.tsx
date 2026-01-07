@@ -65,16 +65,17 @@ export default function Home() {
         <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center  sm:pt-20">
           <div className="inline-flex items-center justify-center space-x-2 border border-[rgba(255,255,255,0.4)] rounded-full px-3 sm:px-3 py-2  sm:py-2 mb-4 animate-pulse-slow">
             <div className="w-[6px] h-[6px] rounded-full bg-[#FF8F00] smooth-pulse shadow-[0_0_8px_#FF8F00]" />
-            <span className="text-[12px] text-[#fff]">
-              Preventa en vivo ahora{" "}
-            </span>
+            <span className="text-[12px] text-[#fff]">en vivo ahora </span>
           </div>
 
           <h1
-            className={`${orbitron.className} text-[32px] sm:text-[56px] lg:text-[100px] text-[#fff] font-semibold leading-[1em] mb-6`}
+            className={`${orbitron.className} text-[32px] sm:text-[62px] text-[#fff] font-semibold leading-[1em] mb-6`}
           >
-            Un proyecto blockchain inspirado en
-            <span className="text-[#FFB74A]"> la cultura cubana</span>
+            El Activo Digital Nativo en IA de Cuba
+            <span className="text-[#FFB74A]">
+              {" "}
+              — Despertando un Nuevo Futuro.
+            </span>
           </h1>
 
           <p
