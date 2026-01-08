@@ -538,7 +538,10 @@ export default function Home() {
         >
           An overview of how CNEX can be accessed on Binance Smart Chain{" "}
         </p>
-        <div className="px-6 grid max-w-[1300px] mx-auto gap-8 md:grid-cols-4">
+        <div
+          id="smart-contracts"
+          className="px-6 grid max-w-[1300px] mx-auto gap-8 md:grid-cols-4"
+        >
           {/* 1 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="step-wrapper w-full mx-auto">

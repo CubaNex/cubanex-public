@@ -80,6 +80,13 @@ export default function Footer() {
             >
               {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco (PDF)"}
             </a>
+            <br></br>
+            <a
+              href="#smart-contracts"
+              className="hover:text-gray-300 pt-3 transition-colors inline-flex items-center gap-2"
+            >
+              {language === "eng" ? "Contract" : "Contrato"}
+            </a>
           </div>
 
           {/* Community */}

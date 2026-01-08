@@ -479,7 +479,10 @@ export default function Home() {
         >
           Únete a la preventa en 4 sencillos pasos{" "}
         </p>
-        <div className="px-8 grid max-w-[1300px] mx-auto gap-6 sm:gap-5 md:grid-cols-4">
+        <div
+          id="smart-contracts"
+          className="px-8 grid max-w-[1300px] mx-auto gap-6 sm:gap-5 md:grid-cols-4"
+        >
           {/* 1 */}
           <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             {/* <img src="../one.png" alt="" className="mx-auto pb-4 w-[55px]" /> */}
