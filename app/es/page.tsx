@@ -63,10 +63,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/30 sm:bg-black/30" />
         </div>
         <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center  sm:pt-20">
-          <div className="inline-flex items-center justify-center space-x-2 border border-[rgba(255,255,255,0.4)] rounded-full px-3 sm:px-3 py-2  sm:py-2 mb-4 animate-pulse-slow">
+          {/* <div className="inline-flex items-center justify-center space-x-2 border border-[rgba(255,255,255,0.4)] rounded-full px-3 sm:px-3 py-2  sm:py-2 mb-4 animate-pulse-slow">
             <div className="w-[6px] h-[6px] rounded-full bg-[#FF8F00] smooth-pulse shadow-[0_0_8px_#FF8F00]" />
             <span className="text-[12px] text-[#fff]">en vivo ahora </span>
-          </div>
+          </div> */}
 
           <h1
             className={`${orbitron.className} text-[32px] sm:text-[62px] text-[#fff] font-semibold leading-[1em] mb-6`}
@@ -147,7 +147,7 @@ export default function Home() {
             alt="Hero Background"
           />
         </div>
-        <div className="relative z-10   flex items-center justify-center gap-4 sm:gap-6 pb-[60px]">
+        {/* <div className="relative z-10   flex items-center justify-center gap-4 sm:gap-6 pb-[60px]">
           <div className="lg:min-w-[250px] flex flex-col items-center justify-center gap-2 sm:gap-4">
             <img src="./1B+.png" alt="" className="w-[45px] sm:w-auto" />
 
@@ -176,7 +176,7 @@ export default function Home() {
               Desarrollo{" "}
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="relative z-10  max-w-6xl mx-auto text-center">
           <h2
             className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1em] mb-6`}
@@ -312,6 +312,15 @@ export default function Home() {
             </h2>
 
             <ul className="space-y-4">
+              <li
+                className={`${workSans.className} flex justify-between text-white/80`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#ff8f00]"></span>
+                  Total Supply
+                </span>
+                <span className="text-[#ff8f00] font-semibold">1B+</span>
+              </li>
               <li
                 className={`${workSans.className} flex justify-between text-white/80`}
               >
