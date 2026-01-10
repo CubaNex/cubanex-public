@@ -126,11 +126,28 @@ body:has(.coming-soon) .Footer {
   background-position: left 16px center;
 }
 .bg-section {
-  background-image: url('/bird.png');
+  position: relative;
+  background-image: url("/alchemy.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
+
+.bg-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82); /* adjust darkness */
+  z-index: 1;
+}
+
+/* Make sure content stays above overlay */
+.bg-section > * {
+  position: relative;
+  z-index: 2;
+}
+
 .abhBg {
   background-image: url('/abheroShape.svg');
   background-size: contain;
@@ -160,12 +177,20 @@ body:has(.coming-soon) .Footer {
 
 /* For mobile devices */
 @media (max-width: 768px) {
-  .bg-section {
+  /* .bg-section {
     background-image: url('/birdp.png');
      background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  }
+  } */
+   
+.bg-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85); /* adjust darkness */
+  z-index: 1;
+}
   .abhBg {
   background-image: url('/abheroshapephone.svg');
   background-size: contain;
