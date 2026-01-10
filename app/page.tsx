@@ -9,7 +9,7 @@ import {
   Wallet,
 } from "lucide-react";
 import { Work_Sans, Orbitron, Sen } from "next/font/google";
-import { main } from "framer-motion/client";
+import { div, main } from "framer-motion/client";
 import Image from "next/image";
 import RoeadMapEn from "@/components/RoeadMapEn";
 import ConnectWallet from "@/components/ConnectWallet";
@@ -17,6 +17,7 @@ import VipForm from "@/components/VipForm";
 import WhitePaper from "@/components/WhitePaper";
 import ArrowB from "@/components/ArrowB";
 import VideoPlayer from "@/components/VideoPlayer";
+
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -28,6 +29,8 @@ const orbitron = Orbitron({
   weight: ["700", "800"],
 });
 import type { Metadata } from "next";
+import { Card } from "@/components/ui/Cartd";
+import RoadmapTimeline from "@/components/RoeadMapEn";
 
 export const metadata: Metadata = {
   title: "CubaNex (CNEX) – A Blockchain Project Inspired by Cuba",
@@ -81,6 +84,63 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
+const roadmapPhases = [
+  {
+    phase: "Phase 1",
+    title: "The Awakening",
+    status: "Completed",
+    items: [
+      "Smart contract creation",
+      "Website deployment",
+      "Whitepaper v1.0 release",
+      "Social channels established",
+      "GitHub organization created",
+    ],
+  },
+  {
+    phase: "Phase 2",
+    title: "Conscious Layer Foundation",
+    status: "Current",
+    items: [
+      "Branding finalization",
+      "Website enhancements",
+      "Roadmap publishing",
+      "Community activation groundwork",
+      "Explorer (BscScan) verification",
+    ],
+  },
+  {
+    phase: "Phase 3",
+    title: "Ecosystem Expansion",
+    status: "Upcoming",
+    items: [
+      "Developer API documentation",
+      "Early AI-assisted tools",
+      "Governance framework",
+      "Utility design progression",
+    ],
+  },
+  {
+    phase: "Phase 4",
+    title: "Integration & Growth",
+    status: "Upcoming",
+    items: [
+      "Additional AI system layers",
+      "Third party integrations",
+      "Ecosystem partnerships",
+    ],
+  },
+  {
+    phase: "Phase 5",
+    title: "Legacy Framework",
+    status: "Upcoming",
+    items: [
+      "Long-term decentralized growth",
+      "Open-source intelligence modules",
+      "Continued evolution and refinement",
+    ],
+  },
+];
 
 export default function Home() {
   return (
@@ -512,22 +572,40 @@ export default function Home() {
       {/* ================= tokenomics ================= */}
 
       {/* ================= Road Map ================= */}
-      <section>
-        <h2
-          className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
-        >
-          Project
-          <span className="text-[#FF8F00]"> Roadmap</span>
-        </h2>
-        <p
-          className={`${workSans.className} text-center text-[16px] px-3 sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
-        >
-          A clear roadmap for developing the CNEX ecosystem and supporting
-          community growth.{" "}
-        </p>
+      <section className="py-10 sm:py-24 bg-background relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-gradient-glow" />
+        </div>
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: "url('/assets/crypto-pattern.jpg')",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        />
 
-        <div className="roead map px-12">
-          <RoeadMapEn />
+        <div className="container mx-auto px-4 relative z-10">
+          {/* Section Header */}
+          <h2
+            className={`${orbitron.className}  text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          >
+            Project
+            <span className="text-[#FF8F00]"> Roadmap</span>
+          </h2>
+          <p
+            className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
+          >
+            A clear roadmap for developing the CNEX ecosystem and supporting
+            community growth.
+          </p>
+
+          {/* Roadmap Timeline Component */}
+          <div className="max-w-8xl mx-auto ">
+            <RoadmapTimeline />
+          </div>
         </div>
       </section>
 

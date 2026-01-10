@@ -38,18 +38,15 @@ export default function RootLayout({
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1"
-        />{" "}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${workSans.variable} ${orbitron.variable} antialiased`}
       >
-        {/* Header (client) receives default language */}
         <Header defaultLanguage={defaultLang} />
         <BackToTop />
-        {/* Main content */}
         {children}
 
-        {/* Footer (server) receives language directly */}
         <Footer />
       </body>
     </html>

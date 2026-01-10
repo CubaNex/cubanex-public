@@ -467,7 +467,7 @@ export default function Home() {
           participación de la comunidad.
         </p>
 
-        <div className="roead map px-8 sm:px-0">
+        <div className="roead map sm:px-0">
           <RoeadMapEn />
         </div>
       </section>
