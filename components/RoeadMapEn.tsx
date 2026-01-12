@@ -128,7 +128,7 @@ export default function RoadmapTimeline() {
               style={{ width: `${(activeIndex / (phases.length - 1)) * 100}%` }}
             />
 
-            <div className="relative flex justify-between items-start">
+            <div className="relative flex justify-between items-start gap-20">
               {phases.map((phase, index) => {
                 const isActive = index === activeIndex;
                 const isPast = index < activeIndex;
