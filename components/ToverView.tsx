@@ -46,9 +46,14 @@ const TokenOverviewMini = () => {
           <p className="text-gray-400 text-xs">Contract Address</p>
 
           <div className="flex items-center justify-between gap-2 mt-1">
-            <span className="text-[#FFB74A] break-all text-xs font-mono">
+            <a
+              href={`https://bscscan.com/token/${contract}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FFB74A] hover:text-[#FFB74A]/80 transition break-all text-xs font-mono underline underline-offset-4"
+            >
               {contract}
-            </span>
+            </a>
 
             <button onClick={copyAddress} className="text-[#b340ff]">
               {copied ? (

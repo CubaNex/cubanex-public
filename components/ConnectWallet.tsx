@@ -27,6 +27,7 @@ const TokenOverview = () => {
 
   return (
     <div
+      id="smart-contract"
       className={`w-full flex justify-center py-16 px-5 ${workSans.variable} ${orbitron.variable}`}
     >
       <div className="bg-[#081420] border border-[#0f2334] rounded-xl p-8 sm:p-10 w-full max-w-[900px] shadow-xl">
@@ -56,9 +57,14 @@ const TokenOverview = () => {
           </p>
 
           <div className="flex items-center justify-between gap-3 mt-2">
-            <span className="text-[#FFB74A] break-all text-sm font-mono">
+            <a
+              href={`https://bscscan.com/token/${contract}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FFB74A] hover:text-[#FFB74A]/80 transition break-all text-sm font-mono underline underline-offset-4"
+            >
               {contract}
-            </span>
+            </a>
 
             <button
               onClick={copyAddress}

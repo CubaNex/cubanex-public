@@ -82,7 +82,7 @@ export default function Footer() {
             </a>
             <br></br>
             <a
-              href="#smart-contracts"
+              href="#smart-contract"
               className="hover:text-gray-300 pt-3 transition-colors inline-flex items-center gap-2"
             >
               {language === "eng" ? "Contract" : "Contrato"}
@@ -113,6 +113,16 @@ export default function Footer() {
                 className="w-10 h-10 rounded-full bg-muted hover:bg-primary/20 flex items-center justify-center transition-colors"
               >
                 <Send className="w-5 h-5" />
+              </a>
+
+              {/* GitHub */}
+              <a
+                href="https://github.com/CubaNex"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-muted hover:bg-primary/20 flex items-center justify-center transition-colors"
+              >
+                <Github className="w-5 h-5" />
               </a>
             </div>
           </div>

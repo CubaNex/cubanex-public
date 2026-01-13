@@ -27,14 +27,17 @@ const Page = () => {
         </h1>
 
         <p
-          className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto mb-8`}
+          className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto mb-4`}
         >
           CubaNex is a decentralized AI-powered digital asset built on BNB
           Chain. The project focuses on creating an adaptive, secure, and
           transparent ecosystem that supports the development of autonomous
-          tools and future intelligent systems. Designed for long-term
-          evolution, CubaNex aims to provide a foundation for emerging digital
-          and economic experiences powered by decentralized technology.
+          tools and future intelligent systems.
+        </p>
+        <p
+          className={`${workSans.className} max-w-[750px] text-center text-[14px] sm:text-[18px] text-[#FFB74A]/80 mx-auto mb-8 font-medium`}
+        >
+          CubaNex operates on the Binance Smart Chain as a decentralized digital asset with future modular AI utilities.
         </p>
         <section className="relative w-full  pt-24 px-4">
           <div className="max-w-6xl mx-auto">

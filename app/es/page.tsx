@@ -79,10 +79,15 @@ export default function Home() {
           </h1>
 
           <p
-            className={`${workSans.className} text-[16px] sm:text-[24px] text-gray-300 max-w-[700px] mx-auto mb-8`}
+            className={`${workSans.className} text-[16px] sm:text-[24px] text-gray-300 max-w-[700px] mx-auto mb-4`}
           >
             El Sueño Despertó como Código — CUBANEX es un proyecto comunitario
             basado en la inspiración cultural cubana.
+          </p>
+          <p
+            className={`${workSans.className} text-[14px] sm:text-[18px] text-[#FFB74A]/80 max-w-[700px] mx-auto mb-8 font-medium`}
+          >
+            CubaNex (CNEX) es un token BEP-20 impulsado por sistemas autónomos adaptativos en BNB Chain.
           </p>
 
           <div className="flex gap-2 sm:gap-6 justify-center">
@@ -443,9 +448,11 @@ export default function Home() {
 
         {/* BUTTON */}
         <div className="flex justify-center mt-10">
-          <button className="px-[20px] py-3 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2]">
-            Ver Smart Contract{" "}
-          </button>
+          <a href="#smart-contract">
+            <button className="px-[20px] py-3 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2]">
+              Ver Smart Contract{" "}
+            </button>
+          </a>
         </div>
         {/*  */}
       </section>

@@ -2,7 +2,7 @@ import React from "react";
 import { Work_Sans, Orbitron } from "next/font/google";
 import ConnectWallet from "@/components/ConnectWallet";
 import Image from "next/image";
-import { FileText } from "lucide-react";
+import { FileText, Shield } from "lucide-react";
 import TokenOverviewMini from "@/components/ToverView";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -23,6 +23,58 @@ const page = () => {
         >
           <span className="text-[#FF8F00]"> CNEX</span> Tokenomics
         </h1>
+
+        <div className="bg-[#081420]/90 backdrop-blur-md border border-[#FFB74A]/30 rounded-2xl p-8 mb-12 max-w-[900px] mx-auto text-left shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-4 opacity-10">
+            <Shield size={120} className="text-[#FFB74A]" />
+          </div>
+
+          <h2 className={`${orbitron.className} text-[#FFB74A] font-bold text-2xl mb-6 flex items-center gap-3`}>
+            <span className="w-2 h-8 bg-[#FFB74A] rounded-full"></span>
+            CubaNex (CNEX) — Token Overview
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-8 text-sm sm:text-base">
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Token Standard:</span>
+              <span className="text-white font-semibold">BEP-20</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Blockchain:</span>
+              <span className="text-white font-semibold">BNB Smart Chain</span>
+            </div>
+            <div className="flex flex-col border-b border-white/10 pb-2 md:col-span-2">
+              <span className="text-gray-400 mb-1">Contract Address:</span>
+              <a
+                href="https://bscscan.com/token/0xf073d173Ed309f8A208e6C183eFf858DbC882DbB"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[10px] sm:text-sm text-[#FFB74A] hover:underline break-all"
+              >
+                0xf073d173Ed309f8A208e6C183eFf858DbC882DbB
+              </a>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Total Supply:</span>
+              <span className="text-white font-semibold">100,000,000,000 CNEX</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Decimals:</span>
+              <span className="text-white font-semibold">18</span>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className={`${orbitron.className} text-white font-semibold text-lg`}>Description:</h3>
+            <p className={`${workSans.className} text-gray-300 leading-relaxed text-sm sm:text-base`}>
+              CubaNex (CNEX) is a decentralized digital asset built on the BNB Smart Chain.
+              The token serves as the foundation of the evolving CubaNex ecosystem, enabling
+              future on-chain tools, autonomous modules, and AI-driven system extensions.
+              CNEX provides utility across the platform and acts as the key medium for
+              ecosystem participation.
+            </p>
+          </div>
+        </div>
 
         <p
           className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto `}
@@ -221,9 +273,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className=" mt-[-60px] sm:mt-[-100px] pb-10">
-        <TokenOverviewMini />
-      </div>
+
 
       {/* real utility */}
       <section className="w-full pb-20 px-4 bg-[#010813]">

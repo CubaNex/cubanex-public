@@ -182,10 +182,15 @@ export default function Home() {
           </h1>
 
           <p
-            className={`${workSans.className} text-[16px] sm:text-[24px] text-gray-300 max-w-[700px]  mx-auto mb-8`}
+            className={`${workSans.className} text-[16px] sm:text-[24px] text-gray-300 max-w-[700px]  mx-auto mb-4`}
           >
             The Dream Awoke as a Code — A community-driven blockchain project
             inspired by Cuban culture. CUBANEX is here
+          </p>
+          <p
+            className={`${workSans.className} text-[14px] sm:text-[18px] text-[#FFB74A]/80 max-w-[700px] mx-auto mb-8 font-medium`}
+          >
+            CubaNex (CNEX) is a BEP-20 token powered by adaptive autonomous systems on BNB Chain.
           </p>
 
           <div className="flex gap-2 sm:gap-6 justify-center">

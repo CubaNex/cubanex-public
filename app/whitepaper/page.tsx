@@ -71,6 +71,31 @@ const Whitepaper = () => {
               Download Whitepaper (PDF)
             </a>
           </div>
+
+          <div className="mt-8 max-w-md mx-auto text-left bg-black/40 backdrop-blur-md border border-primary/20 rounded-xl p-6">
+            <h3 className="text-primary font-bold mb-4 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              Quick Facts
+            </h3>
+            <ul className="space-y-3 text-sm text-gray-300">
+              <li className="flex justify-between border-b border-white/5 pb-2">
+                <span className="font-semibold text-white">Total Supply:</span>
+                <span>100,000,000,000 CNEX</span>
+              </li>
+              <li className="flex justify-between border-b border-white/5 pb-2">
+                <span className="font-semibold text-white">Chain:</span>
+                <span>BNB Smart Chain (BEP-20)</span>
+              </li>
+              <li className="flex justify-between border-b border-white/5 pb-2">
+                <span className="font-semibold text-white">Contract:</span>
+                <a href="https://bscscan.com/token/0xf073d173Ed309f8A208e6C183eFf858DbC882DbB" target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] text-primary hover:underline">0xf073...2DbB</a>
+              </li>
+              <li className="flex justify-between">
+                <span className="font-semibold text-white">Utility Summary:</span>
+                <span className="text-right">Autonomous Systems & AI Utilities</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 

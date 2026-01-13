@@ -19,6 +19,15 @@ export default function EcosystemPage() {
           utilities, and modular frameworks designed to operate securely and
           transparently on the blockchain.
         </p>
+
+        <div className="mt-16 relative flex justify-center">
+          <div className="absolute inset-0 bg-[#22E6E3]/5 blur-[100px] rounded-full"></div>
+          <img
+            src="/shapbg.png"
+            alt="CubaNex Ecosystem Visualization"
+            className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#22E6E3]/20 shadow-2xl shadow-[#22E6E3]/10"
+          />
+        </div>
       </section>
 
       {/* FUTURE UTILITIES */}

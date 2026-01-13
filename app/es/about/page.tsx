@@ -27,11 +27,14 @@ const page = () => {
         </h1>
 
         <p
-          className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto mb-8`}
+          className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto mb-4`}
         >
-          CubaNex representa más que una criptomoneda — es un puente entre la
-          cultura y la innovación, impulsado por la tecnología blockchain y una
-          visión sostenible.
+          CubaNex es un activo digital descentralizado impulsado por IA, construido sobre la BNB Chain. El proyecto se enfoca en crear un ecosistema adaptativo, seguro y transparente que respalda el desarrollo de herramientas autónomas y futuros sistemas inteligentes.
+        </p>
+        <p
+          className={`${workSans.className} max-w-[750px] text-center text-[14px] sm:text-[18px] text-[#FFB74A]/80 mx-auto mb-8 font-medium`}
+        >
+          CubaNex opera en la Binance Smart Chain como un activo digital descentralizado con futuras utilidades modulares de IA.
         </p>
 
         {/* Nuestra Historia */}
