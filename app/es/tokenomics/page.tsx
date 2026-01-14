@@ -17,7 +17,7 @@ const orbitron = Orbitron({
 const page = () => {
   return (
     <div className="main w-full relative  bg-[#010813]">
-      <div className="flex px-4 min-w-full pt-[120px] pb-[80px] sm:py-[150px] flex-col gap-2 items-center justify-center bg-cover tockenomicBg">
+      <div className="flex px-4 min-w-full pt-[120px] pb-[60px] sm:pt-[150px] sm:pb-[80px] flex-col gap-2 items-center justify-center bg-cover tockenomicBg">
         <h1
           className={`${orbitron.className} w-full text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-6`}
         >
@@ -270,6 +270,63 @@ const page = () => {
                 ></div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Sección de Tabla de Distribución */}
+        <div className="w-full pt-16 pb-10 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-[#081420]/60 backdrop-blur-xl border border-white/5 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left">
+                  <thead>
+                    <tr className="bg-[#FFB74A]/10 border-b border-white/10">
+                      <th className={`${orbitron.className} px-6 py-5 text-[#FFB74A] font-bold text-sm tracking-wider uppercase`}>Asignación</th>
+                      <th className={`${orbitron.className} px-6 py-5 text-[#FFB74A] font-bold text-sm tracking-wider uppercase`}>Porcentaje</th>
+                      <th className={`${orbitron.className} px-6 py-5 text-[#FFB74A] font-bold text-sm tracking-wider uppercase`}>Cantidad de Tokens</th>
+                    </tr>
+                  </thead>
+                  <tbody className={`${workSans.className} divide-y divide-white/5`}>
+                    <tr className="hover:bg-white/5 transition-colors">
+                      <td className="px-6 py-4 text-white font-medium">Preventa</td>
+                      <td className="px-6 py-4 text-teal-400">40%</td>
+                      <td className="px-6 py-4 text-gray-300">40,000,000,000 CNEX</td>
+                    </tr>
+                    <tr className="hover:bg-white/5 transition-colors">
+                      <td className="px-6 py-4 text-white font-medium">Fondo de Liquidez</td>
+                      <td className="px-6 py-4 text-amber-400">30%</td>
+                      <td className="px-6 py-4 text-gray-300">30,000,000,000 CNEX</td>
+                    </tr>
+                    <tr className="hover:bg-white/5 transition-colors">
+                      <td className="px-6 py-4 text-white font-medium">Desarrollo</td>
+                      <td className="px-6 py-4 text-green-400">15%</td>
+                      <td className="px-6 py-4 text-gray-300">15,000,000,000 CNEX</td>
+                    </tr>
+                    <tr className="hover:bg-white/5 transition-colors">
+                      <td className="px-6 py-4 text-white font-medium">Marketing</td>
+                      <td className="px-6 py-4 text-purple-400">10%</td>
+                      <td className="px-6 py-4 text-gray-300">10,000,000,000 CNEX</td>
+                    </tr>
+                    <tr className="hover:bg-white/5 transition-colors">
+                      <td className="px-6 py-4 text-white font-medium">Equipo (Bloqueado)</td>
+                      <td className="px-6 py-4 text-orange-400">5%</td>
+                      <td className="px-6 py-4 text-gray-300">5,000,000,000 CNEX</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr className="bg-white/5 font-bold">
+                      <td className="px-6 py-5 text-white">Suministro Total</td>
+                      <td className="px-6 py-5 text-white">100%</td>
+                      <td className="px-6 py-5 text-[#FFB74A]">100,000,000,000 CNEX</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+
+            <p className="text-gray-500 text-xs mt-6 text-center italic">
+              * Los tokens del equipo están sujetos a un período de consolidación de 2 años para garantizar el compromiso a largo plazo con el proyecto.
+            </p>
           </div>
         </div>
       </div>
