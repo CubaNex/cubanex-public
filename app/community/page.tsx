@@ -71,17 +71,28 @@ const page = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
-                <Twitter size={56} className="mx-auto mb-5" strokeWidth={1.8} />
-
-                <h3 className="text-xl font-semibold mb-3">Twitter / X</h3>
-
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Follow us for real-time updates and announcements
-                  <br />
-                  <br />
-                  <span className="text-[#FFB74A] font-medium">@CubaNex</span>
-                </p>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+                <div className="relative z-20 px-6">
+                  <div className="w-full flex justify-center mb-4">
+                    <Twitter size={56} className="mx-auto" strokeWidth={1.8} />
+                  </div>
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                    Twitter / X
+                  </h2>
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                    Follow us for real-time updates and announcements
+                    <br />
+                    <br />
+                    <span className="text-[#FFB74A] font-medium">@CubaNex</span>
+                  </p>
+                </div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                    backgroundSize: '100% 100%, 15px 15px'
+                  }}
+                />
               </div>
             </a>
           </ScrollReveal>
@@ -94,19 +105,28 @@ const page = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
-                <Send size={56} className="mx-auto mb-5" strokeWidth={1.8} />
-
-                <h3 className="text-xl font-semibold mb-3">Telegram</h3>
-
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Join our active community and chat with the team
-                  <br />
-                  <br />
-                  <span className="text-[#FFB74A] font-medium">
-                    Join Telegram
-                  </span>
-                </p>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+                <div className="relative z-20 px-6">
+                  <div className="w-full flex justify-center mb-4">
+                    <Send size={56} className="mx-auto" strokeWidth={1.8} />
+                  </div>
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                    Telegram
+                  </h2>
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                    Join our active community and chat with the team
+                    <br />
+                    <br />
+                    <span className="text-[#FFB74A] font-medium">Join Telegram</span>
+                  </p>
+                </div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                    backgroundSize: '100% 100%, 15px 15px'
+                  }}
+                />
               </div>
             </a>
           </ScrollReveal>

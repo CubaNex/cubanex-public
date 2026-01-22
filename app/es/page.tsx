@@ -195,108 +195,153 @@ export default function Home() {
               Inspirado en la cultura cubana, combinando identidad cultural con
               innovación blockchain de manera respetuosa y equilibrada.
             </p>
-            <div className="grid gap-4 md:grid-cols-4">
-              {/* 1 */}
-              <div className="p-8 border text-start items-start border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-                <h3 className="text-xl font-semibold mb-3 flex gap-2 items-center">
-                  <div className="w-[3px] h-[17px] bg-[#22CCEE]"></div> Rápido
-                  como un rayo
-                </h3>
-                <p className="text-gray-400 text-sm">
-                  El Surgimiento de Cuba como la Primera Superpotencia Cripto de
-                  América Latina
-                </p>
-              </div>
-              {/* 2 */}
-              <div className="p-8 border text-start items-start border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-                <h3 className="text-xl font-semibold mb-3 flex gap-2 items-center">
-                  <div className="w-[3px] h-[17px] bg-[#22CCEE]"></div> Seguro y
-                  auditado
-                </h3>
-                <p className="text-gray-400 text-sm">
-                  CubaNex une la profundidad cultural de Cuba con la ola creciente
-                  de innovación digital — posicionando a la nación hacia el
-                  liderazgo global en esta nueva era descentralizada.
-                </p>
-              </div>
-              {/* 3 */}
-              <div className="p-8 border text-start items-start border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-                <h3 className="text-xl font-semibold mb-3 flex gap-2 items-center">
-                  <div className="w-[3px] h-[17px] bg-[#FF754B]"></div> Ecológico
-                </h3>
-                <p className="text-gray-400 text-sm">
-                  Introduce un nuevo lenguaje financiero a través de blockchain e
-                  inteligencia artificial — diseñado para avanzar con alineación,
-                  claridad y propósito.
-                </p>
-              </div>
-              {/* 4 */}
-              <div className="p-8 border text-start items-start border-gray-800 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-                <h3 className="text-xl font-semibold mb-3 flex gap-2 items-center">
-                  <div className="w-[3px] h-[17px] bg-[#9945FF]"></div>Utilidad
-                  real
-                </h3>
-                <p className="text-gray-400 text-sm">
-                  Este es el momento en que Cuba lidera a América Latina hacia una
-                  nueva realidad financiera. Un código nacido de la consciencia
-                  colectiva, creado para evolucionar con quienes se alinean
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
-      <ScrollReveal>
-        <div className="relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-8 sm:pb-20 ">
-          <div className="">
-            <h2
-              className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
-            >
-              De La <span className="text-[#7928D2]"> Habana</span> a la
-              <span className="text-[#FF8F00]"> Blockchain</span>
-            </h2>{" "}
-            <div
-              className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[16px] text-gray-300   mb-8`}
-            >
-              <p className="pb-2">
-                {" "}
-                CubaNex está moldeado por la creatividad de la isla y la claridad
-                de las herramientas digitales modernas. Surge como un activo
-                digital con propósito, para quienes se alinean con su visión.
-              </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:grid-cols-4 mt-20">
+              {/* Lightning Fast */}
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
-              <p className="pb-2">
-                {" "}
-                Al unir la identidad cultural con nuevas tecnologías, CubaNex crea
-                un espacio de participación donde el espíritu cubano se conecta
-                con la innovación global.
-              </p>
-              <p className="pb-2">
-                {" "}
-                La visión incluye integraciones con IA, modelos sostenibles y
-                futuras herramientas Web3 — desarrolladas con intención y enfoque.
-              </p>
-              <p>
-                CubaNex abre un camino digital moderno para quienes están listos
-                para explorar nuevas posibilidades — construyendo un puente entre
-                la tradición y la tecnología.
-              </p>
+
+                <div className="relative z-20 px-6">
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                    Rápido como un rayo
+                  </h2>
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                    El Surgimiento de Cuba como la Primera Superpotencia Cripto de América Latina
+                  </p>
+                </div>
+
+                {/* Hover Background Dot Grid Effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                    backgroundSize: '100% 100%, 15px 15px'
+                  }}
+                />
+              </div>
+
+              {/* Secure & Audited */}
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+
+
+                <div className="relative z-20 px-6">
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    <span className="w-1 h-5 sm:h-7 bg-[#22CCEE] rounded-full inline-block" />
+                    Seguro y auditado
+                  </h2>
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                    CubaNex une la profundidad cultural de Cuba con la ola creciente de innovación digital — posicionando a la nación hacia el liderazgo global.
+                  </p>
+                </div>
+
+                {/* Hover Background */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(34, 204, 238, 0.25) 0%, transparent 70%), radial-gradient(rgba(34, 204, 238, 0.3) 1px, transparent 1px)',
+                    backgroundSize: '100% 100%, 15px 15px'
+                  }}
+                />
+              </div>
+
+              {/* Eco-Friendly */}
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+
+
+                <div className="relative z-20 px-6">
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    <span className="w-1 h-5 sm:h-7 bg-[#FF754B] rounded-full inline-block" />
+                    Ecológico
+                  </h2>
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                    Introduce un nuevo lenguaje financiero a través de blockchain e inteligencia artificial — diseñado para avanzar con propósito.
+                  </p>
+                </div>
+
+                {/* Hover Background */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 117, 75, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 117, 75, 0.3) 1px, transparent 1px)',
+                    backgroundSize: '100% 100%, 15px 15px'
+                  }}
+                />
+              </div>
+
+              {/* Real Utility */}
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+
+
+                <div className="relative z-20 px-6">
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    <span className="w-1 h-5 sm:h-7 bg-[#9945FF] rounded-full inline-block" />
+                    Utilidad real
+                  </h2>
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                    Este es el momento en que Cuba lidera a América Latina hacia una nueva realidad financiera. Un código nacido de la consciencia colectiva.
+                  </p>
+                </div>
+
+                {/* Hover Background */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(153, 69, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(153, 69, 255, 0.3) 1px, transparent 1px)',
+                    backgroundSize: '100% 100%, 15px 15px'
+                  }}
+                />
+              </div>
             </div>
           </div>
-          <div className="">
-            {/* <Image
-              src={"/hero-havana-CDeUqYMJ.png"}
-              alt="from havana to blockchain"
-              width={600}
-              height={500}
-            /> */}
-            <VideoPlayer
-              videoSrc="/cubanex-video.mp4"
-              previewSrc="/hero-havana-CDeUqYMJ.png"
-              className="w-full sm:h-[300px] max-w-6xl mx-auto my-24 max-h-[520px]"
-            />
-          </div>
-        </div>
+          <ScrollReveal>
+            <div className="relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-8 sm:pb-20 ">
+              <div className="">
+                <h2
+                  className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+                >
+                  De La <span className="text-[#7928D2]"> Habana</span> a la
+                  <span className="text-[#FF8F00]"> Blockchain</span>
+                </h2>{" "}
+                <div
+                  className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[16px] text-gray-300   mb-8`}
+                >
+                  <p className="pb-2">
+                    {" "}
+                    CubaNex está moldeado por la creatividad de la isla y la claridad
+                    de las herramientas digitales modernas. Surge como un activo
+                    digital con propósito, para quienes se alinean con su visión.
+                  </p>
+
+                  <p className="pb-2">
+                    {" "}
+                    Al unir la identidad cultural con nuevas tecnologías, CubaNex crea
+                    un espacio de participación donde el espíritu cubano se conecta
+                    con la innovación global.
+                  </p>
+                  <p className="pb-2">
+                    {" "}
+                    La visión incluye integraciones con IA, modelos sostenibles y
+                    futuras herramientas Web3 — desarrolladas con intención y enfoque.
+                  </p>
+                  <p>
+                    CubaNex abre un camino digital moderno para quienes están listos
+                    para explorar nuevas posibilidades — construyendo un puente entre
+                    la tradición y la tecnología.
+                  </p>
+                </div>
+              </div>
+              <div className="">
+                {/* <Image
+                  src={"/hero-havana-CDeUqYMJ.png"}
+                  alt="from havana to blockchain"
+                  width={600}
+                  height={500}
+                /> */}
+                <VideoPlayer
+                  videoSrc="/cubanex-video.mp4"
+                  previewSrc="/hero-havana-CDeUqYMJ.png"
+                  className="w-full sm:h-[300px] max-w-6xl mx-auto my-24 max-h-[520px]"
+                />
+              </div>
+            </div>
+          </ScrollReveal>
+        </section>
       </ScrollReveal>
 
       {/* ================= tokenomics ================= */}
@@ -510,58 +555,89 @@ export default function Home() {
           >
             Únete a la preventa en 4 sencillos pasos{" "}
           </p>
-          <div
-            id="smart-contracts"
-            className="px-8 grid max-w-[1300px] mx-auto gap-6 sm:gap-5 md:grid-cols-4"
-          >
-            {/* 1 */}
-            <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-              {/* <img src="../one.png" alt="" className="mx-auto pb-4 w-[55px]" /> */}
-              <div className="step-wrapper w-full mx-auto">
-                <div className="step-circle">1</div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 md:grid-cols-4 mt-20 max-w-5xl mx-auto">
+            {/* Step 1 */}
+            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="relative z-20 px-6">
+                <div className="w-full flex justify-center mb-4"><div className="step-circle">1</div></div>
+                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                  <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                  Obtén una cartera
+                </h2>
+                <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                  Descarga MetaMask o tu cartera Web3 preferida
+                </p>
               </div>
-              <h3 className="text-xl text-center font-semibold mb-3 items-center">
-                Obtén una cartera{" "}
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Descarga MetaMask o tu cartera Web3 preferida
-              </p>
+
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                style={{
+                  backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                  backgroundSize: '100% 100%, 15px 15px'
+                }}
+              />
             </div>
-            {/* 2 */}
-            <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-              <div className="step-wrapper w-full mx-auto">
-                <div className="step-circle-1">2</div>
+
+            {/* Step 2 */}
+            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="relative z-20 px-6">
+                <div className="w-full flex justify-center mb-4"><div className="step-circle-1">2</div></div>
+                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                  <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                  Agregar fondos
+                </h2>
+                <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                  Compra ETH o BNB y envíalos a tu cartera
+                </p>
               </div>
-              <h3 className="text-xl text-center font-semibold mb-3 items-center">
-                Agregar fondos{" "}
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Compra ETH o BNB y envíalos a tu cartera{" "}
-              </p>
+
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                style={{
+                  backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                  backgroundSize: '100% 100%, 15px 15px'
+                }}
+              />
             </div>
-            {/* 3 */}
-            <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-              <div className="step-wrapper w-full mx-auto">
-                <div className="step-circle-2">3</div>
+
+            {/* Step 3 */}
+            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="relative z-20 px-6">
+                <div className="w-full flex justify-center mb-4"><div className="step-circle-2">3</div></div>
+                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                  <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                  Conectar cartera
+                </h2>
+                <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                  Conecta tu cartera a la plataforma de preventa de CubaNex
+                </p>
               </div>
-              <h3 className="text-xl text-center font-semibold mb-3 items-center">
-                Conectar cartera{" "}
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Conecta tu cartera a la plataforma de preventa de CubaNex{" "}
-              </p>
+
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                style={{
+                  backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                  backgroundSize: '100% 100%, 15px 15px'
+                }}
+              />
             </div>
-            {/* 4 */}
-            <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
-              <div className="step-wrapper w-full mx-auto">
-                <div className="step-circle-3">4</div>
+
+            {/* Step 4 */}
+            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="relative z-20 px-6">
+                <div className="w-full flex justify-center mb-4"><div className="step-circle-3">4</div></div>
+                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                  <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                  Comprar CNEX
+                </h2>
+                <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                  Intercambia tu ETH/BNB por tokens CNEX al instante
+                </p>
               </div>
-              <h3 className="text-xl text-center font-semibold mb-3 items-center">
-                Comprar CNEX{" "}
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Intercambia tu ETH/BNB por tokens CNEX al instante{" "}
-              </p>
+
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                style={{
+                  backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                  backgroundSize: '100% 100%, 15px 15px'
+                }}
+              />
             </div>
           </div>
           <ConnectWallet />
@@ -595,19 +671,27 @@ export default function Home() {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
-                <Twitter size={56} className="mx-auto mb-5" strokeWidth={1.8} />
-
-                <h3 className="text-xl font-semibold mb-3">Twitter / X</h3>
-
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Síguenos para obtener actualizaciones y anuncios en tiempo real.
-                  <br />
-                  <br />
-                  <span className="text-[#FFB74A] font-medium">
-                    Seguir @CubaNex
-                  </span>
-                </p>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+                <div className="relative z-20 px-6">
+                  <div className="w-full flex justify-center mb-4">
+                    <Twitter size={56} className="mx-auto" strokeWidth={1.8} />
+                  </div>
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    Twitter / X
+                  </h2>
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                    Síguenos para obtener actualizaciones y anuncios en tiempo real.
+                    <br />
+                    <br />
+                    <span className="text-[#FFB74A] font-medium">Seguir @CubaNex</span>
+                  </p>
+                </div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                    backgroundSize: '100% 100%, 15px 15px'
+                  }}
+                />
               </div>
             </a>
 
@@ -618,20 +702,27 @@ export default function Home() {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
-                <Send size={56} className="mx-auto mb-5" strokeWidth={1.8} />
-
-                <h3 className="text-xl font-semibold mb-3">Telegram</h3>
-
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Únete a nuestra comunidad activa y charla con los miembros del
-                  equipo.
-                  <br />
-                  <br />
-                  <span className="text-[#FFB74A] font-medium">
-                    Unirse Telegram
-                  </span>
-                </p>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+                <div className="relative z-20 px-6">
+                  <div className="w-full flex justify-center mb-4">
+                    <Send size={56} className="mx-auto" strokeWidth={1.8} />
+                  </div>
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    Telegram
+                  </h2>
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                    Únete a nuestra comunidad activa y charla con los miembros del equipo.
+                    <br />
+                    <br />
+                    <span className="text-[#FFB74A] font-medium">Unirse Telegram</span>
+                  </p>
+                </div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                    backgroundSize: '100% 100%, 15px 15px'
+                  }}
+                />
               </div>
             </a>
 
