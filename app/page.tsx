@@ -102,10 +102,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-black  text-white min-h-auto sm:min-h-screen w-full overflow-x-hidden">
+    <main className="bg-black  text-white min-h-0 sm:min-h-screen w-full overflow-x-hidden">
       {/* ================= HERO SECTION ================= */}
       <ScrollReveal delay={0.1} yOffset={0}>
-        <section className="overflow-hidden z-20  relative pb-20 sm:pb-0 pt-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
+        <section className="overflow-hidden z-20  relative pb-20 sm:pb-0 pt-12 w-full min-h-0 sm:min-h-screen flex items-center justify-center px-6">
           <div className="absolute bg-[#000] inset-0 z-0">
             {/* <video
             src="/cubanex-video.mp4"
@@ -207,7 +207,7 @@ export default function Home() {
       <ScrollReveal>
         <section
           id="fourPoint"
-          className="relative sm:pb-20 z-10   sm:py-20 bg-[#000] px-6"
+          className="relative sm:pb-20 z-10   sm:py-20 bg-[#000] px-6 overflow-hidden"
         >
           {/* 4 s*/}
           <div className="absolute  w-full h-full sm:h-auto  bg-[#000] top-0 z-1">
@@ -261,20 +261,17 @@ export default function Home() {
               Connecting Cuba’s cultural heritage with modern blockchain
               technology in a respectful and balanced way.
             </p>
-            <div className="grid gap-8 md:grid-cols-4 mt-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-8 md:grid-cols-4 mt-20">
               {/* Lightning Fast */}
-              <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] max-w-sm w-full mx-auto p-4 relative h-[18rem] rounded-3xl bg-[#04071d]">
-                <PlusIcon className="absolute h-10 w-10 -top-3 -left-3 text-white opacity-30" />
-                <PlusIcon className="absolute h-10 w-10 -bottom-3 -left-3 text-white opacity-30" />
-                <PlusIcon className="absolute h-10 w-10 -top-3 -right-3 text-white opacity-30" />
-                <PlusIcon className="absolute h-10 w-10 -bottom-3 -right-3 text-white opacity-30" />
+              <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
+
 
                 <div className="relative z-20 px-6">
-                  <h2 className="text-white text-center text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-7 bg-[#22CCEE] rounded-full inline-block" />
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
                     Lightning Fast
                   </h2>
-                  <p className="text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
                     Designed for fast, efficient blockchain transactions.
                   </p>
                 </div>
@@ -282,25 +279,22 @@ export default function Home() {
                 {/* Hover Background Dot Grid Effect */}
                 <div className="absolute inset-0 opacity-0 group-hover/canvas-card:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(34, 204, 238, 0.25) 0%, transparent 70%), radial-gradient(rgba(34, 204, 238, 0.3) 1px, transparent 1px)',
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
                     backgroundSize: '100% 100%, 15px 15px'
                   }}
                 />
               </div>
 
               {/* Secure & Audited */}
-              <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] max-w-sm w-full mx-auto p-4 relative h-[18rem] rounded-3xl bg-[#04071d]">
-                <PlusIcon className="absolute h-10 w-10 -top-3 -left-3 text-white opacity-30" />
-                <PlusIcon className="absolute h-10 w-10 -bottom-3 -left-3 text-white opacity-30" />
-                <PlusIcon className="absolute h-10 w-10 -top-3 -right-3 text-white opacity-30" />
-                <PlusIcon className="absolute h-10 w-10 -bottom-3 -right-3 text-white opacity-30" />
+              <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
+
 
                 <div className="relative z-20 px-6">
-                  <h2 className="text-white text-center text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-7 bg-[#22CCEE] rounded-full inline-block" />
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    <span className="w-1 h-5 sm:h-7 bg-[#22CCEE] rounded-full inline-block" />
                     Secure & Audited
                   </h2>
-                  <p className="text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
                     CubaNex combines cultural inspiration with blockchain-based innovation to support participation.
                   </p>
                 </div>
@@ -315,18 +309,15 @@ export default function Home() {
               </div>
 
               {/* Eco-Friendly */}
-              <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] max-w-sm w-full mx-auto p-4 relative h-[18rem] rounded-3xl bg-[#04071d]">
-                <PlusIcon className="absolute h-10 w-10 -top-3 -left-3 text-white opacity-30" />
-                <PlusIcon className="absolute h-10 w-10 -bottom-3 -left-3 text-white opacity-30" />
-                <PlusIcon className="absolute h-10 w-10 -top-3 -right-3 text-white opacity-30" />
-                <PlusIcon className="absolute h-10 w-10 -bottom-3 -right-3 text-white opacity-30" />
+              <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
+
 
                 <div className="relative z-20 px-6">
-                  <h2 className="text-white text-center text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-7 bg-[#FF754B] rounded-full inline-block" />
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    <span className="w-1 h-5 sm:h-7 bg-[#FF754B] rounded-full inline-block" />
                     Eco-Friendly
                   </h2>
-                  <p className="text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
                     New financial language through blockchain and AI — designed for alignment and purpose.
                   </p>
                 </div>
@@ -341,18 +332,15 @@ export default function Home() {
               </div>
 
               {/* Real Utility */}
-              <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] max-w-sm w-full mx-auto p-4 relative h-[18rem] rounded-3xl bg-[#04071d]">
-                <PlusIcon className="absolute h-10 w-10 -top-3 -left-3 text-white opacity-30" />
-                <PlusIcon className="absolute h-10 w-10 -bottom-3 -left-3 text-white opacity-30" />
-                <PlusIcon className="absolute h-10 w-10 -top-3 -right-3 text-white opacity-30" />
-                <PlusIcon className="absolute h-10 w-10 -bottom-3 -right-3 text-white opacity-30" />
+              <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
+
 
                 <div className="relative z-20 px-6">
-                  <h2 className="text-white text-center text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-7 bg-[#9945FF] rounded-full inline-block" />
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    <span className="w-1 h-5 sm:h-7 bg-[#9945FF] rounded-full inline-block" />
                     Real Utility
                   </h2>
-                  <p className="text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
                     Empowering a new financial reality — a token born of collective vision and community.
                   </p>
                 </div>
@@ -614,7 +602,7 @@ export default function Home() {
       {/* ================= How to Buy CNEX ================= */}
 
       <ScrollReveal>
-        <section className="pb-8 sm:pb-16">
+        <section className="pb-8 sm:pb-16 overflow-hidden px-4 sm:px-6">
           <h2
             className={`${orbitron.className} text-center text-[26px] pt-10 sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
           >
@@ -626,20 +614,15 @@ export default function Home() {
           >
             An overview of how CNEX can be accessed on Binance Smart Chain{" "}
           </p>
-          <div className="grid gap-8 md:grid-cols-4 mt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4 mt-20 max-w-5xl mx-auto">
             {/* Step 1 */}
-            <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] max-w-sm w-full mx-auto p-4 relative h-[18rem] rounded-3xl bg-[#04071d]">
-              <PlusIcon className="absolute h-10 w-10 -top-3 -left-3 text-white opacity-30" />
-              <PlusIcon className="absolute h-10 w-10 -bottom-3 -left-3 text-white opacity-30" />
-              <PlusIcon className="absolute h-10 w-10 -top-3 -right-3 text-white opacity-30" />
-              <PlusIcon className="absolute h-10 w-10 -bottom-3 -right-3 text-white opacity-30" />
-
+            <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
               <div className="relative z-20 px-6">
-                <h2 className="text-white text-center text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-7 bg-[#FFB74A] rounded-full inline-block" />
+                <div className="w-full flex justify-center mb-4"><div className="step-circle">1</div></div>
+                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
                   Set Up a Wallet
                 </h2>
-                <p className="text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                <p className="text-[10px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
                   BNB Smart Chain (BEP-20). Use MetaMask or Trust Wallet.
                 </p>
               </div>
@@ -653,18 +636,13 @@ export default function Home() {
             </div>
 
             {/* Step 2 */}
-            <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] max-w-sm w-full mx-auto p-4 relative h-[18rem] rounded-3xl bg-[#04071d]">
-              <PlusIcon className="absolute h-10 w-10 -top-3 -left-3 text-white opacity-30" />
-              <PlusIcon className="absolute h-10 w-10 -bottom-3 -left-3 text-white opacity-30" />
-              <PlusIcon className="absolute h-10 w-10 -top-3 -right-3 text-white opacity-30" />
-              <PlusIcon className="absolute h-10 w-10 -bottom-3 -right-3 text-white opacity-30" />
-
+            <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
               <div className="relative z-20 px-6">
-                <h2 className="text-white text-center text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-7 bg-[#FFB74A] rounded-full inline-block" />
+                <div className="w-full flex justify-center mb-4"><div className="step-circle-1">2</div></div>
+                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
                   Hold BNB
                 </h2>
-                <p className="text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                <p className="text-[10px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
                   BNB is used for network transactions on BSC. Standard fees apply.
                 </p>
               </div>
@@ -678,18 +656,13 @@ export default function Home() {
             </div>
 
             {/* Step 3 */}
-            <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] max-w-sm w-full mx-auto p-4 relative h-[18rem] rounded-3xl bg-[#04071d]">
-              <PlusIcon className="absolute h-10 w-10 -top-3 -left-3 text-white opacity-30" />
-              <PlusIcon className="absolute h-10 w-10 -bottom-3 -left-3 text-white opacity-30" />
-              <PlusIcon className="absolute h-10 w-10 -top-3 -right-3 text-white opacity-30" />
-              <PlusIcon className="absolute h-10 w-10 -bottom-3 -right-3 text-white opacity-30" />
-
+            <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
               <div className="relative z-20 px-6">
-                <h2 className="text-white text-center text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-7 bg-[#FFB74A] rounded-full inline-block" />
+                <div className="w-full flex justify-center mb-4"><div className="step-circle-2">3</div></div>
+                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
                   Connect
                 </h2>
-                <p className="text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                <p className="text-[10px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
                   Connect your wallet to the official platform to view features.
                 </p>
               </div>
@@ -703,18 +676,13 @@ export default function Home() {
             </div>
 
             {/* Step 4 */}
-            <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] max-w-sm w-full mx-auto p-4 relative h-[18rem] rounded-3xl bg-[#04071d]">
-              <PlusIcon className="absolute h-10 w-10 -top-3 -left-3 text-white opacity-30" />
-              <PlusIcon className="absolute h-10 w-10 -bottom-3 -left-3 text-white opacity-30" />
-              <PlusIcon className="absolute h-10 w-10 -top-3 -right-3 text-white opacity-30" />
-              <PlusIcon className="absolute h-10 w-10 -bottom-3 -right-3 text-white opacity-30" />
-
+            <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
               <div className="relative z-20 px-6">
-                <h2 className="text-white text-center text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-7 bg-[#FFB74A] rounded-full inline-block" />
+                <div className="w-full flex justify-center mb-4"><div className="step-circle-3">4</div></div>
+                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
                   Receive CNEX
                 </h2>
-                <p className="text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                <p className="text-[10px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
                   Distributed according to the project’s token model.
                 </p>
               </div>
