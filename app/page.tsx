@@ -261,9 +261,9 @@ export default function Home() {
               Connecting Cuba’s cultural heritage with modern blockchain
               technology in a respectful and balanced way.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-8 md:grid-cols-4 mt-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:grid-cols-4 mt-20">
               {/* Lightning Fast */}
-              <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer">
 
 
                 <div className="relative z-20 px-6">
@@ -277,7 +277,7 @@ export default function Home() {
                 </div>
 
                 {/* Hover Background Dot Grid Effect */}
-                <div className="absolute inset-0 opacity-0 group-hover/canvas-card:opacity-100 transition-opacity duration-500 pointer-events-none"
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
                     backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
                     backgroundSize: '100% 100%, 15px 15px'
@@ -286,7 +286,7 @@ export default function Home() {
               </div>
 
               {/* Secure & Audited */}
-              <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer">
 
 
                 <div className="relative z-20 px-6">
@@ -300,7 +300,7 @@ export default function Home() {
                 </div>
 
                 {/* Hover Background */}
-                <div className="absolute inset-0 opacity-0 group-hover/canvas-card:opacity-100 transition-opacity duration-500 pointer-events-none"
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
                     backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(34, 204, 238, 0.25) 0%, transparent 70%), radial-gradient(rgba(34, 204, 238, 0.3) 1px, transparent 1px)',
                     backgroundSize: '100% 100%, 15px 15px'
@@ -309,7 +309,7 @@ export default function Home() {
               </div>
 
               {/* Eco-Friendly */}
-              <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer">
 
 
                 <div className="relative z-20 px-6">
@@ -323,7 +323,7 @@ export default function Home() {
                 </div>
 
                 {/* Hover Background */}
-                <div className="absolute inset-0 opacity-0 group-hover/canvas-card:opacity-100 transition-opacity duration-500 pointer-events-none"
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
                     backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 117, 75, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 117, 75, 0.3) 1px, transparent 1px)',
                     backgroundSize: '100% 100%, 15px 15px'
@@ -332,7 +332,7 @@ export default function Home() {
               </div>
 
               {/* Real Utility */}
-              <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer">
 
 
                 <div className="relative z-20 px-6">
@@ -346,7 +346,7 @@ export default function Home() {
                 </div>
 
                 {/* Hover Background */}
-                <div className="absolute inset-0 opacity-0 group-hover/canvas-card:opacity-100 transition-opacity duration-500 pointer-events-none"
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
                     backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(153, 69, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(153, 69, 255, 0.3) 1px, transparent 1px)',
                     backgroundSize: '100% 100%, 15px 15px'
@@ -614,9 +614,9 @@ export default function Home() {
           >
             An overview of how CNEX can be accessed on Binance Smart Chain{" "}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4 mt-20 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 md:grid-cols-4 mt-20 max-w-5xl mx-auto">
             {/* Step 1 */}
-            <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
+            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer">
               <div className="relative z-20 px-6">
                 <div className="w-full flex justify-center mb-4"><div className="step-circle">1</div></div>
                 <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
@@ -627,7 +627,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="absolute inset-0 opacity-0 group-hover/canvas-card:opacity-100 transition-opacity duration-500 pointer-events-none"
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 pointer-events-none"
                 style={{
                   backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
                   backgroundSize: '100% 100%, 15px 15px'
@@ -636,7 +636,7 @@ export default function Home() {
             </div>
 
             {/* Step 2 */}
-            <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
+            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer">
               <div className="relative z-20 px-6">
                 <div className="w-full flex justify-center mb-4"><div className="step-circle-1">2</div></div>
                 <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
@@ -647,7 +647,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="absolute inset-0 opacity-0 group-hover/canvas-card:opacity-100 transition-opacity duration-500 pointer-events-none"
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 pointer-events-none"
                 style={{
                   backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
                   backgroundSize: '100% 100%, 15px 15px'
@@ -656,7 +656,7 @@ export default function Home() {
             </div>
 
             {/* Step 3 */}
-            <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
+            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer">
               <div className="relative z-20 px-6">
                 <div className="w-full flex justify-center mb-4"><div className="step-circle-2">3</div></div>
                 <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
@@ -667,7 +667,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="absolute inset-0 opacity-0 group-hover/canvas-card:opacity-100 transition-opacity duration-500 pointer-events-none"
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 pointer-events-none"
                 style={{
                   backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
                   backgroundSize: '100% 100%, 15px 15px'
@@ -676,7 +676,7 @@ export default function Home() {
             </div>
 
             {/* Step 4 */}
-            <div className="group/canvas-card flex items-center justify-center border border-white/[0.1] w-[250px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d]">
+            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer">
               <div className="relative z-20 px-6">
                 <div className="w-full flex justify-center mb-4"><div className="step-circle-3">4</div></div>
                 <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
@@ -687,7 +687,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="absolute inset-0 opacity-0 group-hover/canvas-card:opacity-100 transition-opacity duration-500 pointer-events-none"
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 pointer-events-none"
                 style={{
                   backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
                   backgroundSize: '100% 100%, 15px 15px'
