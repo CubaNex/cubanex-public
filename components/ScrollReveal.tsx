@@ -19,7 +19,7 @@ const ScrollReveal = ({
     className = "",
     delay = 0.2,
     duration = 0.5,
-    yOffset = 50,
+    yOffset = 0,
     once = true,
 }: ScrollRevealProps) => {
     return (

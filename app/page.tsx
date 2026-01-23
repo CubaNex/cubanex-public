@@ -213,7 +213,7 @@ export default function Home() {
               </a>
             </div>
             <div className="pt-5 sm:pt-0 sm:py-8 sm:mt-8 flex gap-2 sm:gap-4 justify-center">
-              <div className="hidden  sm:flex justify-center items-center gap-2">
+              <div className="hidden  lg:flex justify-center items-center gap-2">
                 <img src="../Check_ring_duotone.svg" alt="" />
                 <span
                   className={`${workSans.className} text-[12px] sm:text-[14px] `}
@@ -221,7 +221,7 @@ export default function Home() {
                   Verified Contract{" "}
                 </span>
               </div>
-              <div className="hidden  sm:flex justify-center items-center gap-2">
+              <div className="hidden  lg:flex justify-center items-center gap-2">
                 <img src="../Check_ring_duotone.svg" alt="" />
                 <span
                   className={`${workSans.className} text-[12px] sm:text-[14px] `}
@@ -229,7 +229,7 @@ export default function Home() {
                   Transparent Source{" "}
                 </span>
               </div>
-              <div className="hidden  sm:flex justify-center items-center gap-2">
+              <div className="hidden  lg:flex justify-center items-center gap-2">
                 <img src="../Check_ring_duotone.svg" alt="" />
                 <span
                   className={`${workSans.className} text-[12px] sm:text-[14px] `}
@@ -238,7 +238,7 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div className="hidden  pt-8 sm:flex justify-center">
+            <div className="hidden  pt-8 lg:flex justify-center">
               <ArrowB />
             </div>
           </div>
