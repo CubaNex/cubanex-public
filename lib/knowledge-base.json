@@ -1,0 +1,130 @@
+{
+  "globalContext": {
+    "project": "CubaNex",
+    "token": "CNEX",
+    "blockchain": "BNB Smart Chain (BEP-20)",
+    "total_supply": "100,000,000,000 CNEX",
+    "contract": "0xf073d173Ed309f8A208e6C183eFf858DbC882DbB",
+    "founder": "The Alchemist (Anonymous)",
+    "mission": "Driving sustainable Web3 development in Cuba through blockchain solutions, AI, and community empowerment.",
+    "official_links": {
+      "twitter": "https://x.com/CubaNexOfficial",
+      "telegram": "https://t.me/CubaNexOfficial",
+      "github": "https://github.com/CubaNex"
+    }
+  },
+  "pages": [
+    {
+      "path": "app\\about\\page.tsx",
+      "content": "CubaNex Vision Mission Technology",
+      "metadata": {
+        "title": "about",
+        "url": "\\about"
+      }
+    },
+    {
+      "path": "app\\community\\page.tsx",
+      "content": "Community Connect @CubaNex Join Telegram Discord Join Discord",
+      "metadata": {
+        "title": "community",
+        "url": "\\community"
+      }
+    },
+    {
+      "path": "app\\ecosystem\\page.tsx",
+      "content": "Ecosystem Overview Future Utilities High-Level Overview",
+      "metadata": {
+        "title": "ecosystem",
+        "url": "\\ecosystem"
+      }
+    },
+    {
+      "path": "app\\es\\about\\page.tsx",
+      "content": "La Habana Blockchain Historia Privacidad con propósito Transparencia a través de la coherencia Contribución desde la alineación Tecnología como expresión Valores",
+      "metadata": {
+        "title": "about",
+        "url": "\\es\\about"
+      }
+    },
+    {
+      "path": "app\\es\\community\\page.tsx",
+      "content": "Comunidad Connect Seguir @CubaNex Unirse Telegram Discord",
+      "metadata": {
+        "title": "community",
+        "url": "\\es\\community"
+      }
+    },
+    {
+      "path": "app\\es\\ecosystem\\page.tsx",
+      "content": "Ecosistema General Utilidades Futuras Visión General de Alto Nivel",
+      "metadata": {
+        "title": "ecosystem",
+        "url": "\\es\\ecosystem"
+      }
+    },
+    {
+      "path": "app\\es\\home\\page.tsx",
+      "content": "la cultura cubana ¿Por qué Habana Blockchain Economía del token proyecto CubaNex Twitter / X Telegram Discord Whitepaper",
+      "metadata": {
+        "title": "home",
+        "url": "\\es\\home"
+      }
+    },
+    {
+      "path": "app\\es\\page.tsx",
+      "content": "en vivo ahora ¿Por qué Habana Blockchain Economía del token proyecto CubaNex Seguir @CubaNex Unirse Telegram Discord Whitepaper",
+      "metadata": {
+        "title": "es",
+        "url": "\\es"
+      }
+    },
+    {
+      "path": "app\\es\\tokenomics\\page.tsx",
+      "content": "Estándar del Token: BEP-20 Blockchain: BNB Smart Chain Dirección del Contrato: Suministro Total: 100,000,000,000 CNEX Decimales: Descripción: Total Supply By Leading Firms Team Token Lock Distribution Presale Liquidity Pool Development Marketing Team (Locked) Asignación Porcentaje Cantidad de Tokens Preventa 40,000,000,000 CNEX Fondo de Liquidez 30,000,000,000 CNEX Desarrollo 15,000,000,000 CNEX 10,000,000,000 CNEX Equipo (Bloqueado) 5,000,000,000 CNEX Suministro Total Utility",
+      "metadata": {
+        "title": "tokenomics",
+        "url": "\\es\\tokenomics"
+      }
+    },
+    {
+      "path": "app\\es\\whitepaper\\page.tsx",
+      "content": "CUBANEX WHITEPAPER v1.0 Suministro Total: 100,000,000,000 CNEX BNB Smart Chain (BEP-20) Contrato: 0xf073...2DbB Utilidad: Sistemas Autónomos y Utilidades de IA RESUMEN Purpose Propósito Neutrality Immutability Transparency Conscious evolution No hierarchy — the work belongs to all Network: Binance Smart Chain (BEP-20) Symbol: CNEX Total Supply: 100,000,000,000 CNEX Decimals: 18 Phase 1 — Foundation Phase 2 — AI Layer Introduction Phase 3 — Community Expansion Phase 4 — Ecosystem Evolution Phase 5 — Legacy Framework I AM The Alchemist. It adds nothing. It teaches nothing. It only reveals.",
+      "metadata": {
+        "title": "whitepaper",
+        "url": "\\es\\whitepaper"
+      }
+    },
+    {
+      "path": "app\\home\\page.tsx",
+      "content": "Presale Live Now by Cuba Havana Blockchain Tokenomics Roadmap Buy CNEX CubaNex Twitter / X @CubaNex Telegram Discord Join Discord Whitepaper",
+      "metadata": {
+        "title": "home",
+        "url": "\\home"
+      }
+    },
+    {
+      "path": "app\\page.tsx",
+      "content": "Live Now Awakening a New Future. Havana Blockchain Tokenomics Roadmap Get CNEX CubaNex @CubaNex Discord Join Discord Whitepaper",
+      "metadata": {
+        "title": "app",
+        "url": "/"
+      }
+    },
+    {
+      "path": "app\\tokenomics\\page.tsx",
+      "content": "Token Standard: BEP-20 Blockchain: BNB Smart Chain Contract Address: Total Supply: 100,000,000,000 CNEX Decimals: Description: Total Supply By Leading Firms Team Token Lock Distribution Presale Liquidity Pool Development Marketing Team (Locked) Allocation Percentage Token Amount 40,000,000,000 CNEX 30,000,000,000 CNEX 15,000,000,000 CNEX 10,000,000,000 CNEX 5,000,000,000 CNEX Utility",
+      "metadata": {
+        "title": "tokenomics",
+        "url": "\\tokenomics"
+      }
+    },
+    {
+      "path": "app\\whitepaper\\page.tsx",
+      "content": "CUBANEX WHITEPAPER v1.0 Total Supply: 100,000,000,000 CNEX Chain: BNB Smart Chain (BEP-20) Contract: 0xf073...2DbB Utility Summary: Autonomous Systems & AI Utilities RESUMEN Purpose Propósito Neutrality Immutability Transparency Conscious evolution No hierarchy — the work belongs to all Network: Binance Smart Chain (BEP-20) Symbol: CNEX Total Supply: 100,000,000,000 CNEX Decimals: 18 Phase 1 — Foundation Phase 2 — AI Layer Introduction Phase 3 — Community Expansion Phase 4 — Ecosystem Evolution Phase 5 — Legacy Framework I AM The Alchemist. It adds nothing. It teaches nothing. It only reveals.",
+      "metadata": {
+        "title": "whitepaper",
+        "url": "\\whitepaper"
+      }
+    }
+  ]
+}
