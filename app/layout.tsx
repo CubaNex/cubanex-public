@@ -6,7 +6,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BacktoTop";
-import ChatBot from "@/components/ChatBot";
 
 // Fonts
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -46,7 +45,6 @@ export default function RootLayout({
       >
         <Header defaultLanguage={defaultLang} />
         <BackToTop />
-        <ChatBot />
         {children}
 
         <Footer />
