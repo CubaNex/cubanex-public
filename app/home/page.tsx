@@ -344,7 +344,7 @@ export default function Home() {
 
       <section>
         <h2
-          className={`${orbitron.className} mt-10 sm:mt-0  px-4 sm:px-0 text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          className={`${orbitron.className} mt-[-70px] sm:mt-0  px-4 sm:px-0 text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
           CNEX
           <span className="text-[#FF8F00]"> Tokenomics</span>

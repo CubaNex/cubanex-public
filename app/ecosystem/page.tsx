@@ -1,49 +1,44 @@
 import { Cpu, Brain, Layers, Code2 } from "lucide-react";
-import ScrollReveal from "@/components/ScrollReveal";
 
 export default function EcosystemPage() {
   return (
     <main className="bg-[#000] min-h-screen px-4 text-white font-work">
       {/* HERO */}
-      <ScrollReveal delay={0.1}>
-        <section className="max-w-5xl mx-auto pt-28 text-center">
-          <h1 className="text-4xl sm:text-5xl font-orbitron tracking-tight">
-            <span className="text-[#22E6E3]">Ecosystem</span>{" "}
-            <span className="text-white">Overview</span>
-          </h1>
+      <section className="max-w-5xl mx-auto pt-28 text-center animate-fade-up">
+        <h1 className="text-4xl sm:text-5xl font-orbitron tracking-tight">
+          <span className="text-[#22E6E3]">Ecosystem</span>{" "}
+          <span className="text-white">Overview</span>
+        </h1>
 
-          <p className="mt-6 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto">
-            CubaNex is a decentralized digital asset ecosystem built on BNB Chain.
-            The project integrates autonomous on-chain tools, emerging AI-assisted
-            technologies, and community-driven interaction models to support
-            scalable digital transformation. Over time, the CubaNex ecosystem will
-            expand to include adaptive intelligence components, automated
-            utilities, and modular frameworks designed to operate securely and
-            transparently on the blockchain.
-          </p>
+        <p className="mt-6 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto">
+          CubaNex is a decentralized digital asset ecosystem built on BNB Chain.
+          The project integrates autonomous on-chain tools, emerging AI-assisted
+          technologies, and community-driven interaction models to support
+          scalable digital transformation. Over time, the CubaNex ecosystem will
+          expand to include adaptive intelligence components, automated
+          utilities, and modular frameworks designed to operate securely and
+          transparently on the blockchain.
+        </p>
 
-          <div className="mt-16 relative flex justify-center">
-            <div className="absolute inset-0 bg-[#22E6E3]/5 blur-[100px] rounded-full"></div>
-            <img
-              src="/shapbg.png"
-              alt="CubaNex Ecosystem Visualization"
-              className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#22E6E3]/20 shadow-2xl shadow-[#22E6E3]/10"
-            />
-          </div>
-        </section>
-      </ScrollReveal>
+        <div className="mt-16 relative flex justify-center">
+          <div className="absolute inset-0 bg-[#22E6E3]/5 blur-[100px] rounded-full"></div>
+          <img
+            src="/shapbg.png"
+            alt="CubaNex Ecosystem Visualization"
+            className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#22E6E3]/20 shadow-2xl shadow-[#22E6E3]/10"
+          />
+        </div>
+      </section>
 
       {/* FUTURE UTILITIES */}
       <section className="max-w-6xl mx-auto mt-24">
-        <ScrollReveal>
-          <div className="text-center">
-            <h2 className="text-3xl font-orbitron">
-              <span className="text-white">Future </span>
-              <span className="text-[#F4B33D]">Utilities</span>
-            </h2>
-            <p className="mt-2 text-sm text-[#7F95B7]">High-Level Overview</p>
-          </div>
-        </ScrollReveal>
+        <div className="text-center animate-fade-up">
+          <h2 className="text-3xl font-orbitron">
+            <span className="text-white">Future </span>
+            <span className="text-[#F4B33D]">Utilities</span>
+          </h2>
+          <p className="mt-2 text-sm text-[#7F95B7]">High-Level Overview</p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
           {[
@@ -68,12 +63,11 @@ export default function EcosystemPage() {
               text: "Open-source documentation and public repositories will support community contributions, integrations, and innovation.",
             },
           ].map((item, i) => (
-            <ScrollReveal key={i} delay={0.1 * (i + 1)}>
-              <div
-                tabIndex={0}
-                className="
+            <div
+              key={i}
+              tabIndex={0}
+              className="
                 group
-                h-full
                 rounded-2xl
                 border border-[#0F1E3A]
                 bg-gradient-to-b from-[#071326] to-[#050B16]
@@ -86,12 +80,12 @@ export default function EcosystemPage() {
                 focus-within:border-[#22E6E3]/40
                 outline-none
               "
-              >
-                <div className="flex items-start gap-4">
-                  {/* ICON */}
-                  <div className="relative">
-                    <div
-                      className="
+            >
+              <div className="flex items-start gap-4">
+                {/* ICON */}
+                <div className="relative">
+                  <div
+                    className="
                       absolute inset-0 rounded-xl
                       bg-[#22E6E3]/25 blur-lg
                       opacity-0
@@ -100,22 +94,21 @@ export default function EcosystemPage() {
                       group-focus-within:opacity-100
                       transition-opacity
                     "
-                    />
-                    <div className="relative h-14 w-14 flex items-center justify-center rounded-xl bg-[#22E6E3]/10 text-[#22E6E3]">
-                      <item.icon size={26} />
-                    </div>
-                  </div>
-
-                  {/* TEXT */}
-                  <div>
-                    <h3 className="text-lg font-semibold">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-[#9CB4D8]">
-                      {item.text}
-                    </p>
+                  />
+                  <div className="relative h-14 w-14 flex items-center justify-center rounded-xl bg-[#22E6E3]/10 text-[#22E6E3]">
+                    <item.icon size={26} />
                   </div>
                 </div>
+
+                {/* TEXT */}
+                <div>
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-[#9CB4D8]">
+                    {item.text}
+                  </p>
+                </div>
               </div>
-            </ScrollReveal>
+            </div>
           ))}
         </div>
       </section>

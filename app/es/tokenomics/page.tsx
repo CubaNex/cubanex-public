@@ -4,7 +4,6 @@ import ConnectWallet from "@/components/ConnectWallet";
 import Image from "next/image";
 import { FileText, Shield } from "lucide-react";
 import TokenOverviewMini from "@/components/ToverView";
-import ScrollReveal from "@/components/ScrollReveal";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -18,92 +17,88 @@ const orbitron = Orbitron({
 const page = () => {
   return (
     <div className="main w-full relative  bg-[#010813]">
-      <ScrollReveal>
-        <div className="flex px-4 min-w-full pt-[120px] pb-[60px] sm:pt-[150px] sm:pb-[80px] flex-col gap-2 items-center justify-center bg-cover tockenomicBg">
-          <h1
-            className={`${orbitron.className} w-full text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-6`}
-          >
-            <span className="text-[#FF8F00]"> CNEX</span> Tokenomics
-          </h1>
+      <div className="flex px-4 min-w-full pt-[120px] pb-[60px] sm:pt-[150px] sm:pb-[80px] flex-col gap-2 items-center justify-center bg-cover tockenomicBg">
+        <h1
+          className={`${orbitron.className} w-full text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-6`}
+        >
+          <span className="text-[#FF8F00]"> CNEX</span> Tokenomics
+        </h1>
 
-          <div className="bg-[#081420]/90 mt-8 backdrop-blur-md border border-[#FFB74A]/30 rounded-2xl p-8 mb-12 max-w-[900px] mx-auto text-left shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-4 opacity-10">
-              <Shield size={120} className="text-[#FFB74A]" />
+        <div className="bg-[#081420]/90 backdrop-blur-md border border-[#FFB74A]/30 rounded-2xl p-8 mb-12 max-w-[900px] mx-auto text-left shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-4 opacity-10">
+            <Shield size={120} className="text-[#FFB74A]" />
+          </div>
+
+          <h2 className={`${orbitron.className} text-[#FFB74A] font-bold text-2xl mb-6 flex items-center gap-3`}>
+            <span className="w-2 h-8 bg-[#FFB74A] rounded-full"></span>
+            CubaNex (CNEX) — Resumen del Token
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-8 text-sm sm:text-base text-white">
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Estándar del Token:</span>
+              <span className="font-semibold">BEP-20</span>
             </div>
-
-            <h2 className={`${orbitron.className} text-[#FFB74A] font-bold text-2xl mb-6 flex items-center gap-3`}>
-              <span className="w-2 h-8 bg-[#FFB74A] rounded-full"></span>
-              CubaNex (CNEX) — Resumen del Token
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-8 text-sm sm:text-base text-white">
-              <div className="flex justify-between border-b border-white/10 pb-2">
-                <span className="text-gray-400">Estándar del Token:</span>
-                <span className="font-semibold">BEP-20</span>
-              </div>
-              <div className="flex justify-between border-b border-white/10 pb-2">
-                <span className="text-gray-400">Blockchain:</span>
-                <span className="font-semibold">BNB Smart Chain</span>
-              </div>
-              <div className="flex flex-col border-b border-white/10 pb-2 md:col-span-2">
-                <span className="text-gray-400 mb-1">Dirección del Contrato:</span>
-                <a
-                  href="https://bscscan.com/token/0xf073d173Ed309f8A208e6C183eFf858DbC882DbB"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-mono text-[10px] sm:text-sm text-[#FFB74A] hover:underline break-all"
-                >
-                  0xf073d173Ed309f8A208e6C183eFf858DbC882DbB
-                </a>
-              </div>
-              <div className="flex justify-between border-b border-white/10 pb-2">
-                <span className="text-gray-400">Suministro Total:</span>
-                <span className="font-semibold">100,000,000,000 CNEX</span>
-              </div>
-              <div className="flex justify-between border-b border-white/10 pb-2">
-                <span className="text-gray-400">Decimales:</span>
-                <span className="font-semibold">18</span>
-              </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Blockchain:</span>
+              <span className="font-semibold">BNB Smart Chain</span>
             </div>
-
-            <div className="space-y-4">
-              <h3 className={`${orbitron.className} text-white font-semibold text-lg`}>Descripción:</h3>
-              <p className={`${workSans.className} text-gray-300 leading-relaxed text-sm sm:text-base`}>
-                CubaNex (CNEX) es un activo digital descentralizado construido sobre la BNB Smart Chain.
-                El token sirve como base del ecosistema CubaNex en evolución, permitiendo
-                futuras herramientas on-chain, módulos autónomos y extensiones de sistemas
-                impulsadas por IA. CNEX proporciona utilidad en toda la plataforma y actúa como
-                el medio clave para la participación en el ecosistema.
-              </p>
+            <div className="flex flex-col border-b border-white/10 pb-2 md:col-span-2">
+              <span className="text-gray-400 mb-1">Dirección del Contrato:</span>
+              <a
+                href="https://bscscan.com/token/0xf073d173Ed309f8A208e6C183eFf858DbC882DbB"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[10px] sm:text-sm text-[#FFB74A] hover:underline break-all"
+              >
+                0xf073d173Ed309f8A208e6C183eFf858DbC882DbB
+              </a>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Suministro Total:</span>
+              <span className="font-semibold">100,000,000,000 CNEX</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Decimales:</span>
+              <span className="font-semibold">18</span>
             </div>
           </div>
 
-          <p
-            className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto `}
-          >
-            Distribución transparente de tokens y utilidad real para una comunidad
-            global y participativa.
-          </p>
-          <div className="pb-14 text-white relative z-100 flex justify-center">
-            <a
-              href="/CubaNex_Whitepaper_v1.0.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl
-                   bg-primary/90 hover:bg-primary
-                   text-background font-semibold
-                   transition-all duration-300
-                   backdrop-blur-md shadow-lg"
-            >
-              <FileText className="w-5 h-5" />
-              Download Whitepaper (PDF)
-            </a>
+          <div className="space-y-4">
+            <h3 className={`${orbitron.className} text-white font-semibold text-lg`}>Descripción:</h3>
+            <p className={`${workSans.className} text-gray-300 leading-relaxed text-sm sm:text-base`}>
+              CubaNex (CNEX) es un activo digital descentralizado construido sobre la BNB Smart Chain.
+              El token sirve como base del ecosistema CubaNex en evolución, permitiendo
+              futuras herramientas on-chain, módulos autónomos y extensiones de sistemas
+              impulsadas por IA. CNEX proporciona utilidad en toda la plataforma y actúa como
+              el medio clave para la participación en el ecosistema.
+            </p>
           </div>
         </div>
-      </ScrollReveal>
-      <div className="relative z-10 px-6 grid max-w-[1000px] text-white mx-auto gap-8 md:grid-cols-3">
-        {/* 1 */}
-        <ScrollReveal delay={0.1}>
+
+        <p
+          className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto `}
+        >
+          Distribución transparente de tokens y utilidad real para una comunidad
+          global y participativa.
+        </p>
+        <div className="pb-14 text-white relative z-100 flex justify-center">
+          <a
+            href="/CubaNex_Whitepaper_v1.0.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl
+               bg-primary/90 hover:bg-primary
+               text-background font-semibold
+               transition-all duration-300
+               backdrop-blur-md shadow-lg"
+          >
+            <FileText className="w-5 h-5" />
+            Download Whitepaper (PDF)
+          </a>
+        </div>
+        <div className="relative  z-10 px-6 grid max-w-[1000px] text-white mx-auto gap-8 md:grid-cols-3">
+          {/* 1 */}
           <div className="p-8 border min-w-[266px]  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="w-12 h-12 mb-5 rounded-xl bg-cyan-500/20 flex items-center justify-center">
               <svg
@@ -136,9 +131,7 @@ const page = () => {
             </h3>
             <p className="text-gray-400 text-sm">Total Supply</p>
           </div>
-        </ScrollReveal>
-        {/* 2 */}
-        <ScrollReveal delay={0.2}>
+          {/* 2 */}
           <div className="p-8 border min-w-[266px]  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="w-12 h-12 mb-5 rounded-xl bg-yellow-500/20 flex items-center justify-center">
               <svg
@@ -161,9 +154,7 @@ const page = () => {
             </h3>
             <p className="text-gray-400 text-sm">By Leading Firms</p>
           </div>
-        </ScrollReveal>
-        {/* 3 */}
-        <ScrollReveal delay={0.3}>
+          {/* 3 */}
           <div className="p-8 border min-w-[266px]  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="w-12 h-12 mb-5 rounded-xl bg-purple-500/20 flex items-center justify-center">
               <svg
@@ -196,11 +187,9 @@ const page = () => {
             </h3>
             <p className="text-gray-400 text-sm">Team Token Lock </p>
           </div>
-        </ScrollReveal>
-      </div>
-      {/* section 3 */}
-      <div className="w-full pt-20">
-        <ScrollReveal>
+        </div>
+        {/* section 3 */}
+        <div className="w-full pt-20">
           <h1
             className="text-4xl font-bold text-center mb-12"
             style={{ fontFamily: "var(--font-orbitron)" }}
@@ -208,11 +197,9 @@ const page = () => {
             <span className="text-teal-400">Token</span>{" "}
             <span className="text-white">Distribution</span>
           </h1>
-        </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto px-4">
-          {/* Presale */}
-          <ScrollReveal delay={0.1}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto px-4">
+            {/* Presale */}
             <div className="bg-[#111726] border border-[#1b2235] rounded-xl p-6">
               <div className="flex justify-between mb-4">
                 <span className="text-white text-lg">Presale</span>
@@ -225,10 +212,8 @@ const page = () => {
                 ></div>
               </div>
             </div>
-          </ScrollReveal>
 
-          {/* Liquidity Pool */}
-          <ScrollReveal delay={0.2}>
+            {/* Liquidity Pool */}
             <div className="bg-[#111726] border border-[#1b2235] rounded-xl p-6">
               <div className="flex justify-between mb-4">
                 <span className="text-white text-lg">Liquidity Pool</span>
@@ -241,10 +226,8 @@ const page = () => {
                 ></div>
               </div>
             </div>
-          </ScrollReveal>
 
-          {/* Development */}
-          <ScrollReveal delay={0.3}>
+            {/* Development */}
             <div className="bg-[#111726] border border-[#1b2235] rounded-xl p-6">
               <div className="flex justify-between mb-4">
                 <span className="text-white text-lg">Development</span>
@@ -257,10 +240,8 @@ const page = () => {
                 ></div>
               </div>
             </div>
-          </ScrollReveal>
 
-          {/* Marketing */}
-          <ScrollReveal delay={0.4}>
+            {/* Marketing */}
             <div className="bg-[#111726] border border-[#1b2235] rounded-xl p-6">
               <div className="flex justify-between mb-4">
                 <span className="text-white text-lg">Marketing</span>
@@ -273,12 +254,10 @@ const page = () => {
                 ></div>
               </div>
             </div>
-          </ScrollReveal>
-        </div>
+          </div>
 
-        {/* Team Locked - full row under grid */}
-        <div className="max-w-md mx-auto px-4 mt-8">
-          <ScrollReveal delay={0.5}>
+          {/* Team Locked - full row under grid */}
+          <div className="max-w-md mx-auto px-4 mt-8">
             <div className="bg-[#111726] border border-[#1b2235] rounded-xl p-6">
               <div className="flex justify-between mb-4">
                 <span className="text-white text-lg">Team (Locked)</span>
@@ -291,12 +270,10 @@ const page = () => {
                 ></div>
               </div>
             </div>
-          </ScrollReveal>
+          </div>
         </div>
-      </div>
 
-      {/* Sección de Tabla de Distribución */}
-      <ScrollReveal>
+        {/* Sección de Tabla de Distribución */}
         <div className="w-full pt-16 pb-10 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-[#081420]/60 backdrop-blur-xl border border-white/5 rounded-3xl overflow-hidden shadow-2xl">
@@ -352,129 +329,119 @@ const page = () => {
             </p>
           </div>
         </div>
-      </ScrollReveal>
+      </div>
 
       {/* real utility */}
       <section className="w-full pb-20 px-4 bg-[#010813]">
-        <ScrollReveal>
-          <h2
-            className={`${orbitron.className} text-center text-[32px] sm:text-[48px] font-bold text-white mb-14`}
-          >
-            Real-World <span className="text-[#FFB74A]">Utility</span>
-          </h2>
-        </ScrollReveal>
+        <h2
+          className={`${orbitron.className} text-center text-[32px] sm:text-[48px] font-bold text-white mb-14`}
+        >
+          Real-World <span className="text-[#FFB74A]">Utility</span>
+        </h2>
 
         <div className="max-w-[1000px] mx-auto flex flex-col gap-10">
           {/* 1 — Transportation */}
-          <ScrollReveal>
-            <div className="bg-[#07111f] border border-[#1b2733] rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
-              <Image
-                src="/3d-electric-car-with-charged-battery-symbol 2.png"
-                alt="Transportation"
-                width={300}
-                height={200}
-                className="rounded-lg w-full md:w-[300px] object-cover"
-              />
+          <div className="bg-[#07111f] border border-[#1b2733] rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
+            <Image
+              src="/3d-electric-car-with-charged-battery-symbol 2.png"
+              alt="Transportation"
+              width={300}
+              height={200}
+              className="rounded-lg w-full md:w-[300px] object-cover"
+            />
 
-              <div>
-                <h3
-                  className={`${orbitron.className} text-white text-[26px] mb-2`}
-                >
-                  Transportation
-                </h3>
-                <p
-                  className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
-                >
-                  Power a network of electric vehicle charging stations, enabling
-                  clean and efficient mobility.
-                </p>
-              </div>
+            <div>
+              <h3
+                className={`${orbitron.className} text-white text-[26px] mb-2`}
+              >
+                Transportation
+              </h3>
+              <p
+                className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
+              >
+                Power a network of electric vehicle charging stations, enabling
+                clean and efficient mobility.
+              </p>
             </div>
-          </ScrollReveal>
+          </div>
 
           {/* 2 — Clean Energy (image on right) */}
-          <ScrollReveal delay={0.1}>
-            <div className="bg-[#07111f] border border-[#1b2733] rounded-xl p-6 flex flex-col md:flex-row-reverse gap-6 items-center">
-              <Image
-                src="/3d-electric-car-with-charged-battery-symbol 5.png"
-                alt="Clean Energy"
-                width={300}
-                height={200}
-                className="rounded-lg w-full md:w-[300px] object-cover"
-              />
+          <div className="bg-[#07111f] border border-[#1b2733] rounded-xl p-6 flex flex-col md:flex-row-reverse gap-6 items-center">
+            <Image
+              src="/3d-electric-car-with-charged-battery-symbol 5.png"
+              alt="Clean Energy"
+              width={300}
+              height={200}
+              className="rounded-lg w-full md:w-[300px] object-cover"
+            />
 
-              <div>
-                <h3
-                  className={`${orbitron.className} text-white text-[26px] mb-2`}
-                >
-                  Clean Energy
-                </h3>
-                <p
-                  className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
-                >
-                  Blockchain enables transparency & supports the transition toward
-                  sustainable mobility.
-                </p>
-              </div>
+            <div>
+              <h3
+                className={`${orbitron.className} text-white text-[26px] mb-2`}
+              >
+                Clean Energy
+              </h3>
+              <p
+                className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
+              >
+                Blockchain enables transparency & supports the transition toward
+                sustainable mobility.
+              </p>
             </div>
-          </ScrollReveal>
+          </div>
 
           {/* 3 — Digital Economy */}
-          <ScrollReveal delay={0.2}>
-            <div className="bg-[#07111f] border border-[#1b2733] rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
-              <Image
-                src="/3d-electric-car-with-charged-battery-symbol 4.png"
-                alt="Digital Economy"
-                width={300}
-                height={200}
-                className="rounded-lg w-full md:w-[300px] object-cover"
-              />
+          <div className="bg-[#07111f] border border-[#1b2733] rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
+            <Image
+              src="/3d-electric-car-with-charged-battery-symbol 4.png"
+              alt="Digital Economy"
+              width={300}
+              height={200}
+              className="rounded-lg w-full md:w-[300px] object-cover"
+            />
 
-              <div>
-                <h3
-                  className={`${orbitron.className} text-white text-[26px] mb-2`}
-                >
-                  Digital Economy
-                </h3>
-                <p
-                  className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
-                >
-                  Enable secure peer-to-peer transactions, digital payments,
-                  online businesses, and new income opportunities.
-                </p>
-              </div>
+            <div>
+              <h3
+                className={`${orbitron.className} text-white text-[26px] mb-2`}
+              >
+                Digital Economy
+              </h3>
+              <p
+                className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
+              >
+                Enable secure peer-to-peer transactions, digital payments,
+                online businesses, and new income opportunities.
+              </p>
             </div>
-          </ScrollReveal>
+          </div>
 
           {/* 4 — DeFi Services (image on right) */}
-          <ScrollReveal delay={0.3}>
-            <div className="bg-[#07111f] border border-[#1b2733] rounded-xl p-6 flex flex-col md:flex-row-reverse gap-6 items-center">
-              <Image
-                src="/3d-electric-car-with-charged-battery-symbol 2.png"
-                alt="DeFi Services"
-                width={300}
-                height={200}
-                className="rounded-lg w-full md:w-[300px] object-cover"
-              />
+          <div className="bg-[#07111f] border border-[#1b2733] rounded-xl p-6 flex flex-col md:flex-row-reverse gap-6 items-center">
+            <Image
+              src="/3d-electric-car-with-charged-battery-symbol 2.png"
+              alt="DeFi Services"
+              width={300}
+              height={200}
+              className="rounded-lg w-full md:w-[300px] object-cover"
+            />
 
-              <div>
-                <h3
-                  className={`${orbitron.className} text-white text-[26px] mb-2`}
-                >
-                  DeFi Services
-                </h3>
-                <p
-                  className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
-                >
-                  Access decentralized finance tools—lending, saving, staking, and
-                  yield farming—powered by blockchain.
-                </p>
-              </div>
+            <div>
+              <h3
+                className={`${orbitron.className} text-white text-[26px] mb-2`}
+              >
+                DeFi Services
+              </h3>
+              <p
+                className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed`}
+              >
+                Access decentralized finance tools—lending, saving, staking, and
+                yield farming—powered by blockchain.
+              </p>
             </div>
-          </ScrollReveal>
+          </div>
         </div>
       </section>
-    </div >
+    </div>
   );
 };
 
