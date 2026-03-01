@@ -133,7 +133,7 @@ const ChatBot = () => {
                                 </button>
                             </div>
                             <p className="text-[10px] text-center mt-2 text-gray-500">
-                                Powered by CubaNex AI & Gemini
+                                Powered by CubaNex AI
                             </p>
                         </div>
                     </motion.div>
