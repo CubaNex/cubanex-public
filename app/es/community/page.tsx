@@ -4,6 +4,7 @@ import ConnectWallet from "@/components/ConnectWallet";
 import Image from "next/image";
 import VipForm from "@/components/VipForm";
 import { MessageCircle, Send, Twitch, Twitter } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -17,91 +18,116 @@ const orbitron = Orbitron({
 const page = () => {
   return (
     <div className="main relative  bg-[#010813]">
-      <div className=" sm:flex px-4 w-full pt-[120px] sm:pb-[20px] sm:pt-[150px]  gap-2 items-center justify-center cmbg">
-        <div>
-          {" "}
-          <h1
-            className={`${orbitron.className} text-center sm:text-start text-[32px] sm:text-[56px] max-w-[800px]  text-[#fff] font-semibold leading-[1.2em] mb-6`}
-          >
-            Únete a la <span className="text-[#FF8F00]"> Comunidad</span>
-          </h1>
-          <p
-            className={`${workSans.className} text-center sm:text-start max-w-[750px]  text-[16px] sm:text-[24px] text-gray-300 mb-8`}
-          >
-            Conéctate con miles de seguidores que construyen juntos el futuro
-            descentralizado de Cuba
-          </p>
+      <ScrollReveal>
+        <div className=" sm:flex px-4 w-full pt-[120px] sm:pb-[20px] sm:pt-[150px]  gap-2 items-center justify-center cmbg">
+          <div>
+            {" "}
+            <h1
+              className={`${orbitron.className} text-center sm:text-start text-[32px] sm:text-[56px] max-w-[800px]  text-[#fff] font-semibold leading-[1.2em] mb-6`}
+            >
+              Únete a la <span className="text-[#FF8F00]"> Comunidad</span>
+            </h1>
+            <p
+              className={`${workSans.className} text-center sm:text-start max-w-[750px]  text-[16px] sm:text-[24px] text-gray-300 mb-8`}
+            >
+              Conéctate con miles de seguidores que construyen juntos el futuro
+              descentralizado de Cuba
+            </p>
+          </div>
+          <Image
+            alt="logo"
+            src={"/logos/favoco.png"}
+            width={500}
+            height={500}
+            className="hidden sm:block"
+          />
+          <Image
+            alt="logo"
+            src={"/logos/favoco.png"}
+            width={300}
+            height={200}
+            className="block mt-[-60px] mx-auto sm:hidden"
+          />
         </div>
-        <Image
-          alt="logo"
-          src={"/logos/favoco.png"}
-          width={500}
-          height={500}
-          className="hidden sm:block"
-        />
-        <Image
-          alt="logo"
-          src={"/logos/favoco.png"}
-          width={300}
-          height={200}
-          className="block mt-[-60px] mx-auto sm:hidden"
-        />
-      </div>
+      </ScrollReveal>
       <section className="">
-        <h2
-          className={`${orbitron.className} text-center text-[30px]  sm:text-[40px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
-        >
-          <span className="text-[#00DED4]"> Connect</span> With Us
-        </h2>
+        <ScrollReveal>
+          <h2
+            className={`${orbitron.className} text-center text-[30px]  sm:text-[40px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+          >
+            <span className="text-[#00DED4]"> Connect</span> With Us
+          </h2>
 
-        <VipForm />
+          <VipForm />
+        </ScrollReveal>
         <div className="px-6 pb-8 pt-20 grid  text-white max-w-[1100px] mx-auto gap-8 md:grid-cols-2">
           {/* 1 */}
-          <a
-            href="https://x.com/CubaNexOfficial"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
-              <Twitter size={56} className="mx-auto mb-5" strokeWidth={1.8} />
-
-              <h3 className="text-xl font-semibold mb-3">Twitter / X</h3>
-
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Síguenos para obtener actualizaciones y anuncios en tiempo real.
-                <br />
-                <br />
-                <span className="text-[#FFB74A] font-medium">
-                  Seguir @CubaNex
-                </span>
-              </p>
-            </div>
-          </a>
+          <ScrollReveal delay={0.1}>
+            <a
+              href="https://x.com/CubaNexOfficial"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+                <div className="relative z-20 px-6">
+                  <div className="w-full flex justify-center mb-4">
+                    <Twitter size={56} className="mx-auto" strokeWidth={1.8} />
+                  </div>
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                    Twitter / X
+                  </h2>
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                    Síguenos para obtener actualizaciones y anuncios en tiempo real.
+                    <br />
+                    <br />
+                    <span className="text-[#FFB74A] font-medium">Seguir @CubaNex</span>
+                  </p>
+                </div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                    backgroundSize: '100% 100%, 15px 15px'
+                  }}
+                />
+              </div>
+            </a>
+          </ScrollReveal>
 
           {/* 3 */}
-          <a
-            href="https://t.me/CubaNexOfficial"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
-              <Send size={56} className="mx-auto mb-5" strokeWidth={1.8} />
-
-              <h3 className="text-xl font-semibold mb-3">Telegram</h3>
-
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Únete a nuestra comunidad activa y charla con los miembros del
-                equipo.
-                <br />
-                <br />
-                <span className="text-[#FFB74A] font-medium">
-                  Unirse Telegram
-                </span>
-              </p>
-            </div>
-          </a>
+          <ScrollReveal delay={0.2}>
+            <a
+              href="https://t.me/CubaNexOfficial"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+                <div className="relative z-20 px-6">
+                  <div className="w-full flex justify-center mb-4">
+                    <Send size={56} className="mx-auto" strokeWidth={1.8} />
+                  </div>
+                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                    <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                    Telegram
+                  </h2>
+                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                    Únete a nuestra comunidad activa y charla con los miembros del equipo.
+                    <br />
+                    <br />
+                    <span className="text-[#FFB74A] font-medium">Unirse Telegram</span>
+                  </p>
+                </div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                    backgroundSize: '100% 100%, 15px 15px'
+                  }}
+                />
+              </div>
+            </a>
+          </ScrollReveal>
 
           {/* 4 */}
           {/* <a
@@ -131,22 +157,24 @@ const page = () => {
           </a> */}
         </div>
 
-        <div
-          className={`${workSans.variable} relative z-10 ${orbitron.variable} w-full flex justify-center py-16 px-4 bg-[#060b12]`}
-        >
-          <div className="w-full max-w-[1000px] bg-cover border border-[#1b2733] rounded-xl p-10 text-center cmf">
-            <h2
-              className={`${orbitron.className} text-white text-[40px] md:text-[50px] font-bold mb-10`}
-            >
-              Be Part of Our <span className="text-[#FFB74A]">Team!</span>
-            </h2>
-            <p className="text-gray-400 text-[16px] max-w-[500px] mx-auto text-center">
-              We are a global, growing team on a mission to solve two of the
-              biggest pain points in the physical and digital world today – we
-              are the quintessentially PHIGITAL company:
-            </p>
+        <ScrollReveal>
+          <div
+            className={`${workSans.variable} relative z-10 ${orbitron.variable} w-full flex justify-center py-16 px-4 bg-[#060b12]`}
+          >
+            <div className="w-full max-w-[1000px] bg-cover border border-[#1b2733] rounded-xl p-10 text-center cmf">
+              <h2
+                className={`${orbitron.className} text-white text-[40px] md:text-[50px] font-bold mb-10`}
+              >
+                Be Part of Our <span className="text-[#FFB74A]">Team!</span>
+              </h2>
+              <p className="text-gray-400 text-[16px] max-w-[500px] mx-auto text-center">
+                We are a global, growing team on a mission to solve two of the
+                biggest pain points in the physical and digital world today – we
+                are the quintessentially PHIGITAL company:
+              </p>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </div>
   );
