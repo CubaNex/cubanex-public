@@ -44,30 +44,12 @@ const ChatBot = () => {
         setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
         setIsLoading(true);
 
-        try {
-            const response = await fetch("/api/chat", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ message: userMessage }),
-            });
-
-            const data = await response.json();
-            if (data.error) {
-                setMessages((prev) => [
-                    ...prev,
-                    { role: "bot", content: "Sorry, I encountered an error. Please try again." },
-                ]);
-            } else {
-                setMessages((prev) => [...prev, { role: "bot", content: data.reply }]);
-            }
-        } catch (error) {
-            setMessages((prev) => [
-                ...prev,
-                { role: "bot", content: "Sorry, I'm having trouble connecting right now." },
-            ]);
-        } finally {
+        // Simulate a brief wait to keep the "AI" feel
+        setTimeout(() => {
+            const staticReply = "CubaNex AI is currently in maintenance mode for performance upgrades. Our advanced features will be back online soon! Check out our social media for updates.";
+            setMessages((prev) => [...prev, { role: "bot", content: staticReply }]);
             setIsLoading(false);
-        }
+        }, 800);
     };
 
     return (
