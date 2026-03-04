@@ -2,6 +2,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Work_Sans, Orbitron } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -26,6 +27,12 @@ const orbitron = Orbitron({
 
 // Server-side default language
 const defaultLang: "eng" | "esp" = "eng";
+
+export const metadata: Metadata = {
+  icons: {
+    icon: "/assets/cubanex-token-v2-32x32.svg",
+  },
+};
 
 export default function RootLayout({
   children,

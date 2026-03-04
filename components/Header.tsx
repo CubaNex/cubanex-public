@@ -68,14 +68,14 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
         >
           <Link href={language === "esp" ? "/es" : "/"}>
             <Image
-              src={"/logos/logo.png"}
+              src={"/nlogo.svg"}
               alt="logo"
               width={200}
               height={53}
               className="hidden sm:block"
             />
             <Image
-              src={"/logos/logo.png"}
+              src={"/nlogo.svg"}
               alt="logo"
               width={180}
               height={53}

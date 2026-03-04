@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   title: "CubaNex (CNEX) – A Blockchain Project Inspired by Cuba",
   description:
     "CubaNex (CNEX) is a decentralized blockchain project inspired by Cuban culture and global innovation, built on BNB Smart Chain.",
+  icons: {
+    icon: "/assets/cubanex-token-v2-32x32.svg",
+  },
   keywords: [
     "CubaNex",
     "CNEX",

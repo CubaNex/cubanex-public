@@ -36,14 +36,14 @@ const page = () => {
           </div>
           <Image
             alt="logo"
-            src={"/logos/favoco.png"}
+            src={"/assets/cubanex-token-v2-32x32.svg"}
             width={500}
             height={500}
             className="hidden sm:block"
           />
           <Image
             alt="logo"
-            src={"/logos/favoco.png"}
+            src={"/assets/cubanex-token-v2-32x32.svg"}
             width={300}
             height={200}
             className="block mt-[-60px] mx-auto sm:hidden"
