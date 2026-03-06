@@ -22,7 +22,7 @@ export default function Footer() {
             <div className="flex items-center mb-4">
               <Link href={language === "eng" ? "/" : "/es"}>
                 <Image
-                  src={"/nlogo.svg"}
+                  src={"/assets/v2logo.png"}
                   alt="logo"
                   width={200}
                   height={53}
