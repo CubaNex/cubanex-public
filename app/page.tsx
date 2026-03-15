@@ -173,76 +173,60 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/40 sm:bg-black/40" />
           </div>
           <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center  sm:pt-20">
-            {/* <div className="inline-flex items-center justify-center space-x-2 border border-[rgba(255,255,255,0.4)] rounded-full px-3 sm:px-3 py-2  sm:py-2 mb-4 animate-pulse-slow">
-            <div className="w-[6px] h-[6px] rounded-full bg-[#FF8F00] smooth-pulse shadow-[0_0_8px_#FF8F00]" />
-            <span className="text-[12px] text-[#fff]">Live Now </span>
-          </div> */}
-
             <h1
-              className={`${orbitron.className} text-[32px] sm:text-[62px]  text-[#fff]  font-semibold leading-[1.2em] sm:leading-[1em] mb-6`}
+              className={`${orbitron.className} text-[32px] sm:text-[62px] lg:text-[72px] text-[#fff] font-bold leading-[1.1em] tracking-tight mb-8`}
             >
               Cuba’s AI-Native Digital Asset
-              <span className="text-[#FFB74A] "> Awakening a New Future. </span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#316CFF] to-[#80ECFF]">
+                Awakening a New Future.
+              </span>
             </h1>
 
-            <p
-              className={`${workSans.className} text-[16px] sm:text-[24px] text-gray-300 max-w-[700px]  mx-auto mb-4`}
-            >
-              The Dream Awoke as a Code — A community-driven blockchain project
-              inspired by Cuban culture. CUBANEX is here
-            </p>
-            <p
-              className={`${workSans.className} text-[14px] sm:text-[18px] text-[#FFB74A]/80 max-w-[700px] mx-auto mb-8 font-medium`}
-            >
-              CubaNex (CNEX) is a BEP-20 token powered by adaptive autonomous systems on BNB Chain.
-            </p>
+            <div className="max-w-[800px] mx-auto space-y-4 mb-10">
+              <p
+                className={`${workSans.className} text-[18px] sm:text-[22px] text-gray-200 leading-relaxed font-medium`}
+              >
+                The Dream Awoke as a Code — A community-driven blockchain project
+                inspired by Cuban culture. CUBANEX is here.
+              </p>
+              <p
+                className={`${workSans.className} text-[14px] sm:text-[16px] text-[#80ECFF] tracking-wide uppercase font-semibold`}
+              >
+                BEP-20 token powered by adaptive autonomous systems on BNB Chain
+              </p>
+            </div>
 
-            <div className="flex gap-2 sm:gap-6 justify-center">
-              <a href="/community">
+            <div className="flex flex-row gap-2 sm:gap-6 justify-center items-center">
+              <a href="/community" className="w-auto">
                 <button
-                  className=" px-[10px] py-2 text-[10px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white border-1 font-medium bg-[transparetn] hover:bg-[#fff] hover:text-[#000] 
-    hover:scale-105 transition-transform duration-300 ease-in-out"
+                  className="w-auto px-4 py-3 sm:px-6 sm:py-3 text-[12px] sm:text-[16px] whitespace-nowrap rounded-full text-white border border-white/20 font-medium hover:bg-white/10 hover:border-white/40 transition-all duration-300"
                 >
-                  Be Among the First{" "}
+                  Be Among the First
                 </button>
               </a>
-              <a href="/whitepaper">
+              <a href="/whitepaper" className="w-auto">
                 <button
-                  className="px-[10px] py-2 text-[10px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white font-medium bg-gradient-to-r from-[#C766EF] via-[#7928D2] to-[#2B0C52] 
-    hover:scale-105 transition-transform duration-300 ease-in-out"
+                  className="w-auto px-4 py-3 sm:px-6 sm:py-3 text-[12px] sm:text-[16px] whitespace-nowrap rounded-full text-[#000] font-bold bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2] hover:shadow-[0_0_20px_rgba(128,236,255,0.4)] transition-all duration-300"
                 >
-                  Read Whitepaper{" "}
+                  Read Whitepaper
                 </button>
               </a>
             </div>
-            <div className="pt-5 sm:pt-0 sm:py-8 sm:mt-8 flex gap-2 sm:gap-4 justify-center">
-              <div className="hidden  lg:flex justify-center items-center gap-2">
-                <img src="../Check_ring_duotone.svg" alt="" />
-                <span
-                  className={`${workSans.className} text-[12px] sm:text-[14px] `}
-                >
-                  Verified Contract{" "}
-                </span>
+
+            <div className="pt-10 hidden sm:flex gap-4 lg:gap-8 justify-center opacity-60">
+              <div className="flex items-center gap-2">
+                <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
+                <span className="text-[12px] font-medium">Verified Contract</span>
               </div>
-              <div className="hidden  lg:flex justify-center items-center gap-2">
-                <img src="../Check_ring_duotone.svg" alt="" />
-                <span
-                  className={`${workSans.className} text-[12px] sm:text-[14px] `}
-                >
-                  Transparent Source{" "}
-                </span>
+              <div className="flex items-center gap-2">
+                <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
+                <span className="text-[12px] font-medium">Transparent Source</span>
               </div>
-              <div className="hidden  lg:flex justify-center items-center gap-2">
-                <img src="../Check_ring_duotone.svg" alt="" />
-                <span
-                  className={`${workSans.className} text-[12px] sm:text-[14px] `}
-                >
-                  Pure Supply Structure{" "}
-                </span>
+              <div className="hidden sm:flex items-center gap-2">
+                <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
+                <span className="text-[12px] font-medium">Pure Supply</span>
               </div>
-            </div>
-            <div className="hidden  pt-8 lg:flex justify-center">
-              <ArrowB />
             </div>
           </div>
         </section>
@@ -300,7 +284,7 @@ export default function Home() {
             <h2
               className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1em] mb-6`}
             >
-              <span className="text-[#FF8F00]"> Why </span> CubaNex?
+              <span className="text-[#316CFF]"> Why </span> CubaNex?
             </h2>{" "}
             <p className="text-gray-400 max-w-[500px] mx-auto mb-12">
               Connecting Cuba’s cultural heritage with modern blockchain
@@ -313,7 +297,7 @@ export default function Home() {
 
                 <div className="relative z-20 px-6">
                   <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                    <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
                     Lightning Fast
                   </h2>
                   <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
@@ -324,7 +308,7 @@ export default function Home() {
                 {/* Hover Background Dot Grid Effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(0, 210, 255, 0.3) 1px, transparent 1px)',
                     backgroundSize: '100% 100%, 15px 15px'
                   }}
                 />
@@ -412,8 +396,8 @@ export default function Home() {
                 <h2
                   className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
                 >
-                  From <span className="text-[#7928D2]"> Havana</span> to the
-                  <span className="text-[#FF8F00]"> Blockchain</span>
+                  From <span className="text-[#fc6]"> Havana</span> to the
+                  <span className="text-[#316CFF]"> Blockchain</span>
                 </h2>{" "}
                 <div
                   className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[16px] text-gray-300   mb-8`}
@@ -459,7 +443,7 @@ export default function Home() {
             className={`${orbitron.className} mt-10 sm:mt-0  px-4 sm:px-0 text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
           >
             CNEX
-            <span className="text-[#FF8F00]"> Tokenomics</span>
+            <span className="text-[#316CFF]"> Tokenomics</span>
           </h2>
           <p
             className={`${workSans.className} px-4 sm:px-0 text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
@@ -481,10 +465,10 @@ export default function Home() {
                   className={`${workSans.className} flex justify-between text-white/80`}
                 >
                   <span className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-[#ff8f00]"></span>
+                    <span className="w-3 h-3 rounded-full bg-[#316CFF]"></span>
                     Total Supply
                   </span>
-                  <span className="text-[#ff8f00] font-semibold">1B+</span>
+                  <span className="text-[#316CFF] font-semibold">1B+</span>
                 </li>
                 <li
                   className={`${workSans.className} flex justify-between text-white/80`}
@@ -640,7 +624,7 @@ export default function Home() {
               className={`${orbitron.className}  text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
             >
               Project
-              <span className="text-[#FF8F00]"> Roadmap</span>
+              <span className="text-[#316CFF]"> Roadmap</span>
             </h2>
             <p
               className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
@@ -667,7 +651,7 @@ export default function Home() {
             className={`${orbitron.className} text-center text-[26px] pt-10 sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
           >
             How to
-            <span className="text-[#FF8F00]"> Get CNEX</span>
+            <span className="text-[#316CFF]"> Get CNEX</span>
           </h2>
           <p
             className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
@@ -683,7 +667,7 @@ export default function Home() {
               <div className="relative z-20 px-6">
                 <div className="w-full flex justify-center mb-4"><div className="step-circle">1</div></div>
                 <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                  <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
                   Set Up a Wallet
                 </h2>
                 <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
@@ -704,7 +688,7 @@ export default function Home() {
               <div className="relative z-20 px-6">
                 <div className="w-full flex justify-center mb-4"><div className="step-circle-1">2</div></div>
                 <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                  <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
                   Hold BNB
                 </h2>
                 <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
@@ -725,7 +709,7 @@ export default function Home() {
               <div className="relative z-20 px-6">
                 <div className="w-full flex justify-center mb-4"><div className="step-circle-2">3</div></div>
                 <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                  <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
                   Connect
                 </h2>
                 <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
@@ -746,7 +730,7 @@ export default function Home() {
               <div className="relative z-20 px-6">
                 <div className="w-full flex justify-center mb-4"><div className="step-circle-3">4</div></div>
                 <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                  <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
                   Receive CNEX
                 </h2>
                 <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
@@ -773,7 +757,7 @@ export default function Home() {
           <h2
             className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
           >
-            Unlock <span className="text-[#FF8F00]">VIP </span>
+            Unlock <span className="text-[#316CFF]">VIP </span>
             Access to <span className="text-[#00DED4]">CubaNex</span>
           </h2>
           <p
@@ -805,7 +789,7 @@ export default function Home() {
                     Follow us for real-time updates and announcements
                     <br />
                     <br />
-                    <span className="text-[#FFB74A] font-medium">@CubaNex</span>
+                    <span className="text-[#00D2FF] font-medium">@CubaNex</span>
                   </p>
                 </div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
@@ -836,7 +820,7 @@ export default function Home() {
                     Join our active community and chat with the team
                     <br />
                     <br />
-                    <span className="text-[#FFB74A] font-medium">
+                    <span className="text-[#00D2FF] font-medium">
                       Join Telegram
                     </span>
                   </p>
@@ -852,7 +836,7 @@ export default function Home() {
 
             {/* 4 */}
             {/* <a href="#" rel="noopener noreferrer" className="block">
-            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+            <div className="p-8 border border-[#00D2FF]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#00D2FF]/40">
               <MessageCircle
                 size={56}
                 className="mx-auto mb-5"
@@ -865,7 +849,7 @@ export default function Home() {
                 Connect with holders and participate in governance
                 <br />
                 <br />
-                <span className="text-[#FFB74A] font-medium">Join Discord</span>
+                <span className="text-[#00D2FF] font-medium">Join Discord</span>
               </p>
             </div>
           </a> */}
@@ -880,7 +864,7 @@ export default function Home() {
           <h2
             className={`${orbitron.className} bg-[#000000] text-center text-[26px] pt-6 sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
           >
-            <span className="text-[#FF8F00]">Whitepaper  </span> & Documentation
+            <span className="text-[#316CFF]">Whitepaper  </span> & Documentation
           </h2>{" "}
           <p
             className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[700px]  mx-auto mb-8`}

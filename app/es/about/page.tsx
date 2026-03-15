@@ -21,12 +21,12 @@ const page = () => {
     <div className="main relative bg-[#010813]">
       {/* Hero / Intro Section */}
       <ScrollReveal delay={0.1}>
-        <div className="flex px-4 pt-[120px] pb-[80px] sm:py-[150px] flex-col gap-2 items-center justify-center abhBg">
+        <div className="flex px-4 pt-[120px] pb-[40px] sm:pb-[80px] sm:py-[150px] flex-col gap-2 items-center justify-center abhBg">
           <h1
             className={`${orbitron.className} text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-6`}
           >
             De <span className="text-[#00DED4]"> La Habana</span> a la
-            <span className="text-[#FFB74A]"> Blockchain</span>
+            <span className="text-[#00D2FF]"> Blockchain</span>
           </h1>
 
           <p
@@ -35,7 +35,7 @@ const page = () => {
             CubaNex es un activo digital descentralizado impulsado por IA, construido sobre la BNB Chain. El proyecto se enfoca en crear un ecosistema adaptativo, seguro y transparente que respalda el desarrollo de herramientas autónomas y futuros sistemas inteligentes.
           </p>
           <p
-            className={`${workSans.className} max-w-[750px] text-center text-[14px] sm:text-[18px] text-[#FFB74A]/80 mx-auto mb-8 font-medium`}
+            className={`${workSans.className} max-w-[750px] text-center text-[14px] sm:text-[18px] text-[#00D2FF]/80 mx-auto mb-8 font-medium`}
           >
             CubaNex opera en la Binance Smart Chain como un activo digital descentralizado con futuras utilidades modulares de IA.
           </p>
@@ -44,11 +44,11 @@ const page = () => {
 
       {/* Nuestra Historia */}
       <ScrollReveal delay={0.2}>
-        <div className="max-w-[1000px] mt-12 mx-auto rounded-[12px] bg-[#030E1C] border border-[#1F2E47] p-6 sm:p-12 ">
+        <div className="max-w-[1000px] mt-4 sm:mt-12 mx-auto rounded-[12px] bg-[#030E1C] border border-[#1F2E47] p-6 sm:p-12 ">
           <h2
             className={`${orbitron.className} text-[26px] sm:text-[32px] text-[#fff] font-semibold leading-[1.2em] mb-6`}
           >
-            Nuestra <span className="text-[#FFB74A]">Historia</span>
+            Nuestra <span className="text-[#00D2FF]">Historia</span>
           </h2>
 
           <p className={`${workSans.className} text-[16px] text-gray-300 mb-4`}>
@@ -199,7 +199,7 @@ const page = () => {
             },
           ].map((item, i) => (
             <ScrollReveal key={i} delay={0.1 * i}>
-              <div className="p-8 border border-[#FFB74A]/17 h-full rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <div className="p-8 border border-[#00D2FF]/17 h-full rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
                 <div className={`w-12 h-12 mb-5 rounded-xl bg-${item.color}-500/20 flex items-center justify-center`}>
                   <svg
                     className={`w-6 h-6 text-${item.color}-400`}
@@ -295,7 +295,7 @@ const page = () => {
 
                 {/* Name */}
                 <p
-                  className={`${orbitron.className} text-[24px] sm:text-[34px] text-[#FFB74A] mb-6`}
+                  className={`${orbitron.className} text-[24px] sm:text-[34px] text-[#00D2FF] mb-6`}
                 >
                   The Alchemist
                 </p>

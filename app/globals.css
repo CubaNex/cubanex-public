@@ -858,10 +858,10 @@ html {
   height: 55px;
   border-radius: 50%;
   background: linear-gradient(180deg,
-      #C766EF 15%,
-      #7928D2 54%,
-      #2B0C52 100%);
-  color: #ffffff;
+      #14F195 0%,
+      #80ECFF 61%,
+      #64A8F2 100%);
+  color: #000;
   font-family: 'Abhaya Libre', serif;
 
   font-size: 28px;
@@ -875,10 +875,7 @@ html {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background: linear-gradient(180deg,
-      #14F195 0%,
-      #80ECFF 61%,
-      #64A8F2 100%);
+  background: #fc6;
   font-family: 'Abhaya Libre', serif;
 
   color: #000;
@@ -914,9 +911,9 @@ html {
   height: 55px;
   border-radius: 50%;
   background: linear-gradient(180deg,
-      #FF8F00 23%,
-      #FFA726 54%,
-      #FFB74A 100%);
+      #316CFF 23%,
+      #00A3FF 54%,
+      #00D2FF 100%);
   color: #ffffff;
   font-family: 'Abhaya Libre', serif;
 

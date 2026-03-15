@@ -84,8 +84,8 @@ const WhitePaper = () => {
           // download="CubaNex_Whitepaper_v1.pdf"
           className="
             px-[14px] py-2.5 text-[12px] sm:text-[18px] sm:px-6 sm:py-3
-            rounded-full text-white font-medium
-            bg-gradient-to-r from-[#C766EF] via-[#7928D2] to-[#2B0C52]
+            rounded-full text-[#000] font-medium
+            bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2]
           "
           style={{ fontFamily: "var(--font-work-sans)" }}
         >
@@ -98,9 +98,9 @@ const WhitePaper = () => {
           className="
             px-[57px] py-2.5 text-[12px] sm:text-[18px] text-center sm:px-6 sm:py-3
             rounded-full text-white font-medium
-            border border-[#7928D2]
+            border border-[#00D2FF]
             transition-all duration-300
-            hover:bg-gradient-to-r hover:from-[#C766EF] hover:via-[#7928D2] hover:to-[#2B0C52]  sm:min-w-[180px]
+            hover:bg-gradient-to-r hover:from-[#14F195] hover:via-[#80ECFF] hover:to-[#64A8F2] hover:text-[#000] sm:min-w-[180px]
           "
           style={{ fontFamily: "var(--font-work-sans)" }}
         >

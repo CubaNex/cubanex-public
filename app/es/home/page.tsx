@@ -64,7 +64,7 @@ export default function Home() {
         </div>
         <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center  sm:pt-20">
           <div className="inline-flex items-center justify-center space-x-2 border border-[rgba(255,255,255,0.4)] rounded-full px-3 sm:px-3 py-2  sm:py-2 mb-4 animate-pulse-slow">
-            <div className="w-[6px] h-[6px] rounded-full bg-[#FF8F00] smooth-pulse shadow-[0_0_8px_#FF8F00]" />
+            <div className="w-[6px] h-[6px] rounded-full bg-[#316CFF] smooth-pulse shadow-[0_0_8px_#316CFF]" />
             <span className="text-[12px] text-[#fff]">
               Preventa en vivo ahora{" "}
             </span>
@@ -74,7 +74,7 @@ export default function Home() {
             className={`${orbitron.className} text-[32px] sm:text-[56px] lg:text-[100px] text-[#fff] font-semibold leading-[1em] mb-6`}
           >
             Un proyecto blockchain inspirado en
-            <span className="text-[#FFB74A]"> la cultura cubana</span>
+            <span className="text-[#00D2FF]"> la cultura cubana</span>
           </h1>
 
           <p
@@ -84,25 +84,25 @@ export default function Home() {
             basado en la inspiración cultural cubana.
           </p>
 
-          <div className="flex gap-2 sm:gap-6 justify-center">
-            <a href="/es/community">
+          <div className="flex flex-row gap-2 sm:gap-6 items-center justify-center">
+            <a href="/es/community" className="w-auto">
               <button
-                className=" px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white border-1 font-medium bg-[transparetn] hover:bg-[#fff] hover:text-[#000] 
+                className="w-auto px-[10px] py-2 text-[11px] sm:text-[18px] whitespace-nowrap sm:px-6 sm:py-3 rounded-full text-white border-1 font-medium bg-[transparent] hover:bg-[#fff] hover:text-[#000] 
     hover:scale-105 transition-transform duration-300 ease-in-out"
               >
                 Sé de los primeros
               </button>
             </a>
-            <a href="/whitepaper">
+            <a href="/whitepaper" className="w-auto">
               <button
-                className="px-[10px] py-2 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-white font-medium bg-gradient-to-r from-[#C766EF] via-[#7928D2] to-[#2B0C52] 
+                className="w-auto px-[10px] py-2 text-[11px] sm:text-[18px] whitespace-nowrap sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2] 
     hover:scale-105 transition-transform duration-300 ease-in-out"
               >
                 Leer el Whitepaper
               </button>
             </a>
           </div>
-          <div className="pt-5 sm:pt-0 sm:py-8 sm:mt-8 flex gap-2 sm:gap-4 justify-center">
+          <div className="pt-5 sm:pt-0 sm:py-8 sm:mt-8 hidden sm:flex gap-2 sm:gap-4 justify-center">
             <div className="flex justify-center items-center gap-2">
               <img src="Check_ring_duotone.svg" alt="" />
               <span
@@ -180,7 +180,7 @@ export default function Home() {
           <h2
             className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1em] mb-6`}
           >
-            <span className="text-[#FF8F00]"> ¿Por qué</span> CubaNex?
+            <span className="text-[#316CFF]"> ¿Por qué</span> CubaNex?
           </h2>{" "}
           <p className="text-gray-400 max-w-[500px] mx-auto mb-12">
             Inspirado en la cultura cubana, combinando identidad cultural con
@@ -241,8 +241,8 @@ export default function Home() {
           <h2
             className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
           >
-            De La <span className="text-[#7928D2]"> Habana</span> a la
-            <span className="text-[#FF8F00]"> Blockchain</span>
+            De La <span className="text-[#fc6]"> Habana</span> a la
+            <span className="text-[#316CFF]"> Blockchain</span>
           </h2>{" "}
           <div
             className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[16px] text-gray-300   mb-8`}
@@ -294,7 +294,7 @@ export default function Home() {
           className={`${orbitron.className} mt-[-70px] sm:mt-0 px-4 sm:px-0 text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
           CNEX
-          <span className="text-[#FF8F00]">  Economía del token</span>
+          <span className="text-[#316CFF]">  Economía del token</span>
         </h2>
         <p
           className={`${workSans.className} px-4 sm:px-0 text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
@@ -448,7 +448,7 @@ export default function Home() {
           className={`${orbitron.className}  text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
           Hoja de ruta del
-          <span className="text-[#FF8F00]"> proyecto</span>
+          <span className="text-[#316CFF]"> proyecto</span>
         </h2>
         <p
           className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
@@ -471,7 +471,7 @@ export default function Home() {
           className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
           Cómo comprar
-          <span className="text-[#FF8F00]"> CNEX</span>
+          <span className="text-[#316CFF]"> CNEX</span>
         </h2>
         <p
           className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
@@ -480,7 +480,7 @@ export default function Home() {
         </p>
         <div className="px-8 grid max-w-[1300px] mx-auto gap-6 sm:gap-5 md:grid-cols-4">
           {/* 1 */}
-          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border text-center  items-center border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             {/* <img src="../one.png" alt="" className="mx-auto pb-4 w-[55px]" /> */}
             <div className="step-wrapper w-full mx-auto">
               <div className="step-circle">1</div>
@@ -493,7 +493,7 @@ export default function Home() {
             </p>
           </div>
           {/* 2 */}
-          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border text-center  items-center border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="step-wrapper w-full mx-auto">
               <div className="step-circle-1">2</div>
             </div>
@@ -505,7 +505,7 @@ export default function Home() {
             </p>
           </div>
           {/* 3 */}
-          <div className="p-8 border text-center  items-center border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border text-center  items-center border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="step-wrapper w-full mx-auto">
               <div className="step-circle-2">3</div>
             </div>
@@ -517,7 +517,7 @@ export default function Home() {
             </p>
           </div>
           {/* 4 */}
-          <div className="p-8  text-center  items-center border border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8  text-center  items-center border border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="step-wrapper w-full mx-auto">
               <div className="step-circle-3">4</div>
             </div>
@@ -538,7 +538,7 @@ export default function Home() {
         <h2
           className={`${orbitron.className} text-center text-[26px] sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
-          Obtén acceso <span className="text-[#FF8F00]">VIP </span>a{" "}
+          Obtén acceso <span className="text-[#316CFF]">VIP </span>a{" "}
           <span className="text-[#00DED4]">CubaNex</span>
         </h2>
 
@@ -558,7 +558,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="block"
           >
-            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+            <div className="p-8 border border-[#00D2FF]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#00D2FF]/40">
               <Twitter size={56} className="mx-auto mb-5" strokeWidth={1.8} />
 
               <h3 className="text-xl font-semibold mb-3">Twitter / X</h3>
@@ -567,7 +567,7 @@ export default function Home() {
                 Síguenos para obtener actualizaciones y anuncios en tiempo real.
                 <br />
                 <br />
-                <span className="text-[#FFB74A] font-medium">
+                <span className="text-[#00D2FF] font-medium">
                   Seguir @CubaNex
                 </span>
               </p>
@@ -581,7 +581,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="block"
           >
-            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+            <div className="p-8 border border-[#00D2FF]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#00D2FF]/40">
               <Send size={56} className="mx-auto mb-5" strokeWidth={1.8} />
 
               <h3 className="text-xl font-semibold mb-3">Telegram</h3>
@@ -591,7 +591,7 @@ export default function Home() {
                 equipo.
                 <br />
                 <br />
-                <span className="text-[#FFB74A] font-medium">
+                <span className="text-[#00D2FF] font-medium">
                   Unirse Telegram
                 </span>
               </p>
@@ -605,7 +605,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="block"
           >
-            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+            <div className="p-8 border border-[#00D2FF]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#00D2FF]/40">
               <MessageCircle
                 size={56}
                 className="mx-auto mb-5"
@@ -618,7 +618,7 @@ export default function Home() {
                 Conéctate con los holders y participa en la gobernanza.
                 <br />
                 <br />
-                <span className="text-[#FFB74A] font-medium">
+                <span className="text-[#00D2FF] font-medium">
                   Unirse Discord
                 </span>
               </p>
@@ -633,7 +633,7 @@ export default function Home() {
         <h2
           className={`${orbitron.className} bg-[#000000] text-center text-[28px] sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
         >
-          <span className="text-[#FF8F00]">Whitepaper </span>y Documentación
+          <span className="text-[#316CFF]">Whitepaper </span>y Documentación
         </h2>{" "}
         <p
           className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[700px]  mx-auto mb-8`}

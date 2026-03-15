@@ -25,7 +25,7 @@ const page = () => {
             <h1
               className={`${orbitron.className} text-center sm:text-start text-[32px] sm:text-[56px] max-w-[800px]  text-[#fff] font-semibold leading-[1.2em] mb-6`}
             >
-              Join the <span className="text-[#FF8F00]"> Community</span>
+              Join the <span className="text-[#316CFF]"> Community</span>
             </h1>
             <p
               className={`${workSans.className} text-center sm:text-start max-w-[750px]  text-[16px] sm:text-[24px] text-gray-300 mb-8`}
@@ -77,19 +77,19 @@ const page = () => {
                     <Twitter size={56} className="mx-auto" strokeWidth={1.8} />
                   </div>
                   <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                    <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
                     Twitter / X
                   </h2>
                   <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
                     Follow us for real-time updates and announcements
                     <br />
                     <br />
-                    <span className="text-[#FFB74A] font-medium">@CubaNex</span>
+                    <span className="text-[#00D2FF] font-medium">@CubaNex</span>
                   </p>
                 </div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(0, 210, 255, 0.3) 1px, transparent 1px)',
                     backgroundSize: '100% 100%, 15px 15px'
                   }}
                 />
@@ -111,19 +111,19 @@ const page = () => {
                     <Send size={56} className="mx-auto" strokeWidth={1.8} />
                   </div>
                   <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-5 sm:h-7 bg-[#FFB74A] rounded-full inline-block" />
+                    <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
                     Telegram
                   </h2>
                   <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
                     Join our active community and chat with the team
                     <br />
                     <br />
-                    <span className="text-[#FFB74A] font-medium">Join Telegram</span>
+                    <span className="text-[#00D2FF] font-medium">Join Telegram</span>
                   </p>
                 </div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(0, 210, 255, 0.3) 1px, transparent 1px)',
                     backgroundSize: '100% 100%, 15px 15px'
                   }}
                 />
@@ -133,7 +133,7 @@ const page = () => {
 
           {/* 4 */}
           {/* <a href="#" rel="noopener noreferrer" className="block">
-            <div className="p-8 border border-[#FFB74A]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#FFB74A]/40">
+            <div className="p-8 border border-[#00D2FF]/20 rounded-2xl bg-gradient-to-br from-gray-900 to-black text-center transition transform hover:scale-[1.02] hover:border-[#00D2FF]/40">
               <MessageCircle
                 size={56}
                 className="mx-auto mb-5"
@@ -146,7 +146,7 @@ const page = () => {
                 Connect with holders and participate in governance
                 <br />
                 <br />
-                <span className="text-[#FFB74A] font-medium">Join Discord</span>
+                <span className="text-[#00D2FF] font-medium">Join Discord</span>
               </p>
             </div>
           </a> */}
@@ -160,7 +160,7 @@ const page = () => {
               <h2
                 className={`${orbitron.className} text-white text-[40px] md:text-[50px] font-bold mb-10`}
               >
-                Be Part of Our <span className="text-[#FFB74A]">Team!</span>
+                Be Part of Our <span className="text-[#00D2FF]">Team!</span>
               </h2>
               <p className="text-gray-400 text-[16px] max-w-[500px] mx-auto text-center">
                 We are a global, growing team on a mission to solve two of the

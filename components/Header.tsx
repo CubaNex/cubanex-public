@@ -124,10 +124,10 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
             </button>
             <a href={t.btnLink}>
               <button
-                className="px-3 py-1.5 rounded-full text-white text-[12px]"
+                className="px-3 py-1.5 rounded-full text-[#000] font-medium text-[12px]"
                 style={{
                   background:
-                    "linear-gradient(90deg, #C766EF 0%, #7928D2 51%, #2B0C52 100%)",
+                    "linear-gradient(90deg, #14F195 0%, #80ECFF 51%, #64A8F2 100%)",
                 }}
               >
                 {t.button}
@@ -231,10 +231,10 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="mt-10 w-full px-4 py-2 rounded-[999px] text-white font-medium"
+                className="mt-10 w-full px-4 py-2 rounded-[999px] text-[#000] font-bold"
                 style={{
                   background:
-                    "linear-gradient(90deg, #C766EF 0%, #7928D2 51%, #2B0C52 100%)",
+                    "linear-gradient(90deg, #14F195 0%, #80ECFF 51%, #64A8F2 100%)",
                 }}
                 onClick={() => {
                   setIsMobileMenuOpen(false);

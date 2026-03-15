@@ -5,6 +5,8 @@ import Image from "next/image";
 import { FileText, Shield } from "lucide-react";
 import TokenOverviewMini from "@/components/ToverView";
 import ScrollReveal from "@/components/ScrollReveal";
+import UtilityCarousel from "@/components/UtilityCarousel";
+
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -23,16 +25,16 @@ const page = () => {
           <h1
             className={`${orbitron.className} w-full text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-6`}
           >
-            <span className="text-[#FF8F00]"> CNEX</span> Tokenomics
+            <span className="text-[#316CFF]"> CNEX</span> Tokenomics
           </h1>
 
-          <div className="bg-[#081420]/90 mt-8 backdrop-blur-md border border-[#FFB74A]/30 rounded-2xl p-8 mb-12 max-w-[900px] mx-auto text-left shadow-2xl relative overflow-hidden">
+          <div className="bg-[#081420]/90 mt-8 backdrop-blur-md border border-[#00D2FF]/30 rounded-2xl p-8 mb-12 max-w-[900px] mx-auto text-left shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 p-4 opacity-10">
-              <Shield size={120} className="text-[#FFB74A]" />
+              <Shield size={120} className="text-[#00D2FF]" />
             </div>
 
-            <h2 className={`${orbitron.className} text-[#FFB74A] font-bold text-2xl mb-6 flex items-center gap-3`}>
-              <span className="w-2 h-8 bg-[#FFB74A] rounded-full"></span>
+            <h2 className={`${orbitron.className} text-[#00D2FF] font-bold text-2xl mb-6 flex items-center gap-3`}>
+              <span className="w-2 h-8 bg-[#00D2FF] rounded-full"></span>
               CubaNex (CNEX) — Token Overview
             </h2>
 
@@ -51,7 +53,7 @@ const page = () => {
                   href="https://bscscan.com/token/0xf073d173Ed309f8A208e6C183eFf858DbC882DbB"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-[10px] sm:text-sm text-[#FFB74A] hover:underline break-all"
+                  className="font-mono text-[10px] sm:text-sm text-[#00D2FF] hover:underline break-all"
                 >
                   0xf073d173Ed309f8A208e6C183eFf858DbC882DbB
                 </a>
@@ -104,7 +106,7 @@ const page = () => {
       <div className="relative z-10 px-6 grid max-w-[1000px] text-white mx-auto gap-8 md:grid-cols-3">
         {/* 1 */}
         <ScrollReveal delay={0.1}>
-          <div className="p-8 border min-w-[266px]  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border min-w-[266px]  border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="w-12 h-12 mb-5 rounded-xl bg-cyan-500/20 flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-cyan-400"
@@ -139,7 +141,7 @@ const page = () => {
         </ScrollReveal>
         {/* 2 */}
         <ScrollReveal delay={0.2}>
-          <div className="p-8 border min-w-[266px]  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border min-w-[266px]  border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="w-12 h-12 mb-5 rounded-xl bg-yellow-500/20 flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-yellow-400"
@@ -164,7 +166,7 @@ const page = () => {
         </ScrollReveal>
         {/* 3 */}
         <ScrollReveal delay={0.3}>
-          <div className="p-8 border min-w-[266px]  border-[#FFB74A]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border min-w-[266px]  border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="w-12 h-12 mb-5 rounded-xl bg-purple-500/20 flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-purple-400"
@@ -303,10 +305,10 @@ const page = () => {
               <div className="overflow-x-auto">
                 <table className="w-full text-left">
                   <thead>
-                    <tr className="bg-[#FFB74A]/10 border-b border-white/10">
-                      <th className={`${orbitron.className} px-6 py-5 text-[#FFB74A] font-bold text-sm tracking-wider uppercase`}>Allocation</th>
-                      <th className={`${orbitron.className} px-6 py-5 text-[#FFB74A] font-bold text-sm tracking-wider uppercase`}>Percentage</th>
-                      <th className={`${orbitron.className} px-6 py-5 text-[#FFB74A] font-bold text-sm tracking-wider uppercase`}>Token Amount</th>
+                    <tr className="bg-[#00D2FF]/10 border-b border-white/10">
+                      <th className={`${orbitron.className} px-6 py-5 text-[#00D2FF] font-bold text-sm tracking-wider uppercase`}>Allocation</th>
+                      <th className={`${orbitron.className} px-6 py-5 text-[#00D2FF] font-bold text-sm tracking-wider uppercase`}>Percentage</th>
+                      <th className={`${orbitron.className} px-6 py-5 text-[#00D2FF] font-bold text-sm tracking-wider uppercase`}>Token Amount</th>
                     </tr>
                   </thead>
                   <tbody className={`${workSans.className} divide-y divide-white/5`}>
@@ -340,7 +342,7 @@ const page = () => {
                     <tr className="bg-white/5 font-bold">
                       <td className="px-6 py-5 text-white">Total Supply</td>
                       <td className="px-6 py-5 text-white">100%</td>
-                      <td className="px-6 py-5 text-[#FFB74A]">100,000,000,000 CNEX</td>
+                      <td className="px-6 py-5 text-[#00D2FF]">100,000,000,000 CNEX</td>
                     </tr>
                   </tfoot>
                 </table>
@@ -356,121 +358,43 @@ const page = () => {
 
 
       {/* real utility */}
-      <section className="w-full pb-20 px-4 bg-[#010813]">
-        <ScrollReveal>
-          <h2
-            className={`${orbitron.className} text-center text-[32px] sm:text-[48px] font-bold text-white mb-14`}
-          >
-            Real-World <span className="text-[#FFB74A]">Utility</span>
-          </h2>
-        </ScrollReveal>
-
-        <div className="max-w-[1000px] mx-auto flex flex-col gap-10">
-          {/* 1 — Transportation */}
-          <ScrollReveal>
-            <div className="bg-[#07111f] overflow-hidden border border-[#1b2733] rounded-xl  flex flex-col md:flex-row justify-between gap-6 items-center">
-              <div className="p-6 sm:px-8">
-                <h3
-                  className={`${orbitron.className} text-white text-[26px] mb-2`}
-                >
-                  Transportation
-                </h3>
-                <p
-                  className={`${workSans.className} text-gray-300 text-[15px] max-w-[500px] leading-relaxed`}
-                >
-                  Power a network of electric vehicle charging stations, enabling
-                  clean and efficient mobility.
-                </p>
-              </div>
-              <Image
-                src="/3d-electric-car-with-charged-battery-symbol 2.png"
-                alt="Transportation"
-                width={300}
-                height={200}
-                className="rounded-lg w-full md:w-[300px] object-cover scale: 1.05  ml-[-8px] sm:mr-[-8px] mb-[-8px]"
-              />
-            </div>
-          </ScrollReveal>
-
-          {/* 2 — Clean Energy (image on right) */}
-          <ScrollReveal delay={0.1}>
-            <div className="bg-[#07111f] border border-[#1b2733] rounded-xl  flex flex-col md:flex-row-reverse gap-6 items-center justify-between">
-              <div className="p-6 sm:px-8">
-                <h3
-                  className={`${orbitron.className} text-white text-[26px] mb-2`}
-                >
-                  Clean Energy
-                </h3>
-                <p
-                  className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed max-w-[400px]`}
-                >
-                  Blockchain enables transparency & supports the transition toward
-                  sustainable mobility.
-                </p>
-              </div>
-              <Image
-                src="/3d-electric-car-with-charged-battery-symbol 5.png"
-                alt="Clean Energy"
-                width={300}
-                height={200}
-                className="rounded-lg w-full md:w-[300px] object-cover"
-              />
-            </div>
-          </ScrollReveal>
-
-          {/* 4 — DeFi Services (image on right) */}
-          <ScrollReveal delay={0.2}>
-            <div className="bg-[#07111f] border border-[#1b2733] rounded-xl overflow-hidden justify-between flex flex-col md:flex-row-reverse gap-6 items-center">
-              <Image
-                src="/3d-electric-car-with-charged-battery-symbol 2.png"
-                alt="DeFi Services"
-                width={300}
-                height={200}
-                className="rounded-lg w-full md:w-[300px] object-cover scale:1.05 ml-[-8px] sm:mr-[-8px] mb-[-8px]"
-              />
-
-              <div className="p-4 sm:p-8">
-                <h3
-                  className={`${orbitron.className} text-white text-[26px] mb-2`}
-                >
-                  DeFi Services
-                </h3>
-                <p
-                  className={`${workSans.className} text-gray-300 text-[15px] max-w-[400px] leading-relaxed`}
-                >
-                  Access decentralized finance tools—lending, saving, staking, and
-                  yield farming—powered by blockchain.
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-          {/* 3 — Digital Economy */}
-          <ScrollReveal delay={0.3}>
-            <div className="bg-[#07111f] border border-[#1b2733] rounded-xl overflow-hidden  flex flex-col md:flex-row gap-6 justify-between items-center">
-              <Image
-                src="/3d-electric-car-with-charged-battery-symbol 4.png"
-                alt="Digital Economy"
-                width={300}
-                height={200}
-                className="rounded-lg w-full md:w-[300px] object-cover scale:1.05 ml-[-8px] sm:mr-[-8px] mb-[-8px]"
-              />
-              <div className="p-6 sm:px-8">
-                <h3
-                  className={`${orbitron.className} text-white text-[26px] mb-2`}
-                >
-                  Digital Economy
-                </h3>
-                <p
-                  className={`${workSans.className} text-gray-300 text-[15px] leading-relaxed max-w-[400px]`}
-                >
-                  Enable secure peer-to-peer transactions, digital payments,
-                  online businesses, and new income opportunities.
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <UtilityCarousel 
+        titleText={
+           <>
+             Real-World <span className="text-[#00D2FF]">Utility</span>
+           </>
+        }
+        items={[
+          {
+            id: 1,
+            image: "/3d-electric-car-with-charged-battery-symbol 2.png",
+            category: "Use Case",
+            title: "Transportation",
+            description: "Power a network of electric vehicle charging stations, enabling clean and efficient mobility."
+          },
+          {
+            id: 2,
+            image: "/3d-electric-car-with-charged-battery-symbol 5.png",
+            category: "Sustainable Ecosystem",
+            title: "Clean Energy",
+            description: "Blockchain enables transparency & supports the transition toward sustainable mobility."
+          },
+          {
+            id: 3,
+            image: "/3d-electric-car-with-charged-battery-symbol 2.png",
+            category: "Financial Tools",
+            title: "DeFi Services",
+            description: "Access decentralized finance tools—lending, saving, staking, and yield farming—powered by blockchain."
+          },
+          {
+            id: 4,
+            image: "/3d-electric-car-with-charged-battery-symbol 4.png",
+            category: "Commerce",
+            title: "Digital Economy",
+            description: "Enable secure peer-to-peer transactions, digital payments, online businesses, and new income opportunities."
+          }
+        ]}
+      />
     </div >
   );
 };

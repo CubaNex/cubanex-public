@@ -21,11 +21,11 @@ const Page = () => {
     <div className="main relative bg-[#010813]">
       {/* HERO */}
       <ScrollReveal delay={0.1}>
-        <div className="flex px-4 pt-[120px] pb-[80px] sm:py-[150px] flex-col gap-2 items-center justify-center abhBg">
+        <div className="flex px-4 pt-[120px] pb-[40px] sm:pb-[80px] sm:py-[150px] flex-col gap-2 items-center justify-center abhBg">
           <h1
             className={`${orbitron.className} text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-6`}
           >
-            About <span className="text-[#FFB74A]"> CubaNex</span>
+            About <span className="text-[#00D2FF]"> CubaNex</span>
           </h1>
 
           <p
@@ -37,14 +37,14 @@ const Page = () => {
             tools and future intelligent systems.
           </p>
           <p
-            className={`${workSans.className} max-w-[750px] text-center text-[14px] sm:text-[18px] text-[#FFB74A]/80 mx-auto mb-8 font-medium`}
+            className={`${workSans.className} max-w-[750px] text-center text-[14px] sm:text-[18px] text-[#00D2FF]/80 mx-auto mb-8 font-medium`}
           >
             CubaNex operates on the Binance Smart Chain as a decentralized digital asset with future modular AI utilities.
           </p>
         </div>
       </ScrollReveal>
 
-      <section className="relative w-full  pt-24 px-4">
+      <section className="relative w-full pt-8 sm:pt-24 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Title */}
           <ScrollReveal>
@@ -205,7 +205,7 @@ const Page = () => {
             },
           ].map((item, i) => (
             <ScrollReveal key={i} delay={0.1 * i}>
-              <div className="p-8 border border-[#FFB74A]/17 h-full rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <div className="p-8 border border-[#00D2FF]/17 h-full rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
                 <div className={`w-12 h-12 mb-5 rounded-xl bg-${item.color}-500/20 flex items-center justify-center`}>
                   <svg
                     className={`w-6 h-6 text-${item.color}-400`}
@@ -299,7 +299,7 @@ const Page = () => {
 
                 {/* Name */}
                 <p
-                  className={`${orbitron.className} text-[24px] sm:text-[34px] text-[#FFB74A] mb-6`}
+                  className={`${orbitron.className} text-[24px] sm:text-[34px] text-[#00D2FF] mb-6`}
                 >
                   The Alchemist
                 </p>
