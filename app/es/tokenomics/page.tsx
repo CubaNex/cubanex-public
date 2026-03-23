@@ -366,28 +366,28 @@ const page = () => {
         items={[
           {
             id: 1,
-            image: "/3d-electric-car-with-charged-battery-symbol 2.png",
+            image: "/transportation.jpg",
             category: "Caso de Uso",
             title: "Transporte",
             description: "Potencia una red de estaciones de carga de vehículos eléctricos, facilitando la movilidad limpia."
           },
           {
             id: 2,
-            image: "/3d-electric-car-with-charged-battery-symbol 5.png",
+            image: "/clean-energy.jpg",
             category: "Ecosistema Sostenible",
             title: "Energía Limpia",
             description: "Blockchain permite la transparencia y apoya la transición hacia una movilidad sostenible."
           },
           {
             id: 3,
-            image: "/3d-electric-car-with-charged-battery-symbol 2.png",
+            image: "/defi-services.jpg",
             category: "Herramientas Financieras",
             title: "Servicios DeFi",
             description: "Accede a herramientas financieras descentralizadas: préstamos, ahorros, staking y yield farming."
           },
           {
             id: 4,
-            image: "/3d-electric-car-with-charged-battery-symbol 4.png",
+            image: "/digital-economy.jpg",
             category: "Comercio",
             title: "Economía Digital",
             description: "Realiza transacciones seguras peer-to-peer, pagos digitales, negocios en línea y nuevas oportunidades de ingresos."
