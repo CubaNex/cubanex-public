@@ -15,12 +15,15 @@ const orbitron = Orbitron({
   weight: ["700", "800"],
 });
 
+import Link from "next/link";
+
 export interface UtilityItem {
   id: number;
   image: string;
   category: string;
   title: string;
   description: string;
+  link?: string;
 }
 
 interface Props {
@@ -77,37 +80,54 @@ export default function UtilityCarousel({ titleText, items }: Props) {
             display: none;
           }
         `}} />
-        {items.map((item) => (
-          <div 
-            key={item.id} 
-            className="flex-none w-[320px] sm:w-[350px] md:w-[400px] snap-start bg-[#0B1320] border border-[#1b2733] rounded-2xl flex flex-col overflow-hidden group hover:border-[#00D2FF]/50 transition-colors duration-300 shadow-2xl"
-          >
-            {/* Image top half */}
-            <div className="h-[240px] w-full relative overflow-hidden bg-[#0A101C]">
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B1320] via-transparent to-transparent opacity-100" />
-            </div>
-            
-            {/* Text bottom half */}
-            <div className="p-6 sm:px-8 pb-8 flex flex-col flex-grow relative z-10 -mt-8">
-              <div className="text-[#00D2FF] text-xs font-semibold uppercase tracking-wider mb-2">
-                {item.category}
+        {items.map((item) => {
+          const CardContent = (
+            <div 
+              className="flex-none h-full w-[320px] sm:w-[350px] md:w-[400px] snap-start bg-[#0B1320] border border-[#1b2733] rounded-2xl flex flex-col overflow-hidden group hover:border-[#00D2FF]/50 transition-colors duration-300 shadow-2xl"
+            >
+              {/* Image top half */}
+              <div className="h-[240px] w-full relative overflow-hidden bg-[#0A101C]">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1320] via-transparent to-transparent opacity-100" />
               </div>
-              <h3 className={`${orbitron.className} text-white font-bold text-[26px] mb-3 leading-tight`}>
-                {item.title}
-              </h3>
-              <p className={`${workSans.className} text-gray-400 text-[15px] leading-relaxed flex-grow`}>
-                {item.description}
-              </p>
+              
+              {/* Text bottom half */}
+              <div className="p-6 sm:px-8 pb-8 flex flex-col flex-grow relative z-10 -mt-8">
+                <div className="text-[#00D2FF] text-xs font-semibold uppercase tracking-wider mb-2">
+                  {item.category}
+                </div>
+                <h3 className={`${orbitron.className} text-white font-bold text-[26px] mb-3 leading-tight group-hover:text-[#00D2FF] transition-colors`}>
+                  {item.title}
+                </h3>
+                <p className={`${workSans.className} text-gray-400 text-[15px] leading-relaxed flex-grow`}>
+                  {item.description}
+                </p>
+                {item.link && (
+                  <div className="mt-6 flex items-center text-[#00D2FF] font-semibold text-sm group-hover:gap-2 transition-all">
+                    Learn More <ChevronRight size={16} />
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+
+          if (item.link) {
+            return (
+              <Link key={item.id} href={item.link}>
+                {CardContent}
+              </Link>
+            );
+          }
+
+          return <div key={item.id}>{CardContent}</div>;
+        })}
       </div>
     </div>
   );
 }
+

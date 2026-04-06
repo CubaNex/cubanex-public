@@ -370,28 +370,32 @@ const page = () => {
             image: "/transportation.jpg",
             category: "Use Case",
             title: "Transportation",
-            description: "Power a network of electric vehicle charging stations, enabling clean and efficient mobility."
+            description: "Power a network of electric vehicle charging stations, enabling clean and efficient mobility.",
+            link: "/utility/transportation"
           },
           {
             id: 2,
             image: "/clean-energy.jpg",
             category: "Sustainable Ecosystem",
             title: "Clean Energy",
-            description: "Blockchain enables transparency & supports the transition toward sustainable mobility."
+            description: "Blockchain enables transparency & supports the transition toward sustainable mobility.",
+            link: "/utility/clean-energy"
           },
           {
             id: 3,
             image: "/defi-services.jpg",
             category: "Financial Tools",
             title: "DeFi Services",
-            description: "Access decentralized finance tools—lending, saving, staking, and yield farming—powered by blockchain."
+            description: "Access decentralized finance tools—lending, saving, staking, and yield farming—powered by blockchain.",
+            link: "/utility/defi-services"
           },
           {
             id: 4,
             image: "/digital-economy.jpg",
             category: "Commerce",
             title: "Digital Economy",
-            description: "Enable secure peer-to-peer transactions, digital payments, online businesses, and new income opportunities."
+            description: "Enable secure peer-to-peer transactions, digital payments, online businesses, and new income opportunities.",
+            link: "/utility/digital-economy"
           }
         ]}
       />
