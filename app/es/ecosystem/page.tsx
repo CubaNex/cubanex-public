@@ -12,11 +12,7 @@ export default function EcosystemPage() {
             <span className="text-white">General</span>
           </h1>
 
-          <p className="mt-6 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto">
-            CubaNex es un ecosistema de activos digitales descentralizado construido sobre la BNB Chain. El proyecto integra herramientas autónomas on-chain, tecnologías emergentes asistidas por IA y modelos de interacción impulsados por la comunidad para soportar una transformación digital escalable. Con el tiempo, el ecosistema de CubaNex se expandirá para incluir componentes de inteligencia adaptativa, utilidades automatizadas y marcos modulares diseñados para operar de manera segura y transparente en la blockchain.
-          </p>
-
-          <div className="mt-16 relative flex justify-center">
+          <div className="mt-12 relative flex justify-center">
             <div className="absolute inset-0 bg-[#22E6E3]/5 blur-[100px] rounded-full"></div>
             <img
               src="/ecosystem.jpeg"
@@ -24,6 +20,10 @@ export default function EcosystemPage() {
               className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#22E6E3]/20 shadow-2xl shadow-[#22E6E3]/10"
             />
           </div>
+
+          <p className="mt-12 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto">
+            CubaNex es un ecosistema de activos digitales descentralizado construido sobre la BNB Chain. El proyecto integra herramientas autónomas on-chain, tecnologías emergentes asistidas por IA y modelos de interacción impulsados por la comunidad para soportar una transformación digital escalable. Con el tiempo, el ecosistema de CubaNex se expandirá para incluir componentes de inteligencia adaptativa, utilidades automatizadas y marcos modulares diseñados para operar de manera segura y transparente en la blockchain.
+          </p>
         </section>
       </ScrollReveal>
 

@@ -633,20 +633,32 @@ export default function Home() {
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
       <ScrollReveal>
-        <section className="relative pb-20 sm:py-20 px-6 z-10 b bg-section">
-          <h2
-            className={`${orbitron.className} text-center text-[26px] sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
-          >
-            Obtén acceso <span className="text-[#316CFF]">VIP </span>a{" "}
-            <span className="text-[#00DED4]">CubaNex</span>
-          </h2>
+        <section className="relative pb-20 sm:py-20 px-6 z-10 bg-black overflow-hidden">
+          <div
+            className="absolute inset-0 z-0 opacity-20 pointer-events-none"
+            style={{
+              backgroundImage: "url('/ecosystem.jpeg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+          <div className="absolute inset-0 z-0 bg-gradient-to-b from-black via-transparent to-black pointer-events-none" />
+          
+          <div className="relative z-10">
+            <h2
+              className={`${orbitron.className} text-center text-[26px] sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+            >
+              Obtén acceso <span className="text-[#316CFF]">VIP </span>a{" "}
+              <span className="text-[#00DED4]">CubaNex</span>
+            </h2>
 
-          <p
-            className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[550px] mx-auto mb-8`}
-          >
-            El proyecto avanza en silencio. Quienes están destinados a
-            encontrarlo, siempre lo hacen.
-          </p>
+            <p
+              className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[550px] mx-auto mb-8`}
+            >
+              El proyecto avanza en silencio. Quienes están destinados a
+              encontrarlo, siempre lo hacen.
+            </p>
 
           <VipForm />
           <div className=" sm:px-8 pt-20 grid max-w-[1100px] mx-auto gap-4 md:grid-cols-2">

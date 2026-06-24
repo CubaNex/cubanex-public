@@ -12,7 +12,16 @@ export default function EcosystemPage() {
             <span className="text-white">Overview</span>
           </h1>
 
-          <p className="mt-6 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto">
+          <div className="mt-12 relative flex justify-center">
+            <div className="absolute inset-0 bg-[#22E6E3]/5 blur-[100px] rounded-full"></div>
+            <img
+              src="/ecosystem.jpeg"
+              alt="CubaNex Ecosystem Visualization"
+              className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#22E6E3]/20 shadow-2xl shadow-[#22E6E3]/10"
+            />
+          </div>
+
+          <p className="mt-12 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto">
             CubaNex is a decentralized digital asset ecosystem built on BNB Chain.
             The project integrates autonomous on-chain tools, emerging AI-assisted
             technologies, and community-driven interaction models to support
@@ -21,15 +30,6 @@ export default function EcosystemPage() {
             utilities, and modular frameworks designed to operate securely and
             transparently on the blockchain.
           </p>
-
-          <div className="mt-16 relative flex justify-center">
-            <div className="absolute inset-0 bg-[#22E6E3]/5 blur-[100px] rounded-full"></div>
-            <img
-              src="/ecosystem.jpeg"
-              alt="CubaNex Ecosystem Visualization"
-              className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#22E6E3]/20 shadow-2xl shadow-[#22E6E3]/10"
-            />
-          </div>
         </section>
       </ScrollReveal>
 
