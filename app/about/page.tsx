@@ -29,17 +29,14 @@ const Page = () => {
           </h1>
 
           <p
-            className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto mb-4`}
+            className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-[#9CB4D8] mx-auto mb-4`}
           >
-            CubaNex is a decentralized AI-powered digital asset built on BNB
-            Chain. The project focuses on creating an adaptive, secure, and
-            transparent ecosystem that supports the development of autonomous
-            tools and future intelligent systems.
+            CubaNex is not merely a token; it is the genesis of an AI-native digital civilization. Born from a vision of decentralized intelligence, it bridges human participation with autonomous systems to build a conscious infrastructure for the future.
           </p>
           <p
             className={`${workSans.className} max-w-[750px] text-center text-[14px] sm:text-[18px] text-[#00D2FF]/80 mx-auto mb-8 font-medium`}
           >
-            CubaNex operates on the Binance Smart Chain as a decentralized digital asset with future modular AI utilities.
+            An evolving framework operating on BNB Smart Chain.
           </p>
         </div>
       </ScrollReveal>
@@ -64,11 +61,8 @@ const Page = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white">Mission</h3>
                 </div>
-                <p className="text-gray-400 leading-relaxed text-md">
-                  To build a secure, adaptive, and decentralized ecosystem that
-                  integrates blockchain infrastructure with emerging AI-driven
-                  technologies to support scalable digital transformation and
-                  create new pathways for community-driven innovation.
+                <p className="text-[#9CB4D8] leading-relaxed text-md">
+                  To build a conscious digital ecosystem where blockchain architecture and artificial intelligence converge. CubaNex provides the foundational layer for transparent participation, autonomous development, and scalable digital sovereignty.
                 </p>
               </div>
             </ScrollReveal>
@@ -82,11 +76,8 @@ const Page = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white">Vision</h3>
                 </div>
-                <p className="text-gray-400 leading-relaxed text-md">
-                  CubaNex envisions a future where decentralized intelligence
-                  expands human potential by enabling transparent systems,
-                  autonomous tools, and meaningful digital experiences
-                  accessible to all.
+                <p className="text-[#9CB4D8] leading-relaxed text-md">
+                  A future where digital infrastructure operates as a living entity—empowering individuals through decentralized intelligence, unbroken connection, and adaptive frameworks that evolve with human alignment.
                 </p>
               </div>
             </ScrollReveal>
@@ -149,7 +140,7 @@ const Page = () => {
           <h2
             className={`${orbitron.className} text-center text-[30px] sm:text-[40px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-12`}
           >
-            Our <span className="text-[#00DED4]">Value</span>
+            The <span className="text-[#316CFF]">Foundation</span>
           </h2>
         </ScrollReveal>
 
@@ -164,32 +155,8 @@ const Page = () => {
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                 />
               ),
-              title: "Cuban Heritage",
-              text: "Rooted in the rich culture, resilience, and innovative spirit of Cuba.",
-            },
-            {
-              color: "yellow",
-              icon: (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 20h5v-2a4 4 0 00-5-4M9 20H4v-2a4 4 0 015-4m4-4a4 4 0 11-8 0 4 4 0 018 0zm6 4a3 3 0 100-6 3 3 0 000 6z"
-                />
-              ),
-              title: "Community First",
-              text: "Built with transparency, unity, and shared prosperity.",
-            },
-            {
-              color: "emerald",
-              icon: (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 21a9 9 0 100-18 9 9 0 000 18zM3.6 9h16.8M3.6 15h16.8M12 3c2.5 2.7 2.5 14.3 0 18M12 3c-2.5 2.7-2.5 14.3 0 18"
-                />
-              ),
-              title: "Global Vision",
-              text: "Connecting Cuba to the world through decentralized innovation.",
+              title: "Heritage",
+              text: "Rooted in the culture, resilience, and ingenuity of Cuba.",
             },
             {
               color: "blue",
@@ -197,11 +164,35 @@ const Page = () => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              ),
+              title: "Intelligence",
+              text: "Empowered by systems that learn, adapt, and scale.",
+            },
+            {
+              color: "purple",
+              icon: (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 21a9 9 0 100-18 9 9 0 000 18zM3.6 9h16.8M3.6 15h16.8M12 3c2.5 2.7 2.5 14.3 0 18M12 3c-2.5 2.7-2.5 14.3 0 18"
+                />
+              ),
+              title: "Decentralization",
+              text: "Built on open, trustless networks that distribute power.",
+            },
+            {
+              color: "cyan",
+              icon: (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M5 3l1.5 4L11 8.5l-4.5 1.5L5 14l-1.5-4L-1 8.5l4.5-1.5L5 3zM19 10l1 3 3 1-3 1-1 3-1-3-3-1 3-1 1-3z"
                 />
               ),
-              title: "Sustainable Future",
-              text: "Pioneering eco-friendly blockchain for a green economy.",
+              title: "Evolution",
+              text: "Designed to expand continuously without losing purpose.",
             },
           ].map((item, i) => (
             <ScrollReveal key={i} delay={0.1 * i}>
@@ -231,45 +222,46 @@ const Page = () => {
           >
             <div className="w-full max-w-5xl border border-[#1b2733] rounded-xl p-10 text-center bg-[#0b111b]">
               <h2
+                id="roadmap"
                 className={`${orbitron.className} text-white text-2xl md:text-3xl font-bold mb-10`}
               >
-                Vision for the Future
+                Future Direction
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-                {/* 2025 */}
+                {/* Phase 1 */}
                 <div>
                   <h3
-                    className={`${orbitron.className} text-[#16e0ff] text-3xl font-extrabold mb-3`}
+                    className={`${orbitron.className} text-[#16e0ff] text-2xl font-bold mb-3`}
                   >
-                    2025
+                    Phase 1: Foundation
                   </h3>
-                  <p className="text-[#c8d0d7] text-sm leading-relaxed">
-                    Launch ecosystem & form partnerships with Cuban enterprises.
+                  <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                    Establish the brand system, deploy the core smart contract, and form the initial community network.
                   </p>
                 </div>
 
-                {/* 2026 */}
+                {/* Phase 2 */}
                 <div>
                   <h3
-                    className={`${orbitron.className} text-[#ffcc66] text-3xl font-extrabold mb-3`}
+                    className={`${orbitron.className} text-[#316CFF] text-2xl font-bold mb-3`}
                   >
-                    2026
+                    Phase 2: Intelligence
                   </h3>
-                  <p className="text-[#c8d0d7] text-sm leading-relaxed">
-                    Develop real-world apps for transport & renewable energy.
+                  <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                    Integrate AI-assisted tools and develop the primary ecosystem applications.
                   </p>
                 </div>
 
-                {/* 2027+ */}
+                {/* Phase 3 */}
                 <div>
                   <h3
-                    className={`${orbitron.className} text-[#b374ff] text-3xl font-extrabold mb-3`}
+                    className={`${orbitron.className} text-[#9945FF] text-2xl font-bold mb-3`}
                   >
-                    2027+
+                    Phase 3: Expansion
                   </h3>
-                  <p className="text-[#c8d0d7] text-sm leading-relaxed">
-                    Scale globally while empowering Cuban communities & economy.
+                  <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                    Scale globally, establishing decentralized governance and broader participation models.
                   </p>
                 </div>
               </div>
@@ -306,17 +298,14 @@ const Page = () => {
 
                 {/* Description */}
                 <div
-                  className={`${workSans.className} text-gray-300 text-[16px] sm:text-[18px] leading-relaxed space-y-4 mb-10 max-w-[720px] mx-auto`}
+                  className={`${workSans.className} text-[#9CB4D8] text-[16px] sm:text-[18px] leading-relaxed space-y-4 mb-10 max-w-[720px] mx-auto`}
                 >
                   <p>
-                    CubaNex is developed by a decentralized, privacy-preserving
-                    collective.
+                    CubaNex is developed by a decentralized collective.
                   </p>
 
                   <p>
-                    The founder remains anonymous under the alias &quot;The
-                    Alchemist&quot; as a discipline of neutrality, silence, and
-                    intention, aligned with the principles of decentralization.
+                    The project's architect operates under the alias "The Alchemist" to maintain focus on the code, the ecosystem, and the community, rather than individual identity.
                   </p>
                 </div>
 
@@ -329,7 +318,7 @@ const Page = () => {
                 >
                   <Github className="w-5 h-5" />
                   <span className={`${workSans.className} font-medium`}>
-                    CubaNexLabs
+                    Labs
                   </span>
                 </a>
               </div>

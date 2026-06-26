@@ -107,9 +107,10 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
               href="https://github.com/CubaNex"
               target="_blank"
               rel="noopener noreferrer"
-              className=""
+              className="flex items-center gap-2 group"
             >
-              <span className={``}>CubaNexLabs</span>
+              <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 group-hover:bg-white transition-colors" />
+              <span className="text-gray-300 group-hover:text-white transition-colors tracking-wide text-sm font-medium">Labs</span>
             </a>
           </nav>
 
@@ -215,9 +216,10 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
                 href="https://github.com/CubaNex"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=""
+                className="flex items-center gap-2 mt-2"
               >
-                <span className={``}>CubaNexLabs</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                <span className="text-gray-300 tracking-wide text-sm font-medium">Labs</span>
               </a>
             </nav>
             <Link

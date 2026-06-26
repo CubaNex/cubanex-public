@@ -22,13 +22,7 @@ export default function EcosystemPage() {
           </div>
 
           <p className="mt-12 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto">
-            CubaNex is a decentralized digital asset ecosystem built on BNB Chain.
-            The project integrates autonomous on-chain tools, emerging AI-assisted
-            technologies, and community-driven interaction models to support
-            scalable digital transformation. Over time, the CubaNex ecosystem will
-            expand to include adaptive intelligence components, automated
-            utilities, and modular frameworks designed to operate securely and
-            transparently on the blockchain.
+            The CubaNex ecosystem is designed as a living network. It expands in deliberate phases, starting from secure baseline infrastructure and moving toward autonomous, decentralized systems. Every integration serves to increase the collective intelligence and capability of the framework.
           </p>
         </section>
       </ScrollReveal>
@@ -38,10 +32,9 @@ export default function EcosystemPage() {
         <ScrollReveal>
           <div className="text-center">
             <h2 className="text-3xl font-orbitron">
-              <span className="text-white">Future </span>
-              <span className="text-[#F4B33D]">Utilities</span>
+              <span className="text-[#316CFF]">Future </span>
+              <span className="text-white">Utilities</span>
             </h2>
-            <p className="mt-2 text-sm text-[#7F95B7]">High-Level Overview</p>
           </div>
         </ScrollReveal>
 
@@ -117,6 +110,57 @@ export default function EcosystemPage() {
               </div>
             </ScrollReveal>
           ))}
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto mt-24">
+        <ScrollReveal>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-orbitron">
+              The Living <span className="text-[#00D2FF]">Framework</span>
+            </h2>
+          </div>
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Intelligence */}
+          <ScrollReveal delay={0.1}>
+            <div className="h-full rounded-2xl border border-white/5 bg-[#04071d]/80 p-8 shadow-lg text-center backdrop-blur-sm">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center justify-center gap-3">
+                <span className="w-1.5 h-6 bg-[#00D2FF] rounded-full inline-block" />
+                Intelligence
+              </h3>
+              <p className="text-[#9CB4D8] leading-relaxed text-sm">
+                Systems designed to process, adapt, and evolve. CubaNex utilizes automation and logic to ensure frictionless operation.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Participation */}
+          <ScrollReveal delay={0.2}>
+            <div className="h-full rounded-2xl border border-white/5 bg-[#04071d]/80 p-8 shadow-lg text-center backdrop-blur-sm">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center justify-center gap-3">
+                <span className="w-1.5 h-6 bg-[#316CFF] rounded-full inline-block" />
+                Participation
+              </h3>
+              <p className="text-[#9CB4D8] leading-relaxed text-sm">
+                Decentralized nodes of human and machine interaction. The network grows stronger with every connected participant.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Infrastructure */}
+          <ScrollReveal delay={0.3}>
+            <div className="h-full rounded-2xl border border-white/5 bg-[#04071d]/80 p-8 shadow-lg text-center backdrop-blur-sm">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center justify-center gap-3">
+                <span className="w-1.5 h-6 bg-[#9945FF] rounded-full inline-block" />
+                Infrastructure
+              </h3>
+              <p className="text-[#9CB4D8] leading-relaxed text-sm">
+                The foundational layer. Immutable, verified contracts running on a secure, globally distributed blockchain.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

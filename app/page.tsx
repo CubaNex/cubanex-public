@@ -179,7 +179,7 @@ export default function Home() {
               Cuba’s AI-Native Digital Asset
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#316CFF] to-[#80ECFF]">
-                Awakening a New Future.
+                The Code Has Awakened.
               </span>
             </h1>
 
@@ -187,8 +187,7 @@ export default function Home() {
               <p
                 className={`${workSans.className} text-[18px] sm:text-[22px] text-gray-200 leading-relaxed font-medium`}
               >
-                The Dream Awoke as a Code — A community-driven blockchain project
-                inspired by Cuban culture. CUBANEX is here.
+                CubaNex is an AI-native digital asset built on BNB Chain, designed to evolve into a decentralized intelligence ecosystem.
               </p>
               <p
                 className={`${workSans.className} text-[14px] sm:text-[16px] text-[#80ECFF] tracking-wide uppercase font-semibold`}
@@ -202,7 +201,7 @@ export default function Home() {
                 <button
                   className="w-auto px-4 py-3 sm:px-6 sm:py-3 text-[12px] sm:text-[16px] whitespace-nowrap rounded-full text-white border border-white/20 font-medium hover:bg-white/10 hover:border-white/40 transition-all duration-300"
                 >
-                  Be Among the First
+                  Enter the Ecosystem
                 </button>
               </a>
               <a href="/whitepaper" className="w-auto">
@@ -221,11 +220,11 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-2">
                 <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
-                <span className="text-[12px] font-medium">Transparent Source</span>
+                <span className="text-[12px] font-medium">Open Framework</span>
               </div>
               <div className="hidden sm:flex items-center gap-2">
                 <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
-                <span className="text-[12px] font-medium">Pure Supply</span>
+                <span className="text-[12px] font-medium">Fixed Supply</span>
               </div>
             </div>
           </div>
@@ -280,108 +279,69 @@ export default function Home() {
           {/* 4 s*/}
 
           {/* why cubanex? start  */}
-          <div className="px- relative z-10 max-w-6xl mx-auto text-center">
+          <div className="relative z-10 max-w-6xl mx-auto text-center pt-10">
             <h2
               className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1em] mb-6`}
             >
-              <span className="text-[#316CFF]"> Why </span> CubaNex?
+              Why CubaNex <span className="text-[#316CFF]"> Exists</span>
             </h2>{" "}
-            <p className="text-gray-400 max-w-[500px] mx-auto mb-12">
-              Connecting Cuba’s cultural heritage with modern blockchain
-              technology in a respectful and balanced way.
+            <p className="text-gray-400 max-w-[600px] mx-auto mb-16 text-lg">
+              CubaNex is not simply a token. It is the foundation for an evolving intelligence network where blockchain, AI, and community participation converge.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:grid-cols-4 mt-20">
-              {/* Lightning Fast */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-
-
-                <div className="relative z-20 px-6">
-                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
-                    Lightning Fast
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-10">
+              
+              {/* Intelligence */}
+              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors cursor-pointer outline-none" tabIndex={0}>
+                <div className="relative z-20 text-center w-full">
+                  <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
+                    <span className="w-1.5 h-6 bg-[#00D2FF] rounded-full inline-block" />
+                    Intelligence
                   </h2>
-                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                    The Rise of Cuba as Latin America’s First Crypto Superpower
+                  <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
+                    CubaNex is designed to evolve through future AI-assisted systems, autonomous tools, and adaptive digital frameworks.
                   </p>
                 </div>
-
-                {/* Hover Background Dot Grid Effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(0, 210, 255, 0.3) 1px, transparent 1px)',
-                    backgroundSize: '100% 100%, 15px 15px'
-                  }}
-                />
               </div>
 
-              {/* Secure & Audited */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-
-
-                <div className="relative z-20 px-6">
-                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-5 sm:h-7 bg-[#22CCEE] rounded-full inline-block" />
-                    Secure & Audited
+              {/* Sovereignty */}
+              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors cursor-pointer outline-none" tabIndex={0}>
+                <div className="relative z-20 text-center w-full">
+                  <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
+                    <span className="w-1.5 h-6 bg-[#316CFF] rounded-full inline-block" />
+                    Sovereignty
                   </h2>
-                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                    CubaNex bridges Cuba’s cultural depth with the rising wave of digital innovation—positioning the nation toward global leadership.
+                  <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
+                    Built on decentralized infrastructure, CubaNex creates a foundation for transparent participation without dependence on centralized control.
                   </p>
                 </div>
-
-                {/* Hover Background */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(34, 204, 238, 0.25) 0%, transparent 70%), radial-gradient(rgba(34, 204, 238, 0.3) 1px, transparent 1px)',
-                    backgroundSize: '100% 100%, 15px 15px'
-                  }}
-                />
               </div>
 
-              {/* Eco-Friendly */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-
-
-                <div className="relative z-20 px-6">
-                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-5 sm:h-7 bg-[#FF754B] rounded-full inline-block" />
-                    Eco-Friendly
+              {/* Connection */}
+              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors cursor-pointer outline-none" tabIndex={0}>
+                <div className="relative z-20 text-center w-full">
+                  <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
+                    <span className="w-1.5 h-6 bg-[#9945FF] rounded-full inline-block" />
+                    Connection
                   </h2>
-                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                    Introduces a new financial language through blockchain and artificial intelligence—designed to advance with alignment, clarity, and purpose.
+                  <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
+                    The project bridges Cuban identity, global technology, and emerging digital systems into one unified ecosystem.
                   </p>
                 </div>
-
-                {/* Hover Background */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 117, 75, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 117, 75, 0.3) 1px, transparent 1px)',
-                    backgroundSize: '100% 100%, 15px 15px'
-                  }}
-                />
               </div>
 
-              {/* Real Utility */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-
-
-                <div className="relative z-20 px-6">
-                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-5 sm:h-7 bg-[#9945FF] rounded-full inline-block" />
-                    Real Utility
+              {/* Evolution */}
+              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors cursor-pointer outline-none" tabIndex={0}>
+                <div className="relative z-20 text-center w-full">
+                  <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
+                    <span className="w-1.5 h-6 bg-[#00E5FF] rounded-full inline-block" />
+                    Evolution
                   </h2>
-                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                    This is the moment Cuba leads Latin America toward a new financial reality. A code born of collective consciousness, created to evolve with those who align.
+                  <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
+                    CubaNex is built to expand over time through modular utilities, open documentation, and future ecosystem layers.
                   </p>
                 </div>
-
-                {/* Hover Background */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(153, 69, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(153, 69, 255, 0.3) 1px, transparent 1px)',
-                    backgroundSize: '100% 100%, 15px 15px'
-                  }}
-                />
               </div>
+
             </div>
           </div>
           {/* why cubanex? start end  */}
@@ -396,30 +356,17 @@ export default function Home() {
                 <h2
                   className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
                 >
-                  From <span className="text-[#fc6]"> Havana</span> to the
-                  <span className="text-[#316CFF]"> Blockchain</span>
+                  Born from <span className="text-[#fc6]"> Cuba</span>. Built for the
+                  <span className="text-[#316CFF]"> Digital Future</span>.
                 </h2>{" "}
                 <div
-                  className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[16px] text-gray-300   mb-8`}
+                  className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[18px] text-[#9CB4D8] leading-relaxed mb-8`}
                 >
-                  <p className="pb-2">
-                    CubaNex is molded by the island's creativity and the clarity of
-                    modern digital tools. It emerges as a purposeful digital asset,
-                    for those who align with its vision.
-                  </p>
-                  <p className="pb-2">
-                    By joining cultural identity with new technologies, CubaNex creates
-                    a space for participation where the Cuban spirit connects with
-                    global innovation.
-                  </p>
-                  <p className="pb-2">
-                    The vision includes integrations with AI, sustainable models, and
-                    future Web3 tools—developed with intention and focus.
+                  <p className="pb-6">
+                    CubaNex draws inspiration from Cuba’s resilience, creativity, and cultural depth — then translates that spirit into a new digital form.
                   </p>
                   <p>
-                    CubaNex opens a modern digital path for those who are ready to
-                    explore new possibilities—building a bridge between tradition and
-                    technology.
+                    It is a bridge between heritage and intelligence, between identity and infrastructure, between what Cuba has always carried within and what technology can now reveal.
                   </p>
                 </div>
               </div>
@@ -438,164 +385,61 @@ export default function Home() {
       {/* ================= tokenomics ================= */}
 
       <ScrollReveal>
-        <section>
-          <h2
-            className={`${orbitron.className} mt-10 sm:mt-0  px-4 sm:px-0 text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
-          >
-            CNEX
-            <span className="text-[#316CFF]"> Tokenomics</span>
-          </h2>
-          <p
-            className={`${workSans.className} px-4 sm:px-0 text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
-          >
-            A new digital asset built for a global, community-driven ecosystem
-            inspired by Cuban culture, CUBANEX brings the CNEX token to life with
-            clear, transparent tokenomics.
-          </p>
-          {/*  */}
-          <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* TOKEN DISTRIBUTION BOX */}
-            <div className="bg-[#000] border  border-[#9333EA]/40 rounded-xl p-8 shadow-lg">
-              <h2 className={`${orbitron.className} text-white text-2xl mb-6`}>
-                Token Distribution
-              </h2>
+        <section className="py-16 px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2
+              className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-4`}
+            >
+              CNEX <span className="text-[#316CFF]">Token</span>
+            </h2>
+            <p
+              className={`${workSans.className} text-[16px] sm:text-[18px] text-[#9CB4D8] max-w-[600px] mx-auto mb-12`}
+            >
+              The digital asset at the center of the CubaNex ecosystem.
+            </p>
 
-              <ul className="space-y-4">
-                <li
-                  className={`${workSans.className} flex justify-between text-white/80`}
-                >
-                  <span className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-[#316CFF]"></span>
-                    Total Supply
-                  </span>
-                  <span className="text-[#316CFF] font-semibold">1B+</span>
-                </li>
-                <li
-                  className={`${workSans.className} flex justify-between text-white/80`}
-                >
-                  <span className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-[#7f5af0]"></span>
-                    Presale
-                  </span>
-                  <span className="text-[#7f5af0] font-semibold">40%</span>
-                </li>
-
-                <li
-                  className={`${workSans.className} flex justify-between text-white/80`}
-                >
-                  <span className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-[#ffb800]"></span>
-                    Liquidity
-                  </span>
-                  <span className="text-[#ffb800] font-semibold">30%</span>
-                </li>
-
-                <li
-                  className={`${workSans.className} flex justify-between text-white/80`}
-                >
-                  <span className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-[#00d1ff]"></span>
-                    Development
-                  </span>
-                  <span className="text-[#00d1ff] font-semibold">15%</span>
-                </li>
-
-                <li
-                  className={`${workSans.className} flex justify-between text-white/80`}
-                >
-                  <span className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-[#ff4d4d]"></span>
-                    Marketing
-                  </span>
-                  <span className="text-[#ff4d4d] font-semibold">10%</span>
-                </li>
-
-                <li
-                  className={`${workSans.className} flex justify-between text-white/80`}
-                >
-                  <span className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-[#00ff88]"></span>
-                    Team & Ecosystem
-                  </span>
-                  <span className="text-[#00ff88] font-semibold">5%</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* KEY FEATURES BOX */}
-            <div className="bg-[#000] border  border-[#9333EA]/40 rounded-xl p-8 shadow-lg">
-              <h2 className={`${orbitron.className} text-white text-2xl mb-6`}>
-                Key Features
-              </h2>
-
-              <div className="space-y-6">
-                {/* Total Supply */}
-                <div className="flex items-center gap-4">
-                  {/* <div className="w-12 h-12 rounded-lg bg-[#7f5af0] flex justify-center items-center text-white">
-                  <span className="text-xl">🔢</span>
-                </div> */}
-                  <div className="icon-card purple">
-                    <Wallet size={28} />
-                  </div>
-
-                  <div>
-                    <p className={`${workSans.className} text-white font-medium`}>
-                      Total Supply
-                    </p>
-                    <p className={`${workSans.className} text-white/60 text-sm`}>
-                      100,000,000,000 CNEX{" "}
-                    </p>
-                  </div>
+            <div className="bg-[#04071d]/80 border border-white/[0.05] rounded-3xl p-8 shadow-lg max-w-3xl mx-auto backdrop-blur-sm">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left">
+                
+                <div className="border-b sm:border-b-0 sm:border-r border-white/10 pb-6 sm:pb-0 sm:pr-8">
+                  <p className="text-gray-500 text-sm mb-1">Total Supply</p>
+                  <p className={`${orbitron.className} text-xl text-white font-medium`}>100,000,000,000 <span className="text-[#00D2FF]">CNEX</span></p>
+                </div>
+                
+                <div className="pb-6 sm:pb-0">
+                  <p className="text-gray-500 text-sm mb-1">Network</p>
+                  <p className="text-xl text-white font-medium">BNB Smart Chain</p>
                 </div>
 
-                {/* Smart Contract */}
-                <div className="flex items-center gap-4">
-                  {/* <div className="w-12 h-12 rounded-lg bg-[#ffb800] flex justify-center items-center text-white">
-                  <span className="text-xl">📜</span>
-                </div> */}
-                  <div className="icon-card yellow">
-                    <Shield size={28} />
-                  </div>
-                  <div>
-                    <p className={`${workSans.className} text-white font-medium`}>
-                      Smart Contract
-                    </p>
-                    <p className={`${workSans.className} text-white/60 text-sm`}>
-                      Audited & Verified
-                    </p>
-                  </div>
+                <div className="border-b sm:border-b-0 sm:border-r border-white/10 pb-6 sm:pb-0 sm:pr-8 sm:pt-6">
+                  <p className="text-gray-500 text-sm mb-1">Standard</p>
+                  <p className="text-xl text-white font-medium">BEP-20</p>
                 </div>
 
-                {/* Real Utility */}
-                <div className="flex items-center gap-4">
-                  {/* <div className="w-12 h-12 rounded-lg bg-[#00d1ff] flex justify-center items-center text-white">
-                  <span className="text-xl">🚀</span>
-                </div> */}
-                  <div className="icon-card cyan">
-                    <TrendingUp size={28} />
-                  </div>
-                  <div>
-                    <p className={`${workSans.className} text-white font-medium`}>
-                      Real Utility
-                    </p>
-                    <p className={`${workSans.className} text-white/60 text-sm`}>
-                      Transportation, Energy & DeFi
-                    </p>
-                  </div>
+                <div className="sm:pt-6">
+                  <p className="text-gray-500 text-sm mb-1">Contract Address</p>
+                  <a
+                    href="https://bscscan.com/token/0xf073d173Ed309f8A208e6C183eFf858DbC882DbB"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 group"
+                  >
+                    <span className="text-lg text-[#316CFF] font-mono group-hover:text-[#80ECFF] transition-colors">0xf073...2DbB</span>
+                    <img src="/link-external.svg" alt="" className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
+                  </a>
                 </div>
+
               </div>
             </div>
-          </div>
 
-          {/* BUTTON */}
-          <div className="flex justify-center mt-10">
-            <a href="#smart-contract">
-              <button className="px-[30px] py-3 text-[12px] sm:text-[18px]  sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2]">
-                View Smart Contract
-              </button>
-            </a>
+            <div className="flex justify-center mt-12">
+              <a href="/tokenomics">
+                <button className="px-8 py-3.5 text-[14px] sm:text-[16px] rounded-full text-white font-medium border border-white/20 hover:bg-white/10 transition-all duration-300">
+                  View Token Details
+                </button>
+              </a>
+            </div>
           </div>
-          {/*  */}
         </section>
       </ScrollReveal>
 
@@ -603,153 +447,116 @@ export default function Home() {
 
       {/* ================= Road Map ================= */}
       <ScrollReveal>
-        <section className="py-10 sm:py-24 bg-background relative overflow-hidden">
-          {/* Background Elements */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0 bg-gradient-glow" />
-          </div>
-          <div
-            className="absolute inset-0 opacity-[0.02]"
-            style={{
-              backgroundImage: "url('/assets/crypto-pattern.jpg')",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-            }}
-          />
-
-          <div className="container mx-auto px-4 relative z-10">
-            {/* Section Header */}
+        <section className="py-20 bg-[#000] relative overflow-hidden">
+          <div className="container mx-auto px-6 relative z-10">
             <h2
-              className={`${orbitron.className}  text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+              className={`${orbitron.className} text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-4`}
             >
-              Project
-              <span className="text-[#316CFF]"> Roadmap</span>
+              The Path of <span className="text-[#316CFF]">Awakening</span>
             </h2>
             <p
-              className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
+              className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-[#9CB4D8] max-w-[600px] mx-auto mb-16`}
             >
-              A clear roadmap for developing the CNEX ecosystem and supporting
-              community growth.
+              CubaNex unfolds in phases. Each phase reveals another layer of the ecosystem.
             </p>
 
-            {/* Roadmap Timeline Component */}
-            <div className="max-w-8xl mx-auto ">
-              <RoadmapTimeline />
+            <div className="max-w-3xl mx-auto">
+              <div className="relative border border-[#00D2FF]/20 bg-[#04071d]/60 backdrop-blur-sm rounded-3xl p-8 sm:p-10">
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#00D2FF]/10 rounded-full blur-2xl"></div>
+                
+                <p className={`${orbitron.className} text-[#00D2FF] font-semibold text-lg mb-2`}>Current Phase</p>
+                <h3 className="text-3xl text-white font-bold mb-8">Conscious Layer</h3>
+                
+                <ul className="space-y-4">
+                  {[
+                    "Brand system refinement",
+                    "Ecosystem page upgrade",
+                    "Whitepaper alignment",
+                    "Community activation",
+                    "Smart contract verification",
+                    "Labs foundation"
+                  ].map((milestone, idx) => (
+                    <li key={idx} className="flex items-center gap-4">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#316CFF]"></div>
+                      <span className="text-[#E4ECFF] text-lg">{milestone}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+              </div>
+            </div>
+
+            <div className="flex justify-center mt-12">
+              <a href="/about#roadmap">
+                <button className="px-8 py-3.5 text-[14px] sm:text-[16px] rounded-full text-white font-medium border border-white/20 hover:bg-white/10 transition-all duration-300">
+                  View Full Roadmap
+                </button>
+              </a>
             </div>
           </div>
         </section>
       </ScrollReveal>
-
       {/* ================= Road Map ================= */}
 
-      {/* ================= How to Buy CNEX ================= */}
+      {/* ================= How to Get CNEX ================= */}
 
       <ScrollReveal>
-        <section className="pb-8 sm:pb-16">
-          <h2
-            className={`${orbitron.className} text-center text-[26px] pt-10 sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
-          >
-            How to
-            <span className="text-[#316CFF]"> Get CNEX</span>
-          </h2>
-          <p
-            className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[500px]  mx-auto mb-8`}
-          >
-            An overview of how CNEX can be accessed on Binance Smart Chain{" "}
-          </p>
-          <div
-            id="smart-contracts"
-            className="px-6 grid max-w-[1300px] mx-auto gap-5 sm:gap-6 md:grid-cols-4 mt-20"
-          >
-            {/* Step 1 */}
-            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-              <div className="relative z-20 px-6">
-                <div className="w-full flex justify-center mb-4"><div className="step-circle">1</div></div>
-                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
-                  Set Up a Wallet
-                </h2>
-                <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                  BNB Smart Chain (BEP-20). Use MetaMask or Trust Wallet.
+        <section className="py-20 px-6">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2
+              className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-4`}
+            >
+              Accessing <span className="text-[#316CFF]">CNEX</span>
+            </h2>
+            <p
+              className={`${workSans.className} text-[16px] sm:text-[18px] text-[#9CB4D8] max-w-[600px] mx-auto mb-16`}
+            >
+              CNEX operates on BNB Smart Chain as a BEP-20 digital asset.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              
+              {/* Step 1 */}
+              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors text-left outline-none" tabIndex={0}>
+                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">1</div>
+                <h3 className="text-white text-xl font-bold mb-4">Set Up Wallet</h3>
+                <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                  Use MetaMask, Trust Wallet, or another compatible wallet.
                 </p>
               </div>
 
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{
-                  backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
-                  backgroundSize: '100% 100%, 15px 15px'
-                }}
-              />
-            </div>
-
-            {/* Step 2 */}
-            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-              <div className="relative z-20 px-6">
-                <div className="w-full flex justify-center mb-4"><div className="step-circle-1">2</div></div>
-                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
-                  Hold BNB
-                </h2>
-                <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                  BNB is used for network transactions on BSC. Standard fees apply.
+              {/* Step 2 */}
+              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors text-left outline-none" tabIndex={0}>
+                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">2</div>
+                <h3 className="text-white text-xl font-bold mb-4">Add BNB Smart Chain</h3>
+                <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                  Ensure your wallet is connected to BNB Smart Chain.
                 </p>
               </div>
 
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{
-                  backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
-                  backgroundSize: '100% 100%, 15px 15px'
-                }}
-              />
-            </div>
-
-            {/* Step 3 */}
-            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-              <div className="relative z-20 px-6">
-                <div className="w-full flex justify-center mb-4"><div className="step-circle-2">3</div></div>
-                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
-                  Connect
-                </h2>
-                <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                  Connect your wallet to the official platform to view features.
+              {/* Step 3 */}
+              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors text-left outline-none" tabIndex={0}>
+                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">3</div>
+                <h3 className="text-white text-xl font-bold mb-4">Verify Contract</h3>
+                <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                  Always use the official contract address listed on cubanex.io.
                 </p>
               </div>
 
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{
-                  backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
-                  backgroundSize: '100% 100%, 15px 15px'
-                }}
-              />
-            </div>
-
-            {/* Step 4 */}
-            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-              <div className="relative z-20 px-6">
-                <div className="w-full flex justify-center mb-4"><div className="step-circle-3">4</div></div>
-                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
-                  Receive CNEX
-                </h2>
-                <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                  Distributed according to the project’s token model.
+              {/* Step 4 */}
+              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors text-left outline-none" tabIndex={0}>
+                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">4</div>
+                <h3 className="text-white text-xl font-bold mb-4">Receive CNEX</h3>
+                <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                  CNEX distribution follows the official token model and project access structure.
                 </p>
               </div>
 
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{
-                  backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
-                  backgroundSize: '100% 100%, 15px 15px'
-                }}
-              />
             </div>
           </div>
-          <ConnectWallet />
         </section>
       </ScrollReveal>
-      {/* ================= How to Buy CNEX ================= */}
+      {/* ================= How to Get CNEX ================= */}
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
       <ScrollReveal>
@@ -769,13 +576,12 @@ export default function Home() {
             <h2
               className={`${orbitron.className} text-center text-[26px] pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
             >
-              Unlock <span className="text-[#316CFF]">VIP </span>
-              Access to <span className="text-[#00DED4]">CubaNex</span>
+              The Signal Is <span className="text-[#316CFF]">Open</span>
             </h2>
             <p
-              className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-gray-300 max-w-[550px]  mx-auto mb-8`}
+              className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-[#9CB4D8] max-w-[550px] mx-auto mb-8`}
             >
-              The project moves quietly. Those meant to find it always do.{" "}
+              The network is active. Connect to stay updated.
             </p>
 
             <VipForm />
@@ -798,7 +604,7 @@ export default function Home() {
                     Twitter / X
                   </h2>
                   <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                    Follow us for real-time updates and announcements
+                    Follow the transmission and project updates.
                     <br />
                     <br />
                     <span className="text-[#00D2FF] font-medium">@CubaNex</span>
@@ -829,7 +635,7 @@ export default function Home() {
                     Telegram
                   </h2>
                   <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                    Join our active community and chat with the team
+                    Enter the communication node.
                     <br />
                     <br />
                     <span className="text-[#00D2FF] font-medium">

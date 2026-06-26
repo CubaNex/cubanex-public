@@ -23,10 +23,15 @@ const page = () => {
       <ScrollReveal>
         <div className="flex px-4 min-w-full pt-[120px] pb-[60px] sm:pt-[150px] sm:pb-[80px] flex-col gap-2 items-center justify-center bg-cover tockenomicBg">
           <h1
-            className={`${orbitron.className} w-full text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-6`}
+            className={`${orbitron.className} w-full text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-4`}
           >
             <span className="text-[#316CFF]"> CNEX</span> Tokenomics
           </h1>
+          <p
+            className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-[#9CB4D8] mx-auto `}
+          >
+            The digital asset powering the next evolution of decentralized intelligence.
+          </p>
 
           <div className="bg-[#081420]/90 mt-8 backdrop-blur-md border border-[#00D2FF]/30 rounded-2xl p-8 mb-12 max-w-[900px] mx-auto text-left shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 p-4 opacity-10">
@@ -70,7 +75,7 @@ const page = () => {
 
             <div className="space-y-4">
               <h3 className={`${orbitron.className} text-white font-semibold text-lg`}>Description:</h3>
-              <p className={`${workSans.className} text-gray-300 leading-relaxed text-sm sm:text-base`}>
+              <p className={`${workSans.className} text-[#9CB4D8] leading-relaxed text-sm sm:text-base`}>
                 CubaNex (CNEX) is a decentralized digital asset built on the BNB Smart Chain.
                 The token serves as the foundation of the evolving CubaNex ecosystem, enabling
                 future on-chain tools, autonomous modules, and AI-driven system extensions.
@@ -79,13 +84,6 @@ const page = () => {
               </p>
             </div>
           </div>
-
-          <p
-            className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-gray-300 mx-auto `}
-          >
-            Transparent token distribution and real-world utility for a
-            community-driven ecosystem.
-          </p>
           <div className="pb-14 text-white relative z-100 flex justify-center">
             <a
               href="/CubaNex_Whitepaper_v1.0.pdf"
@@ -159,9 +157,9 @@ const page = () => {
             </div>
 
             <h3 className="text-xl  font-semibold mb-3 items-center">
-              Audited{" "}
+              Verified Contract{" "}
             </h3>
-            <p className="text-gray-400 text-sm">By Leading Firms</p>
+            <p className="text-gray-400 text-sm">On BNB Chain</p>
           </div>
         </ScrollReveal>
         {/* 3 */}
@@ -361,44 +359,50 @@ const page = () => {
       <UtilityCarousel 
         titleText={
            <>
-             Real-World <span className="text-[#00D2FF]">Utility</span>
+             Future Utility <span className="text-[#316CFF]">Layers</span>
            </>
         }
         items={[
           {
             id: 1,
             image: "/transportation.jpg",
-            category: "Use Case",
-            title: "Transportation",
-            description: "Power a network of electric vehicle charging stations, enabling clean and efficient mobility.",
-            link: "/utility/transportation"
+            category: "Layer 1",
+            title: "Digital Payments",
+            description: "A framework for frictionless borderless value transfer within the ecosystem.",
+            link: "#"
           },
           {
             id: 2,
             image: "/clean-energy.jpg",
-            category: "Sustainable Ecosystem",
-            title: "Clean Energy",
-            description: "Blockchain enables transparency & supports the transition toward sustainable mobility.",
-            link: "/utility/clean-energy"
+            category: "Layer 2",
+            title: "AI-Assisted Systems",
+            description: "Modular integrations for smart contracts, autonomous validation, and predictive analytics.",
+            link: "#"
           },
           {
             id: 3,
             image: "/defi-services.jpg",
-            category: "Financial Tools",
-            title: "DeFi Services",
-            description: "Access decentralized finance tools—lending, saving, staking, and yield farming—powered by blockchain.",
-            link: "/utility/defi-services"
+            category: "Layer 3",
+            title: "Infrastructure Concepts",
+            description: "Theoretical frameworks for decentralized physical infrastructure networks (DePIN).",
+            link: "#"
           },
           {
             id: 4,
             image: "/digital-economy.jpg",
-            category: "Commerce",
+            category: "Layer 4",
             title: "Digital Economy",
-            description: "Enable secure peer-to-peer transactions, digital payments, online businesses, and new income opportunities.",
-            link: "/utility/digital-economy"
+            description: "Building the participatory layer for the incoming AI-native civilization.",
+            link: "#"
           }
         ]}
       />
+      
+      <div className="max-w-4xl mx-auto px-6 pb-20 text-center">
+        <p className="text-[#9CB4D8] text-sm italic">
+          Disclaimer: Utility layers represent the intended evolutionary path of the CubaNex network. Timelines and features are subject to development milestones and ecosystem alignment.
+        </p>
+      </div>
     </div >
   );
 };

@@ -25,13 +25,12 @@ const page = () => {
             <h1
               className={`${orbitron.className} text-center sm:text-start text-[32px] sm:text-[56px] max-w-[800px]  text-[#fff] font-semibold leading-[1.2em] mb-6`}
             >
-              Join the <span className="text-[#316CFF]"> Community</span>
+              Join the <span className="text-[#316CFF]"> Signal</span>
             </h1>
             <p
-              className={`${workSans.className} text-center sm:text-start max-w-[750px]  text-[16px] sm:text-[24px] text-gray-300 mb-8`}
+              className={`${workSans.className} text-center sm:text-start max-w-[750px]  text-[16px] sm:text-[24px] text-[#9CB4D8] mb-8`}
             >
-              Connect with thousands of supporters building Cuba's decentralized
-              future together
+              The network is active. Connect with participants building the future of decentralized intelligence.
             </p>
           </div>
           <Image
@@ -55,7 +54,7 @@ const page = () => {
           <h2
             className={`${orbitron.className} text-center text-[30px]  sm:text-[40px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
           >
-            <span className="text-[#00DED4]"> Connect</span> With Us
+            Open <span className="text-[#316CFF]">Channels</span>
           </h2>
 
           <VipForm />
@@ -153,23 +152,39 @@ const page = () => {
         </div>
 
         <ScrollReveal>
-          <div
-            className={`${workSans.variable} relative z-10 ${orbitron.variable} w-full flex justify-center py-16 px-4 bg-[#060b12]`}
-          >
-            <div className="w-full max-w-[1000px] bg-cover border border-[#1b2733] rounded-xl p-10 text-center cmf">
+          <div className="w-full flex justify-center py-16 px-4 bg-[#060b12]">
+            <div className="w-full max-w-[1000px] border border-[#1b2733] rounded-xl p-10 text-center bg-[#04071d]">
               <h2
-                className={`${orbitron.className} text-white text-[40px] md:text-[50px] font-bold mb-10`}
+                className={`${orbitron.className} text-white text-[32px] md:text-[40px] font-bold mb-6`}
               >
-                Be Part of Our <span className="text-[#00D2FF]">Team!</span>
+                The First <span className="text-[#00D2FF]">Circle</span>
               </h2>
-              <p className="text-gray-400 text-[16px] max-w-[500px] mx-auto text-center">
-                We are a global, growing team on a mission to solve two of the
-                biggest pain points in the physical and digital world today – we
-                are the quintessentially PHIGITAL company:
+              <p className={`${workSans.className} text-[#9CB4D8] text-[16px] max-w-[700px] mx-auto text-center leading-relaxed mb-12`}>
+                CubaNex is not built by employees; it is built by participants. The first circle of contributors has laid the infrastructure. The next circles will expand it.
               </p>
+
+              <h3 className={`${orbitron.className} text-white text-[24px] font-semibold mb-8`}>
+                What We <span className="text-[#316CFF]">Stand For</span>
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                <div className="p-6 border border-white/5 bg-[#0a1128] rounded-xl">
+                  <h4 className={`${orbitron.className} text-[#00D2FF] text-lg font-bold mb-2`}>Alignment over noise</h4>
+                  <p className="text-[#9CB4D8] text-sm leading-relaxed">Focus on building systems of value rather than engaging in empty hype.</p>
+                </div>
+                <div className="p-6 border border-white/5 bg-[#0a1128] rounded-xl">
+                  <h4 className={`${orbitron.className} text-[#316CFF] text-lg font-bold mb-2`}>Code over speculation</h4>
+                  <p className="text-[#9CB4D8] text-sm leading-relaxed">Prioritize robust infrastructure, transparent contracts, and functional technology.</p>
+                </div>
+                <div className="p-6 border border-white/5 bg-[#0a1128] rounded-xl">
+                  <h4 className={`${orbitron.className} text-[#9945FF] text-lg font-bold mb-2`}>Evolution over stagnation</h4>
+                  <p className="text-[#9CB4D8] text-sm leading-relaxed">Embrace change. Adaptability is the core requirement for longevity in decentralized systems.</p>
+                </div>
+              </div>
             </div>
           </div>
         </ScrollReveal>
+
+        <div className="h-32" />
       </section>
     </div>
   );

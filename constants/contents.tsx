@@ -11,7 +11,7 @@ export const textContent = {
     // -----------------------
     footer: {
       brandText:
-        "Driving sustainable Web3 development in Cuba through blockchain solutions.",
+        "CubaNex is an AI-native digital asset ecosystem inspired by Cuba and built for the next era of decentralized intelligence.",
       quickLinks: ["Home", "About", "Tokenomics"],
       resources: [
         { label: "Whitepaper", slug: "whitepaper" },
