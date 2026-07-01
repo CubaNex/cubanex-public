@@ -104,9 +104,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
             </a> */}
 
             <a
-              href="https://github.com/CubaNex"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/labs"
               className="flex items-center gap-2 group"
             >
               <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 group-hover:bg-white transition-colors" />
@@ -213,9 +211,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
                 {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco (PDF)"}
               </a> */}
               <a
-                href="https://github.com/CubaNex"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/labs"
                 className="flex items-center gap-2 mt-2"
               >
                 <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />

@@ -293,7 +293,7 @@ const Page = () => {
                 <p
                   className={`${orbitron.className} text-[24px] sm:text-[34px] text-[#00D2FF] mb-6`}
                 >
-                  The Alchemist
+                  El Alquimista
                 </p>
 
                 {/* Description */}
@@ -305,7 +305,7 @@ const Page = () => {
                   </p>
 
                   <p>
-                    The project's architect operates under the alias "The Alchemist" to maintain focus on the code, the ecosystem, and the community, rather than individual identity.
+                    The project's architect operates under the alias "El Alquimista" to maintain focus on the code, the ecosystem, and the community, rather than individual identity.
                   </p>
                 </div>
 

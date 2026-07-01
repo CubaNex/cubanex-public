@@ -147,72 +147,146 @@ const roadmapPhases = [
 
 export default function Home() {
   return (
-    <main className="bg-black  text-white min-h-0 sm:min-h-screen w-full overflow-x-hidden">
+    <main className="bg-black text-white min-h-0 sm:min-h-screen w-full overflow-x-hidden">
       {/* ================= HERO SECTION ================= */}
+      {/* Chapter 1: The Awakening — Approved hero artwork */}
+      <style>{`
+        @media (prefers-reduced-motion: no-preference) {
+          .hero-sphere {
+            animation: sphereBreathe 16s ease-in-out infinite;
+          }
+          .hero-ring {
+            animation: ringRotate 200s linear infinite;
+          }
+          .hero-particle {
+            animation: particleDrift 8s ease-in-out infinite;
+          }
+          .hero-particle:nth-child(2) { animation-delay: -2s; animation-duration: 11s; }
+          .hero-particle:nth-child(3) { animation-delay: -5s; animation-duration: 9s; }
+          .hero-particle:nth-child(4) { animation-delay: -1s; animation-duration: 13s; }
+          .hero-particle:nth-child(5) { animation-delay: -7s; animation-duration: 10s; }
+        }
+        @keyframes sphereBreathe {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.015); }
+        }
+        @keyframes ringRotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes particleDrift {
+          0%, 100% { opacity: 0; transform: translateY(0px) scale(1); }
+          20% { opacity: 0.06; }
+          50% { opacity: 0.03; transform: translateY(-18px) scale(1.1); }
+          80% { opacity: 0.06; }
+        }
+      `}</style>
+
       <ScrollReveal delay={0.1} yOffset={0}>
-        <section className="overflow-hidden z-20  relative pb-20 sm:pb-0 pt-12 w-full min-h-0 sm:min-h-screen flex items-center justify-center px-6">
-          <div className="absolute bg-[#000] inset-0 z-0">
-            {/* <video
-            src="/cubanex-video.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className=" absolute inset-0 w-full h-full object-cover"
-          /> */}
+        <section className="overflow-hidden z-20 relative pb-20 sm:pb-0 pt-12 w-full min-h-0 sm:min-h-screen flex items-center justify-center px-6">
+
+          {/* ── Approved Artwork Background ── */}
+          <div className="absolute inset-0 z-0 bg-[#000]">
+
+            {/* Hero image — desktop */}
+            <div className="hero-sphere hidden sm:block w-full h-full">
+              <img
+                src="/cheroimg.jpeg"
+                className="w-full h-full object-cover object-center"
+                alt="CubaNex – The Awakening"
+                style={{ opacity: 1 }}
+              />
+            </div>
+
+            {/* Hero image — mobile (cropped to keep sphere dominant) */}
             <img
-              src="/cubanexthero.png"
-              className="hidden sm:block w-full h-full center object-cover opacity-45"
-              alt="Hero Background"
+              src="/cheroimg.jpeg"
+              className="block sm:hidden w-full h-full object-cover"
+              style={{ objectPosition: "center 30%", opacity: 1 }}
+              alt="CubaNex – The Awakening"
             />
-            <img
-              src="/cubanextherophone.png"
-              className="block sm:hidden w-full h-full center object-cover opacity-45"
-              alt="Hero Background"
+
+            {/* Ambient particles */}
+            <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
+              {[...Array(5)].map((_, i) => (
+                <div
+                  key={i}
+                  className="hero-particle absolute rounded-full bg-[#316CFF]"
+                  style={{
+                    width: `${60 + i * 40}px`,
+                    height: `${60 + i * 40}px`,
+                    left: `${10 + i * 18}%`,
+                    top: `${15 + (i % 3) * 25}%`,
+                    filter: "blur(60px)",
+                    opacity: 0,
+                  }}
+                />
+              ))}
+            </div>
+
+            {/* Cinematic vignette — edges only, no heavy overlay */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%)",
+              }}
             />
-            <div className="absolute inset-0 bg-black/40 sm:bg-black/40" />
+            {/* Bottom fade to page */}
+            <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent pointer-events-none" />
           </div>
-          <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center  sm:pt-20">
+
+          {/* ── Overlay Content ── */}
+          <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center sm:pt-20">
+
+            {/* Subheadline above */}
+            <p
+              className={`${workSans.className} text-[13px] sm:text-[15px] text-[#80ECFF] tracking-[0.2em] uppercase font-semibold mb-5 opacity-90`}
+            >
+              Cuba&apos;s AI-Native Digital Asset
+            </p>
+
+            {/* Headline */}
             <h1
               className={`${orbitron.className} text-[32px] sm:text-[62px] lg:text-[72px] text-[#fff] font-bold leading-[1.1em] tracking-tight mb-8`}
+              style={{ textShadow: "0 2px 40px rgba(0,0,0,0.6)" }}
             >
-              Cuba’s AI-Native Digital Asset
-              <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#316CFF] to-[#80ECFF]">
                 The Code Has Awakened.
               </span>
             </h1>
 
-            <div className="max-w-[800px] mx-auto space-y-4 mb-10">
+            {/* Body */}
+            <div className="max-w-[720px] mx-auto mb-10">
               <p
-                className={`${workSans.className} text-[18px] sm:text-[22px] text-gray-200 leading-relaxed font-medium`}
+                className={`${workSans.className} text-[17px] sm:text-[20px] text-gray-200 leading-relaxed font-medium`}
+                style={{ textShadow: "0 1px 20px rgba(0,0,0,0.8)" }}
               >
                 CubaNex is an AI-native digital asset built on BNB Chain, designed to evolve into a decentralized intelligence ecosystem.
               </p>
-              <p
-                className={`${workSans.className} text-[14px] sm:text-[16px] text-[#80ECFF] tracking-wide uppercase font-semibold`}
-              >
-                BEP-20 token powered by adaptive autonomous systems on BNB Chain
-              </p>
             </div>
 
+            {/* CTA Buttons */}
             <div className="flex flex-row gap-2 sm:gap-6 justify-center items-center">
               <a href="/community" className="w-auto">
                 <button
-                  className="w-auto px-4 py-3 sm:px-6 sm:py-3 text-[12px] sm:text-[16px] whitespace-nowrap rounded-full text-white border border-white/20 font-medium hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+                  id="hero-enter-ecosystem"
+                  className="w-auto px-5 py-3 sm:px-7 sm:py-4 text-[13px] sm:text-[16px] whitespace-nowrap rounded-full text-white border border-white/30 font-medium hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
                 >
                   Enter the Ecosystem
                 </button>
               </a>
               <a href="/whitepaper" className="w-auto">
                 <button
-                  className="w-auto px-4 py-3 sm:px-6 sm:py-3 text-[12px] sm:text-[16px] whitespace-nowrap rounded-full text-[#000] font-bold bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2] hover:shadow-[0_0_20px_rgba(128,236,255,0.4)] transition-all duration-300"
+                  id="hero-read-whitepaper"
+                  className="w-auto px-5 py-3 sm:px-7 sm:py-4 text-[13px] sm:text-[16px] whitespace-nowrap rounded-full text-[#000] font-bold bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2] hover:shadow-[0_0_24px_rgba(128,236,255,0.5)] transition-all duration-300"
                 >
                   Read Whitepaper
                 </button>
               </a>
             </div>
 
+            {/* Trust badges */}
             <div className="pt-10 hidden sm:flex gap-4 lg:gap-8 justify-center opacity-60">
               <div className="flex items-center gap-2">
                 <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
