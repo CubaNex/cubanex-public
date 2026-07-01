@@ -115,7 +115,7 @@ export default function LabsPage() {
           {/* Desktop — full bleed, sphere centred */}
           <div className="forge-sphere hidden sm:block w-full h-full">
             <img
-              src="/lab.png"
+              src="/active-home-hero.png"
               className="w-full h-full object-cover object-center"
               alt="CubaNex Labs – The Forge"
             />
@@ -123,7 +123,7 @@ export default function LabsPage() {
 
           {/* Mobile — cropped to keep sphere + figure dominant */}
           <img
-            src="/lab.png"
+            src="/active-home-hero.png"
             className="block sm:hidden w-full h-full object-cover"
             style={{ objectPosition: "center 25%" }}
             alt="CubaNex Labs – The Forge"
@@ -162,15 +162,15 @@ export default function LabsPage() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.62) 100%)",
+                "radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.38) 100%)",
             }}
           />
 
           {/* Bottom fade — merges into page content */}
-          <div className="absolute bottom-0 left-0 right-0 h-52 bg-gradient-to-t from-black to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-52 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
 
           {/* Top fade — breathing room under header */}
-          <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-black/65 to-transparent pointer-events-none" />
+          <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-black/40 to-transparent pointer-events-none" />
         </div>
 
         {/* Hero text */}
