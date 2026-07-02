@@ -34,18 +34,18 @@ const page = () => {
             </p>
           </div>
           <Image
-            alt="logo"
-            src={"/assets/cubanex-token-v2-32x32.svg"}
+            alt="community"
+            src={"/7-2-26/community-7-2-26.jpeg"}
             width={500}
             height={500}
-            className="hidden sm:block"
+            className="hidden sm:block rounded-2xl border border-white/10"
           />
           <Image
-            alt="logo"
-            src={"/assets/cubanex-token-v2-32x32.svg"}
+            alt="community"
+            src={"/7-2-26/community-7-2-26.jpeg"}
             width={300}
             height={200}
-            className="block mt-[-60px] mx-auto sm:hidden"
+            className="block mt-[20px] mx-auto sm:hidden rounded-2xl border border-white/10"
           />
         </div>
       </ScrollReveal>

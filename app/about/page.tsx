@@ -21,24 +21,28 @@ const Page = () => {
     <div className="main relative bg-[#010813]">
       {/* HERO */}
       <ScrollReveal delay={0.1}>
-        <div className="flex px-4 pt-[120px] pb-[40px] sm:pb-[80px] sm:py-[150px] flex-col gap-2 items-center justify-center abhBg">
-          <h1
-            className={`${orbitron.className} text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-6`}
-          >
-            About <span className="text-[#00D2FF]"> CubaNex</span>
+        <section className="max-w-5xl mx-auto pt-28 px-4 text-center">
+          <h1 className={`${orbitron.className} text-4xl sm:text-5xl tracking-tight mb-6`}>
+            <span className="text-white">About</span>{" "}
+            <span className="text-[#00D2FF]">CubaNex</span>
           </h1>
 
-          <p
-            className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-[#9CB4D8] mx-auto mb-4`}
-          >
+          <div className="mt-12 relative flex justify-center">
+            <div className="absolute inset-0 bg-[#00D2FF]/5 blur-[100px] rounded-full"></div>
+            <img
+              src="/7-2-26/about-7-2-26.jpeg"
+              alt="CubaNex About Visualization"
+              className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#00D2FF]/20 shadow-2xl shadow-[#00D2FF]/10"
+            />
+          </div>
+
+          <p className={`${workSans.className} mt-12 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto`}>
             CubaNex is not merely a token; it is the genesis of an AI-native digital civilization. Born from a vision of decentralized intelligence, it bridges human participation with autonomous systems to build a conscious infrastructure for the future.
           </p>
-          <p
-            className={`${workSans.className} max-w-[750px] text-center text-[14px] sm:text-[18px] text-[#00D2FF]/80 mx-auto mb-8 font-medium`}
-          >
+          <p className={`${workSans.className} mt-4 text-[14px] sm:text-[16px] text-[#00D2FF]/80 max-w-4xl mx-auto font-medium`}>
             An evolving framework operating on BNB Smart Chain.
           </p>
-        </div>
+        </section>
       </ScrollReveal>
 
       <section className="relative w-full pt-8 sm:pt-24 px-4">

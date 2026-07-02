@@ -15,36 +15,31 @@ const Whitepaper = () => {
   return (
     <div className="whitepaper-page min-h-screen bg-background text-foreground">
       {/* ================= HERO ================= */}
-      <section className="hero-section pt-32 pb-16 px-4 relative overflow-hidden">
-        <div className="hero-glow-bg absolute inset-0" />
-        <div className="hero-orb absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+      <section className="max-w-5xl mx-auto pt-28 px-4 text-center">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-[11px] font-semibold tracking-widest uppercase mb-8">
+          <FileText className="w-4 h-4" />
+          <span>CUBANEX WHITEPAPER v1.0</span>
+        </div>
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="badge mb-8">
-            <FileText className="badge-icon" />
-            <span className="badge-text">CUBANEX WHITEPAPER v1.0</span>
-          </div>
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6 font-display text-white">
+          <span className="text-white">NOTHING IS ADDED</span><br/>
+          <span className="text-[#00D2FF]">ONLY REVEALED</span>
+        </h1>
 
-          <h1 className="whitepaper-title text-4xl md:text-6xl font-display font-bold mb-4">
-            NOTHING IS ADDED
-          </h1>
-          <p className="whitepaper-subtitle text-xl md:text-2xl mb-2">
-            ONLY REVEALED
-          </p>
-          <p className="whitepaper-body text-lg italic mb-8">
-            Nada se añade — solo se revela
-          </p>
+        <div className="mt-12 relative flex justify-center">
+          <div className="absolute inset-0 bg-[#00D2FF]/5 blur-[100px] rounded-full"></div>
+          <img
+            src="/7-2-26/whitepaper-7-2-26.jpeg"
+            alt="CubaNex Whitepaper Visualization"
+            className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#00D2FF]/20 shadow-2xl shadow-[#00D2FF]/10"
+          />
+        </div>
 
-          <div className="card-glass mb-8">
-            <p className="whitepaper-title mb-4">
-              CubaNex is a self-evolving digital asset built on the Binance
-              Smart Chain.
-            </p>
-            <p className="whitepaper-body italic">
-              Un activo digital auto-evolutivo construido sobre Binance Smart
-              Chain.
-            </p>
-          </div>
+        <p className="mt-12 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto">
+          CubaNex is a self-evolving digital asset built on the Binance Smart Chain.
+          <br/>
+          <span className="italic">Un activo digital auto-evolutivo construido sobre Binance Smart Chain.</span>
+        </p>
 
           <blockquote className="blockquote">
             <p className="mb-2">
@@ -96,7 +91,6 @@ const Whitepaper = () => {
               </li>
             </ul>
           </div>
-        </div>
       </section>
 
       {/* ================= SECTION 01 — ABSTRACT ================= */}

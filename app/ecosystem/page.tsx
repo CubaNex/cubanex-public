@@ -15,7 +15,7 @@ export default function EcosystemPage() {
           <div className="mt-12 relative flex justify-center">
             <div className="absolute inset-0 bg-[#22E6E3]/5 blur-[100px] rounded-full"></div>
             <img
-              src="/ecosystem.jpeg"
+              src="/7-2-26/ecosystem-7-2-26.jpeg"
               alt="CubaNex Ecosystem Visualization"
               className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#22E6E3]/20 shadow-2xl shadow-[#22E6E3]/10"
             />

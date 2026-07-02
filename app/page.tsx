@@ -191,7 +191,7 @@ export default function Home() {
             {/* Hero image — desktop */}
             <div className="hero-sphere hidden sm:block w-full h-full">
               <img
-                src="/cheroimg.jpeg"
+                src="/7-2-26/home-hero-7-2-26.jpeg"
                 className="w-full h-full object-cover object-center"
                 alt="CubaNex – The Awakening"
                 style={{ opacity: 1 }}
@@ -200,7 +200,7 @@ export default function Home() {
 
             {/* Hero image — mobile (cropped to keep sphere dominant) */}
             <img
-              src="/cheroimg.jpeg"
+              src="/7-2-26/home-hero-7-2-26.jpeg"
               className="block sm:hidden w-full h-full object-cover"
               style={{ objectPosition: "center 30%", opacity: 1 }}
               alt="CubaNex – The Awakening"

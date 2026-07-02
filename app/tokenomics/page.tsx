@@ -21,15 +21,22 @@ const page = () => {
   return (
     <div className="main w-full relative  bg-[#010813]">
       <ScrollReveal>
-        <div className="flex px-4 min-w-full pt-[120px] pb-[60px] sm:pt-[150px] sm:pb-[80px] flex-col gap-2 items-center justify-center bg-cover tockenomicBg">
-          <h1
-            className={`${orbitron.className} w-full text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-4`}
-          >
-            <span className="text-[#316CFF]"> CNEX</span> Tokenomics
+        <section className="max-w-5xl mx-auto pt-28 px-4 text-center">
+          <h1 className={`${orbitron.className} text-4xl sm:text-5xl tracking-tight mb-6`}>
+            <span className="text-[#316CFF]">CNEX</span>{" "}
+            <span className="text-white">Tokenomics</span>
           </h1>
-          <p
-            className={`${workSans.className} max-w-[750px] text-center text-[16px] sm:text-[24px] text-[#9CB4D8] mx-auto `}
-          >
+
+          <div className="mt-12 relative flex justify-center">
+            <div className="absolute inset-0 bg-[#316CFF]/5 blur-[100px] rounded-full"></div>
+            <img
+              src="/7-2-26/token-7-2-26.jpeg"
+              alt="CNEX Tokenomics Visualization"
+              className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#316CFF]/20 shadow-2xl shadow-[#316CFF]/10"
+            />
+          </div>
+
+          <p className={`${workSans.className} mt-12 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto`}>
             The digital asset powering the next evolution of decentralized intelligence.
           </p>
 
@@ -99,7 +106,7 @@ const page = () => {
               Download Whitepaper (PDF)
             </a>
           </div>
-        </div>
+        </section>
       </ScrollReveal>
       <div className="relative z-10 px-6 grid max-w-[1000px] text-white mx-auto gap-8 md:grid-cols-3">
         {/* 1 */}

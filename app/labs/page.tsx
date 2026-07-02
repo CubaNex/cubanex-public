@@ -71,170 +71,33 @@ export default function LabsPage() {
     <main
       className={`${workSans.variable} bg-black text-white min-h-screen w-full overflow-x-hidden`}
     >
-      {/* ── CSS Animations ── */}
-      <style>{`
-        @media (prefers-reduced-motion: no-preference) {
-          .forge-sphere {
-            animation: forgeBreathe 16s ease-in-out infinite;
-          }
-          .forge-beam {
-            animation: forgePulse 4s ease-in-out infinite;
-          }
-          .forge-particle {
-            animation: forgeParticleDrift 10s ease-in-out infinite;
-          }
-          .forge-particle:nth-child(2) { animation-delay: -3s;  animation-duration: 13s; }
-          .forge-particle:nth-child(3) { animation-delay: -6s;  animation-duration: 9s;  }
-          .forge-particle:nth-child(4) { animation-delay: -1s;  animation-duration: 15s; }
-          .forge-particle:nth-child(5) { animation-delay: -8s;  animation-duration: 11s; }
-        }
-        @keyframes forgeBreathe {
-          0%, 100% { transform: scale(1); }
-          50%       { transform: scale(1.015); }
-        }
-        @keyframes forgePulse {
-          0%, 100% { opacity: 0.85; }
-          50%       { opacity: 1; }
-        }
-        @keyframes forgeParticleDrift {
-          0%, 100% { opacity: 0;    transform: translateY(0px)   scale(1); }
-          20%      { opacity: 0.05; }
-          50%      { opacity: 0.025; transform: translateY(-20px) scale(1.12); }
-          80%      { opacity: 0.05; }
-        }
-      `}</style>
-
       {/* ══════════════════════════════════════════
           HERO — THE FORGE
       ══════════════════════════════════════════ */}
-      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+      <ScrollReveal delay={0.1}>
+        <section className="max-w-5xl mx-auto pt-28 px-4 text-center">
+          <h1 className={`${orbitron.className} text-4xl sm:text-5xl tracking-tight mb-6`}>
+            <span className="text-white">CubaNex</span>{" "}
+            <span className="text-[#316CFF]">Labs</span>
+          </h1>
 
-        {/* Background artwork */}
-        <div className="absolute inset-0 z-0 bg-black">
-
-          {/* Desktop — full bleed, sphere centred */}
-          <div className="forge-sphere hidden sm:block w-full h-full">
+          <div className="mt-12 relative flex justify-center">
+            <div className="absolute inset-0 bg-[#316CFF]/5 blur-[100px] rounded-full"></div>
             <img
-              src="/active-home-hero.png"
-              className="w-full h-full object-cover object-center"
-              alt="CubaNex Labs – The Forge"
+              src="/7-2-26/labs-7-2-26.jpeg"
+              alt="CubaNex Labs Visualization"
+              className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#316CFF]/20 shadow-2xl shadow-[#316CFF]/10"
             />
           </div>
 
-          {/* Mobile — cropped to keep sphere + figure dominant */}
-          <img
-            src="/active-home-hero.png"
-            className="block sm:hidden w-full h-full object-cover"
-            style={{ objectPosition: "center 25%" }}
-            alt="CubaNex Labs – The Forge"
-          />
-
-          {/* Ambient colour particles */}
-          <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
-            {[...Array(5)].map((_, i) => (
-              <div
-                key={i}
-                className="forge-particle absolute rounded-full"
-                style={{
-                  width: `${80 + i * 50}px`,
-                  height: `${80 + i * 50}px`,
-                  left: `${8 + i * 20}%`,
-                  top: `${10 + (i % 3) * 28}%`,
-                  background: (["#316CFF", "#00D2FF", "#9945FF", "#14F195", "#316CFF"] as const)[i],
-                  filter: "blur(70px)",
-                  opacity: 0,
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Energy beam pulse — extremely subtle vertical strip aligned to centre beam */}
-          <div
-            className="forge-beam absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                "linear-gradient(to bottom, transparent 0%, rgba(49,108,255,0.04) 35%, rgba(128,236,255,0.07) 50%, rgba(49,108,255,0.04) 65%, transparent 100%)",
-            }}
-          />
-
-          {/* Cinematic vignette — edges only, no heavy center darkening */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.38) 100%)",
-            }}
-          />
-
-          {/* Bottom fade — merges into page content */}
-          <div className="absolute bottom-0 left-0 right-0 h-52 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
-
-          {/* Top fade — breathing room under header */}
-          <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-black/40 to-transparent pointer-events-none" />
-        </div>
-
-        {/* Hero text */}
-        <div className="relative z-10 max-w-[1100px] mx-auto px-6 text-center pt-28 pb-32 sm:pt-36 sm:pb-40">
-
-          {/* Label */}
-          <p
-            className={`${workSans.className} text-[11px] sm:text-[13px] text-[#80ECFF] tracking-[0.28em] uppercase font-semibold mb-6 opacity-85`}
-          >
-            CubaNex Labs · Flagship Artwork 03
-          </p>
-
-          {/* Headline */}
-          <h1
-            className={`${orbitron.className} text-[48px] sm:text-[76px] lg:text-[96px] font-bold leading-[1.04em] tracking-tight mb-8`}
-            style={{ textShadow: "0 2px 50px rgba(0,0,0,0.75)" }}
-          >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#316CFF] via-[#80ECFF] to-[#14F195]">
-              The Forge
-            </span>
-          </h1>
-
-          {/* Subheadline */}
-          <p
-            className={`${workSans.className} text-[16px] sm:text-[20px] text-gray-200 leading-relaxed font-medium max-w-[660px] mx-auto mb-5`}
-            style={{ textShadow: "0 1px 24px rgba(0,0,0,0.9)" }}
-          >
-            Where intelligent systems are conceived, refined, and prepared for the next generation of the CubaNex ecosystem.
-          </p>
-
-          {/* Body */}
-          <p
-            className={`${workSans.className} text-[14px] sm:text-[16px] text-[#9CB4D8] leading-relaxed max-w-[580px] mx-auto mb-12`}
-            style={{ textShadow: "0 1px 16px rgba(0,0,0,0.8)" }}
-          >
+          <p className={`${workSans.className} mt-12 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto`}>
             CubaNex Labs is the research and development division of the ecosystem. It explores future AI-assisted systems, autonomous tools, modular infrastructure, and experimental technologies that may become future layers of CubaNex.
           </p>
-
-          {/* CTAs */}
-          <div className="flex flex-row gap-3 sm:gap-5 justify-center items-center flex-wrap">
-            <a href="/ecosystem" className="w-auto">
-              <button
-                id="labs-explore-ecosystem"
-                className="px-6 py-3 sm:px-8 sm:py-4 text-[13px] sm:text-[15px] whitespace-nowrap rounded-full text-[#000] font-bold bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2] hover:shadow-[0_0_28px_rgba(128,236,255,0.5)] transition-all duration-300"
-              >
-                Explore Labs
-              </button>
-            </a>
-            <a
-              href="https://github.com/CubaNex"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-auto"
-            >
-              <button
-                id="labs-view-github"
-                className="px-6 py-3 sm:px-8 sm:py-4 text-[13px] sm:text-[15px] whitespace-nowrap rounded-full text-white border border-white/30 font-medium hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
-              >
-                View GitHub
-              </button>
-            </a>
-          </div>
-        </div>
-      </section>
+          <p className={`${workSans.className} mt-4 text-[14px] sm:text-[16px] text-[#316CFF]/80 max-w-4xl mx-auto font-medium`}>
+            Where intelligent systems are conceived, refined, and prepared for the next generation of the CubaNex ecosystem.
+          </p>
+        </section>
+      </ScrollReveal>
 
       {/* ══════════════════════════════════════════
           DESIGN PHILOSOPHY PILLARS
