@@ -50,11 +50,13 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
 
   const t = textContent[language].header;
 
-  const menuItems = [
-    { name: t.links[0], path: "/" },
-    { name: t.links[1], path: "/about" },
-    { name: t.links[2], path: "/tokenomics" },
-    { name: t.links[3], path: "/community" },
+  const navItems = [
+    { type: "link", name: t.links[0], path: "/" },
+    { type: "a", name: language === "eng" ? "Ecosystem" : "Ecosistema", path: "/ecosystem" },
+    { type: "labs", name: "Labs", path: "/labs" },
+    { type: "link", name: t.links[2], path: "/tokenomics" },
+    { type: "link", name: t.links[3], path: "/community" },
+    { type: "link", name: t.links[1], path: "/about" },
   ];
 
   return (
@@ -86,30 +88,39 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden md:flex flex-1 justify-center  items-center gap-6 text-white font-normal">
-            {menuItems.map((item, idx) => (
-              <Link
-                key={idx}
-                href={language === "esp" ? "/es" + item.path : item.path}
-                className="hover:text-gray-300 cursor-pointer transition"
-              >
-                {item.name}
-              </Link>
-            ))}
-            <a href="/ecosystem">
-              {language === "eng" ? "Ecosystem" : "Ecosystem"}
-            </a>
-            {/* <a href="/CubaNex_Whitepaper_v1.0.pdf">
-              {language === "eng" ? "Whitepaper" : "Libro Blanco"}
-            </a> */}
-
-            <a
-              href="/labs"
-              className="flex items-center gap-2 group"
-            >
-              <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 group-hover:bg-white transition-colors" />
-              <span className="text-gray-300 group-hover:text-white transition-colors tracking-wide text-sm font-medium">Labs</span>
-            </a>
+          <nav className="hidden md:flex flex-1 justify-center items-center gap-6 text-white font-normal">
+            {navItems.map((item, idx) => {
+              if (item.type === "link") {
+                return (
+                  <Link
+                    key={idx}
+                    href={language === "esp" ? (item.path === "/" ? "/es" : "/es" + item.path) : item.path}
+                    className="hover:text-gray-300 cursor-pointer transition"
+                  >
+                    {item.name}
+                  </Link>
+                );
+              } else if (item.type === "a") {
+                return (
+                  <a key={idx} href={item.path} className="hover:text-gray-300 cursor-pointer transition">
+                    {item.name}
+                  </a>
+                );
+              } else if (item.type === "labs") {
+                return (
+                  <a
+                    key={idx}
+                    href={item.path}
+                    className="flex items-center gap-2 group"
+                  >
+                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 group-hover:bg-white transition-colors" />
+                    <span className="text-gray-300 group-hover:text-white transition-colors tracking-wide text-sm font-medium">
+                      {item.name}
+                    </span>
+                  </a>
+                );
+              }
+            })}
           </nav>
 
           {/* Desktop Buttons */}
@@ -189,34 +200,38 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
             className="fixed pt-[70px] right-0 h-[calc(100%-70px)] w-64 bg-[#1A1A20] text-white p-6 z-[999] flex flex-col"
           >
             <nav className="flex flex-col gap-6 text-lg mt-4">
-              {menuItems.map((item, idx) => (
+              {navItems.map((item, idx) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, x: 40 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.08 }}
                 >
-                  <Link
-                    href={language === "esp" ? "/es" + item.path : item.path}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
+                  {item.type === "link" && (
+                    <Link
+                      href={language === "esp" ? (item.path === "/" ? "/es" : "/es" + item.path) : item.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                  {item.type === "a" && (
+                    <a href={item.path} onClick={() => setIsMobileMenuOpen(false)}>
+                      {item.name}
+                    </a>
+                  )}
+                  {item.type === "labs" && (
+                    <a
+                      href={item.path}
+                      className="flex items-center gap-2 mt-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                      <span className="text-gray-300 tracking-wide text-sm font-medium">{item.name}</span>
+                    </a>
+                  )}
                 </motion.div>
-              ))}{" "}
-              <a href="/ecosystem">
-                {language === "eng" ? "Ecosystem" : "Ecosystem"}
-              </a>
-              {/* <a href="/CubaNex_Whitepaper_v1.0.pdf">
-                {language === "eng" ? "Whitepaper (PDF)" : "Libro Blanco (PDF)"}
-              </a> */}
-              <a
-                href="/labs"
-                className="flex items-center gap-2 mt-2"
-              >
-                <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                <span className="text-gray-300 tracking-wide text-sm font-medium">Labs</span>
-              </a>
+              ))}
             </nav>
             <Link
               href={
