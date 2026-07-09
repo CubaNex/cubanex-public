@@ -21,18 +21,21 @@ const Page = () => {
     <div className="main relative bg-[#010813]">
       {/* HERO */}
       <ScrollReveal delay={0.1}>
-        <section className="max-w-5xl mx-auto pt-28 px-4 text-center">
+        <section className="max-w-5xl mx-auto pt-32 px-4 text-center">
           <h1 className={`${orbitron.className} text-4xl sm:text-5xl tracking-tight mb-6`}>
             <span className="text-white">About</span>{" "}
             <span className="text-[#00D2FF]">CubaNex</span>
           </h1>
 
-          <div className="mt-12 relative flex justify-center">
-            <div className="absolute inset-0 bg-[#00D2FF]/5 blur-[100px] rounded-full"></div>
-            <img
+          <div className="mt-14 relative flex justify-center w-full max-w-4xl mx-auto aspect-[16/9]">
+            <div className="absolute inset-0 bg-[#00D2FF]/5 blur-[100px] rounded-full animate-ambient-pulse"></div>
+            <Image
               src="/7-2-26/about-7-2-26.jpeg"
               alt="CubaNex About Visualization"
-              className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#00D2FF]/20 shadow-2xl shadow-[#00D2FF]/10"
+              fill
+              priority
+              className="mobile-focus-top"
+              style={{ objectPosition: "center 20%" }}
             />
           </div>
 
@@ -45,7 +48,7 @@ const Page = () => {
         </section>
       </ScrollReveal>
 
-      <section className="relative w-full pt-8 sm:pt-24 px-4">
+      <section className="relative py-20 sm:py-28 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Title */}
           <ScrollReveal>
@@ -55,10 +58,10 @@ const Page = () => {
           </ScrollReveal>
 
           {/* Mission & Vision Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
             {/* Mission */}
             <ScrollReveal delay={0.1}>
-              <div className="h-full rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg">
+              <div className="h-full rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(0,210,255,0.12)] hover:border-cyan-500/40">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="h-10 w-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
                     <span className="text-cyan-400 text-lg">◎</span>
@@ -73,7 +76,7 @@ const Page = () => {
 
             {/* Vision */}
             <ScrollReveal delay={0.2}>
-              <div className="h-full rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg">
+              <div className="h-full rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(0,210,255,0.12)] hover:border-cyan-500/40">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="h-10 w-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
                     <span className="text-cyan-400 text-lg">◉</span>
@@ -89,7 +92,7 @@ const Page = () => {
 
           {/* Technology */}
           <ScrollReveal>
-            <div className="rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 mb-8 shadow-lg">
+            <div className="rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 mb-8 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="h-10 w-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
                   <span className="text-cyan-400 text-lg">⚙</span>
@@ -108,7 +111,7 @@ const Page = () => {
 
           {/* Transparency */}
           <ScrollReveal>
-            <div className="rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg">
+            <div className="rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="h-10 w-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
                   <span className="text-cyan-400 text-lg">🔍</span>
@@ -130,16 +133,18 @@ const Page = () => {
       </section>
 
       {/* BACKGROUND */}
-      <Image
-        src="/abvbg.svg"
-        alt="Hero Background"
-        width={800}
-        height={800}
-        className="w-full absolute top-[200px] left-0 h-full object-cover opacity-80 -z-10"
-      />
+      <div className="absolute left-0 right-0 flex justify-center pointer-events-none z-0 opacity-40">
+        <Image
+          src="/abvbg.svg"
+          alt="Hero Background"
+          width={800}
+          height={800}
+          className="object-cover"
+        />
+      </div>
 
       {/* VALUE SECTION */}
-      <section className="pt-24">
+      <section className="py-20 sm:py-28">
         <ScrollReveal>
           <h2
             className={`${orbitron.className} text-center text-[30px] sm:text-[40px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-12`}
@@ -148,7 +153,7 @@ const Page = () => {
           </h2>
         </ScrollReveal>
 
-        <div className="relative pb-20 z-10 px-6 grid max-w-[1300px] text-white mx-auto gap-8 md:grid-cols-4">
+        <div className="relative pb-20 z-10 px-6 grid max-w-[1300px] text-white mx-auto gap-10 md:grid-cols-4">
           {[
             {
               color: "cyan",

@@ -61,7 +61,7 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
 
   return (
     <>
-      <header className="Header w-full bg-[#000] font-[var(--font-work-sans)] shadow-lg fixed top-0 left-0 z-[1000]">
+      <header className="Header header-glass w-full font-[var(--font-work-sans)] fixed top-0 left-0 z-[1000] transition-all duration-300">
         <motion.div
           variants={textVariant2}
           initial="hidden"
@@ -90,31 +90,55 @@ const Header: React.FC<HeaderProps> = ({ defaultLanguage }) => {
           {/* Desktop Menu */}
           <nav className="hidden md:flex flex-1 justify-center items-center gap-6 text-white font-normal">
             {navItems.map((item, idx) => {
+              const resolvedPath = language === "esp"
+                ? (item.path === "/" ? "/es" : "/es" + item.path)
+                : item.path;
+              const isActive = pathname === resolvedPath ||
+                (item.path !== "/" && pathname.startsWith(item.path));
+
               if (item.type === "link") {
                 return (
                   <Link
                     key={idx}
-                    href={language === "esp" ? (item.path === "/" ? "/es" : "/es" + item.path) : item.path}
-                    className="hover:text-gray-300 cursor-pointer transition"
+                    href={resolvedPath}
+                    className={`relative pb-1 cursor-pointer transition-colors duration-200 ${
+                      isActive
+                        ? "nav-active"
+                        : "text-white/80 hover:text-white"
+                    }`}
                   >
                     {item.name}
                   </Link>
                 );
               } else if (item.type === "a") {
+                const aIsActive = pathname.startsWith(item.path);
                 return (
-                  <a key={idx} href={item.path} className="hover:text-gray-300 cursor-pointer transition">
+                  <a
+                    key={idx}
+                    href={item.path}
+                    className={`relative pb-1 cursor-pointer transition-colors duration-200 ${
+                      aIsActive
+                        ? "nav-active"
+                        : "text-white/80 hover:text-white"
+                    }`}
+                  >
                     {item.name}
                   </a>
                 );
               } else if (item.type === "labs") {
+                const labsActive = pathname.startsWith("/labs");
                 return (
                   <a
                     key={idx}
                     href={item.path}
                     className="flex items-center gap-2 group"
                   >
-                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 group-hover:bg-white transition-colors" />
-                    <span className="text-gray-300 group-hover:text-white transition-colors tracking-wide text-sm font-medium">
+                    <div className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                      labsActive ? "bg-[#80ECFF]" : "bg-cyan-400 group-hover:bg-white"
+                    }`} />
+                    <span className={`transition-colors tracking-wide text-sm font-medium ${
+                      labsActive ? "text-[#80ECFF]" : "text-gray-300 group-hover:text-white"
+                    }`}>
                       {item.name}
                     </span>
                   </a>

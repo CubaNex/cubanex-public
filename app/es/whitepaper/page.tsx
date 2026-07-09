@@ -100,7 +100,7 @@ const Whitepaper = () => {
       </section>
 
       {/* ================= SECTION 01 — ABSTRACT ================= */}
-      <section id="section-01" className="py-20 px-4">
+      <section id="section-01" className="py-28 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
             <span className="whitepaper-title text-5xl font-bold text-primary/30">
@@ -131,9 +131,9 @@ const Whitepaper = () => {
       {/* ================= SECTION 02 — INTRODUCTION ================= */}
       <section
         id="section-02"
-        className="py-20 px-4 bg-[hsl(217_70%_8%_/_0.3)] border-y border-[hsl(217_40%_20%)]"
+        className="py-28 px-4 bg-[hsl(217_70%_8%_/_0.3)] border-y border-[hsl(217_40%_20%)]"
       >
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
             <h3 className="text-lg font-semibold text-[#00e0c7]">Purpose</h3>
             <p className="text-[#8badb5] leading-relaxed">
@@ -154,7 +154,7 @@ const Whitepaper = () => {
       </section>
 
       {/* ================= SECTION 03 — CORE PRINCIPLES ================= */}
-      <section id="section-03" className="py-20 px-4">
+      <section id="section-03" className="py-28 px-4">
         <div className="max-w-4xl mx-auto">
           <ul className="space-y-2 text-[#8badb5]">
             <li>Neutrality</li>
@@ -169,7 +169,7 @@ const Whitepaper = () => {
       {/* ================= SECTION 04 — TOKEN ARCHITECTURE ================= */}
       <section
         id="section-04"
-        className="py-20 px-4 bg-[hsl(217_70%_8%_/_0.3)] border-y border-[hsl(217_40%_20%)]"
+        className="py-28 px-4 bg-[hsl(217_70%_8%_/_0.3)] border-y border-[hsl(217_40%_20%)]"
       >
         <div className="max-w-4xl mx-auto space-y-4 text-[#8badb5]">
           <p>Network: Binance Smart Chain (BEP-20)</p>
@@ -184,7 +184,7 @@ const Whitepaper = () => {
       </section>
 
       {/* ================= SECTION 05 — AI & GOVERNANCE ================= */}
-      <section id="section-05" className="py-20 px-4">
+      <section id="section-05" className="py-28 px-4">
         <div className="max-w-4xl mx-auto">
           <p className="text-[#8badb5] leading-relaxed">
             CubaNex integrates a philosophical AI layer focused on recognition
@@ -197,7 +197,7 @@ const Whitepaper = () => {
       {/* ================= SECTION 06 — ROADMAP ================= */}
       <section
         id="section-06"
-        className="py-20 px-4 bg-[hsl(217_70%_8%_/_0.3)] border-y border-[hsl(217_40%_20%)]"
+        className="py-28 px-4 bg-[hsl(217_70%_8%_/_0.3)] border-y border-[hsl(217_40%_20%)]"
       >
         <div className="max-w-4xl mx-auto text-[#8badb5] space-y-2">
           <p>Phase 1 — Foundation</p>
@@ -209,7 +209,7 @@ const Whitepaper = () => {
       </section>
 
       {/* ================= SECTION 07 — THE ALCHEMIST ================= */}
-      <section id="section-07" className="py-20 px-4">
+      <section id="section-07" className="py-28 px-4">
         <div className="max-w-4xl mx-auto text-[#8badb5] space-y-4">
           <p>I AM The Alchemist.</p>
           <p>

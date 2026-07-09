@@ -1,23 +1,27 @@
 import { Cpu, Brain, Layers, Code2 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import Image from "next/image";
 
 export default function EcosystemPage() {
   return (
     <main className="bg-[#000] min-h-screen px-4 text-white font-work">
       {/* HERO */}
       <ScrollReveal delay={0.1}>
-        <section className="max-w-5xl mx-auto pt-28 text-center">
+        <section className="max-w-5xl mx-auto pt-32 text-center">
           <h1 className="text-4xl sm:text-5xl font-orbitron tracking-tight">
             <span className="text-[#22E6E3]">Ecosystem</span>{" "}
             <span className="text-white">Overview</span>
           </h1>
 
-          <div className="mt-12 relative flex justify-center">
-            <div className="absolute inset-0 bg-[#22E6E3]/5 blur-[100px] rounded-full"></div>
-            <img
+          <div className="mt-14 relative flex justify-center w-full max-w-4xl mx-auto aspect-[16/9]">
+            <div className="absolute inset-0 bg-[#22E6E3]/5 blur-[100px] rounded-full animate-ambient-pulse"></div>
+            <Image
               src="/7-2-26/ecosystem-7-2-26.jpeg"
               alt="CubaNex Ecosystem Visualization"
-              className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#22E6E3]/20 shadow-2xl shadow-[#22E6E3]/10"
+              fill
+              priority
+              className="mobile-focus-top"
+              style={{ objectPosition: "center 20%" }}
             />
           </div>
 
@@ -28,7 +32,7 @@ export default function EcosystemPage() {
       </ScrollReveal>
 
       {/* FUTURE UTILITIES */}
-      <section className="max-w-6xl mx-auto mt-24">
+      <section className="max-w-6xl mx-auto py-20 sm:py-28">
         <ScrollReveal>
           <div className="text-center">
             <h2 className="text-3xl font-orbitron">
@@ -71,9 +75,10 @@ export default function EcosystemPage() {
                 border border-[#0F1E3A]
                 bg-gradient-to-b from-[#071326] to-[#050B16]
                 p-6
-                transition-all duration-300
+                transition-all duration-400
                 hover:border-[#22E6E3]/40
-                hover:-translate-y-1
+                hover:-translate-y-1.5
+                hover:shadow-[0_12px_40px_rgba(34,230,227,0.1)]
                 active:border-[#22E6E3]/40
                 active:scale-[0.97]
                 focus-within:border-[#22E6E3]/40
@@ -113,7 +118,7 @@ export default function EcosystemPage() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto mt-24">
+      <section className="max-w-6xl mx-auto py-20 sm:py-28">
         <ScrollReveal>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-orbitron">
@@ -122,10 +127,10 @@ export default function EcosystemPage() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Intelligence */}
           <ScrollReveal delay={0.1}>
-            <div className="h-full rounded-2xl border border-white/5 bg-[#04071d]/80 p-8 shadow-lg text-center backdrop-blur-sm">
+            <div className="h-full rounded-2xl border border-white/5 bg-[#04071d]/80 p-8 shadow-lg text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)]">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center justify-center gap-3">
                 <span className="w-1.5 h-6 bg-[#00D2FF] rounded-full inline-block" />
                 Intelligence
@@ -138,7 +143,7 @@ export default function EcosystemPage() {
 
           {/* Participation */}
           <ScrollReveal delay={0.2}>
-            <div className="h-full rounded-2xl border border-white/5 bg-[#04071d]/80 p-8 shadow-lg text-center backdrop-blur-sm">
+            <div className="h-full rounded-2xl border border-white/5 bg-[#04071d]/80 p-8 shadow-lg text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(49,108,255,0.1)]">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center justify-center gap-3">
                 <span className="w-1.5 h-6 bg-[#316CFF] rounded-full inline-block" />
                 Participation
@@ -151,7 +156,7 @@ export default function EcosystemPage() {
 
           {/* Infrastructure */}
           <ScrollReveal delay={0.3}>
-            <div className="h-full rounded-2xl border border-white/5 bg-[#04071d]/80 p-8 shadow-lg text-center backdrop-blur-sm">
+            <div className="h-full rounded-2xl border border-white/5 bg-[#04071d]/80 p-8 shadow-lg text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(153,69,255,0.1)]">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center justify-center gap-3">
                 <span className="w-1.5 h-6 bg-[#9945FF] rounded-full inline-block" />
                 Infrastructure

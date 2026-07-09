@@ -956,3 +956,134 @@ html {
     box-shadow: 0 0 0 0 rgba(0, 229, 255, 0);
   }
 }
+
+/* ==================== PREMIUM POLISH ANIMATIONS ==================== */
+
+/* Gentle hero drift — very subtle Y float for headline blocks */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+.animate-float-y {
+  animation: floatY 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Ambient glow pulse — for orb/hero background elements */
+@keyframes ambientPulse {
+  0%, 100% { opacity: 0.12; transform: scale(1); }
+  50%       { opacity: 0.22; transform: scale(1.06); }
+}
+
+.animate-ambient-pulse {
+  animation: ambientPulse 6s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Shimmer border — subtle gradient sweep for premium cards */
+@keyframes shimmerBorder {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Section fade-in from bottom — used by ScrollReveal but also available as CSS */
+@keyframes sectionReveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-section-reveal {
+  animation: sectionReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Reduced-motion: disable all custom animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-y,
+  .animate-ambient-pulse,
+  .animate-section-reveal,
+  .hero-sphere,
+  .hero-ring,
+  .hero-particle,
+  .soft-bounce,
+  .smooth-pulse {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ==================== PERFORMANCE UTILITIES ==================== */
+
+/* Apply to any element that is animated with transform/opacity */
+.gpu-accelerated {
+  will-change: transform, opacity;
+  contain: layout style;
+}
+
+/* ==================== MOBILE IMAGE FOCAL HELPERS ==================== */
+
+/* Keeps the centre-top of the image in view on narrow screens */
+@media (max-width: 640px) {
+  .mobile-focus-top    { object-position: center 15% !important; }
+  .mobile-focus-center { object-position: center 50% !important; }
+  .mobile-focus-60     { object-position: 60% 30% !important; }
+}
+
+/* ==================== HEADER REFINEMENTS ==================== */
+
+/* Glassy header backdrop */
+.header-glass {
+  background: rgba(0, 0, 0, 0.82) !important;
+  backdrop-filter: blur(14px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Active nav link indicator */
+.nav-active {
+  color: #80ECFF !important;
+  position: relative;
+}
+
+.nav-active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #14F195, #80ECFF, #64A8F2);
+}
+
+/* ==================== CARD HOVER REFINEMENTS ==================== */
+
+/* Unified premium card hover — adds a soft glow ring on hover */
+.card-hover-glow {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.4s ease;
+}
+
+.card-hover-glow:hover,
+.card-hover-glow:focus-visible {
+  transform: translateY(-4px);
+  outline: none;
+}
+
+/* Subtle bottom fade for section transitions */
+.section-bottom-fade {
+  position: relative;
+}
+
+.section-bottom-fade::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+  pointer-events: none;
+}

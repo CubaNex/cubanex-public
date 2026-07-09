@@ -103,7 +103,7 @@ const page = () => {
           </div>
         </div>
       </ScrollReveal>
-      <div className="relative z-10 px-6 grid max-w-[1000px] text-white mx-auto gap-8 md:grid-cols-3">
+      <div className="relative z-10 px-6 grid max-w-[1000px] text-white mx-auto gap-10 md:grid-cols-3">
         {/* 1 */}
         <ScrollReveal delay={0.1}>
           <div className="p-8 border min-w-[266px]  border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
@@ -212,7 +212,7 @@ const page = () => {
           </h1>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto px-4">
           {/* Presale */}
           <ScrollReveal delay={0.1}>
             <div className="bg-[#111726] border border-[#1b2235] rounded-xl p-6">

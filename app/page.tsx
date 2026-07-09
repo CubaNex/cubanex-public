@@ -153,22 +153,22 @@ export default function Home() {
       <style>{`
         @media (prefers-reduced-motion: no-preference) {
           .hero-sphere {
-            animation: sphereBreathe 16s ease-in-out infinite;
+            animation: sphereBreathe 24s ease-in-out infinite;
           }
           .hero-ring {
             animation: ringRotate 200s linear infinite;
           }
           .hero-particle {
-            animation: particleDrift 8s ease-in-out infinite;
+            animation: particleDrift 12s ease-in-out infinite;
           }
-          .hero-particle:nth-child(2) { animation-delay: -2s; animation-duration: 11s; }
-          .hero-particle:nth-child(3) { animation-delay: -5s; animation-duration: 9s; }
-          .hero-particle:nth-child(4) { animation-delay: -1s; animation-duration: 13s; }
-          .hero-particle:nth-child(5) { animation-delay: -7s; animation-duration: 10s; }
+          .hero-particle:nth-child(2) { animation-delay: -2s; animation-duration: 15s; }
+          .hero-particle:nth-child(3) { animation-delay: -5s; animation-duration: 14s; }
+          .hero-particle:nth-child(4) { animation-delay: -1s; animation-duration: 18s; }
+          .hero-particle:nth-child(5) { animation-delay: -7s; animation-duration: 16s; }
         }
         @keyframes sphereBreathe {
           0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.015); }
+          50% { transform: scale(1.01); }
         }
         @keyframes ringRotate {
           from { transform: rotate(0deg); }
@@ -176,9 +176,9 @@ export default function Home() {
         }
         @keyframes particleDrift {
           0%, 100% { opacity: 0; transform: translateY(0px) scale(1); }
-          20% { opacity: 0.06; }
-          50% { opacity: 0.03; transform: translateY(-18px) scale(1.1); }
-          80% { opacity: 0.06; }
+          20% { opacity: 0.04; }
+          50% { opacity: 0.02; transform: translateY(-12px) scale(1.05); }
+          80% { opacity: 0.04; }
         }
       `}</style>
 
@@ -189,22 +189,30 @@ export default function Home() {
           <div className="absolute inset-0 z-0 bg-[#000]">
 
             {/* Hero image — desktop */}
-            <div className="hero-sphere hidden sm:block w-full h-full">
-              <img
+            <div className="hero-sphere hidden sm:block w-full h-full relative">
+              <Image
                 src="/7-2-26/home-hero-7-2-26.jpeg"
                 className="w-full h-full object-cover object-center"
                 alt="CubaNex – The Awakening"
+                fill
+                priority
+                sizes="100vw"
                 style={{ opacity: 1 }}
               />
             </div>
 
             {/* Hero image — mobile (cropped to keep sphere dominant) */}
-            <img
-              src="/7-2-26/home-hero-7-2-26.jpeg"
-              className="block sm:hidden w-full h-full object-cover"
-              style={{ objectPosition: "center 30%", opacity: 1 }}
-              alt="CubaNex – The Awakening"
-            />
+            <div className="block sm:hidden w-full h-full absolute inset-0">
+              <Image
+                src="/7-2-26/home-hero-7-2-26.jpeg"
+                className="w-full h-full object-cover mobile-focus-60"
+                style={{ objectPosition: "60% 30%", opacity: 1 }}
+                alt="CubaNex – The Awakening"
+                fill
+                priority
+                sizes="100vw"
+              />
+            </div>
 
             {/* Ambient particles */}
             <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -218,7 +226,7 @@ export default function Home() {
                     left: `${10 + i * 18}%`,
                     top: `${15 + (i % 3) * 25}%`,
                     filter: "blur(60px)",
-                    opacity: 0,
+                    opacity: 0.06,
                   }}
                 />
               ))}
@@ -287,7 +295,7 @@ export default function Home() {
             </div>
 
             {/* Trust badges */}
-            <div className="pt-10 hidden sm:flex gap-4 lg:gap-8 justify-center opacity-60">
+            <div className="pt-10 hidden sm:flex gap-4 lg:gap-10 justify-center opacity-60">
               <div className="flex items-center gap-2">
                 <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
                 <span className="text-[12px] font-medium">Verified Contract</span>
@@ -308,14 +316,13 @@ export default function Home() {
       {/* ================= WHY CUBANEX ================= */}
       <ScrollReveal>
         <section
-          id="fourPoint"
-          className="relative sm:pb-20 z-10   sm:py-20 bg-[#000] px-6 overflow-hidden"
+          className="relative py-20 sm:py-28 z-10 bg-[#000] px-6 overflow-hidden"
         >
           {/* 4 s*/}
-          <div className="absolute  w-full h-full sm:h-auto  bg-[#000] top-0 z-1">
+          <div className="absolute w-full h-full bg-[#000] top-0 z-0 opacity-50">
             <img
               src="/shapbg.png"
-              className=" w-full h-full center z-10  object-cover "
+              className="w-full h-full object-cover" style={{ objectPosition: "center top" }}
               alt="Hero Background"
             />
           </div>
@@ -362,10 +369,10 @@ export default function Home() {
             <p className="text-gray-400 max-w-[600px] mx-auto mb-16 text-lg">
               CubaNex is not simply a token. It is the foundation for an evolving intelligence network where blockchain, AI, and community participation converge.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 mt-10">
               
               {/* Intelligence */}
-              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors cursor-pointer outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)] transition-all duration-500 cursor-pointer outline-none" tabIndex={0}>
                 <div className="relative z-20 text-center w-full">
                   <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
                     <span className="w-1.5 h-6 bg-[#00D2FF] rounded-full inline-block" />
@@ -378,7 +385,7 @@ export default function Home() {
               </div>
 
               {/* Sovereignty */}
-              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors cursor-pointer outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(49,108,255,0.1)] transition-all duration-500 cursor-pointer outline-none" tabIndex={0}>
                 <div className="relative z-20 text-center w-full">
                   <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
                     <span className="w-1.5 h-6 bg-[#316CFF] rounded-full inline-block" />
@@ -391,7 +398,7 @@ export default function Home() {
               </div>
 
               {/* Connection */}
-              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors cursor-pointer outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(153,69,255,0.1)] transition-all duration-500 cursor-pointer outline-none" tabIndex={0}>
                 <div className="relative z-20 text-center w-full">
                   <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
                     <span className="w-1.5 h-6 bg-[#9945FF] rounded-full inline-block" />
@@ -404,7 +411,7 @@ export default function Home() {
               </div>
 
               {/* Evolution */}
-              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors cursor-pointer outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,229,255,0.1)] transition-all duration-500 cursor-pointer outline-none" tabIndex={0}>
                 <div className="relative z-20 text-center w-full">
                   <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
                     <span className="w-1.5 h-6 bg-[#00E5FF] rounded-full inline-block" />
@@ -425,7 +432,7 @@ export default function Home() {
           {/* from havana to blockchain s*/}
           {/* from havana to blockchain s*/}
           <ScrollReveal>
-            <div className=" relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-8 sm:pb-20 ">
+            <div className=" relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-10 sm:pb-20 ">
               <div className="">
                 <h2
                   className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
@@ -459,7 +466,7 @@ export default function Home() {
       {/* ================= tokenomics ================= */}
 
       <ScrollReveal>
-        <section className="py-16 px-6">
+        <section className="py-20 sm:py-28 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2
               className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-4`}
@@ -473,7 +480,7 @@ export default function Home() {
             </p>
 
             <div className="bg-[#04071d]/80 border border-white/[0.05] rounded-3xl p-8 shadow-lg max-w-3xl mx-auto backdrop-blur-sm">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-left">
                 
                 <div className="border-b sm:border-b-0 sm:border-r border-white/10 pb-6 sm:pb-0 sm:pr-8">
                   <p className="text-gray-500 text-sm mb-1">Total Supply</p>
@@ -521,7 +528,7 @@ export default function Home() {
 
       {/* ================= Road Map ================= */}
       <ScrollReveal>
-        <section className="py-20 bg-[#000] relative overflow-hidden">
+        <section className="py-20 sm:py-28 bg-[#000] relative overflow-hidden">
           <div className="container mx-auto px-6 relative z-10">
             <h2
               className={`${orbitron.className} text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-4`}
@@ -536,7 +543,7 @@ export default function Home() {
 
             <div className="max-w-3xl mx-auto">
               <div className="relative border border-[#00D2FF]/20 bg-[#04071d]/60 backdrop-blur-sm rounded-3xl p-8 sm:p-10">
-                <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#00D2FF]/10 rounded-full blur-2xl"></div>
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#00D2FF]/10 rounded-full blur-2xl animate-ambient-pulse"></div>
                 
                 <p className={`${orbitron.className} text-[#00D2FF] font-semibold text-lg mb-2`}>Current Phase</p>
                 <h3 className="text-3xl text-white font-bold mb-8">Conscious Layer</h3>
@@ -575,7 +582,7 @@ export default function Home() {
       {/* ================= How to Get CNEX ================= */}
 
       <ScrollReveal>
-        <section className="py-20 px-6">
+        <section className="py-20 sm:py-28 px-6">
           <div className="max-w-6xl mx-auto text-center">
             <h2
               className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-4`}
@@ -591,7 +598,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               
               {/* Step 1 */}
-              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors text-left outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 text-center outline-none" tabIndex={0}>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">1</div>
                 <h3 className="text-white text-xl font-bold mb-4">Set Up Wallet</h3>
                 <p className="text-[#9CB4D8] text-sm leading-relaxed">
@@ -600,7 +607,7 @@ export default function Home() {
               </div>
 
               {/* Step 2 */}
-              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors text-left outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 text-center outline-none" tabIndex={0}>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">2</div>
                 <h3 className="text-white text-xl font-bold mb-4">Add BNB Smart Chain</h3>
                 <p className="text-[#9CB4D8] text-sm leading-relaxed">
@@ -609,7 +616,7 @@ export default function Home() {
               </div>
 
               {/* Step 3 */}
-              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors text-left outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 text-center outline-none" tabIndex={0}>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">3</div>
                 <h3 className="text-white text-xl font-bold mb-4">Verify Contract</h3>
                 <p className="text-[#9CB4D8] text-sm leading-relaxed">
@@ -618,7 +625,7 @@ export default function Home() {
               </div>
 
               {/* Step 4 */}
-              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] transition-colors text-left outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 text-center outline-none" tabIndex={0}>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">4</div>
                 <h3 className="text-white text-xl font-bold mb-4">Receive CNEX</h3>
                 <p className="text-[#9CB4D8] text-sm leading-relaxed">
@@ -634,7 +641,7 @@ export default function Home() {
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
       <ScrollReveal>
-        <section className="relative mt-[-70px] pb-20 sm:pb-20 px-6 z-10 bg-black overflow-hidden">
+        <section className="relative mt-[-70px] py-20 sm:py-28 px-6 z-10 bg-black overflow-hidden">
           <div
             className="absolute inset-0 z-0 opacity-20 pointer-events-none"
             style={{
@@ -659,7 +666,7 @@ export default function Home() {
             </p>
 
             <VipForm />
-            <div className="px-6 pt-20 grid max-w-[1100px] mx-auto gap-8 md:grid-cols-2">
+            <div className="px-6 pt-20 grid max-w-[1100px] mx-auto gap-10 md:grid-cols-2">
             {/* 1 */}
 
             {/* 2 */}
@@ -753,7 +760,7 @@ export default function Home() {
 
       {/* ================= WHITEPAPER SECTION ================= */}
       <ScrollReveal>
-        <section className="px-5 pb-20">
+        <section className="px-5 pb-24">
           <h2
             className={`${orbitron.className} bg-[#000000] text-center text-[26px] pt-6 sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
           >

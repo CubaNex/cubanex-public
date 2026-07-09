@@ -1,23 +1,26 @@
 import { Cpu, Brain, Layers, Code2 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import Image from "next/image";
 
 export default function EcosystemPage() {
   return (
     <main className="bg-[#000] min-h-screen px-4 text-white font-work">
       {/* HERO */}
       <ScrollReveal>
-        <section className="max-w-5xl mx-auto pt-28 text-center animate-fade-up">
+        <section className="max-w-5xl mx-auto pt-32 text-center animate-fade-up">
           <h1 className="text-4xl sm:text-5xl font-orbitron tracking-tight">
             <span className="text-[#22E6E3]">Ecosistema</span>{" "}
             <span className="text-white">General</span>
           </h1>
 
-          <div className="mt-12 relative flex justify-center">
+          <div className="mt-14 relative flex justify-center w-full max-w-4xl mx-auto aspect-[16/9]">
             <div className="absolute inset-0 bg-[#22E6E3]/5 blur-[100px] rounded-full"></div>
-            <img
-              src="/ecosystem.jpeg"
+            <Image
+              src="/7-2-26/ecosystem-7-2-26.jpeg"
               alt="Visualización del Ecosistema CubaNex"
-              className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#22E6E3]/20 shadow-2xl shadow-[#22E6E3]/10"
+              fill
+              priority
+              className="" style={{ objectPosition: "center top" }}
             />
           </div>
 
@@ -28,7 +31,7 @@ export default function EcosystemPage() {
       </ScrollReveal>
 
       {/* FUTURE UTILITIES */}
-      <section className="max-w-6xl mx-auto mt-24">
+      <section className="max-w-6xl mx-auto mt-32">
         <ScrollReveal>
           <div className="text-center animate-fade-up">
             <h2 className="text-3xl font-orbitron">

@@ -25,7 +25,7 @@ export default function CleanEnergyPage() {
             src="/clean-energy.jpg"
             alt="Clean Energy Utility"
             fill
-            className="object-cover opacity-60"
+            className="" style={{ objectPosition: "center top" }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#010813]/20 via-transparent to-[#010813]" />
         </div>
@@ -57,7 +57,7 @@ export default function CleanEnergyPage() {
 
       {/* Content Section */}
       <section className="relative z-10 max-w-6xl mx-auto px-6 pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 -mt-20">
           {[
             {
               icon: Sun,
@@ -95,7 +95,7 @@ export default function CleanEnergyPage() {
                   src="/clean-energy.jpg"
                   alt="Sustainable Power"
                   fill
-                  className="object-cover opacity-80"
+                  className="" style={{ objectPosition: "center top" }}
                 />
               </div>
             </ScrollReveal>
@@ -131,7 +131,7 @@ export default function CleanEnergyPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-b from-transparent to-[#10B981]/5 relative overflow-hidden">
+      <section className="py-28 bg-gradient-to-b from-transparent to-[#10B981]/5 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <ScrollReveal>
             <h2 className={`${orbitron.className} text-3xl sm:text-5xl font-bold mb-8`}>

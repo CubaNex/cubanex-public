@@ -19,7 +19,7 @@ const page = () => {
   return (
     <div className="main relative  bg-[#010813]">
       <ScrollReveal>
-        <div className=" sm:flex px-4 w-full pt-[120px] sm:pb-[20px] sm:pt-[150px]  gap-2 items-center justify-center cmbg">
+        <div className="sm:flex px-4 w-full pt-[140px] pb-[40px] sm:pt-[170px] gap-2 items-center justify-center cmbg">
           <div>
             {" "}
             <h1
@@ -35,32 +35,34 @@ const page = () => {
             </p>
           </div>
           <Image
-            alt="logo"
-            src={"/assets/cubanex-token-v2-32x32.svg"}
+            alt="community"
+            src={"/7-2-26/community-7-2-26.jpeg"}
             width={500}
             height={500}
-            className="hidden sm:block"
+            priority
+            className="hidden sm:block rounded-2xl border border-white/10"
           />
           <Image
-            alt="logo"
-            src={"/assets/cubanex-token-v2-32x32.svg"}
+            alt="community"
+            src={"/7-2-26/community-7-2-26.jpeg"}
             width={300}
             height={200}
-            className="block mt-[-60px] mx-auto sm:hidden"
+            priority
+            className="block mt-[20px] mx-auto sm:hidden rounded-2xl border border-white/10"
           />
         </div>
       </ScrollReveal>
       <section className="">
         <ScrollReveal>
           <h2
-            className={`${orbitron.className} text-center text-[30px]  sm:text-[40px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+            className={`${orbitron.className} text-center text-[30px] sm:text-[40px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
           >
             <span className="text-[#00DED4]"> Connect</span> With Us
           </h2>
 
           <VipForm />
         </ScrollReveal>
-        <div className="px-6 pb-8 pt-20 grid  text-white max-w-[1100px] mx-auto gap-8 md:grid-cols-2">
+        <div className="px-6 pb-14 pt-24 grid text-white max-w-[1100px] mx-auto gap-10 md:grid-cols-2">
           {/* 1 */}
           <ScrollReveal delay={0.1}>
             <a
@@ -69,7 +71,7 @@ const page = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)] transition-all duration-500 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
                 <div className="relative z-20 px-6">
                   <div className="w-full flex justify-center mb-4">
                     <Twitter size={56} className="mx-auto" strokeWidth={1.8} />
@@ -103,7 +105,7 @@ const page = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)] transition-all duration-500 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
                 <div className="relative z-20 px-6">
                   <div className="w-full flex justify-center mb-4">
                     <Send size={56} className="mx-auto" strokeWidth={1.8} />

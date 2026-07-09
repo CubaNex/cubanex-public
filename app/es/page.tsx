@@ -30,7 +30,7 @@ const orbitron = Orbitron({
 });
 // app/fonts.ts or layout.tsx
 
-export const abhayaLibre = Abhaya_Libre({
+const abhayaLibre = Abhaya_Libre({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-abhaya",
@@ -40,27 +40,86 @@ export default function Home() {
   return (
     <main className="bg-black  text-white min-h-auto sm:min-h-screen w-full overflow-x-hidden">
       {/* ================= HERO SECTION ================= */}
-      <section className="overflow-hidden z-20  relative pb-20 sm:pb-0 pt-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
-        <div className="absolute bg-[#000] inset-0 z-0">
-          {/* <video
-            src="/cubanex-video.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className=" absolute inset-0 w-full h-full object-cover"
-          /> */}
-          <img
-            src="/cubanexthero.png"
-            className="hidden sm:block w-full h-full center object-cover opacity-45"
-            alt="Hero Background"
+      <style>{`
+        @media (prefers-reduced-motion: no-preference) {
+          .hero-sphere {
+            animation: sphereBreathe 24s ease-in-out infinite;
+          }
+          .hero-ring {
+            animation: ringRotate 200s linear infinite;
+          }
+          .hero-particle {
+            animation: particleDrift 12s ease-in-out infinite;
+          }
+          .hero-particle:nth-child(2) { animation-delay: -2s; animation-duration: 15s; }
+          .hero-particle:nth-child(3) { animation-delay: -5s; animation-duration: 14s; }
+          .hero-particle:nth-child(4) { animation-delay: -1s; animation-duration: 18s; }
+          .hero-particle:nth-child(5) { animation-delay: -7s; animation-duration: 16s; }
+        }
+        @keyframes sphereBreathe {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.01); }
+        }
+        @keyframes ringRotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes particleDrift {
+          0%, 100% { opacity: 0; transform: translateY(0px) scale(1); }
+          20% { opacity: 0.04; }
+          50% { opacity: 0.02; transform: translateY(-12px) scale(1.05); }
+          80% { opacity: 0.04; }
+        }
+      `}</style>
+
+      <section className="overflow-hidden z-20 relative pb-20 sm:pb-0 pt-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
+        <div className="absolute inset-0 z-0 bg-[#000]">
+          <div className="hero-sphere hidden sm:block w-full h-full relative">
+            <Image
+              src="/7-2-26/home-hero-7-2-26.jpeg"
+              className="w-full h-full object-cover object-center"
+              alt="CubaNex – The Awakening"
+              fill
+              priority
+              sizes="100vw"
+              style={{ opacity: 1 }}
+            />
+          </div>
+          <div className="block sm:hidden w-full h-full absolute inset-0">
+            <Image
+              src="/7-2-26/home-hero-7-2-26.jpeg"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: "center 30%", opacity: 1 }}
+              alt="CubaNex – The Awakening"
+              fill
+              priority
+              sizes="100vw"
+            />
+          </div>
+          <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
+            {[...Array(5)].map((_, i) => (
+              <div
+                key={i}
+                className="hero-particle absolute rounded-full bg-[#316CFF]"
+                style={{
+                  width: `${60 + i * 40}px`,
+                  height: `${60 + i * 40}px`,
+                  left: `${10 + i * 18}%`,
+                  top: `${15 + (i % 3) * 25}%`,
+                  filter: "blur(60px)",
+                  opacity: 0,
+                }}
+              />
+            ))}
+          </div>
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%)",
+            }}
           />
-          <img
-            src="/cubanextherophone.png"
-            className="block sm:hidden w-full h-full center object-cover opacity-45"
-            alt="Hero Background"
-          />
-          <div className="absolute inset-0 bg-black/30 sm:bg-black/30" />
+          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent pointer-events-none" />
         </div>
         <ScrollReveal>
           <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center  sm:pt-20">
@@ -110,7 +169,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="pt-10 hidden sm:flex gap-4 lg:gap-8 justify-center opacity-60">
+            <div className="pt-10 hidden sm:flex gap-4 lg:gap-10 justify-center opacity-60">
               <div className="flex items-center gap-2">
                 <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
                 <span className="text-[12px] font-medium">Contrato Verificado</span>
@@ -132,12 +191,12 @@ export default function Home() {
       <ScrollReveal>
         <section
           id="fourPoint"
-          className="relative sm:pb-20 z-10   sm:py-20 bg-[#000] px-6"
+          className="relative sm:pb-24 z-10 sm:py-28 bg-[#000] px-6"
         >
           <div className="absolute  w-full h-full sm:h-auto  bg-[#000] top-0 z-1">
             <img
               src="/shapbg.png"
-              className=" w-full h-full center z-10  object-cover "
+              className="" style={{ objectPosition: "center top" }}
               alt="Hero Background"
             />
           </div>
@@ -181,9 +240,9 @@ export default function Home() {
               Inspirado en la cultura cubana, combinando identidad cultural con
               innovación blockchain de manera respetuosa y equilibrada.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:grid-cols-4 mt-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 md:grid-cols-4 mt-20">
               {/* Lightning Fast */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
 
                 <div className="relative z-20 px-6">
@@ -206,7 +265,7 @@ export default function Home() {
               </div>
 
               {/* Secure & Audited */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
 
                 <div className="relative z-20 px-6">
@@ -229,7 +288,7 @@ export default function Home() {
               </div>
 
               {/* Eco-Friendly */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
 
                 <div className="relative z-20 px-6">
@@ -252,7 +311,7 @@ export default function Home() {
               </div>
 
               {/* Real Utility */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
 
                 <div className="relative z-20 px-6">
@@ -276,7 +335,7 @@ export default function Home() {
             </div>
           </div>
           <ScrollReveal>
-            <div className="relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-8 sm:pb-20 ">
+            <div className="relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-10 sm:pb-20 ">
               <div className="">
                 <h2
                   className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
@@ -633,7 +692,7 @@ export default function Home() {
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
       <ScrollReveal>
-        <section className="relative pb-20 sm:py-20 px-6 z-10 bg-black overflow-hidden">
+        <section className="relative pb-20 sm:py-28 px-6 z-10 bg-black overflow-hidden">
           <div
             className="absolute inset-0 z-0 opacity-20 pointer-events-none"
             style={{
@@ -758,7 +817,7 @@ export default function Home() {
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
 
       <ScrollReveal>
-        <section className="px-5 py-10 sm:py-20">
+        <section className="px-5 py-10 sm:py-28">
           <h2
             className={`${orbitron.className} bg-[#000000] text-center text-[28px] sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
           >

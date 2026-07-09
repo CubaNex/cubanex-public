@@ -30,7 +30,7 @@ const orbitron = Orbitron({
 });
 // app/fonts.ts or layout.tsx
 
-export const abhayaLibre = Abhaya_Libre({
+const abhayaLibre = Abhaya_Libre({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-abhaya",
@@ -48,16 +48,16 @@ export default function Home() {
             loop
             muted
             playsInline
-            className=" absolute inset-0 w-full h-full object-cover"
+            className="" style={{ objectPosition: "center top" }}
           /> */}
           <img
             src="/cubanexthero.png"
-            className="hidden sm:block w-full h-full center object-cover opacity-45"
+            className="" style={{ objectPosition: "center top" }}
             alt="Hero Background"
           />
           <img
             src="/cubanextherophone.png"
-            className="block sm:hidden w-full h-full center object-cover opacity-45"
+            className="" style={{ objectPosition: "center top" }}
             alt="Hero Background"
           />
           <div className="absolute inset-0 bg-black/30 sm:bg-black/30" />
@@ -137,12 +137,12 @@ export default function Home() {
       {/* ================= WHY CUBANEX ================= */}
       <section
         id="fourPoint"
-        className="relative sm:pb-20 z-10   sm:py-20 bg-[#000] px-6"
+        className="relative sm:pb-20 z-10   sm:py-28 bg-[#000] px-6"
       >
         <div className="absolute  w-full h-full sm:h-auto  bg-[#000] top-0 z-1">
           <img
             src="/shapbg.png"
-            className=" w-full h-full center z-10  object-cover "
+            className="" style={{ objectPosition: "center top" }}
             alt="Hero Background"
           />
         </div>
@@ -236,7 +236,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-8 sm:pb-20 ">
+      <div className="relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-10 sm:pb-20 ">
         <div className="">
           <h2
             className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
@@ -534,7 +534,7 @@ export default function Home() {
       {/* ================= How to Buy CNEX ================= */}
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
-      <section className="relative pb-20 sm:py-20 px-6 z-10 b bg-section">
+      <section className="relative pb-20 sm:py-28 px-6 z-10 b bg-section">
         <h2
           className={`${orbitron.className} text-center text-[26px] sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
         >
@@ -629,7 +629,7 @@ export default function Home() {
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
 
-      <section className="px-5 py-10 sm:py-20">
+      <section className="px-5 py-10 sm:py-28">
         <h2
           className={`${orbitron.className} bg-[#000000] text-center text-[28px] sm:pt-20 sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em]  mb-6`}
         >

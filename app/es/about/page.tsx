@@ -21,7 +21,7 @@ const page = () => {
     <div className="main relative bg-[#010813]">
       {/* Hero / Intro Section */}
       <ScrollReveal delay={0.1}>
-        <div className="flex px-4 pt-[120px] pb-[40px] sm:pb-[80px] sm:py-[150px] flex-col gap-2 items-center justify-center abhBg">
+        <div className="flex px-4 pt-[140px] pb-[40px] sm:pb-[80px] sm:pt-[170px] flex-col gap-2 items-center justify-center abhBg">
           <h1
             className={`${orbitron.className} text-[32px] sm:text-[56px] max-w-[800px] mx-auto text-center text-[#fff] font-semibold leading-[1.2em] mb-6`}
           >
@@ -130,13 +130,13 @@ const page = () => {
       </ScrollReveal>
 
       {/* Our Value Section */}
-      <section className="">
+      <section className="pt-28">
         <Image
           src="/abvbg.svg"
           alt="Fondo de Hero"
           width={800}
           height={800}
-          className="w-full absolute top-[200px] left-0 h-full object-cover opacity-80"
+          className="" style={{ objectPosition: "center top" }}
         />
 
         <ScrollReveal>
@@ -147,7 +147,7 @@ const page = () => {
           </h2>
         </ScrollReveal>
 
-        <div className="relative pb-20 z-10 px-6 grid max-w-[1300px] mx-auto text-white gap-8 md:grid-cols-4">
+        <div className="relative pb-20 z-10 px-6 grid max-w-[1300px] mx-auto text-white gap-10 md:grid-cols-4">
           {[
             {
               color: "cyan",
@@ -199,7 +199,7 @@ const page = () => {
             },
           ].map((item, i) => (
             <ScrollReveal key={i} delay={0.1 * i}>
-              <div className="p-8 border border-[#00D2FF]/17 h-full rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+              <div className="p-8 border border-[#00D2FF]/17 h-full rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)] transition-all duration-500">
                 <div className={`w-12 h-12 mb-5 rounded-xl bg-${item.color}-500/20 flex items-center justify-center`}>
                   <svg
                     className={`w-6 h-6 text-${item.color}-400`}

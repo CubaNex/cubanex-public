@@ -28,11 +28,15 @@ const page = () => {
           </h1>
 
           <div className="mt-12 relative flex justify-center">
-            <div className="absolute inset-0 bg-[#316CFF]/5 blur-[100px] rounded-full"></div>
-            <img
+            <div className="absolute inset-0 bg-[#316CFF]/5 blur-[100px] rounded-full animate-ambient-pulse"></div>
+            <Image
               src="/7-2-26/token-7-2-26.jpeg"
               alt="CNEX Tokenomics Visualization"
+              width={896}
+              height={504}
+              priority
               className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#316CFF]/20 shadow-2xl shadow-[#316CFF]/10"
+              style={{ objectFit: "cover" }}
             />
           </div>
 
@@ -108,10 +112,10 @@ const page = () => {
           </div>
         </section>
       </ScrollReveal>
-      <div className="relative z-10 px-6 grid max-w-[1000px] text-white mx-auto gap-8 md:grid-cols-3">
+      <div className="relative z-10 px-6 grid max-w-[1000px] text-white mx-auto gap-10 md:grid-cols-3">
         {/* 1 */}
         <ScrollReveal delay={0.1}>
-          <div className="p-8 border min-w-[266px]  border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border w-full border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="w-12 h-12 mb-5 rounded-xl bg-cyan-500/20 flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-cyan-400"
@@ -146,7 +150,7 @@ const page = () => {
         </ScrollReveal>
         {/* 2 */}
         <ScrollReveal delay={0.2}>
-          <div className="p-8 border min-w-[266px]  border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border w-full border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="w-12 h-12 mb-5 rounded-xl bg-yellow-500/20 flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-yellow-400"
@@ -171,7 +175,7 @@ const page = () => {
         </ScrollReveal>
         {/* 3 */}
         <ScrollReveal delay={0.3}>
-          <div className="p-8 border min-w-[266px]  border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border w-full border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="w-12 h-12 mb-5 rounded-xl bg-purple-500/20 flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-purple-400"
@@ -217,7 +221,7 @@ const page = () => {
           </h1>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto px-4">
           {/* Presale */}
           <ScrollReveal delay={0.1}>
             <div className="bg-[#111726] border border-[#1b2235] rounded-xl p-6">

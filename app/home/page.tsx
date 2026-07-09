@@ -97,16 +97,16 @@ export default function Home() {
             loop
             muted
             playsInline
-            className=" absolute inset-0 w-full h-full object-cover"
+            className="" style={{ objectPosition: "center top" }}
           /> */}
           <img
             src="/cubanexthero.png"
-            className="hidden sm:block w-full h-full center object-cover opacity-45"
+            className="" style={{ objectPosition: "center top" }}
             alt="Hero Background"
           />
           <img
             src="/cubanextherophone.png"
-            className="block sm:hidden w-full h-full center object-cover opacity-45"
+            className="" style={{ objectPosition: "center top" }}
             alt="Hero Background"
           />
           <div className="absolute inset-0 bg-black/30 sm:bg-black/30" />
@@ -152,7 +152,7 @@ export default function Home() {
               </button>
             </a>
           </div>
-          <div className="pt-10 hidden sm:flex gap-4 sm:gap-8 justify-center opacity-60">
+          <div className="pt-10 hidden sm:flex gap-4 sm:gap-10 justify-center opacity-60">
             <div className="flex justify-center items-center gap-2">
               <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
               <span className="text-[12px] sm:text-[14px] font-medium">Verified Contract</span>
@@ -172,13 +172,13 @@ export default function Home() {
       {/* ================= WHY CUBANEX ================= */}
       <section
         id="fourPoint"
-        className="relative sm:pb-20 z-10   sm:py-20 bg-[#000] px-6"
+        className="relative sm:pb-20 z-10   sm:py-28 bg-[#000] px-6"
       >
         {/* 4 s*/}
         <div className="absolute  w-full h-full sm:h-auto  bg-[#000] top-0 z-1">
           <img
             src="/shapbg.png"
-            className=" w-full h-full center z-10  object-cover "
+            className="" style={{ objectPosition: "center top" }}
             alt="Hero Background"
           />
         </div>
@@ -280,7 +280,7 @@ export default function Home() {
 
         {/* from havana to blockchain s*/}
       </section>
-      <div className=" relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-8 sm:pb-20 ">
+      <div className=" relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-10 sm:pb-20 ">
         <div className="">
           <h2
             className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
@@ -520,7 +520,7 @@ export default function Home() {
         >
           Join the presale in 4 simple steps
         </p>
-        <div className="px-6 grid max-w-[1300px] mx-auto gap-8 md:grid-cols-4">
+        <div className="px-6 grid max-w-[1300px] mx-auto gap-10 md:grid-cols-4">
           {/* 1 */}
           <div className="p-8 border text-center  items-center border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
             <div className="step-wrapper w-full mx-auto">
@@ -589,7 +589,7 @@ export default function Home() {
         </p>
 
         <VipForm />
-        <div className="px-6 pt-20 grid max-w-[1100px] mx-auto gap-8 md:grid-cols-3">
+        <div className="px-6 pt-20 grid max-w-[1100px] mx-auto gap-10 md:grid-cols-3">
           {/* 1 */}
 
           {/* 2 */}

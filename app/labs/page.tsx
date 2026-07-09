@@ -2,6 +2,7 @@ import React from "react";
 import { Work_Sans, Orbitron } from "next/font/google";
 import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -75,18 +76,20 @@ export default function LabsPage() {
           HERO — THE FORGE
       ══════════════════════════════════════════ */}
       <ScrollReveal delay={0.1}>
-        <section className="max-w-5xl mx-auto pt-28 px-4 text-center">
+        <section className="max-w-5xl mx-auto pt-32 px-4 text-center">
           <h1 className={`${orbitron.className} text-4xl sm:text-5xl tracking-tight mb-6`}>
             <span className="text-white">CubaNex</span>{" "}
             <span className="text-[#316CFF]">Labs</span>
           </h1>
 
-          <div className="mt-12 relative flex justify-center">
+          <div className="mt-14 relative flex justify-center w-full max-w-4xl mx-auto aspect-[16/9]">
             <div className="absolute inset-0 bg-[#316CFF]/5 blur-[100px] rounded-full"></div>
-            <img
+            <Image
               src="/7-2-26/labs-7-2-26.jpeg"
               alt="CubaNex Labs Visualization"
-              className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#316CFF]/20 shadow-2xl shadow-[#316CFF]/10"
+              fill
+              priority
+              className="" style={{ objectPosition: "center top" }}
             />
           </div>
 
@@ -103,7 +106,7 @@ export default function LabsPage() {
           DESIGN PHILOSOPHY PILLARS
       ══════════════════════════════════════════ */}
       <ScrollReveal>
-        <section className="relative py-24 px-6 bg-black">
+        <section className="relative py-28 px-6 bg-black">
           <div
             className="absolute inset-0 pointer-events-none opacity-40"
             style={{
@@ -136,7 +139,7 @@ export default function LabsPage() {
                 <ScrollReveal key={i} delay={0.1 * (i + 1)}>
                   <div
                     tabIndex={0}
-                    className="group flex flex-col border border-white/[0.06] rounded-3xl p-7 bg-[#04071d]/80 hover:bg-[#060b28] hover:-translate-y-1 transition-all duration-300 cursor-default outline-none focus-within:border-white/20 min-h-[220px]"
+                    className="group flex flex-col border border-white/[0.06] rounded-3xl p-7 bg-[#04071d]/80 hover:bg-[#060b28] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(49,108,255,0.1)] transition-all duration-500 cursor-default outline-none focus-within:border-white/20 min-h-[220px]"
                   >
                     <div
                       className="w-8 h-[3px] rounded-full mb-6 transition-all duration-400 group-hover:w-12"
@@ -162,7 +165,7 @@ export default function LabsPage() {
           STATUS BANNER
       ══════════════════════════════════════════ */}
       <ScrollReveal>
-        <section className="py-20 px-6 bg-[#02050f]">
+        <section className="py-28 px-6 bg-[#02050f]">
           <div className="max-w-3xl mx-auto text-center">
 
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#14F195]/30 bg-[#14F195]/5 text-[#14F195] text-[11px] font-semibold tracking-widest uppercase mb-8">

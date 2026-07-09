@@ -1,6 +1,6 @@
 "use client";
-import { section, div } from "framer-motion/client";
 import { FileText } from "lucide-react";
+import Image from "next/image";
 
 const Whitepaper = () => {
   const tokenUtilities = [
@@ -15,7 +15,7 @@ const Whitepaper = () => {
   return (
     <div className="whitepaper-page min-h-screen bg-background text-foreground">
       {/* ================= HERO ================= */}
-      <section className="max-w-5xl mx-auto pt-28 px-4 text-center">
+      <section className="max-w-5xl mx-auto pt-32 px-4 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-[11px] font-semibold tracking-widest uppercase mb-8">
           <FileText className="w-4 h-4" />
           <span>CUBANEX WHITEPAPER v1.0</span>
@@ -27,11 +27,15 @@ const Whitepaper = () => {
         </h1>
 
         <div className="mt-12 relative flex justify-center">
-          <div className="absolute inset-0 bg-[#00D2FF]/5 blur-[100px] rounded-full"></div>
-          <img
+          <div className="absolute inset-0 bg-[#00D2FF]/5 blur-[100px] rounded-full animate-ambient-pulse"></div>
+          <Image
             src="/7-2-26/whitepaper-7-2-26.jpeg"
             alt="CubaNex Whitepaper Visualization"
-            className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#00D2FF]/20 shadow-2xl shadow-[#00D2FF]/10"
+            width={896}
+            height={504}
+            priority
+            className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#00D2FF]/20 shadow-2xl shadow-[#00D2FF]/10 mobile-focus-top"
+            style={{ objectFit: "cover", objectPosition: "center 20%" }}
           />
         </div>
 
@@ -87,14 +91,14 @@ const Whitepaper = () => {
               </li>
               <li className="flex justify-between">
                 <span className="font-semibold text-white">Utility Summary:</span>
-                <span className="text-right">Autonomous Systems & AI Utilities</span>
+                <span className="text-right">Autonomous Systems &amp; AI Utilities</span>
               </li>
             </ul>
           </div>
       </section>
 
       {/* ================= SECTION 01 — ABSTRACT ================= */}
-      <section id="section-01" className="py-20 px-4">
+      <section id="section-01" className="py-32 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
             <span className="whitepaper-title text-5xl font-bold text-primary/30">
@@ -110,8 +114,8 @@ const Whitepaper = () => {
 
           <p className="whitepaper-body leading-relaxed">
             CubaNex (CNEX) is a self-evolving digital asset built on the Binance
-            Smart Chain. Guided by the principle “Nothing Is Added, Only
-            Revealed,” it integrates philosophical intention with technical
+            Smart Chain. Guided by the principle &quot;Nothing Is Added, Only
+            Revealed,&quot; it integrates philosophical intention with technical
             precision.
           </p>
 
@@ -125,9 +129,9 @@ const Whitepaper = () => {
       {/* ================= SECTION 02 — INTRODUCTION ================= */}
       <section
         id="section-02"
-        className="py-20 px-4 bg-[hsl(217_70%_8%_/_0.3)] border-y border-[hsl(217_40%_20%)]"
+        className="py-32 px-4 bg-[hsl(217_70%_8%_/_0.3)] border-y border-[hsl(217_40%_20%)]"
       >
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
             <h3 className="text-lg font-semibold text-[#00e0c7]">Purpose</h3>
             <p className="text-[#8badb5] leading-relaxed">
@@ -148,7 +152,7 @@ const Whitepaper = () => {
       </section>
 
       {/* ================= SECTION 03 — CORE PRINCIPLES ================= */}
-      <section id="section-03" className="py-20 px-4">
+      <section id="section-03" className="py-32 px-4">
         <div className="max-w-4xl mx-auto">
           <ul className="space-y-2 text-[#8badb5]">
             <li>Neutrality</li>
@@ -163,7 +167,7 @@ const Whitepaper = () => {
       {/* ================= SECTION 04 — TOKEN ARCHITECTURE ================= */}
       <section
         id="section-04"
-        className="py-20 px-4 bg-[hsl(217_70%_8%_/_0.3)] border-y border-[hsl(217_40%_20%)]"
+        className="py-32 px-4 bg-[hsl(217_70%_8%_/_0.3)] border-y border-[hsl(217_40%_20%)]"
       >
         <div className="max-w-4xl mx-auto space-y-4 text-[#8badb5]">
           <p>Network: Binance Smart Chain (BEP-20)</p>
@@ -178,7 +182,7 @@ const Whitepaper = () => {
       </section>
 
       {/* ================= SECTION 05 — AI & GOVERNANCE ================= */}
-      <section id="section-05" className="py-20 px-4">
+      <section id="section-05" className="py-32 px-4">
         <div className="max-w-4xl mx-auto">
           <p className="text-[#8badb5] leading-relaxed">
             CubaNex integrates a philosophical AI layer focused on recognition
@@ -191,7 +195,7 @@ const Whitepaper = () => {
       {/* ================= SECTION 06 — ROADMAP ================= */}
       <section
         id="section-06"
-        className="py-20 px-4 bg-[hsl(217_70%_8%_/_0.3)] border-y border-[hsl(217_40%_20%)]"
+        className="py-32 px-4 bg-[hsl(217_70%_8%_/_0.3)] border-y border-[hsl(217_40%_20%)]"
       >
         <div className="max-w-4xl mx-auto text-[#8badb5] space-y-2">
           <p>Phase 1 — Foundation</p>
@@ -203,7 +207,7 @@ const Whitepaper = () => {
       </section>
 
       {/* ================= SECTION 07 — THE ALCHEMIST ================= */}
-      <section id="section-07" className="py-20 px-4">
+      <section id="section-07" className="py-32 px-4">
         <div className="max-w-4xl mx-auto text-[#8badb5] space-y-4">
           <p>I AM The Alchemist.</p>
           <p>

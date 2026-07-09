@@ -19,7 +19,7 @@ const page = () => {
   return (
     <div className="main relative  bg-[#010813]">
       <ScrollReveal>
-        <div className=" sm:flex px-4 w-full pt-[120px] pb-[20px] sm:pt-[150px]  gap-2 items-center justify-center cmbg">
+        <div className="sm:flex px-4 w-full pt-[140px] pb-[40px] sm:pt-[170px] gap-2 items-center justify-center cmbg">
           <div>
             {" "}
             <h1
@@ -38,6 +38,7 @@ const page = () => {
             src={"/7-2-26/community-7-2-26.jpeg"}
             width={500}
             height={500}
+            priority
             className="hidden sm:block rounded-2xl border border-white/10"
           />
           <Image
@@ -45,24 +46,23 @@ const page = () => {
             src={"/7-2-26/community-7-2-26.jpeg"}
             width={300}
             height={200}
+            priority
             className="block mt-[20px] mx-auto sm:hidden rounded-2xl border border-white/10"
           />
         </div>
       </ScrollReveal>
-      <section className="">
+      <section className="py-20 sm:py-28">
         <ScrollReveal>
           <h2
-            className={`${orbitron.className} text-center text-[30px]  sm:text-[40px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+            className={`${orbitron.className} text-center text-[30px] sm:text-[40px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
           >
             Open <span className="text-[#316CFF]">Channels</span>
           </h2>
 
           <VipForm />
         </ScrollReveal>
-        <div className="px-6 pb-10 pt-20 grid  text-white max-w-[1100px] mx-auto gap-8 md:grid-cols-2">
-          {/* 1 */}
-
-          {/* 2 */}
+        <div className="px-6 pb-14 pt-24 grid text-white max-w-[1100px] mx-auto gap-10 md:grid-cols-2">
+          {/* 2 - Twitter / X */}
           <ScrollReveal delay={0.1}>
             <a
               href="https://x.com/CubaNexOfficial"
@@ -70,7 +70,7 @@ const page = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(0,210,255,0.12)] hover:border-[#00D2FF]/30 transition-all duration-500 cursor-pointer outline-none" tabIndex={0}>
                 <div className="relative z-20 px-6">
                   <div className="w-full flex justify-center mb-4">
                     <Twitter size={56} className="mx-auto" strokeWidth={1.8} />
@@ -88,15 +88,15 @@ const page = () => {
                 </div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(0, 210, 255, 0.3) 1px, transparent 1px)',
-                    backgroundSize: '100% 100%, 15px 15px'
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.12) 0%, transparent 70%), radial-gradient(rgba(0, 210, 255, 0.15) 1px, transparent 1px)',
+                    backgroundSize: '100% 100%, 18px 18px'
                   }}
                 />
               </div>
             </a>
           </ScrollReveal>
 
-          {/* 3 */}
+          {/* 3 - Telegram */}
           <ScrollReveal delay={0.2}>
             <a
               href="https://t.me/CubaNexOfficial"
@@ -104,7 +104,7 @@ const page = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(0,210,255,0.12)] hover:border-[#00D2FF]/30 transition-all duration-500 cursor-pointer outline-none" tabIndex={0}>
                 <div className="relative z-20 px-6">
                   <div className="w-full flex justify-center mb-4">
                     <Send size={56} className="mx-auto" strokeWidth={1.8} />
@@ -122,8 +122,8 @@ const page = () => {
                 </div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(0, 210, 255, 0.3) 1px, transparent 1px)',
-                    backgroundSize: '100% 100%, 15px 15px'
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.12) 0%, transparent 70%), radial-gradient(rgba(0, 210, 255, 0.15) 1px, transparent 1px)',
+                    backgroundSize: '100% 100%, 18px 18px'
                   }}
                 />
               </div>
@@ -167,15 +167,15 @@ const page = () => {
                 What We <span className="text-[#316CFF]">Stand For</span>
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                <div className="p-6 border border-white/5 bg-[#0a1128] rounded-xl">
+                <div className="p-6 border border-white/5 bg-[#0a1128] rounded-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.08)]">
                   <h4 className={`${orbitron.className} text-[#00D2FF] text-lg font-bold mb-2`}>Alignment over noise</h4>
                   <p className="text-[#9CB4D8] text-sm leading-relaxed">Focus on building systems of value rather than engaging in empty hype.</p>
                 </div>
-                <div className="p-6 border border-white/5 bg-[#0a1128] rounded-xl">
+                <div className="p-6 border border-white/5 bg-[#0a1128] rounded-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(49,108,255,0.08)]">
                   <h4 className={`${orbitron.className} text-[#316CFF] text-lg font-bold mb-2`}>Code over speculation</h4>
                   <p className="text-[#9CB4D8] text-sm leading-relaxed">Prioritize robust infrastructure, transparent contracts, and functional technology.</p>
                 </div>
-                <div className="p-6 border border-white/5 bg-[#0a1128] rounded-xl">
+                <div className="p-6 border border-white/5 bg-[#0a1128] rounded-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(153,69,255,0.08)]">
                   <h4 className={`${orbitron.className} text-[#9945FF] text-lg font-bold mb-2`}>Evolution over stagnation</h4>
                   <p className="text-[#9CB4D8] text-sm leading-relaxed">Embrace change. Adaptability is the core requirement for longevity in decentralized systems.</p>
                 </div>
