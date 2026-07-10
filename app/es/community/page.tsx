@@ -71,7 +71,7 @@ const page = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)] transition-all duration-500 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)] transition-all duration-700 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
                 <div className="relative z-20 px-6">
                   <div className="w-full flex justify-center mb-4">
                     <Twitter size={56} className="mx-auto" strokeWidth={1.8} />
@@ -105,7 +105,7 @@ const page = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)] transition-all duration-500 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)] transition-all duration-700 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
                 <div className="relative z-20 px-6">
                   <div className="w-full flex justify-center mb-4">
                     <Send size={56} className="mx-auto" strokeWidth={1.8} />

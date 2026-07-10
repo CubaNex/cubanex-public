@@ -70,7 +70,7 @@ const pillars = [
 export default function LabsPage() {
   return (
     <main
-      className={`${workSans.variable} bg-black text-white min-h-screen w-full overflow-x-hidden`}
+      className={`${workSans.variable} bg-black text-white min-h-screen w-full`}
     >
       {/* ══════════════════════════════════════════
           HERO — THE FORGE

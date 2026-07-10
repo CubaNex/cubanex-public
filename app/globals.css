@@ -257,35 +257,20 @@ body:has(.coming-soon) .Footer {
   }
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling and overflow management */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
-  /* for anchor links */
-  scroll-padding-top: 4rem;
-  /* optional offset for fixed headers */
-  overflow-x: hidden;
+  scroll-padding-top: 4rem; /* offset for fixed headers */
 }
 
 /* Smooth momentum scrolling on mobile (iOS) */
 body {
   -webkit-overflow-scrolling: touch;
-}
-
-/* Premium smooth scroll feel */
-/* Global scrollbar hiding removed for better accessibility and feeling of control */
-/* * {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-*::-webkit-scrollbar {
-  display: none;
-} */
-
-/* Optional: smooth scrolling for wheel and trackpad using ease-in-out */
-html {
-  scroll-behavior: smooth;
-  /* scroll-snap-type removed to fix "tight" scrolling on mobile */
 }
 
 /*White paper css  */

@@ -147,7 +147,7 @@ const roadmapPhases = [
 
 export default function Home() {
   return (
-    <main className="bg-black text-white min-h-0 sm:min-h-screen w-full overflow-x-hidden">
+    <main className="bg-black text-white min-h-0 sm:min-h-screen w-full">
       {/* ================= HERO SECTION ================= */}
       {/* Chapter 1: The Awakening — Approved hero artwork */}
       <style>{`
@@ -232,12 +232,12 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Cinematic vignette — edges only, no heavy overlay */}
+            {/* Cinematic vignette — enhanced opacity for better text visibility */}
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
                 background:
-                  "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%)",
+                  "radial-gradient(ellipse at center, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.8) 100%)",
               }}
             />
             {/* Bottom fade to page */}
@@ -316,7 +316,7 @@ export default function Home() {
       {/* ================= WHY CUBANEX ================= */}
       <ScrollReveal>
         <section
-          className="relative py-20 sm:py-28 z-10 bg-[#000] px-6 overflow-hidden"
+          className="relative py-24 sm:py-32 z-10 bg-[#000] px-6 overflow-hidden"
         >
           {/* 4 s*/}
           <div className="absolute w-full h-full bg-[#000] top-0 z-0 opacity-50">
@@ -372,7 +372,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 mt-10">
               
               {/* Intelligence */}
-              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)] transition-all duration-500 cursor-pointer outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)] transition-all duration-700 cursor-pointer outline-none" tabIndex={0}>
                 <div className="relative z-20 text-center w-full">
                   <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
                     <span className="w-1.5 h-6 bg-[#00D2FF] rounded-full inline-block" />
@@ -385,7 +385,7 @@ export default function Home() {
               </div>
 
               {/* Sovereignty */}
-              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(49,108,255,0.1)] transition-all duration-500 cursor-pointer outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(49,108,255,0.1)] transition-all duration-700 cursor-pointer outline-none" tabIndex={0}>
                 <div className="relative z-20 text-center w-full">
                   <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
                     <span className="w-1.5 h-6 bg-[#316CFF] rounded-full inline-block" />
@@ -398,7 +398,7 @@ export default function Home() {
               </div>
 
               {/* Connection */}
-              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(153,69,255,0.1)] transition-all duration-500 cursor-pointer outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(153,69,255,0.1)] transition-all duration-700 cursor-pointer outline-none" tabIndex={0}>
                 <div className="relative z-20 text-center w-full">
                   <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
                     <span className="w-1.5 h-6 bg-[#9945FF] rounded-full inline-block" />
@@ -411,7 +411,7 @@ export default function Home() {
               </div>
 
               {/* Evolution */}
-              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,229,255,0.1)] transition-all duration-500 cursor-pointer outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,229,255,0.1)] transition-all duration-700 cursor-pointer outline-none" tabIndex={0}>
                 <div className="relative z-20 text-center w-full">
                   <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
                     <span className="w-1.5 h-6 bg-[#00E5FF] rounded-full inline-block" />
@@ -466,7 +466,7 @@ export default function Home() {
       {/* ================= tokenomics ================= */}
 
       <ScrollReveal>
-        <section className="py-20 sm:py-28 px-6">
+        <section className="py-24 sm:py-32 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2
               className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-4`}
@@ -528,7 +528,7 @@ export default function Home() {
 
       {/* ================= Road Map ================= */}
       <ScrollReveal>
-        <section className="py-20 sm:py-28 bg-[#000] relative overflow-hidden">
+        <section className="py-24 sm:py-32 bg-[#000] relative overflow-hidden">
           <div className="container mx-auto px-6 relative z-10">
             <h2
               className={`${orbitron.className} text-center text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-4`}
@@ -582,7 +582,7 @@ export default function Home() {
       {/* ================= How to Get CNEX ================= */}
 
       <ScrollReveal>
-        <section className="py-20 sm:py-28 px-6">
+        <section className="py-24 sm:py-32 px-6">
           <div className="max-w-6xl mx-auto text-center">
             <h2
               className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-4`}
@@ -598,7 +598,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               
               {/* Step 1 */}
-              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 text-center outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 text-center outline-none" tabIndex={0}>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">1</div>
                 <h3 className="text-white text-xl font-bold mb-4">Set Up Wallet</h3>
                 <p className="text-[#9CB4D8] text-sm leading-relaxed">
@@ -607,7 +607,7 @@ export default function Home() {
               </div>
 
               {/* Step 2 */}
-              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 text-center outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 text-center outline-none" tabIndex={0}>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">2</div>
                 <h3 className="text-white text-xl font-bold mb-4">Add BNB Smart Chain</h3>
                 <p className="text-[#9CB4D8] text-sm leading-relaxed">
@@ -616,7 +616,7 @@ export default function Home() {
               </div>
 
               {/* Step 3 */}
-              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 text-center outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 text-center outline-none" tabIndex={0}>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">3</div>
                 <h3 className="text-white text-xl font-bold mb-4">Verify Contract</h3>
                 <p className="text-[#9CB4D8] text-sm leading-relaxed">
@@ -625,7 +625,7 @@ export default function Home() {
               </div>
 
               {/* Step 4 */}
-              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 text-center outline-none" tabIndex={0}>
+              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 text-center outline-none" tabIndex={0}>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">4</div>
                 <h3 className="text-white text-xl font-bold mb-4">Receive CNEX</h3>
                 <p className="text-[#9CB4D8] text-sm leading-relaxed">
@@ -641,7 +641,7 @@ export default function Home() {
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
       <ScrollReveal>
-        <section className="relative mt-[-70px] py-20 sm:py-28 px-6 z-10 bg-black overflow-hidden">
+        <section className="relative mt-[-70px] py-24 sm:py-32 px-6 z-10 bg-black overflow-hidden">
           <div
             className="absolute inset-0 z-0 opacity-20 pointer-events-none"
             style={{

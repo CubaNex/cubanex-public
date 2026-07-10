@@ -150,7 +150,7 @@ const page = () => {
         </ScrollReveal>
         {/* 2 */}
         <ScrollReveal delay={0.2}>
-          <div className="p-8 border w-full border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border w-full border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] hover:-translate-y-2 transition-all duration-700">
             <div className="w-12 h-12 mb-5 rounded-xl bg-yellow-500/20 flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-yellow-400"
@@ -175,7 +175,7 @@ const page = () => {
         </ScrollReveal>
         {/* 3 */}
         <ScrollReveal delay={0.3}>
-          <div className="p-8 border w-full border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] transition">
+          <div className="p-8 border w-full border-[#00D2FF]/17 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:scale-[1.02] hover:-translate-y-2 transition-all duration-700">
             <div className="w-12 h-12 mb-5 rounded-xl bg-purple-500/20 flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-purple-400"
@@ -409,7 +409,7 @@ const page = () => {
         ]}
       />
       
-      <div className="max-w-4xl mx-auto px-6 pb-20 text-center">
+      <div className="max-w-4xl mx-auto px-6 pb-24 text-center">
         <p className="text-[#9CB4D8] text-sm italic">
           Disclaimer: Utility layers represent the intended evolutionary path of the CubaNex network. Timelines and features are subject to development milestones and ecosystem alignment.
         </p>

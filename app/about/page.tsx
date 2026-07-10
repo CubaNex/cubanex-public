@@ -48,7 +48,7 @@ const Page = () => {
         </section>
       </ScrollReveal>
 
-      <section className="relative py-20 sm:py-28 px-4">
+      <section className="relative py-24 sm:py-32 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Title */}
           <ScrollReveal>
@@ -61,7 +61,7 @@ const Page = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
             {/* Mission */}
             <ScrollReveal delay={0.1}>
-              <div className="h-full rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(0,210,255,0.12)] hover:border-cyan-500/40">
+              <div className="h-full rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,210,255,0.12)] hover:border-cyan-500/40">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="h-10 w-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
                     <span className="text-cyan-400 text-lg">◎</span>
@@ -76,7 +76,7 @@ const Page = () => {
 
             {/* Vision */}
             <ScrollReveal delay={0.2}>
-              <div className="h-full rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(0,210,255,0.12)] hover:border-cyan-500/40">
+              <div className="h-full rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 shadow-lg transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,210,255,0.12)] hover:border-cyan-500/40">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="h-10 w-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
                     <span className="text-cyan-400 text-lg">◉</span>
@@ -92,7 +92,7 @@ const Page = () => {
 
           {/* Technology */}
           <ScrollReveal>
-            <div className="rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 mb-8 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)]">
+            <div className="rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-[#07131f] to-[#030c14] p-8 mb-8 shadow-lg transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="h-10 w-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
                   <span className="text-cyan-400 text-lg">⚙</span>
@@ -144,7 +144,7 @@ const Page = () => {
       </div>
 
       {/* VALUE SECTION */}
-      <section className="py-20 sm:py-28">
+      <section className="py-24 sm:py-32">
         <ScrollReveal>
           <h2
             className={`${orbitron.className} text-center text-[30px] sm:text-[40px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-12`}

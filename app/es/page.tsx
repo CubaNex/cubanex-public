@@ -38,7 +38,7 @@ const abhayaLibre = Abhaya_Libre({
 
 export default function Home() {
   return (
-    <main className="bg-black  text-white min-h-auto sm:min-h-screen w-full overflow-x-hidden">
+    <main className="bg-black  text-white min-h-auto sm:min-h-screen w-full">
       {/* ================= HERO SECTION ================= */}
       <style>{`
         @media (prefers-reduced-motion: no-preference) {
@@ -116,7 +116,7 @@ export default function Home() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%)",
+                "radial-gradient(ellipse at center, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.8) 100%)",
             }}
           />
           <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent pointer-events-none" />
@@ -191,7 +191,7 @@ export default function Home() {
       <ScrollReveal>
         <section
           id="fourPoint"
-          className="relative sm:pb-24 z-10 sm:py-28 bg-[#000] px-6"
+          className="relative sm:pb-24 z-10 sm:py-32 bg-[#000] px-6"
         >
           <div className="absolute  w-full h-full sm:h-auto  bg-[#000] top-0 z-1">
             <img
@@ -242,7 +242,7 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 md:grid-cols-4 mt-20">
               {/* Lightning Fast */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
 
                 <div className="relative z-20 px-6">
@@ -265,7 +265,7 @@ export default function Home() {
               </div>
 
               {/* Secure & Audited */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
 
                 <div className="relative z-20 px-6">
@@ -288,7 +288,7 @@ export default function Home() {
               </div>
 
               {/* Eco-Friendly */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
 
                 <div className="relative z-20 px-6">
@@ -311,7 +311,7 @@ export default function Home() {
               </div>
 
               {/* Real Utility */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-500 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
 
                 <div className="relative z-20 px-6">
@@ -692,7 +692,7 @@ export default function Home() {
 
       {/* ================= Unlock VIP Access to CubaNexN ================= */}
       <ScrollReveal>
-        <section className="relative pb-20 sm:py-28 px-6 z-10 bg-black overflow-hidden">
+        <section className="relative pb-20 sm:py-32 px-6 z-10 bg-black overflow-hidden">
           <div
             className="absolute inset-0 z-0 opacity-20 pointer-events-none"
             style={{
