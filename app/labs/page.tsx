@@ -88,7 +88,7 @@ export default function LabsPage() {
               src="/7-2-26/labs-7-2-26.jpeg"
               alt="CubaNex Labs Visualization"
               fill
-              priority
+              priority quality={100}
               className="" style={{ objectPosition: "center top" }}
             />
           </div>

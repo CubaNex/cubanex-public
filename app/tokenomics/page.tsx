@@ -34,7 +34,7 @@ const page = () => {
               alt="CNEX Tokenomics Visualization"
               width={896}
               height={504}
-              priority
+              priority quality={100}
               className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#316CFF]/20 shadow-2xl shadow-[#316CFF]/10"
               style={{ objectFit: "cover" }}
             />

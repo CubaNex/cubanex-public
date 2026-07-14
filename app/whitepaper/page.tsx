@@ -33,7 +33,7 @@ const Whitepaper = () => {
             alt="CubaNex Whitepaper Visualization"
             width={896}
             height={504}
-            priority
+            priority quality={100}
             className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#00D2FF]/20 shadow-2xl shadow-[#00D2FF]/10 mobile-focus-top"
             style={{ objectFit: "cover", objectPosition: "center 20%" }}
           />

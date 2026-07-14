@@ -33,7 +33,7 @@ const Page = () => {
               src="/7-2-26/about-7-2-26.jpeg"
               alt="CubaNex About Visualization"
               fill
-              priority
+              priority quality={100}
               className="mobile-focus-top"
               style={{ objectPosition: "center 20%" }}
             />

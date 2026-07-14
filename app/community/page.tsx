@@ -38,7 +38,7 @@ const page = () => {
             src={"/7-2-26/community-7-2-26.jpeg"}
             width={500}
             height={500}
-            priority
+            priority quality={100}
             className="hidden sm:block rounded-2xl border border-white/10"
           />
           <Image
@@ -46,7 +46,7 @@ const page = () => {
             src={"/7-2-26/community-7-2-26.jpeg"}
             width={300}
             height={200}
-            priority
+            priority quality={100}
             className="block mt-[20px] mx-auto sm:hidden rounded-2xl border border-white/10"
           />
         </div>

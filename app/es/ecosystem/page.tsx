@@ -16,10 +16,10 @@ export default function EcosystemPage() {
           <div className="mt-14 relative flex justify-center w-full max-w-4xl mx-auto aspect-[16/9]">
             <div className="absolute inset-0 bg-[#22E6E3]/5 blur-[100px] rounded-full"></div>
             <Image
-              src="/7-2-26/ecosystem-7-2-26.jpeg"
+              src="/7-2-26/es.jpeg"
               alt="Visualización del Ecosistema CubaNex"
               fill
-              priority
+              priority quality={100}
               className="" style={{ objectPosition: "center top" }}
             />
           </div>
