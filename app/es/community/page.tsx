@@ -18,39 +18,29 @@ const orbitron = Orbitron({
 const page = () => {
   return (
     <div className="main relative  bg-[#010813]">
-      <ScrollReveal>
-        <div className="sm:flex px-4 w-full pt-[140px] pb-[40px] sm:pt-[170px] gap-2 items-center justify-center cmbg">
-          <div>
-            {" "}
-            <h1
-              className={`${orbitron.className} text-center sm:text-start text-[32px] sm:text-[56px] max-w-[800px]  text-[#fff] font-semibold leading-[1.2em] mb-6`}
-            >
-              Únete a la <span className="text-[#316CFF]"> Comunidad</span>
-            </h1>
-            <p
-              className={`${workSans.className} text-center sm:text-start max-w-[750px]  text-[16px] sm:text-[24px] text-gray-300 mb-8`}
-            >
-              Conéctate con miles de seguidores que construyen juntos el futuro
-              descentralizado de Cuba
-            </p>
+      <ScrollReveal delay={0.1}>
+        <section className="max-w-5xl mx-auto pt-32 px-4 text-center">
+          <h1 className={`${orbitron.className} text-4xl sm:text-5xl tracking-tight mb-6`}>
+            <span className="text-white">Únete a la</span>{" "}
+            <span className="text-[#316CFF]">Comunidad</span>
+          </h1>
+
+          <div className="mt-14 relative flex justify-center w-full max-w-4xl mx-auto aspect-[16/9]">
+            <div className="absolute inset-0 bg-[#316CFF]/5 blur-[100px] rounded-full animate-ambient-pulse"></div>
+            <Image
+              src="/7-2-26/community-7-2-26.jpeg"
+              alt="Comunidad CubaNex"
+              fill
+              priority quality={100}
+              className="rounded-2xl border border-white/10 shadow-2xl"
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+            />
           </div>
-          <Image
-            alt="community"
-            src={"/7-2-26/community-7-2-26.jpeg"}
-            width={500}
-            height={500}
-            priority quality={100}
-            className="hidden sm:block rounded-2xl border border-white/10"
-          />
-          <Image
-            alt="community"
-            src={"/7-2-26/community-7-2-26.jpeg"}
-            width={300}
-            height={200}
-            priority quality={100}
-            className="block mt-[20px] mx-auto sm:hidden rounded-2xl border border-white/10"
-          />
-        </div>
+
+          <p className={`${workSans.className} mt-12 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto`}>
+            Conéctate con miles de seguidores que construyen juntos el futuro descentralizado de Cuba
+          </p>
+        </section>
       </ScrollReveal>
       <section className="">
         <ScrollReveal>

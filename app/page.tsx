@@ -206,7 +206,7 @@ export default function Home() {
               <Image
                 src="/7-2-26/home-hero-7-2-26.jpeg"
                 className="w-full h-full object-cover mobile-focus-60"
-                style={{ objectPosition: "60% 30%", opacity: 1 }}
+                style={{ objectPosition: "center 30%", opacity: 1 }}
                 alt="CubaNex – The Awakening"
                 fill
                 priority

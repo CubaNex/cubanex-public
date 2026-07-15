@@ -18,38 +18,29 @@ const orbitron = Orbitron({
 const page = () => {
   return (
     <div className="main relative  bg-[#010813]">
-      <ScrollReveal>
-        <div className="sm:flex px-4 w-full pt-[140px] pb-[40px] sm:pt-[170px] gap-2 items-center justify-center cmbg">
-          <div>
-            {" "}
-            <h1
-              className={`${orbitron.className} text-center sm:text-start text-[32px] sm:text-[56px] max-w-[800px]  text-[#fff] font-semibold leading-[1.2em] mb-6`}
-            >
-              Join the <span className="text-[#316CFF]"> Signal</span>
-            </h1>
-            <p
-              className={`${workSans.className} text-center sm:text-start max-w-[750px]  text-[16px] sm:text-[24px] text-[#9CB4D8] mb-8`}
-            >
-              The network is active. Connect with participants building the future of decentralized intelligence.
-            </p>
+      <ScrollReveal delay={0.1}>
+        <section className="max-w-5xl mx-auto pt-32 px-4 text-center">
+          <h1 className={`${orbitron.className} text-4xl sm:text-5xl tracking-tight mb-6`}>
+            <span className="text-white">Join the</span>{" "}
+            <span className="text-[#316CFF]">Signal</span>
+          </h1>
+
+          <div className="mt-14 relative flex justify-center w-full max-w-4xl mx-auto aspect-[16/9]">
+            <div className="absolute inset-0 bg-[#316CFF]/5 blur-[100px] rounded-full animate-ambient-pulse"></div>
+            <Image
+              src="/7-2-26/community-7-2-26.jpeg"
+              alt="CubaNex Community"
+              fill
+              priority quality={100}
+              className="rounded-2xl border border-white/10 shadow-2xl"
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+            />
           </div>
-          <Image
-            alt="community"
-            src={"/7-2-26/community-7-2-26.jpeg"}
-            width={500}
-            height={500}
-            priority quality={100}
-            className="hidden sm:block rounded-2xl border border-white/10"
-          />
-          <Image
-            alt="community"
-            src={"/7-2-26/community-7-2-26.jpeg"}
-            width={300}
-            height={200}
-            priority quality={100}
-            className="block mt-[20px] mx-auto sm:hidden rounded-2xl border border-white/10"
-          />
-        </div>
+
+          <p className={`${workSans.className} mt-12 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto`}>
+            The network is active. Connect with participants building the future of decentralized intelligence.
+          </p>
+        </section>
       </ScrollReveal>
       <section className="py-24 sm:py-32">
         <ScrollReveal>
