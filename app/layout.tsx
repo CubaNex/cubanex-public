@@ -7,6 +7,8 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BacktoTop";
+import CustomCursor from "@/components/CustomCursor";
+import NoiseBackground from "@/components/NoiseBackground";
 
 // Fonts
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -50,6 +52,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${workSans.variable} ${orbitron.variable} antialiased`}
       >
+        <CustomCursor />
+        <NoiseBackground />
         <Header defaultLanguage={defaultLang} />
         <BackToTop />
         {children}

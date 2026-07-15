@@ -1071,4 +1071,178 @@ body {
   height: 80px;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
   pointer-events: none;
-}
+}
+
+/* ==================== AWWWARDS-LEVEL GLASSMORPHISM & EFFECTS ==================== */
+
+.glass-panel {
+  background: rgba(4, 7, 29, 0.6) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+  transition: border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.glass-panel:hover {
+  border-color: rgba(49, 108, 255, 0.25) !important;
+  box-shadow: 0 8px 32px 0 rgba(49, 108, 255, 0.15) !important;
+}
+
+/* Custom interactive cursor trailing style */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #80ECFF;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(128, 236, 255, 0.4);
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  will-change: width, height, transform, border-color, background-color;
+  transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              height 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.3s,
+              background-color 0.3s;
+}
+
+/* Cursor hover adjustments over clickable elements */
+.custom-cursor-hover .custom-cursor {
+  width: 4px;
+  height: 4px;
+  background-color: #316CFF;
+}
+
+.custom-cursor-hover .custom-cursor-ring {
+  width: 56px;
+  height: 56px;
+  border-color: rgba(49, 108, 255, 0.6);
+  background-color: rgba(49, 108, 255, 0.08);
+}
+
+/* Click ripple animation styles */
+.ripple-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(128, 236, 255, 0.35);
+  transform: scale(0);
+  animation: ripple-animation-kf 0.6s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation-kf {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Cinematic film grain noise overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.045;
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* Aurora lighting gradient background effect */
+.aurora-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  filter: blur(110px);
+  opacity: 0.35;
+}
+
+.aurora-sphere {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.aurora-sphere-1 {
+  top: -15%;
+  left: -10%;
+  width: 65vw;
+  height: 65vh;
+  background: radial-gradient(circle, rgba(49, 108, 255, 0.35) 0%, transparent 70%);
+  animation: aurora-drift-1-kf 35s ease-in-out infinite alternate;
+}
+
+.aurora-sphere-2 {
+  bottom: -15%;
+  right: -10%;
+  width: 75vw;
+  height: 75vh;
+  background: radial-gradient(circle, rgba(128, 236, 255, 0.25) 0%, transparent 70%);
+  animation: aurora-drift-2-kf 40s ease-in-out infinite alternate;
+}
+
+.aurora-sphere-3 {
+  top: 25%;
+  right: 15%;
+  width: 55vw;
+  height: 55vh;
+  background: radial-gradient(circle, rgba(20, 241, 149, 0.12) 0%, transparent 70%);
+  animation: aurora-drift-3-kf 28s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-drift-1-kf {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  50% { transform: translate(8vw, 6vh) rotate(180deg) scale(1.08); }
+  100% { transform: translate(-6vw, -8vh) rotate(360deg) scale(0.92); }
+}
+
+@keyframes aurora-drift-2-kf {
+  0% { transform: translate(0, 0) rotate(0deg) scale(0.92); }
+  50% { transform: translate(-6vw, -10vh) rotate(-180deg) scale(1.12); }
+  100% { transform: translate(10vw, 5vh) rotate(-360deg) scale(1); }
+}
+
+@keyframes aurora-drift-3-kf {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(6vw, -6vh) scale(0.88); }
+  100% { transform: translate(-8vw, 4vh) scale(1.08); }
+}
+

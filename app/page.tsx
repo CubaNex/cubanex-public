@@ -17,6 +17,10 @@ import VipForm from "@/components/VipForm";
 import WhitePaper from "@/components/WhitePaper";
 import ArrowB from "@/components/ArrowB";
 import VideoPlayer from "@/components/VideoPlayer";
+import HeroScene from "@/components/HeroScene";
+import TiltCard from "@/components/ui/TiltCard";
+import Magnetic from "@/components/ui/Magnetic";
+import Ripple from "@/components/ui/Ripple";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -187,6 +191,8 @@ export default function Home() {
 
           {/* ── Approved Artwork Background ── */}
           <div className="absolute inset-0 z-0 bg-[#000]">
+            {/* Interactive 3D WebGL hero scene */}
+            <HeroScene />
 
             {/* Hero image — desktop */}
             <div className="hero-sphere hidden sm:block w-full h-full relative">
@@ -197,7 +203,7 @@ export default function Home() {
                 fill
                 priority
                 sizes="100vw"
-                style={{ opacity: 1 }}
+                style={{ opacity: 0.65 }}
               />
             </div>
 
@@ -206,7 +212,7 @@ export default function Home() {
               <Image
                 src="/7-2-26/home-hero-7-2-26.jpeg"
                 className="w-full h-full object-cover mobile-focus-60"
-                style={{ objectPosition: "center 30%", opacity: 1 }}
+                style={{ objectPosition: "center 30%", opacity: 0.65 }}
                 alt="CubaNex – The Awakening"
                 fill
                 priority
@@ -276,22 +282,30 @@ export default function Home() {
 
             {/* CTA Buttons */}
             <div className="flex flex-row gap-2 sm:gap-6 justify-center items-center">
-              <a href="/community" className="w-auto">
-                <button
-                  id="hero-enter-ecosystem"
-                  className="w-auto px-5 py-3 sm:px-7 sm:py-4 text-[13px] sm:text-[16px] whitespace-nowrap rounded-full text-white border border-white/30 font-medium hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
-                >
-                  Enter the Ecosystem
-                </button>
-              </a>
-              <a href="/whitepaper" className="w-auto">
-                <button
-                  id="hero-read-whitepaper"
-                  className="w-auto px-5 py-3 sm:px-7 sm:py-4 text-[13px] sm:text-[16px] whitespace-nowrap rounded-full text-[#000] font-bold bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2] hover:shadow-[0_0_24px_rgba(128,236,255,0.5)] transition-all duration-300"
-                >
-                  Read Whitepaper
-                </button>
-              </a>
+              <Magnetic>
+                <Ripple>
+                  <a href="/community" className="w-auto block">
+                    <button
+                      id="hero-enter-ecosystem"
+                      className="w-auto px-5 py-3 sm:px-7 sm:py-4 text-[13px] sm:text-[16px] whitespace-nowrap rounded-full text-white border border-white/30 font-medium hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
+                    >
+                      Enter the Ecosystem
+                    </button>
+                  </a>
+                </Ripple>
+              </Magnetic>
+              <Magnetic>
+                <Ripple>
+                  <a href="/whitepaper" className="w-auto block">
+                    <button
+                      id="hero-read-whitepaper"
+                      className="w-auto px-5 py-3 sm:px-7 sm:py-4 text-[13px] sm:text-[16px] whitespace-nowrap rounded-full text-[#000] font-bold bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2] hover:shadow-[0_0_24px_rgba(128,236,255,0.5)] transition-all duration-300"
+                    >
+                      Read Whitepaper
+                    </button>
+                  </a>
+                </Ripple>
+              </Magnetic>
             </div>
 
             {/* Trust badges */}
@@ -365,64 +379,72 @@ export default function Home() {
               className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1em] mb-6`}
             >
               Why CubaNex <span className="text-[#316CFF]"> Exists</span>
-            </h2>{" "}
+            </h2>
             <p className="text-gray-400 max-w-[600px] mx-auto mb-16 text-lg">
               CubaNex is not simply a token. It is the foundation for an evolving intelligence network where blockchain, AI, and community participation converge.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 mt-10">
               
               {/* Intelligence */}
-              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,210,255,0.1)] transition-all duration-700 cursor-pointer outline-none" tabIndex={0}>
-                <div className="relative z-20 text-center w-full">
-                  <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
-                    <span className="w-1.5 h-6 bg-[#00D2FF] rounded-full inline-block" />
-                    Intelligence
-                  </h2>
-                  <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
-                    CubaNex is designed to evolve through future AI-assisted systems, autonomous tools, and adaptive digital frameworks.
-                  </p>
+              <TiltCard className="w-full">
+                <div className="group flex flex-col items-center justify-center w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl glass-panel cursor-pointer outline-none" tabIndex={0}>
+                  <div className="relative z-20 text-center w-full">
+                    <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
+                      <span className="w-1.5 h-6 bg-[#00D2FF] rounded-full inline-block" />
+                      Intelligence
+                    </h2>
+                    <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
+                      CubaNex is designed to evolve through future AI-assisted systems, autonomous tools, and adaptive digital frameworks.
+                    </p>
+                  </div>
                 </div>
-              </div>
-
+              </TiltCard>
+ 
               {/* Sovereignty */}
-              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(49,108,255,0.1)] transition-all duration-700 cursor-pointer outline-none" tabIndex={0}>
-                <div className="relative z-20 text-center w-full">
-                  <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
-                    <span className="w-1.5 h-6 bg-[#316CFF] rounded-full inline-block" />
-                    Sovereignty
-                  </h2>
-                  <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
-                    Built on decentralized infrastructure, CubaNex creates a foundation for transparent participation without dependence on centralized control.
-                  </p>
+              <TiltCard className="w-full">
+                <div className="group flex flex-col items-center justify-center w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl glass-panel cursor-pointer outline-none" tabIndex={0}>
+                  <div className="relative z-20 text-center w-full">
+                    <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
+                      <span className="w-1.5 h-6 bg-[#316CFF] rounded-full inline-block" />
+                      Sovereignty
+                    </h2>
+                    <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
+                      Built on decentralized infrastructure, CubaNex creates a foundation for transparent participation without dependence on centralized control.
+                    </p>
+                  </div>
                 </div>
-              </div>
-
+              </TiltCard>
+ 
               {/* Connection */}
-              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(153,69,255,0.1)] transition-all duration-700 cursor-pointer outline-none" tabIndex={0}>
-                <div className="relative z-20 text-center w-full">
-                  <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
-                    <span className="w-1.5 h-6 bg-[#9945FF] rounded-full inline-block" />
-                    Connection
-                  </h2>
-                  <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
-                    The project bridges Cuban identity, global technology, and emerging digital systems into one unified ecosystem.
-                  </p>
+              <TiltCard className="w-full">
+                <div className="group flex flex-col items-center justify-center w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl glass-panel cursor-pointer outline-none" tabIndex={0}>
+                  <div className="relative z-20 text-center w-full">
+                    <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
+                      <span className="w-1.5 h-6 bg-[#9945FF] rounded-full inline-block" />
+                      Connection
+                    </h2>
+                    <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
+                      The project bridges Cuban identity, global technology, and emerging digital systems into one unified ecosystem.
+                    </p>
+                  </div>
                 </div>
-              </div>
-
+              </TiltCard>
+ 
               {/* Evolution */}
-              <div className="group flex flex-col items-center justify-center border border-white/[0.05] w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,229,255,0.1)] transition-all duration-700 cursor-pointer outline-none" tabIndex={0}>
-                <div className="relative z-20 text-center w-full">
-                  <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
-                    <span className="w-1.5 h-6 bg-[#00E5FF] rounded-full inline-block" />
-                    Evolution
-                  </h2>
-                  <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
-                    CubaNex is built to expand over time through modular utilities, open documentation, and future ecosystem layers.
-                  </p>
+              <TiltCard className="w-full">
+                <div className="group flex flex-col items-center justify-center w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl glass-panel cursor-pointer outline-none" tabIndex={0}>
+                  <div className="relative z-20 text-center w-full">
+                    <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
+                      <span className="w-1.5 h-6 bg-[#00E5FF] rounded-full inline-block" />
+                      Evolution
+                    </h2>
+                    <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
+                      CubaNex is built to expand over time through modular utilities, open documentation, and future ecosystem layers.
+                    </p>
+                  </div>
                 </div>
-              </div>
-
+              </TiltCard>
+ 
             </div>
           </div>
           {/* why cubanex? start end  */}
@@ -479,7 +501,7 @@ export default function Home() {
               The digital asset at the center of the CubaNex ecosystem.
             </p>
 
-            <div className="bg-[#04071d]/80 border border-white/[0.05] rounded-3xl p-8 shadow-lg max-w-3xl mx-auto backdrop-blur-sm">
+            <div className="max-w-3xl mx-auto rounded-3xl p-8 glass-panel">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-left">
                 
                 <div className="border-b sm:border-b-0 sm:border-r border-white/10 pb-6 sm:pb-0 sm:pr-8">
@@ -514,11 +536,15 @@ export default function Home() {
             </div>
 
             <div className="flex justify-center mt-12">
-              <a href="/tokenomics">
-                <button className="px-8 py-3.5 text-[14px] sm:text-[16px] rounded-full text-white font-medium border border-white/20 hover:bg-white/10 transition-all duration-300">
-                  View Token Details
-                </button>
-              </a>
+              <Magnetic>
+                <Ripple>
+                  <a href="/tokenomics">
+                    <button className="px-8 py-3.5 text-[14px] sm:text-[16px] rounded-full text-white font-medium border border-white/20 hover:bg-white/10 transition-all duration-300">
+                      View Token Details
+                    </button>
+                  </a>
+                </Ripple>
+              </Magnetic>
             </div>
           </div>
         </section>
@@ -542,7 +568,7 @@ export default function Home() {
             </p>
 
             <div className="max-w-3xl mx-auto">
-              <div className="relative border border-[#00D2FF]/20 bg-[#04071d]/60 backdrop-blur-sm rounded-3xl p-8 sm:p-10">
+              <div className="relative rounded-3xl p-8 sm:p-10 glass-panel">
                 <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#00D2FF]/10 rounded-full blur-2xl animate-ambient-pulse"></div>
                 
                 <p className={`${orbitron.className} text-[#00D2FF] font-semibold text-lg mb-2`}>Current Phase</p>
@@ -568,11 +594,15 @@ export default function Home() {
             </div>
 
             <div className="flex justify-center mt-12">
-              <a href="/about#roadmap">
-                <button className="px-8 py-3.5 text-[14px] sm:text-[16px] rounded-full text-white font-medium border border-white/20 hover:bg-white/10 transition-all duration-300">
-                  View Full Roadmap
-                </button>
-              </a>
+              <Magnetic>
+                <Ripple>
+                  <a href="/about#roadmap">
+                    <button className="px-8 py-3.5 text-[14px] sm:text-[16px] rounded-full text-white font-medium border border-white/20 hover:bg-white/10 transition-all duration-300">
+                      View Full Roadmap
+                    </button>
+                  </a>
+                </Ripple>
+              </Magnetic>
             </div>
           </div>
         </section>
@@ -598,40 +628,48 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               
               {/* Step 1 */}
-              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 text-center outline-none" tabIndex={0}>
-                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">1</div>
-                <h3 className="text-white text-xl font-bold mb-4">Set Up Wallet</h3>
-                <p className="text-[#9CB4D8] text-sm leading-relaxed">
-                  Use MetaMask, Trust Wallet, or another compatible wallet.
-                </p>
-              </div>
+              <TiltCard className="w-full">
+                <div className="group flex flex-col items-center p-8 rounded-3xl glass-panel text-center outline-none" tabIndex={0}>
+                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">1</div>
+                  <h3 className="text-white text-xl font-bold mb-4">Set Up Wallet</h3>
+                  <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                    Use MetaMask, Trust Wallet, or another compatible wallet.
+                  </p>
+                </div>
+              </TiltCard>
 
               {/* Step 2 */}
-              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 text-center outline-none" tabIndex={0}>
-                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">2</div>
-                <h3 className="text-white text-xl font-bold mb-4">Add BNB Smart Chain</h3>
-                <p className="text-[#9CB4D8] text-sm leading-relaxed">
-                  Ensure your wallet is connected to BNB Smart Chain.
-                </p>
-              </div>
+              <TiltCard className="w-full">
+                <div className="group flex flex-col items-center p-8 rounded-3xl glass-panel text-center outline-none" tabIndex={0}>
+                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">2</div>
+                  <h3 className="text-white text-xl font-bold mb-4">Add BNB Smart Chain</h3>
+                  <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                    Ensure your wallet is connected to BNB Smart Chain.
+                  </p>
+                </div>
+              </TiltCard>
 
               {/* Step 3 */}
-              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 text-center outline-none" tabIndex={0}>
-                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">3</div>
-                <h3 className="text-white text-xl font-bold mb-4">Verify Contract</h3>
-                <p className="text-[#9CB4D8] text-sm leading-relaxed">
-                  Always use the official contract address listed on cubanex.io.
-                </p>
-              </div>
+              <TiltCard className="w-full">
+                <div className="group flex flex-col items-center p-8 rounded-3xl glass-panel text-center outline-none" tabIndex={0}>
+                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">3</div>
+                  <h3 className="text-white text-xl font-bold mb-4">Verify Contract</h3>
+                  <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                    Always use the official contract address listed on cubanex.io.
+                  </p>
+                </div>
+              </TiltCard>
 
               {/* Step 4 */}
-              <div className="group flex flex-col items-center border border-white/[0.05] p-8 rounded-3xl bg-[#04071d]/80 hover:bg-[#060b24] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 text-center outline-none" tabIndex={0}>
-                <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">4</div>
-                <h3 className="text-white text-xl font-bold mb-4">Receive CNEX</h3>
-                <p className="text-[#9CB4D8] text-sm leading-relaxed">
-                  CNEX distribution follows the official token model and project access structure.
-                </p>
-              </div>
+              <TiltCard className="w-full">
+                <div className="group flex flex-col items-center p-8 rounded-3xl glass-panel text-center outline-none" tabIndex={0}>
+                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">4</div>
+                  <h3 className="text-white text-xl font-bold mb-4">Receive CNEX</h3>
+                  <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                    CNEX distribution follows the official token model and project access structure.
+                  </p>
+                </div>
+              </TiltCard>
 
             </div>
           </div>
@@ -670,68 +708,72 @@ export default function Home() {
             {/* 1 */}
 
             {/* 2 */}
-            <a
-              href="https://x.com/CubaNexOfficial"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-                <div className="relative z-20 px-6">
-                  <div className="w-full flex justify-center mb-4">
-                    <Twitter size={56} className="mx-auto" strokeWidth={1.8} />
+            <TiltCard className="block w-full">
+              <a
+                href="https://x.com/CubaNexOfficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="group flex items-center justify-center w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl glass-panel cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+                  <div className="relative z-20 px-6">
+                    <div className="w-full flex justify-center mb-4">
+                      <Twitter size={56} className="mx-auto" strokeWidth={1.8} />
+                    </div>
+                    <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                      Twitter / X
+                    </h2>
+                    <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                      Follow the transmission and project updates.
+                      <br />
+                      <br />
+                      <span className="text-[#00D2FF] font-medium">@CubaNex</span>
+                    </p>
                   </div>
-                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    Twitter / X
-                  </h2>
-                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                    Follow the transmission and project updates.
-                    <br />
-                    <br />
-                    <span className="text-[#00D2FF] font-medium">@CubaNex</span>
-                  </p>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                      backgroundSize: '100% 100%, 15px 15px'
+                    }}
+                  />
                 </div>
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
-                    backgroundSize: '100% 100%, 15px 15px'
-                  }}
-                />
-              </div>
-            </a>
+              </a>
+            </TiltCard>
 
             {/* 3 */}
-            <a
-              href="https://t.me/CubaNexOfficial"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-                <div className="relative z-20 px-6">
-                  <div className="w-full flex justify-center mb-4">
-                    <Send size={56} className="mx-auto" strokeWidth={1.8} />
+            <TiltCard className="block w-full">
+              <a
+                href="https://t.me/CubaNexOfficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="group flex items-center justify-center w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl glass-panel cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+                  <div className="relative z-20 px-6">
+                    <div className="w-full flex justify-center mb-4">
+                      <Send size={56} className="mx-auto" strokeWidth={1.8} />
+                    </div>
+                    <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                      Telegram
+                    </h2>
+                    <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                      Enter the communication node.
+                      <br />
+                      <br />
+                      <span className="text-[#00D2FF] font-medium">
+                        Join Telegram
+                      </span>
+                    </p>
                   </div>
-                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    Telegram
-                  </h2>
-                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                    Enter the communication node.
-                    <br />
-                    <br />
-                    <span className="text-[#00D2FF] font-medium">
-                      Join Telegram
-                    </span>
-                  </p>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
+                      backgroundSize: '100% 100%, 15px 15px'
+                    }}
+                  />
                 </div>
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
-                    backgroundSize: '100% 100%, 15px 15px'
-                  }}
-                />
-              </div>
-            </a>
+              </a>
+            </TiltCard>
 
             {/* 4 */}
             {/* <a href="#" rel="noopener noreferrer" className="block">
