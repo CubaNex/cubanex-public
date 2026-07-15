@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 
 interface RippleProps {
-  children: React.ReactElement;
+  children: React.ReactElement<any>;
 }
 
 export default function Ripple({ children }: RippleProps) {
