@@ -1,6 +1,5 @@
-// app/layout.tsx
 import { Geist, Geist_Mono } from "next/font/google";
-import { Work_Sans, Orbitron } from "next/font/google";
+import { Work_Sans, Orbitron, Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -26,6 +25,16 @@ const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["700", "800"],
 });
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
 
 // Server-side default language
 const defaultLang: "eng" | "esp" = "eng";
@@ -50,7 +59,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${workSans.variable} ${orbitron.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${workSans.variable} ${orbitron.variable} ${plusJakarta.variable} ${spaceGrotesk.variable} antialiased`}
       >
         <CustomCursor />
         <NoiseBackground />

@@ -138,7 +138,7 @@ export default function ComingSoon() {
                 />
               </motion.div> */}
               <div className="py-3"></div>
-              <TypeText />
+              <TypeText language="en" />
             </motion.p>
 
             {/* Signup form */}

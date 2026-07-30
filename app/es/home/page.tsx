@@ -18,6 +18,7 @@ import VipForm from "@/components/VipForm";
 import WhitePaper from "@/components/WhitePaper";
 import ArrowB from "@/components/ArrowB";
 import VideoPlayer from "@/components/VideoPlayer";
+import HeroButtons from "@/components/HeroButtons";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -84,24 +85,12 @@ export default function Home() {
             basado en la inspiración cultural cubana.
           </p>
 
-          <div className="flex flex-row gap-2 sm:gap-6 items-center justify-center">
-            <a href="/es/community" className="w-auto">
-              <button
-                className="w-auto px-[10px] py-2 text-[11px] sm:text-[18px] whitespace-nowrap sm:px-6 sm:py-3 rounded-full text-white border-1 font-medium bg-[transparent] hover:bg-[#fff] hover:text-[#000] 
-    hover:scale-105 transition-transform duration-300 ease-in-out"
-              >
-                Sé de los primeros
-              </button>
-            </a>
-            <a href="/whitepaper" className="w-auto">
-              <button
-                className="w-auto px-[10px] py-2 text-[11px] sm:text-[18px] whitespace-nowrap sm:px-6 sm:py-3 rounded-full text-[#000] font-medium bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2] 
-    hover:scale-105 transition-transform duration-300 ease-in-out"
-              >
-                Leer el Whitepaper
-              </button>
-            </a>
-          </div>
+          <HeroButtons
+            primaryHref="/es/community"
+            primaryText="Sé de los primeros"
+            secondaryHref="/whitepaper"
+            secondaryText="Leer el Whitepaper"
+          />
           <div className="pt-5 sm:pt-0 sm:py-8 sm:mt-8 hidden sm:flex gap-2 sm:gap-4 justify-center">
             <div className="flex justify-center items-center gap-2">
               <img src="Check_ring_duotone.svg" alt="" />
@@ -282,7 +271,7 @@ export default function Home() {
           <VideoPlayer
             videoSrc="/cubanex-video.mp4"
             previewSrc="/hero-havana-CDeUqYMJ.png"
-            className="w-full sm:h-[300px] max-w-6xl mx-auto my-24 max-h-[520px]"
+            className="w-full sm:h-[300px] max-w-6xl mx-auto my-4 sm:my-8 max-h-[520px]"
           />
         </div>
       </div>
@@ -458,7 +447,7 @@ export default function Home() {
         </p>
 
         <div className="roead map px-8 sm:px-0">
-          <RoeadMapEn />
+          <RoeadMapEn language="esp" />
         </div>
       </section>
 

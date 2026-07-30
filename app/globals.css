@@ -1245,4 +1245,26 @@ body {
   50% { transform: translate(6vw, -6vh) scale(0.88); }
   100% { transform: translate(-8vw, 4vh) scale(1.08); }
 }
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes shimmer-sweep {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #316CFF 0%, #00D2FF 25%, #80ECFF 50%, #00D2FF 75%, #316CFF 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-sweep 6s linear infinite;
+}
 

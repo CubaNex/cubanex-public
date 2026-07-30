@@ -11,6 +11,7 @@ interface ScrollRevealProps {
   duration?: number;
   yOffset?: number;
   xOffset?: number;
+  scaleOffset?: number;
   once?: boolean;
 }
 
@@ -20,8 +21,9 @@ const ScrollReveal = ({
   className = "",
   delay = 0.1,
   duration = 0.75,
-  yOffset = 20,
+  yOffset = 25,
   xOffset = 0,
+  scaleOffset = 1,
   once = true,
 }: ScrollRevealProps) => {
   const prefersReducedMotion = useReducedMotion();
@@ -38,13 +40,23 @@ const ScrollReveal = ({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: yOffset, x: xOffset }}
-      whileInView={{ opacity: 1, y: 0, x: 0 }}
-      viewport={{ once, margin: "-60px" }}
+      initial={{
+        opacity: 0,
+        y: yOffset,
+        x: xOffset,
+        scale: scaleOffset,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        x: 0,
+        scale: 1,
+      }}
+      viewport={{ once, margin: "-50px" }}
       transition={{
         duration,
         delay,
-        ease: [0.22, 1, 0.36, 1], // premium "swift-out" curve
+        ease: [0.215, 0.61, 0.355, 1], // Smooth cubic ease-out
       }}
       style={{ width }}
     >

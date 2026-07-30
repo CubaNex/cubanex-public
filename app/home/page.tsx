@@ -17,6 +17,7 @@ import VipForm from "@/components/VipForm";
 import WhitePaper from "@/components/WhitePaper";
 import ArrowB from "@/components/ArrowB";
 import VideoPlayer from "@/components/VideoPlayer";
+import HeroButtons from "@/components/HeroButtons";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -136,22 +137,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-row gap-2 sm:gap-6 justify-center items-center">
-            <a href="/community" className="w-auto">
-              <button
-                className="w-auto px-4 py-3 sm:px-6 sm:py-3 text-[12px] sm:text-[18px] whitespace-nowrap rounded-full text-white border border-white/20 font-medium hover:bg-white/10 hover:border-white/40 transition-all duration-300"
-              >
-                Be Among the First
-              </button>
-            </a>
-            <a href="/whitepaper" className="w-auto">
-              <button
-                className="w-auto px-4 py-3 sm:px-6 sm:py-3 text-[12px] sm:text-[18px] whitespace-nowrap rounded-full text-[#000] font-bold bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2] hover:shadow-[0_0_20px_rgba(128,236,255,0.4)] transition-all duration-300"
-              >
-                Read Whitepaper
-              </button>
-            </a>
-          </div>
+          <HeroButtons
+            primaryHref="/community"
+            primaryText="Be Among the First"
+            secondaryHref="/whitepaper"
+            secondaryText="Read Whitepaper"
+          />
           <div className="pt-10 hidden sm:flex gap-4 sm:gap-10 justify-center opacity-60">
             <div className="flex justify-center items-center gap-2">
               <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
@@ -326,7 +317,7 @@ export default function Home() {
           <VideoPlayer
             videoSrc="/cubanex-video.mp4"
             previewSrc="/hero-havana-CDeUqYMJ.png"
-            className="w-full sm:h-[300px] max-w-6xl mx-auto my-24 max-h-[520px]"
+            className="w-full sm:h-[300px] max-w-6xl mx-auto my-4 sm:my-8 max-h-[520px]"
           />
         </div>
       </div>

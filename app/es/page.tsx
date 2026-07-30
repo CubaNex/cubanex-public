@@ -18,6 +18,10 @@ import WhitePaper from "@/components/WhitePaper";
 import ArrowB from "@/components/ArrowB";
 import VideoPlayer from "@/components/VideoPlayer";
 import ScrollReveal from "@/components/ScrollReveal";
+import HeroButtons from "@/components/HeroButtons";
+import InteractiveHeroBackground from "@/components/InteractiveHeroBackground";
+import TiltCard from "@/components/ui/TiltCard";
+import Stagger3DBox from "@/components/ui/Stagger3DBox";
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
@@ -73,54 +77,7 @@ export default function Home() {
       `}</style>
 
       <section className="overflow-hidden z-20 relative pb-20 sm:pb-0 pt-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
-        <div className="absolute inset-0 z-0 bg-[#000]">
-          <div className="hero-sphere hidden sm:block w-full h-full relative">
-            <Image
-              src="/7-2-26/home-hero-7-2-26.jpeg"
-              className="w-full h-full object-cover object-center"
-              alt="CubaNex – The Awakening"
-              fill
-              priority
-              sizes="100vw"
-              style={{ opacity: 1 }}
-            />
-          </div>
-          <div className="block sm:hidden w-full h-full absolute inset-0">
-            <Image
-              src="/7-2-26/home-hero-7-2-26.jpeg"
-              className="w-full h-full object-cover"
-              style={{ objectPosition: "center 30%", opacity: 1 }}
-              alt="CubaNex – The Awakening"
-              fill
-              priority
-              sizes="100vw"
-            />
-          </div>
-          <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
-            {[...Array(5)].map((_, i) => (
-              <div
-                key={i}
-                className="hero-particle absolute rounded-full bg-[#316CFF]"
-                style={{
-                  width: `${60 + i * 40}px`,
-                  height: `${60 + i * 40}px`,
-                  left: `${10 + i * 18}%`,
-                  top: `${15 + (i % 3) * 25}%`,
-                  filter: "blur(60px)",
-                  opacity: 0,
-                }}
-              />
-            ))}
-          </div>
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse at center, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.8) 100%)",
-            }}
-          />
-          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent pointer-events-none" />
-        </div>
+        <InteractiveHeroBackground />
         <ScrollReveal>
           <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center  sm:pt-20">
             {/* <div className="inline-flex items-center justify-center space-x-2 border border-[rgba(255,255,255,0.4)] rounded-full px-3 sm:px-3 py-2  sm:py-2 mb-4 animate-pulse-slow">
@@ -152,22 +109,12 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-row gap-2 sm:gap-6 justify-center items-center">
-              <a href="/es/community" className="w-auto">
-                <button
-                  className="w-auto px-4 py-3 sm:px-6 sm:py-3 text-[12px] sm:text-[16px] whitespace-nowrap rounded-full text-white border border-white/20 font-medium hover:bg-white/10 hover:border-white/40 transition-all duration-300"
-                >
-                  Sé de los primeros
-                </button>
-              </a>
-              <a href="/whitepaper" className="w-auto">
-                <button
-                  className="w-auto px-4 py-3 sm:px-6 sm:py-3 text-[12px] sm:text-[16px] whitespace-nowrap rounded-full text-[#000] font-bold bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2] hover:shadow-[0_0_20px_rgba(128,236,255,0.4)] transition-all duration-300"
-                >
-                  Leer el Whitepaper
-                </button>
-              </a>
-            </div>
+            <HeroButtons
+              primaryHref="/es/community"
+              primaryText="Sé de los primeros"
+              secondaryHref="/whitepaper"
+              secondaryText="Leer el Whitepaper"
+            />
 
             <div className="pt-10 hidden sm:flex gap-4 lg:gap-10 justify-center opacity-60">
               <div className="flex items-center gap-2">
@@ -242,96 +189,105 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 md:grid-cols-4 mt-20">
               {/* Lightning Fast */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <Stagger3DBox index={0} className="w-full">
+                <TiltCard className="w-full">
+                  <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:border-[#00D2FF]/50 transition-all duration-300 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
+                    <div className="relative z-20 px-6">
+                      <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                        <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block group-hover:scale-125 group-hover:shadow-[0_0_12px_#00D2FF] transition-all" />
+                        Rápido como un rayo
+                      </h2>
+                      <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                        El Surgimiento de Cuba como la Primera Superpotencia Cripto de América Latina
+                      </p>
+                    </div>
 
-                <div className="relative z-20 px-6">
-                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
-                    Rápido como un rayo
-                  </h2>
-                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                    El Surgimiento de Cuba como la Primera Superpotencia Cripto de América Latina
-                  </p>
-                </div>
-
-                {/* Hover Background Dot Grid Effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(0, 210, 255, 0.3) 1px, transparent 1px)',
-                    backgroundSize: '100% 100%, 15px 15px'
-                  }}
-                />
-              </div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                      style={{
+                        backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(0, 210, 255, 0.3) 1px, transparent 1px)',
+                        backgroundSize: '100% 100%, 15px 15px'
+                      }}
+                    />
+                  </div>
+                </TiltCard>
+              </Stagger3DBox>
 
               {/* Secure & Audited */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <Stagger3DBox index={1} className="w-full">
+                <TiltCard className="w-full">
+                  <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:border-[#22CCEE]/50 transition-all duration-300 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
+                    <div className="relative z-20 px-6">
+                      <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                        <span className="w-1 h-5 sm:h-7 bg-[#22CCEE] rounded-full inline-block group-hover:scale-125 group-hover:shadow-[0_0_12px_#22CCEE] transition-all" />
+                        Seguro y auditado
+                      </h2>
+                      <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                        CubaNex une la profundidad cultural de Cuba con la ola creciente de innovación digital — posicionando a la nación hacia el liderazgo global.
+                      </p>
+                    </div>
 
-                <div className="relative z-20 px-6">
-                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-5 sm:h-7 bg-[#22CCEE] rounded-full inline-block" />
-                    Seguro y auditado
-                  </h2>
-                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                    CubaNex une la profundidad cultural de Cuba con la ola creciente de innovación digital — posicionando a la nación hacia el liderazgo global.
-                  </p>
-                </div>
-
-                {/* Hover Background */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(34, 204, 238, 0.25) 0%, transparent 70%), radial-gradient(rgba(34, 204, 238, 0.3) 1px, transparent 1px)',
-                    backgroundSize: '100% 100%, 15px 15px'
-                  }}
-                />
-              </div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                      style={{
+                        backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(34, 204, 238, 0.25) 0%, transparent 70%), radial-gradient(rgba(34, 204, 238, 0.3) 1px, transparent 1px)',
+                        backgroundSize: '100% 100%, 15px 15px'
+                      }}
+                    />
+                  </div>
+                </TiltCard>
+              </Stagger3DBox>
 
               {/* Eco-Friendly */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <Stagger3DBox index={2} className="w-full">
+                <TiltCard className="w-full">
+                  <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:border-[#FF754B]/50 transition-all duration-300 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
+                    <div className="relative z-20 px-6">
+                      <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                        <span className="w-1 h-5 sm:h-7 bg-[#FF754B] rounded-full inline-block group-hover:scale-125 group-hover:shadow-[0_0_12px_#FF754B] transition-all" />
+                        Ecológico
+                      </h2>
+                      <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                        Introduce un nuevo lenguaje financiero a través de blockchain e inteligencia artificial — diseñado para avanzar con propósito.
+                      </p>
+                    </div>
 
-                <div className="relative z-20 px-6">
-                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-5 sm:h-7 bg-[#FF754B] rounded-full inline-block" />
-                    Ecológico
-                  </h2>
-                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                    Introduce un nuevo lenguaje financiero a través de blockchain e inteligencia artificial — diseñado para avanzar con propósito.
-                  </p>
-                </div>
-
-                {/* Hover Background */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 117, 75, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 117, 75, 0.3) 1px, transparent 1px)',
-                    backgroundSize: '100% 100%, 15px 15px'
-                  }}
-                />
-              </div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                      style={{
+                        backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 117, 75, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 117, 75, 0.3) 1px, transparent 1px)',
+                        backgroundSize: '100% 100%, 15px 15px'
+                      }}
+                    />
+                  </div>
+                </TiltCard>
+              </Stagger3DBox>
 
               {/* Real Utility */}
-              <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-700 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+              <Stagger3DBox index={3} className="w-full">
+                <TiltCard className="w-full">
+                  <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:border-[#9945FF]/50 transition-all duration-300 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
 
+                    <div className="relative z-20 px-6">
+                      <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                        <span className="w-1 h-5 sm:h-7 bg-[#9945FF] rounded-full inline-block group-hover:scale-125 group-hover:shadow-[0_0_12px_#9945FF] transition-all" />
+                        Utilidad real
+                      </h2>
+                      <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                        Este es el momento en que Cuba lidera a América Latina hacia una nueva realidad financiera. Un código nacido de la consciencia colectiva.
+                      </p>
+                    </div>
 
-                <div className="relative z-20 px-6">
-                  <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                    <span className="w-1 h-5 sm:h-7 bg-[#9945FF] rounded-full inline-block" />
-                    Utilidad real
-                  </h2>
-                  <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                    Este es el momento en que Cuba lidera a América Latina hacia una nueva realidad financiera. Un código nacido de la consciencia colectiva.
-                  </p>
-                </div>
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                      style={{
+                        backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(153, 69, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(153, 69, 255, 0.3) 1px, transparent 1px)',
+                        backgroundSize: '100% 100%, 15px 15px'
+                      }}
+                    />
+                  </div>
+                </TiltCard>
+              </Stagger3DBox>
 
-                {/* Hover Background */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(153, 69, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(153, 69, 255, 0.3) 1px, transparent 1px)',
-                    backgroundSize: '100% 100%, 15px 15px'
-                  }}
-                />
-              </div>
             </div>
           </div>
           <ScrollReveal>
@@ -381,7 +337,7 @@ export default function Home() {
                 <VideoPlayer
                   videoSrc="/cubanex-video.mp4"
                   previewSrc="/hero-havana-CDeUqYMJ.png"
-                  className="w-full sm:h-[300px] max-w-6xl mx-auto my-24 max-h-[520px]"
+                  className="w-full sm:h-[300px] max-w-6xl mx-auto my-4 sm:my-8 max-h-[520px]"
                 />
               </div>
             </div>
@@ -576,7 +532,7 @@ export default function Home() {
           </p>
 
           <div className="roead map sm:px-0">
-            <RoeadMapEn />
+            <RoeadMapEn language="esp" />
           </div>
         </section>
       </ScrollReveal>
@@ -602,88 +558,104 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 md:grid-cols-4 mt-20 max-w-5xl mx-auto">
             {/* Step 1 */}
-            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-              <div className="relative z-20 px-6">
-                <div className="w-full flex justify-center mb-4"><div className="step-circle">1</div></div>
-                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
-                  Obtén una cartera
-                </h2>
-                <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                  Descarga MetaMask o tu cartera Web3 preferida
-                </p>
-              </div>
+            <Stagger3DBox index={0} className="w-full">
+              <TiltCard className="w-full">
+                <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:border-[#00D2FF]/50 transition-all duration-300 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+                  <div className="relative z-20 px-6">
+                    <div className="w-full flex justify-center mb-4"><div className="step-circle">1</div></div>
+                    <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                      <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block group-hover:scale-125 group-hover:shadow-[0_0_12px_#00D2FF] transition-all" />
+                      Obtén una cartera
+                    </h2>
+                    <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                      Descarga MetaMask o tu cartera Web3 preferida
+                    </p>
+                  </div>
 
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{
-                  backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
-                  backgroundSize: '100% 100%, 15px 15px'
-                }}
-              />
-            </div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(0, 210, 255, 0.3) 1px, transparent 1px)',
+                      backgroundSize: '100% 100%, 15px 15px'
+                    }}
+                  />
+                </div>
+              </TiltCard>
+            </Stagger3DBox>
 
             {/* Step 2 */}
-            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-              <div className="relative z-20 px-6">
-                <div className="w-full flex justify-center mb-4"><div className="step-circle-1">2</div></div>
-                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
-                  Agregar fondos
-                </h2>
-                <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                  Compra ETH o BNB y envíalos a tu cartera
-                </p>
-              </div>
+            <Stagger3DBox index={1} className="w-full">
+              <TiltCard className="w-full">
+                <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:border-[#22CCEE]/50 transition-all duration-300 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+                  <div className="relative z-20 px-6">
+                    <div className="w-full flex justify-center mb-4"><div className="step-circle-1">2</div></div>
+                    <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                      <span className="w-1 h-5 sm:h-7 bg-[#22CCEE] rounded-full inline-block group-hover:scale-125 group-hover:shadow-[0_0_12px_#22CCEE] transition-all" />
+                      Agregar fondos
+                    </h2>
+                    <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                      Compra ETH o BNB y envíalos a tu cartera
+                    </p>
+                  </div>
 
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{
-                  backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
-                  backgroundSize: '100% 100%, 15px 15px'
-                }}
-              />
-            </div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(34, 204, 238, 0.25) 0%, transparent 70%), radial-gradient(rgba(34, 204, 238, 0.3) 1px, transparent 1px)',
+                      backgroundSize: '100% 100%, 15px 15px'
+                    }}
+                  />
+                </div>
+              </TiltCard>
+            </Stagger3DBox>
 
             {/* Step 3 */}
-            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-              <div className="relative z-20 px-6">
-                <div className="w-full flex justify-center mb-4"><div className="step-circle-2">3</div></div>
-                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
-                  Conectar cartera
-                </h2>
-                <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                  Conecta tu cartera a la plataforma de preventa de CubaNex
-                </p>
-              </div>
+            <Stagger3DBox index={2} className="w-full">
+              <TiltCard className="w-full">
+                <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:border-[#FF754B]/50 transition-all duration-300 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+                  <div className="relative z-20 px-6">
+                    <div className="w-full flex justify-center mb-4"><div className="step-circle-2">3</div></div>
+                    <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                      <span className="w-1 h-5 sm:h-7 bg-[#FF754B] rounded-full inline-block group-hover:scale-125 group-hover:shadow-[0_0_12px_#FF754B] transition-all" />
+                      Conectar cartera
+                    </h2>
+                    <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                      Conecta tu cartera a la plataforma de preventa de CubaNex
+                    </p>
+                  </div>
 
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{
-                  backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
-                  backgroundSize: '100% 100%, 15px 15px'
-                }}
-              />
-            </div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 117, 75, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 117, 75, 0.3) 1px, transparent 1px)',
+                      backgroundSize: '100% 100%, 15px 15px'
+                    }}
+                  />
+                </div>
+              </TiltCard>
+            </Stagger3DBox>
 
             {/* Step 4 */}
-            <div className="group flex items-center justify-center border border-white/[0.1] w-[300px] sm:w-full sm:max-w-sm mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] cursor-pointer tab-index-0 outline-none" tabIndex={0}>
-              <div className="relative z-20 px-6">
-                <div className="w-full flex justify-center mb-4"><div className="step-circle-3">4</div></div>
-                <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
-                  <span className="w-1 h-5 sm:h-7 bg-[#00D2FF] rounded-full inline-block" />
-                  Comprar CNEX
-                </h2>
-                <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
-                  Intercambia tu ETH/BNB por tokens CNEX al instante
-                </p>
-              </div>
+            <Stagger3DBox index={3} className="w-full">
+              <TiltCard className="w-full">
+                <div className="group flex items-center justify-center border border-white/[0.1] w-full mx-auto p-2 sm:p-4 relative h-auto py-4 min-h-[14rem] sm:h-[18rem] rounded-3xl bg-[#04071d] hover:border-[#9945FF]/50 transition-all duration-300 cursor-pointer tab-index-0 outline-none" tabIndex={0}>
+                  <div className="relative z-20 px-6">
+                    <div className="w-full flex justify-center mb-4"><div className="step-circle-3">4</div></div>
+                    <h2 className="text-white text-center text-[16px] sm:text-3xl relative z-10 mt-4 font-bold transition duration-200 flex items-center justify-center gap-3">
+                      <span className="w-1 h-5 sm:h-7 bg-[#9945FF] rounded-full inline-block group-hover:scale-125 group-hover:shadow-[0_0_12px_#9945FF] transition-all" />
+                      Comprar CNEX
+                    </h2>
+                    <p className="text-[16px] sm:text-sm relative z-10 mt-4 text-center transition duration-200 text-[#E4ECFF]">
+                      Ingresa el monto que deseas comprar y confirma la transacción
+                    </p>
+                  </div>
 
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{
-                  backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255, 183, 74, 0.25) 0%, transparent 70%), radial-gradient(rgba(255, 183, 74, 0.3) 1px, transparent 1px)',
-                  backgroundSize: '100% 100%, 15px 15px'
-                }}
-              />
-            </div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(153, 69, 255, 0.25) 0%, transparent 70%), radial-gradient(rgba(153, 69, 255, 0.3) 1px, transparent 1px)',
+                      backgroundSize: '100% 100%, 15px 15px'
+                    }}
+                  />
+                </div>
+              </TiltCard>
+            </Stagger3DBox>
           </div>
           <ConnectWallet />
         </section>

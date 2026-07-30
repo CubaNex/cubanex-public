@@ -1,6 +1,7 @@
 "use client";
 import { FileText } from "lucide-react";
 import Image from "next/image";
+import HeroImage3DMotion from "@/components/ui/HeroImage3DMotion";
 
 const Whitepaper = () => {
   const tokenUtilities = [
@@ -26,17 +27,20 @@ const Whitepaper = () => {
           <span className="text-[#00D2FF]">ONLY REVEALED</span>
         </h1>
 
-        <div className="mt-12 relative flex justify-center">
-          <div className="absolute inset-0 bg-[#00D2FF]/5 blur-[100px] rounded-full animate-ambient-pulse"></div>
-          <Image
-            src="/7-2-26/whitepaper-7-2-26.jpeg"
-            alt="CubaNex Whitepaper Visualization"
-            width={896}
-            height={504}
-            priority quality={100}
-            className="relative z-10 w-full max-w-4xl rounded-2xl border border-[#00D2FF]/20 shadow-2xl shadow-[#00D2FF]/10 mobile-focus-top"
-            style={{ objectFit: "cover", objectPosition: "center 20%" }}
-          />
+        {/* Home-Style Automatic 3D Hero Motion Image */}
+        <div className="mt-12 relative flex justify-center w-full max-w-4xl mx-auto">
+          <div className="absolute -inset-4 bg-gradient-to-r from-[#00D2FF]/20 via-[#316CFF]/20 to-[#9945FF]/20 rounded-3xl blur-3xl opacity-70 pointer-events-none" />
+          <HeroImage3DMotion className="w-full rounded-2xl border border-[#00D2FF]/30 shadow-[0_20px_60px_rgba(0,210,255,0.25)]">
+            <Image
+              src="/7-2-26/whitepaper-7-2-26.jpeg"
+              alt="CubaNex Whitepaper Visualization"
+              width={896}
+              height={504}
+              priority quality={100}
+              className="w-full rounded-2xl mobile-focus-top object-cover"
+              style={{ objectPosition: "center 20%" }}
+            />
+          </HeroImage3DMotion>
         </div>
 
         <p className="mt-12 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto">

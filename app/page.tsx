@@ -4,9 +4,15 @@ import {
   MessageCircle,
   Send,
   Shield,
+  ShieldCheck,
   TrendingUp,
   Twitter,
   Wallet,
+  Cpu,
+  Globe,
+  Zap,
+  Sparkles,
+  Layers,
 } from "lucide-react";
 import { Work_Sans, Orbitron, Sen } from "next/font/google";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -17,8 +23,10 @@ import VipForm from "@/components/VipForm";
 import WhitePaper from "@/components/WhitePaper";
 import ArrowB from "@/components/ArrowB";
 import VideoPlayer from "@/components/VideoPlayer";
-import HeroScene from "@/components/HeroScene";
+import InteractiveHeroBackground from "@/components/InteractiveHeroBackground";
+import HeroButtons from "@/components/HeroButtons";
 import TiltCard from "@/components/ui/TiltCard";
+import Stagger3DBox from "@/components/ui/Stagger3DBox";
 import Magnetic from "@/components/ui/Magnetic";
 import Ripple from "@/components/ui/Ripple";
 
@@ -189,71 +197,13 @@ export default function Home() {
       <ScrollReveal delay={0.1} yOffset={0}>
         <section className="overflow-hidden z-20 relative pb-20 sm:pb-0 pt-12 w-full min-h-0 sm:min-h-screen flex items-center justify-center px-6">
 
-          {/* ── Approved Artwork Background ── */}
-          <div className="absolute inset-0 z-0 bg-[#000]">
-            {/* Interactive 3D WebGL hero scene */}
-            <HeroScene />
-
-            {/* Hero image — desktop */}
-            <div className="hero-sphere hidden sm:block w-full h-full relative">
-              <Image
-                src="/7-2-26/home-hero-7-2-26.jpeg"
-                className="w-full h-full object-cover object-center"
-                alt="CubaNex – The Awakening"
-                fill
-                priority
-                sizes="100vw"
-                style={{ opacity: 0.65 }}
-              />
-            </div>
-
-            {/* Hero image — mobile (cropped to keep sphere dominant) */}
-            <div className="block sm:hidden w-full h-full absolute inset-0">
-              <Image
-                src="/7-2-26/home-hero-7-2-26.jpeg"
-                className="w-full h-full object-cover mobile-focus-60"
-                style={{ objectPosition: "center 30%", opacity: 0.65 }}
-                alt="CubaNex – The Awakening"
-                fill
-                priority
-                sizes="100vw"
-              />
-            </div>
-
-            {/* Ambient particles */}
-            <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
-              {[...Array(5)].map((_, i) => (
-                <div
-                  key={i}
-                  className="hero-particle absolute rounded-full bg-[#316CFF]"
-                  style={{
-                    width: `${60 + i * 40}px`,
-                    height: `${60 + i * 40}px`,
-                    left: `${10 + i * 18}%`,
-                    top: `${15 + (i % 3) * 25}%`,
-                    filter: "blur(60px)",
-                    opacity: 0.06,
-                  }}
-                />
-              ))}
-            </div>
-
-            {/* Cinematic vignette — enhanced opacity for better text visibility */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background:
-                  "radial-gradient(ellipse at center, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.8) 100%)",
-              }}
-            />
-            {/* Bottom fade to page */}
-            <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent pointer-events-none" />
-          </div>
+          {/* ── Approved Artwork Background with Hover Parallax & Scroll Motion ── */}
+          <InteractiveHeroBackground />
 
           {/* ── Overlay Content ── */}
           <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center sm:pt-20">
 
-            {/* Subheadline above */}
+            {/* Clean Subheadline */}
             <p
               className={`${workSans.className} text-[13px] sm:text-[15px] text-[#80ECFF] tracking-[0.2em] uppercase font-semibold mb-5 opacity-90`}
             >
@@ -280,33 +230,13 @@ export default function Home() {
               </p>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-row gap-2 sm:gap-6 justify-center items-center">
-              <Magnetic>
-                <Ripple>
-                  <a href="/community" className="w-auto block">
-                    <button
-                      id="hero-enter-ecosystem"
-                      className="w-auto px-5 py-3 sm:px-7 sm:py-4 text-[13px] sm:text-[16px] whitespace-nowrap rounded-full text-white border border-white/30 font-medium hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
-                    >
-                      Enter the Ecosystem
-                    </button>
-                  </a>
-                </Ripple>
-              </Magnetic>
-              <Magnetic>
-                <Ripple>
-                  <a href="/whitepaper" className="w-auto block">
-                    <button
-                      id="hero-read-whitepaper"
-                      className="w-auto px-5 py-3 sm:px-7 sm:py-4 text-[13px] sm:text-[16px] whitespace-nowrap rounded-full text-[#000] font-bold bg-gradient-to-r from-[#14F195] via-[#80ECFF] to-[#64A8F2] hover:shadow-[0_0_24px_rgba(128,236,255,0.5)] transition-all duration-300"
-                    >
-                      Read Whitepaper
-                    </button>
-                  </a>
-                </Ripple>
-              </Magnetic>
-            </div>
+            {/* Ultra-Premium Solana-Style Hero CTA Buttons */}
+            <HeroButtons
+              primaryHref="/community"
+              primaryText="Enter the Ecosystem"
+              secondaryHref="/whitepaper"
+              secondaryText="Read Whitepaper"
+            />
 
             {/* Trust badges */}
             <div className="pt-10 hidden sm:flex gap-4 lg:gap-10 justify-center opacity-60">
@@ -383,67 +313,127 @@ export default function Home() {
             <p className="text-gray-400 max-w-[600px] mx-auto mb-16 text-lg">
               CubaNex is not simply a token. It is the foundation for an evolving intelligence network where blockchain, AI, and community participation converge.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-12">
               
               {/* Intelligence */}
-              <TiltCard className="w-full">
-                <div className="group flex flex-col items-center justify-center w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl glass-panel cursor-pointer outline-none" tabIndex={0}>
-                  <div className="relative z-20 text-center w-full">
-                    <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
-                      <span className="w-1.5 h-6 bg-[#00D2FF] rounded-full inline-block" />
-                      Intelligence
-                    </h2>
-                    <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
-                      CubaNex is designed to evolve through future AI-assisted systems, autonomous tools, and adaptive digital frameworks.
-                    </p>
+              <Stagger3DBox index={0} className="w-full">
+                <TiltCard className="w-full h-full">
+                  <div className="group relative flex flex-col items-center justify-between w-full h-full p-7 sm:p-8 rounded-3xl glass-panel border border-white/10 hover:border-[#00D2FF]/60 hover:shadow-[0_0_35px_rgba(0,210,255,0.25)] transition-all duration-500 overflow-hidden cursor-pointer" tabIndex={0}>
+                    {/* Top Radial Light Beam */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-24 bg-[#00D2FF]/15 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                    <div className="relative z-10 flex flex-col items-center text-center w-full">
+                      {/* Web3 Glowing Icon Badge */}
+                      <div className="w-14 h-14 rounded-2xl bg-[#00D2FF]/10 border border-[#00D2FF]/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 group-hover:border-[#00D2FF] group-hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all duration-300">
+                        <Cpu className="w-7 h-7 text-[#00D2FF]" />
+                      </div>
+
+                      <h3 className="text-white text-xl sm:text-2xl font-bold mb-3 tracking-tight flex items-center justify-center gap-2">
+                        <span>Intelligence</span>
+                      </h3>
+                      <p className="text-sm sm:text-[15px] text-[#9CB4D8] leading-relaxed group-hover:text-gray-200 transition-colors">
+                        CubaNex is designed to evolve through future AI-assisted systems, autonomous tools, and adaptive digital frameworks.
+                      </p>
+                    </div>
+
+                    {/* Bottom Indicator Pill */}
+                    <div className="relative z-10 w-full pt-6 mt-4 border-t border-white/5 flex items-center justify-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-[#00D2FF] shadow-[0_0_8px_#00D2FF] group-hover:animate-pulse" />
+                      <span className="text-xs uppercase tracking-widest text-[#00D2FF] font-semibold">AI Ecosystem</span>
+                    </div>
                   </div>
-                </div>
-              </TiltCard>
+                </TiltCard>
+              </Stagger3DBox>
  
               {/* Sovereignty */}
-              <TiltCard className="w-full">
-                <div className="group flex flex-col items-center justify-center w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl glass-panel cursor-pointer outline-none" tabIndex={0}>
-                  <div className="relative z-20 text-center w-full">
-                    <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
-                      <span className="w-1.5 h-6 bg-[#316CFF] rounded-full inline-block" />
-                      Sovereignty
-                    </h2>
-                    <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
-                      Built on decentralized infrastructure, CubaNex creates a foundation for transparent participation without dependence on centralized control.
-                    </p>
+              <Stagger3DBox index={1} className="w-full">
+                <TiltCard className="w-full h-full">
+                  <div className="group relative flex flex-col items-center justify-between w-full h-full p-7 sm:p-8 rounded-3xl glass-panel border border-white/10 hover:border-[#316CFF]/60 hover:shadow-[0_0_35px_rgba(49,108,255,0.25)] transition-all duration-500 overflow-hidden cursor-pointer" tabIndex={0}>
+                    {/* Top Radial Light Beam */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-24 bg-[#316CFF]/15 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                    <div className="relative z-10 flex flex-col items-center text-center w-full">
+                      {/* Web3 Glowing Icon Badge */}
+                      <div className="w-14 h-14 rounded-2xl bg-[#316CFF]/10 border border-[#316CFF]/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 group-hover:border-[#316CFF] group-hover:shadow-[0_0_20px_rgba(49,108,255,0.4)] transition-all duration-300">
+                        <ShieldCheck className="w-7 h-7 text-[#316CFF]" />
+                      </div>
+
+                      <h3 className="text-white text-xl sm:text-2xl font-bold mb-3 tracking-tight flex items-center justify-center gap-2">
+                        <span>Sovereignty</span>
+                      </h3>
+                      <p className="text-sm sm:text-[15px] text-[#9CB4D8] leading-relaxed group-hover:text-gray-200 transition-colors">
+                        Built on decentralized infrastructure, CubaNex creates a foundation for transparent participation without dependence on centralized control.
+                      </p>
+                    </div>
+
+                    {/* Bottom Indicator Pill */}
+                    <div className="relative z-10 w-full pt-6 mt-4 border-t border-white/5 flex items-center justify-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-[#316CFF] shadow-[0_0_8px_#316CFF] group-hover:animate-pulse" />
+                      <span className="text-xs uppercase tracking-widest text-[#316CFF] font-semibold">Decentralized</span>
+                    </div>
                   </div>
-                </div>
-              </TiltCard>
+                </TiltCard>
+              </Stagger3DBox>
  
               {/* Connection */}
-              <TiltCard className="w-full">
-                <div className="group flex flex-col items-center justify-center w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl glass-panel cursor-pointer outline-none" tabIndex={0}>
-                  <div className="relative z-20 text-center w-full">
-                    <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
-                      <span className="w-1.5 h-6 bg-[#9945FF] rounded-full inline-block" />
-                      Connection
-                    </h2>
-                    <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
-                      The project bridges Cuban identity, global technology, and emerging digital systems into one unified ecosystem.
-                    </p>
+              <Stagger3DBox index={2} className="w-full">
+                <TiltCard className="w-full h-full">
+                  <div className="group relative flex flex-col items-center justify-between w-full h-full p-7 sm:p-8 rounded-3xl glass-panel border border-white/10 hover:border-[#9945FF]/60 hover:shadow-[0_0_35px_rgba(153,69,255,0.25)] transition-all duration-500 overflow-hidden cursor-pointer" tabIndex={0}>
+                    {/* Top Radial Light Beam */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-24 bg-[#9945FF]/15 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                    <div className="relative z-10 flex flex-col items-center text-center w-full">
+                      {/* Web3 Glowing Icon Badge */}
+                      <div className="w-14 h-14 rounded-2xl bg-[#9945FF]/10 border border-[#9945FF]/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 group-hover:border-[#9945FF] group-hover:shadow-[0_0_20px_rgba(153,69,255,0.4)] transition-all duration-300">
+                        <Globe className="w-7 h-7 text-[#9945FF]" />
+                      </div>
+
+                      <h3 className="text-white text-xl sm:text-2xl font-bold mb-3 tracking-tight flex items-center justify-center gap-2">
+                        <span>Connection</span>
+                      </h3>
+                      <p className="text-sm sm:text-[15px] text-[#9CB4D8] leading-relaxed group-hover:text-gray-200 transition-colors">
+                        The project bridges Cuban identity, global technology, and emerging digital systems into one unified ecosystem.
+                      </p>
+                    </div>
+
+                    {/* Bottom Indicator Pill */}
+                    <div className="relative z-10 w-full pt-6 mt-4 border-t border-white/5 flex items-center justify-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-[#9945FF] shadow-[0_0_8px_#9945FF] group-hover:animate-pulse" />
+                      <span className="text-xs uppercase tracking-widest text-[#9945FF] font-semibold">Global Bridge</span>
+                    </div>
                   </div>
-                </div>
-              </TiltCard>
+                </TiltCard>
+              </Stagger3DBox>
  
               {/* Evolution */}
-              <TiltCard className="w-full">
-                <div className="group flex flex-col items-center justify-center w-full mx-auto p-6 relative h-auto min-h-[16rem] rounded-3xl glass-panel cursor-pointer outline-none" tabIndex={0}>
-                  <div className="relative z-20 text-center w-full">
-                    <h2 className="text-white text-[20px] sm:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
-                      <span className="w-1.5 h-6 bg-[#00E5FF] rounded-full inline-block" />
-                      Evolution
-                    </h2>
-                    <p className="text-[14px] sm:text-[15px] text-[#9CB4D8] leading-relaxed">
-                      CubaNex is built to expand over time through modular utilities, open documentation, and future ecosystem layers.
-                    </p>
+              <Stagger3DBox index={3} className="w-full">
+                <TiltCard className="w-full h-full">
+                  <div className="group relative flex flex-col items-center justify-between w-full h-full p-7 sm:p-8 rounded-3xl glass-panel border border-white/10 hover:border-[#00E5FF]/60 hover:shadow-[0_0_35px_rgba(0,229,255,0.25)] transition-all duration-500 overflow-hidden cursor-pointer" tabIndex={0}>
+                    {/* Top Radial Light Beam */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-24 bg-[#00E5FF]/15 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                    <div className="relative z-10 flex flex-col items-center text-center w-full">
+                      {/* Web3 Glowing Icon Badge */}
+                      <div className="w-14 h-14 rounded-2xl bg-[#00E5FF]/10 border border-[#00E5FF]/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 group-hover:border-[#00E5FF] group-hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] transition-all duration-300">
+                        <Zap className="w-7 h-7 text-[#00E5FF]" />
+                      </div>
+
+                      <h3 className="text-white text-xl sm:text-2xl font-bold mb-3 tracking-tight flex items-center justify-center gap-2">
+                        <span>Evolution</span>
+                      </h3>
+                      <p className="text-sm sm:text-[15px] text-[#9CB4D8] leading-relaxed group-hover:text-gray-200 transition-colors">
+                        CubaNex is built to expand over time through modular utilities, open documentation, and future ecosystem layers.
+                      </p>
+                    </div>
+
+                    {/* Bottom Indicator Pill */}
+                    <div className="relative z-10 w-full pt-6 mt-4 border-t border-white/5 flex items-center justify-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-[#00E5FF] shadow-[0_0_8px_#00E5FF] group-hover:animate-pulse" />
+                      <span className="text-xs uppercase tracking-widest text-[#00E5FF] font-semibold">Modular Web3</span>
+                    </div>
                   </div>
-                </div>
-              </TiltCard>
+                </TiltCard>
+              </Stagger3DBox>
  
             </div>
           </div>
@@ -453,32 +443,42 @@ export default function Home() {
 
           {/* from havana to blockchain s*/}
           {/* from havana to blockchain s*/}
+          {/* Born from Cuba. Built for the Digital Future */}
           <ScrollReveal>
-            <div className=" relative px-8 pb-10 z-10 pt-20 max-w-[1300px]  mx-auto sm:flex items-center justify-between gap-10 sm:pb-20 ">
-              <div className="">
+            <div className="relative px-6 z-10 mt-16 sm:mt-24 pt-12 sm:pt-20 border-t border-white/10 max-w-[1300px] mx-auto flex flex-col lg:flex-row items-stretch justify-between gap-10 sm:gap-14 pb-12 sm:pb-20">
+              {/* Left Column Text Content */}
+              <div className="flex-1 max-w-2xl flex flex-col justify-center">
                 <h2
-                  className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-6`}
+                  className={`${orbitron.className} text-[26px] sm:text-[38px] lg:text-[46px] text-[#fff] font-bold leading-[1.2] mb-6 tracking-tight`}
                 >
-                  Born from <span className="text-[#fc6]"> Cuba</span>. Built for the
-                  <span className="text-[#316CFF]"> Digital Future</span>.
-                </h2>{" "}
+                  Born from <span className="bg-gradient-to-r from-[#FFD700] to-[#FF8C00] bg-clip-text text-transparent">Cuba</span>. Built for the
+                  <span className="bg-gradient-to-r from-[#00D2FF] to-[#316CFF] bg-clip-text text-transparent"> Digital Future</span>.
+                </h2>
+
                 <div
-                  className={`${workSans.className} text-[16px] max-w-[560px] sm:text-[18px] text-[#9CB4D8] leading-relaxed mb-8`}
+                  className={`${workSans.className} text-[15px] sm:text-[17px] text-[#9CB4D8] leading-relaxed space-y-4`}
                 >
-                  <p className="pb-6">
+                  <p className="p-4 sm:p-5 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-[#00D2FF]/40 hover:bg-white/[0.04] transition-all duration-300">
                     CubaNex draws inspiration from Cuba’s resilience, creativity, and cultural depth — then translates that spirit into a new digital form.
                   </p>
-                  <p>
+                  <p className="p-4 sm:p-5 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-[#316CFF]/40 hover:bg-white/[0.04] transition-all duration-300">
                     It is a bridge between heritage and intelligence, between identity and infrastructure, between what Cuba has always carried within and what technology can now reveal.
                   </p>
                 </div>
               </div>
-              <div className="">
-                <VideoPlayer
-                  videoSrc="/cubanex-video.mp4"
-                  previewSrc="/hero-havana-CDeUqYMJ.png"
-                  className="w-full sm:h-[300px] max-w-6xl mx-auto my-24 max-h-[520px]"
-                />
+
+              {/* Right Column Video Frame with Equal Height */}
+              <div className="flex-1 max-w-xl w-full flex flex-col relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#00D2FF]/20 via-[#316CFF]/20 to-[#9945FF]/20 rounded-3xl blur-2xl opacity-60 pointer-events-none" />
+                <TiltCard className="w-full h-full flex flex-col flex-1">
+                  <div className="relative rounded-3xl overflow-hidden border border-white/15 bg-black/60 shadow-[0_20px_50px_rgba(0,0,0,0.8)] hover:border-[#00D2FF]/50 transition-all duration-500 h-full flex flex-col flex-1 min-h-[300px] sm:min-h-[360px]">
+                    <VideoPlayer
+                      videoSrc="/cubanex-video.mp4"
+                      previewSrc="/hero-havana-CDeUqYMJ.png"
+                      className="w-full h-full min-h-[300px] sm:min-h-[360px] my-0 flex-1"
+                    />
+                  </div>
+                </TiltCard>
               </div>
             </div>
           </ScrollReveal>
@@ -488,7 +488,7 @@ export default function Home() {
       {/* ================= tokenomics ================= */}
 
       <ScrollReveal>
-        <section className="py-24 sm:py-32 px-6">
+        <section className="py-12 sm:py-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2
               className={`${orbitron.className} text-[26px] sm:text-[36px] lg:text-[46px] text-[#fff] font-semibold leading-[1.3em] mb-4`}
@@ -501,45 +501,47 @@ export default function Home() {
               The digital asset at the center of the CubaNex ecosystem.
             </p>
 
-            <div className="max-w-3xl mx-auto rounded-3xl p-8 glass-panel">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-left">
-                
-                <div className="border-b sm:border-b-0 sm:border-r border-white/10 pb-6 sm:pb-0 sm:pr-8">
-                  <p className="text-gray-500 text-sm mb-1">Total Supply</p>
-                  <p className={`${orbitron.className} text-xl text-white font-medium`}>100,000,000,000 <span className="text-[#00D2FF]">CNEX</span></p>
-                </div>
-                
-                <div className="pb-6 sm:pb-0">
-                  <p className="text-gray-500 text-sm mb-1">Network</p>
-                  <p className="text-xl text-white font-medium">BNB Smart Chain</p>
-                </div>
+            <TiltCard className="max-w-3xl mx-auto">
+              <div className="rounded-3xl p-8 glass-panel border border-white/10 hover:border-[#00D2FF]/40 transition-all duration-300">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-left">
+                  
+                  <div className="border-b sm:border-b-0 sm:border-r border-white/10 pb-6 sm:pb-0 sm:pr-8 group cursor-pointer">
+                    <p className="text-gray-500 text-sm mb-1 group-hover:text-[#80ECFF] transition-colors">Total Supply</p>
+                    <p className={`${orbitron.className} text-xl text-white font-medium group-hover:scale-105 transition-transform duration-300`}>100,000,000,000 <span className="text-[#00D2FF]">CNEX</span></p>
+                  </div>
+                  
+                  <div className="pb-6 sm:pb-0 group cursor-pointer">
+                    <p className="text-gray-500 text-sm mb-1 group-hover:text-[#80ECFF] transition-colors">Network</p>
+                    <p className="text-xl text-white font-medium group-hover:scale-105 transition-transform duration-300">BNB Smart Chain</p>
+                  </div>
 
-                <div className="border-b sm:border-b-0 sm:border-r border-white/10 pb-6 sm:pb-0 sm:pr-8 sm:pt-6">
-                  <p className="text-gray-500 text-sm mb-1">Standard</p>
-                  <p className="text-xl text-white font-medium">BEP-20</p>
-                </div>
+                  <div className="border-b sm:border-b-0 sm:border-r border-white/10 pb-6 sm:pb-0 sm:pr-8 sm:pt-6 group cursor-pointer">
+                    <p className="text-gray-500 text-sm mb-1 group-hover:text-[#80ECFF] transition-colors">Standard</p>
+                    <p className="text-xl text-white font-medium group-hover:scale-105 transition-transform duration-300">BEP-20</p>
+                  </div>
 
-                <div className="sm:pt-6">
-                  <p className="text-gray-500 text-sm mb-1">Contract Address</p>
-                  <a
-                    href="https://bscscan.com/token/0xf073d173Ed309f8A208e6C183eFf858DbC882DbB"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 group"
-                  >
-                    <span className="text-lg text-[#316CFF] font-mono group-hover:text-[#80ECFF] transition-colors">0xf073...2DbB</span>
-                    <img src="/link-external.svg" alt="" className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
-                  </a>
-                </div>
+                  <div className="sm:pt-6">
+                    <p className="text-gray-500 text-sm mb-1">Contract Address</p>
+                    <a
+                      href="https://bscscan.com/token/0xf073d173Ed309f8A208e6C183eFf858DbC882DbB"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 group"
+                    >
+                      <span className="text-lg text-[#316CFF] font-mono group-hover:text-[#80ECFF] transition-colors">0xf073...2DbB</span>
+                      <img src="/link-external.svg" alt="" className="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                    </a>
+                  </div>
 
+                </div>
               </div>
-            </div>
+            </TiltCard>
 
             <div className="flex justify-center mt-12">
               <Magnetic>
                 <Ripple>
                   <a href="/tokenomics">
-                    <button className="px-8 py-3.5 text-[14px] sm:text-[16px] rounded-full text-white font-medium border border-white/20 hover:bg-white/10 transition-all duration-300">
+                    <button className="px-8 py-3.5 text-[14px] sm:text-[16px] rounded-full text-white font-medium border border-white/20 hover:border-[#80ECFF] hover:bg-white/10 transition-all duration-300">
                       View Token Details
                     </button>
                   </a>
@@ -562,42 +564,18 @@ export default function Home() {
               The Path of <span className="text-[#316CFF]">Awakening</span>
             </h2>
             <p
-              className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-[#9CB4D8] max-w-[600px] mx-auto mb-16`}
+              className={`${workSans.className} text-center text-[16px] sm:text-[18px] text-[#9CB4D8] max-w-[600px] mx-auto mb-12`}
             >
               CubaNex unfolds in phases. Each phase reveals another layer of the ecosystem.
             </p>
 
-            <div className="max-w-3xl mx-auto">
-              <div className="relative rounded-3xl p-8 sm:p-10 glass-panel">
-                <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#00D2FF]/10 rounded-full blur-2xl animate-ambient-pulse"></div>
-                
-                <p className={`${orbitron.className} text-[#00D2FF] font-semibold text-lg mb-2`}>Current Phase</p>
-                <h3 className="text-3xl text-white font-bold mb-8">Conscious Layer</h3>
-                
-                <ul className="space-y-4">
-                  {[
-                    "Brand system refinement",
-                    "Ecosystem page upgrade",
-                    "Whitepaper alignment",
-                    "Community activation",
-                    "Smart contract verification",
-                    "Labs foundation"
-                  ].map((milestone, idx) => (
-                    <li key={idx} className="flex items-center gap-4">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#316CFF]"></div>
-                      <span className="text-[#E4ECFF] text-lg">{milestone}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-              </div>
-            </div>
+            <RoadmapTimeline language="eng" />
 
-            <div className="flex justify-center mt-12">
+            <div className="flex justify-center mt-10">
               <Magnetic>
                 <Ripple>
                   <a href="/about#roadmap">
-                    <button className="px-8 py-3.5 text-[14px] sm:text-[16px] rounded-full text-white font-medium border border-white/20 hover:bg-white/10 transition-all duration-300">
+                    <button className="px-8 py-3.5 text-[14px] sm:text-[16px] rounded-full text-white font-medium border border-white/20 hover:border-[#80ECFF] hover:bg-white/10 transition-all duration-300">
                       View Full Roadmap
                     </button>
                   </a>
@@ -628,48 +606,56 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               
               {/* Step 1 */}
-              <TiltCard className="w-full">
-                <div className="group flex flex-col items-center p-8 rounded-3xl glass-panel text-center outline-none" tabIndex={0}>
-                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">1</div>
-                  <h3 className="text-white text-xl font-bold mb-4">Set Up Wallet</h3>
-                  <p className="text-[#9CB4D8] text-sm leading-relaxed">
-                    Use MetaMask, Trust Wallet, or another compatible wallet.
-                  </p>
-                </div>
-              </TiltCard>
+              <Stagger3DBox index={0} className="w-full">
+                <TiltCard className="w-full">
+                  <div className="group flex flex-col items-center p-8 rounded-3xl glass-panel text-center outline-none hover:border-[#00D2FF]/40 transition-all duration-300" tabIndex={0}>
+                    <div className="w-12 h-12 rounded-full border border-white/10 group-hover:border-[#00D2FF] group-hover:text-[#00D2FF] group-hover:shadow-[0_0_15px_rgba(0,210,255,0.4)] flex items-center justify-center text-white/50 text-xl font-bold mb-6 transition-all duration-300">1</div>
+                    <h3 className="text-white text-xl font-bold mb-4">Set Up Wallet</h3>
+                    <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                      Use MetaMask, Trust Wallet, or another compatible wallet.
+                    </p>
+                  </div>
+                </TiltCard>
+              </Stagger3DBox>
 
               {/* Step 2 */}
-              <TiltCard className="w-full">
-                <div className="group flex flex-col items-center p-8 rounded-3xl glass-panel text-center outline-none" tabIndex={0}>
-                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">2</div>
-                  <h3 className="text-white text-xl font-bold mb-4">Add BNB Smart Chain</h3>
-                  <p className="text-[#9CB4D8] text-sm leading-relaxed">
-                    Ensure your wallet is connected to BNB Smart Chain.
-                  </p>
-                </div>
-              </TiltCard>
+              <Stagger3DBox index={1} className="w-full">
+                <TiltCard className="w-full">
+                  <div className="group flex flex-col items-center p-8 rounded-3xl glass-panel text-center outline-none hover:border-[#316CFF]/40 transition-all duration-300" tabIndex={0}>
+                    <div className="w-12 h-12 rounded-full border border-white/10 group-hover:border-[#316CFF] group-hover:text-[#316CFF] group-hover:shadow-[0_0_15px_rgba(49,108,255,0.4)] flex items-center justify-center text-white/50 text-xl font-bold mb-6 transition-all duration-300">2</div>
+                    <h3 className="text-white text-xl font-bold mb-4">Add BNB Smart Chain</h3>
+                    <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                      Ensure your wallet is connected to BNB Smart Chain.
+                    </p>
+                  </div>
+                </TiltCard>
+              </Stagger3DBox>
 
               {/* Step 3 */}
-              <TiltCard className="w-full">
-                <div className="group flex flex-col items-center p-8 rounded-3xl glass-panel text-center outline-none" tabIndex={0}>
-                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">3</div>
-                  <h3 className="text-white text-xl font-bold mb-4">Verify Contract</h3>
-                  <p className="text-[#9CB4D8] text-sm leading-relaxed">
-                    Always use the official contract address listed on cubanex.io.
-                  </p>
-                </div>
-              </TiltCard>
+              <Stagger3DBox index={2} className="w-full">
+                <TiltCard className="w-full">
+                  <div className="group flex flex-col items-center p-8 rounded-3xl glass-panel text-center outline-none hover:border-[#9945FF]/40 transition-all duration-300" tabIndex={0}>
+                    <div className="w-12 h-12 rounded-full border border-white/10 group-hover:border-[#9945FF] group-hover:text-[#9945FF] group-hover:shadow-[0_0_15px_rgba(153,69,255,0.4)] flex items-center justify-center text-white/50 text-xl font-bold mb-6 transition-all duration-300">3</div>
+                    <h3 className="text-white text-xl font-bold mb-4">Verify Contract</h3>
+                    <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                      Always use the official contract address listed on cubanex.io.
+                    </p>
+                  </div>
+                </TiltCard>
+              </Stagger3DBox>
 
               {/* Step 4 */}
-              <TiltCard className="w-full">
-                <div className="group flex flex-col items-center p-8 rounded-3xl glass-panel text-center outline-none" tabIndex={0}>
-                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/50 text-xl font-bold mb-6">4</div>
-                  <h3 className="text-white text-xl font-bold mb-4">Receive CNEX</h3>
-                  <p className="text-[#9CB4D8] text-sm leading-relaxed">
-                    CNEX distribution follows the official token model and project access structure.
-                  </p>
-                </div>
-              </TiltCard>
+              <Stagger3DBox index={3} className="w-full">
+                <TiltCard className="w-full">
+                  <div className="group flex flex-col items-center p-8 rounded-3xl glass-panel text-center outline-none hover:border-[#00E5FF]/40 transition-all duration-300" tabIndex={0}>
+                    <div className="w-12 h-12 rounded-full border border-white/10 group-hover:border-[#00E5FF] group-hover:text-[#00E5FF] group-hover:shadow-[0_0_15px_rgba(0,229,255,0.4)] flex items-center justify-center text-white/50 text-xl font-bold mb-6 transition-all duration-300">4</div>
+                    <h3 className="text-white text-xl font-bold mb-4">Receive CNEX</h3>
+                    <p className="text-[#9CB4D8] text-sm leading-relaxed">
+                      CNEX distribution follows the official token model and project access structure.
+                    </p>
+                  </div>
+                </TiltCard>
+              </Stagger3DBox>
 
             </div>
           </div>

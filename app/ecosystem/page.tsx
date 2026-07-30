@@ -1,6 +1,8 @@
+"use client";
 import { Cpu, Brain, Layers, Code2 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import Image from "next/image";
+import HeroImage3DMotion from "@/components/ui/HeroImage3DMotion";
 
 export default function EcosystemPage() {
   return (
@@ -13,16 +15,19 @@ export default function EcosystemPage() {
             <span className="text-white">Overview</span>
           </h1>
 
-          <div className="mt-14 relative flex justify-center w-full max-w-4xl mx-auto aspect-[16/9]">
-            <div className="absolute inset-0 bg-[#22E6E3]/5 blur-[100px] rounded-full animate-ambient-pulse"></div>
-            <Image
-              src="/7-2-26/es.jpeg"
-              alt="CubaNex Ecosystem Visualization"
-              fill
-              priority quality={100}
-              className="mobile-focus-top"
-              style={{ objectPosition: "center 20%" }}
-            />
+          {/* Home-Style Automatic 3D Hero Motion Image */}
+          <div className="mt-14 relative flex justify-center w-full max-w-4xl mx-auto">
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#22E6E3]/20 via-[#316CFF]/20 to-[#9945FF]/20 rounded-3xl blur-3xl opacity-70 pointer-events-none" />
+            <HeroImage3DMotion className="w-full rounded-2xl border border-[#22E6E3]/30 shadow-[0_20px_60px_rgba(34,230,227,0.25)] aspect-[16/9]">
+              <Image
+                src="/7-2-26/es.jpeg"
+                alt="CubaNex Ecosystem Visualization"
+                fill
+                priority quality={100}
+                className="mobile-focus-top object-cover"
+                style={{ objectPosition: "center 20%" }}
+              />
+            </HeroImage3DMotion>
           </div>
 
           <p className="mt-12 text-[15px] leading-7 text-[#9CB4D8] max-w-4xl mx-auto">
