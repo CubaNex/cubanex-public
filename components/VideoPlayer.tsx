@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
+import { Play, Pause, Volume2, VolumeX, X } from "lucide-react";
 
 interface VideoPlayerProps {
   videoSrc: string;
@@ -16,18 +16,21 @@ export default function VideoPlayer({
   className,
 }: VideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handlePlay = async () => {
     if (videoRef.current) {
       try {
         videoRef.current.muted = false;
+        setIsMuted(false);
         await videoRef.current.play();
         setIsPlaying(true);
       } catch (err) {
         console.warn("Unmuted play blocked, trying muted play fallback:", err);
         try {
           videoRef.current.muted = true;
+          setIsMuted(true);
           await videoRef.current.play();
           setIsPlaying(true);
         } catch (e) {
@@ -37,10 +40,35 @@ export default function VideoPlayer({
     }
   };
 
+  const handlePause = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    if (videoRef.current) {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  const handleStop = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+      setIsPlaying(false);
+    }
+  };
+
+  const handleToggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
+
   return (
     <div
       onClick={!isPlaying ? handlePlay : undefined}
-      className={`relative w-full rounded-2xl overflow-hidden shadow-xl cursor-pointer ${className}`}
+      className={`relative w-full rounded-2xl overflow-hidden shadow-xl cursor-pointer group ${className}`}
     >
       {/* Glow Animation */}
       {!isPlaying && (
@@ -73,7 +101,65 @@ export default function VideoPlayer({
         controls={isPlaying}
         loop
         playsInline
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+        onEnded={() => {
+          setIsPlaying(false);
+          if (videoRef.current) videoRef.current.currentTime = 0;
+        }}
+        onVolumeChange={() => {
+          if (videoRef.current) setIsMuted(videoRef.current.muted);
+        }}
       />
+
+      {/* Overlay Controls when Video is Playing (Mobile & Desktop Friendly) */}
+      {isPlaying && (
+        <>
+          {/* Top-Right Floating Stop/Pause Button */}
+          <div className="absolute top-3 right-3 z-30 flex items-center gap-2">
+            <button
+              onClick={handlePause}
+              type="button"
+              aria-label="Pause Video"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/70 hover:bg-black/90 text-white text-xs sm:text-sm font-medium border border-white/20 shadow-lg backdrop-blur-md transition active:scale-95 cursor-pointer"
+            >
+              <Pause className="w-4 h-4 text-[#00D2FF]" />
+              <span>Pause</span>
+            </button>
+            <button
+              onClick={handleStop}
+              type="button"
+              aria-label="Stop Video"
+              className="flex items-center justify-center p-1.5 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/20 shadow-lg backdrop-blur-md transition active:scale-95 cursor-pointer"
+              title="Stop & Close"
+            >
+              <X className="w-4 h-4 text-red-400" />
+            </button>
+          </div>
+
+          {/* Top-Left Floating Mute Toggle */}
+          <div className="absolute top-3 left-3 z-30">
+            <button
+              onClick={handleToggleMute}
+              type="button"
+              aria-label={isMuted ? "Unmute Video" : "Mute Video"}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/70 hover:bg-black/90 text-white text-xs sm:text-sm font-medium border border-white/20 shadow-lg backdrop-blur-md transition active:scale-95 cursor-pointer"
+            >
+              {isMuted ? (
+                <>
+                  <VolumeX className="w-4 h-4 text-amber-400" />
+                  <span className="hidden sm:inline">Unmute</span>
+                </>
+              ) : (
+                <>
+                  <Volume2 className="w-4 h-4 text-[#00D2FF]" />
+                  <span className="hidden sm:inline">Mute</span>
+                </>
+              )}
+            </button>
+          </div>
+        </>
+      )}
 
       {/* Play Button */}
       {!isPlaying && (

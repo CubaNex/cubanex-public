@@ -5,6 +5,10 @@ import {
   MessageCircle,
   Send,
   Shield,
+  ShieldCheck,
+  Cpu,
+  Zap,
+  Sparkles,
   TrendingUp,
   Twitter,
   Wallet,
@@ -76,58 +80,72 @@ export default function Home() {
         }
       `}</style>
 
-      <section className="overflow-hidden z-20 relative pb-20 sm:pb-0 pt-12 w-full min-h-auto sm:min-h-screen flex items-center justify-center px-6">
+      <section className="overflow-hidden z-20 relative min-h-[70vh] sm:min-h-screen w-full flex flex-col justify-center items-center px-4 sm:px-6 py-6 sm:py-0">
         <InteractiveHeroBackground />
         <ScrollReveal>
-          <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center  sm:pt-20">
-            {/* <div className="inline-flex items-center justify-center space-x-2 border border-[rgba(255,255,255,0.4)] rounded-full px-3 sm:px-3 py-2  sm:py-2 mb-4 animate-pulse-slow">
-              <div className="w-[6px] h-[6px] rounded-full bg-[#316CFF] smooth-pulse shadow-[0_0_8px_#316CFF]" />
-              <span className="text-[12px] text-[#fff]">en vivo ahora </span>
-            </div> */}
+          <div className="relative z-10 max-w-[1200px] w-full mx-auto text-center flex flex-col justify-center items-center my-auto pt-2 sm:pt-16">
 
+            {/* Ambient Backlight Aura */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[680px] h-[280px] sm:h-[380px] bg-gradient-to-tr from-[#316CFF]/25 via-[#00D2FF]/25 to-[#9945FF]/15 blur-[100px] sm:blur-[140px] rounded-full pointer-events-none -z-10" />
+
+            {/* Futuristic Live Badge (Hidden on Phone) */}
+            <div className="hidden sm:inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-black/40 border border-[#00D2FF]/30 backdrop-blur-xl shadow-[0_0_25px_rgba(0,210,255,0.2)] mb-6 sm:mb-8 hover:border-[#00D2FF]/70 hover:bg-black/60 transition-all duration-300 group">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00D2FF] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#00D2FF]"></span>
+              </span>
+              <span className={`${workSans.className} text-[11px] sm:text-[13px] text-[#80ECFF] tracking-[0.2em] uppercase font-semibold`}>
+                ACTIVO DIGITAL NATIVO EN IA DE CUBA
+              </span>
+              <Sparkles className="w-3.5 h-3.5 text-[#80ECFF] group-hover:rotate-12 transition-transform duration-300" />
+            </div>
+
+            {/* Headline */}
             <h1
-              className={`${orbitron.className} text-[32px] sm:text-[62px] lg:text-[72px] text-[#fff] font-bold leading-[1.1em] tracking-tight mb-8`}
+              className={`${orbitron.className} text-[34px] sm:text-[66px] lg:text-[78px] font-extrabold leading-[1.08em] tracking-tight mb-4 sm:mb-8 text-white`}
             >
-              El Activo Digital Nativo en IA de Cuba
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#316CFF] to-[#80ECFF]">
-                Despertando un Nuevo Futuro.
+              El Código Ha{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#80ECFF] via-[#00D2FF] to-[#316CFF] drop-shadow-[0_0_40px_rgba(0,210,255,0.6)]">
+                Despertado.
               </span>
             </h1>
 
-            <div className="max-w-[800px] mx-auto space-y-4 mb-10">
+            {/* Body */}
+            <div className="max-w-[760px] mx-auto mb-6 sm:mb-10 px-2">
               <p
-                className={`${workSans.className} text-[18px] sm:text-[22px] text-gray-200 leading-relaxed font-medium`}
+                className={`${workSans.className} text-[16px] sm:text-[21px] text-gray-200 leading-relaxed font-normal`}
+                style={{ textShadow: "0 2px 20px rgba(0,0,0,0.9)" }}
               >
-                El Sueño Despertó como Código — CUBANEX es un proyecto comunitario
-                basado en la inspiración cultural cubana.
-              </p>
-              <p
-                className={`${workSans.className} text-[14px] sm:text-[16px] text-[#80ECFF] tracking-wide uppercase font-semibold`}
-              >
-                Token BEP-20 impulsado por sistemas autónomos adaptativos en BNB Chain
+                CubaNex es un{" "}
+                <span className="text-[#80ECFF] font-semibold border-b border-[#00D2FF]/40 pb-0.5">
+                  activo digital nativo en IA
+                </span>{" "}
+                basado en <span className="text-white font-semibold">BNB Chain</span>, diseñado para evolucionar hacia un ecosistema de inteligencia descentralizada.
               </p>
             </div>
 
             <HeroButtons
               primaryHref="/es/community"
-              primaryText="Sé de los primeros"
+              primaryText="Entrar al Ecosistema"
               secondaryHref="/whitepaper"
               secondaryText="Leer el Whitepaper"
             />
 
-            <div className="pt-10 hidden sm:flex gap-4 lg:gap-10 justify-center opacity-60">
-              <div className="flex items-center gap-2">
-                <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
-                <span className="text-[12px] font-medium">Contrato Verificado</span>
+            {/* Trust Badges Bar (Hidden on Phone) */}
+            <div className="mt-10 sm:mt-14 hidden sm:inline-flex flex-wrap items-center justify-center gap-3 sm:gap-6 px-5 sm:px-8 py-3 rounded-2xl bg-black/50 border border-white/15 backdrop-blur-xl shadow-[0_10px_35px_rgba(0,0,0,0.7)]">
+              <div className="flex items-center gap-2 text-gray-300 hover:text-white transition cursor-default">
+                <ShieldCheck className="w-4 h-4 text-[#00D2FF]" />
+                <span className="text-[12px] sm:text-[13px] font-medium tracking-wide">Contrato Verificado</span>
               </div>
-              <div className="flex items-center gap-2">
-                <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
-                <span className="text-[12px] font-medium">Fuente Transparente</span>
+              <div className="hidden sm:block w-[1px] h-4 bg-white/20" />
+              <div className="flex items-center gap-2 text-gray-300 hover:text-white transition cursor-default">
+                <Cpu className="w-4 h-4 text-[#80ECFF]" />
+                <span className="text-[12px] sm:text-[13px] font-medium tracking-wide">Marco de IA Abierto</span>
               </div>
-              <div className="hidden sm:flex items-center gap-2">
-                <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
-                <span className="text-[12px] font-medium">Suministro Puro</span>
+              <div className="hidden sm:block w-[1px] h-4 bg-white/20" />
+              <div className="flex items-center gap-2 text-gray-300 hover:text-white transition cursor-default">
+                <Zap className="w-4 h-4 text-[#316CFF]" />
+                <span className="text-[12px] sm:text-[13px] font-medium tracking-wide">Suministro Fijo (1B)</span>
               </div>
             </div>
           </div>

@@ -195,38 +195,50 @@ export default function Home() {
       `}</style>
 
       <ScrollReveal delay={0.1} yOffset={0}>
-        <section className="overflow-hidden z-20 relative pb-20 sm:pb-0 pt-12 w-full min-h-0 sm:min-h-screen flex items-center justify-center px-6">
+        <section className="overflow-hidden z-20 relative min-h-[70vh] sm:min-h-screen w-full flex flex-col justify-center items-center px-4 sm:px-6 py-6 sm:py-0">
 
           {/* ── Approved Artwork Background with Hover Parallax & Scroll Motion ── */}
           <InteractiveHeroBackground />
 
           {/* ── Overlay Content ── */}
-          <div className="relative pt-[30px] z-10 max-w-[1200px] mx-auto text-center sm:pt-20">
+          <div className="relative z-10 max-w-[1200px] w-full mx-auto text-center flex flex-col justify-center items-center my-auto pt-2 sm:pt-16">
 
-            {/* Clean Subheadline */}
-            <p
-              className={`${workSans.className} text-[13px] sm:text-[15px] text-[#80ECFF] tracking-[0.2em] uppercase font-semibold mb-5 opacity-90`}
-            >
-              Cuba&apos;s AI-Native Digital Asset
-            </p>
+            {/* Ambient Backlight Aura */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[680px] h-[280px] sm:h-[380px] bg-gradient-to-tr from-[#316CFF]/25 via-[#00D2FF]/25 to-[#9945FF]/15 blur-[100px] sm:blur-[140px] rounded-full pointer-events-none -z-10" />
+
+            {/* Futuristic Live Badge (Hidden on Phone) */}
+            <div className="hidden sm:inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-black/40 border border-[#00D2FF]/30 backdrop-blur-xl shadow-[0_0_25px_rgba(0,210,255,0.2)] mb-6 sm:mb-8 hover:border-[#00D2FF]/70 hover:bg-black/60 transition-all duration-300 group">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00D2FF] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#00D2FF]"></span>
+              </span>
+              <span className={`${workSans.className} text-[11px] sm:text-[13px] text-[#80ECFF] tracking-[0.2em] uppercase font-semibold`}>
+                Cuba&apos;s AI-Native Digital Asset
+              </span>
+              <Sparkles className="w-3.5 h-3.5 text-[#80ECFF] group-hover:rotate-12 transition-transform duration-300" />
+            </div>
 
             {/* Headline */}
             <h1
-              className={`${orbitron.className} text-[32px] sm:text-[62px] lg:text-[72px] text-[#fff] font-bold leading-[1.1em] tracking-tight mb-8`}
-              style={{ textShadow: "0 2px 40px rgba(0,0,0,0.6)" }}
+              className={`${orbitron.className} text-[34px] sm:text-[66px] lg:text-[78px] font-extrabold leading-[1.08em] tracking-tight mb-4 sm:mb-8 text-white`}
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#316CFF] to-[#80ECFF]">
-                The Code Has Awakened.
+              The Code Has{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#80ECFF] via-[#00D2FF] to-[#316CFF] drop-shadow-[0_0_40px_rgba(0,210,255,0.6)]">
+                Awakened.
               </span>
             </h1>
 
             {/* Body */}
-            <div className="max-w-[720px] mx-auto mb-10">
+            <div className="max-w-[760px] mx-auto mb-6 sm:mb-10 px-2">
               <p
-                className={`${workSans.className} text-[17px] sm:text-[20px] text-gray-200 leading-relaxed font-medium`}
-                style={{ textShadow: "0 1px 20px rgba(0,0,0,0.8)" }}
+                className={`${workSans.className} text-[16px] sm:text-[21px] text-gray-200 leading-relaxed font-normal`}
+                style={{ textShadow: "0 2px 20px rgba(0,0,0,0.9)" }}
               >
-                CubaNex is an AI-native digital asset built on BNB Chain, designed to evolve into a decentralized intelligence ecosystem.
+                CubaNex is an{" "}
+                <span className="text-[#80ECFF] font-semibold border-b border-[#00D2FF]/40 pb-0.5">
+                  AI-native digital asset
+                </span>{" "}
+                built on <span className="text-white font-semibold">BNB Chain</span>, designed to evolve into a decentralized intelligence ecosystem.
               </p>
             </div>
 
@@ -238,19 +250,21 @@ export default function Home() {
               secondaryText="Read Whitepaper"
             />
 
-            {/* Trust badges */}
-            <div className="pt-10 hidden sm:flex gap-4 lg:gap-10 justify-center opacity-60">
-              <div className="flex items-center gap-2">
-                <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
-                <span className="text-[12px] font-medium">Verified Contract</span>
+            {/* Trust Badges Bar (Hidden on Phone) */}
+            <div className="mt-10 sm:mt-14 hidden sm:inline-flex flex-wrap items-center justify-center gap-3 sm:gap-6 px-5 sm:px-8 py-3 rounded-2xl bg-black/50 border border-white/15 backdrop-blur-xl shadow-[0_10px_35px_rgba(0,0,0,0.7)]">
+              <div className="flex items-center gap-2 text-gray-300 hover:text-white transition cursor-default">
+                <ShieldCheck className="w-4 h-4 text-[#00D2FF]" />
+                <span className="text-[12px] sm:text-[13px] font-medium tracking-wide">Verified Contract</span>
               </div>
-              <div className="flex items-center gap-2">
-                <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
-                <span className="text-[12px] font-medium">Open Framework</span>
+              <div className="hidden sm:block w-[1px] h-4 bg-white/20" />
+              <div className="flex items-center gap-2 text-gray-300 hover:text-white transition cursor-default">
+                <Cpu className="w-4 h-4 text-[#80ECFF]" />
+                <span className="text-[12px] sm:text-[13px] font-medium tracking-wide">Open Framework</span>
               </div>
-              <div className="hidden sm:flex items-center gap-2">
-                <img src="/Check_ring_duotone.svg" className="w-4 h-4" alt="" />
-                <span className="text-[12px] font-medium">Fixed Supply</span>
+              <div className="hidden sm:block w-[1px] h-4 bg-white/20" />
+              <div className="flex items-center gap-2 text-gray-300 hover:text-white transition cursor-default">
+                <Zap className="w-4 h-4 text-[#316CFF]" />
+                <span className="text-[12px] sm:text-[13px] font-medium tracking-wide">Fixed Supply</span>
               </div>
             </div>
           </div>
